@@ -1,12 +1,28 @@
-import json as js
+import json as js 
 import os
 import csv
-import pandas as pd
-import spacy
+import pandas as pd 
+import spacy 
+import nltk 
+
+from nltk.stem import PorterStemmer 
 
 #creating the base paths for the directory and the folder in which we've stored the extracted .t.gaz folders
 BASE_PATH = "C:/Users/acer/Downloads/cord-19_2020-04-10/2020-04-10"
 EXTRACTION_FOLDER = os.path.join(BASE_PATH, "document_parses")
+
+def get_nlp_model():
+    try:
+        return spacy.load("en_core_web_sm")
+    except OSError:
+        print("Please install spaCy model: python -m spacy download en_core_web_sm")
+        return None
+    
+def get_stemmer():
+    try:
+        return PorterStemmer()
+    except Exception as e:
+        print(f"An exception occured: {e}")
 
 #each paper will have a different directory depending on if it is in one of the three subfolders and then if it is a pdf or a pmc paper
 #so we'll define the sub-folders and then we'll check the parameter given in the csv file if it has a "has_pdf_parse/has_pmc_xml_parse" or both
@@ -14,7 +30,7 @@ EXTRACTION_FOLDER = os.path.join(BASE_PATH, "document_parses")
 def find_json_file(paper_row):
     if not os.path.exists(EXTRACTION_FOLDER):
         return None
-   
+    
     sub_folders = ["biorxiv_medrxiv", "comm_use_subset", "noncomm_use_subset", "custom_license"]
 
     if paper_row["has_pdf_parse"] == "True" and paper_row["sha"]:
@@ -22,13 +38,13 @@ def find_json_file(paper_row):
             pdf_json_path = os.path.join(EXTRACTION_FOLDER, folder, "pdf_json", paper_row["sha"] + ".json")
             if os.path.exists(pdf_json_path):
                 return pdf_json_path
-   
+    
     if paper_row["has_pmc_xml_parse"] == "True" and paper_row["pmcid"]:
         for folder in sub_folders:
             pmc_json_path = os.path.join(EXTRACTION_FOLDER, folder, "pmc_json", paper_row["pmcid"] + ".xml.json")
             if os.path.exists(pmc_json_path):
                 return pmc_json_path
-   
+    
     return None
 
 def local_metadatacsv_crawler(csv_path, max_papers=None):  
@@ -39,10 +55,11 @@ def local_metadatacsv_crawler(csv_path, max_papers=None):
         reader = csv.DictReader(within_f)
 
         for i, row in enumerate(reader):
+
             # Stop if we've reached max_papers
             if max_papers and len(papers) >= max_papers:
                 break
-               
+                
             json_path = find_json_file(row)
             paper_text = None
 
@@ -56,22 +73,57 @@ def local_metadatacsv_crawler(csv_path, max_papers=None):
 
             if paper_text:
                 papers.append({
-                    "cord_uid": row["cord_uid"],
-                    "title": row["title"],
-                    "abstract": row["abstract"],
+                    "cord_uid": row["cord_uid"], 
+                    "title": row["title"], 
+                    "abstract": row["abstract"], 
                     "json_parse": paper_text
                 })
 
     print(f"Found {len(papers)} papers with JSON data")
     return papers
 
+#word preprocessing functions from this point below 
+def remove_stop_words(para_lines):
+    nlp = get_nlp_model()
+    cleaned_lines=[]
+
+    for line in para_lines:
+        if not line.strip():  
+            continue
+
+        doc = nlp(line)
+        filtered_words = [token.text for token in doc if not token.is_stop and not token.is_punct]
+        cleaned_lines.append(" ".join(filtered_words))
+
+    return cleaned_lines
+
+def create_stem(cleaned_lines):
+    stemmer = get_stemmer()
+    stemmed_lines =[]
+
+    for line in cleaned_lines:
+        if not line.strip():
+            stemmed_lines.append("")
+            continue
+
+        words = line.split()
+        stemmed_words =[]
+
+        for word in words:
+            stemmed_word = stemmer.stem(word)
+            stemmed_words.append(stemmed_word)
+
+        stemmed_lines.append(" ".join(stemmed_words))
+
+    return stemmed_lines
+
 def extract_text(json_parse):
     if json_parse is None:
         return ""
-   
+    
     body = json_parse.get("body_text", [])
     lines = []
-   
+    
     for section in body:
         text = section.get("text", "")
         lines.extend(text.splitlines())
@@ -84,8 +136,16 @@ def process_papers(json_parse):
     if json_parse is None:
         print("Warning: No JSON parse data available")
         return
-   
+    
     first_lines = extract_text(json_parse)
+
+    list_without_stopwords = remove_stop_words(first_lines)
+    list_with_stem = create_stem(list_without_stopwords)
+    combined_list = list_without_stopwords + list_with_stem
+
+
+    for i, line in enumerate(combined_list):
+        print(line)
 
     for i, line in enumerate(first_lines):
         print(f"Line {i+1}: {line}")
@@ -95,11 +155,13 @@ def main():
     metadata_path = os.path.join(BASE_PATH, "metadata.csv")
     print(f"Metadata path exists: {os.path.exists(metadata_path)}")
     print(f"Extraction folder exists: {os.path.exists(EXTRACTION_FOLDER)}")
-   
+    
     if not os.path.exists(metadata_path):
         print(f"Error: metadata.csv not found at {metadata_path}")
         return
-   
+    
+    csv_path = os.path.join(BASE_PATH, "metadata.csv")
+    papers = local_metadatacsv_crawler(csv_path, max_papers=1)  
     # Load spaCy model
     try:
         nlp = spacy.load("en_core_web_sm")
@@ -109,10 +171,10 @@ def main():
         print("python -m spacy download en_core_web_sm")
         nlp = None
 
-    #
+    # 
     csv_path = os.path.join(BASE_PATH, "metadata.csv")
     papers = local_metadatacsv_crawler(csv_path, max_papers=5)  
-   
+    
     if not papers:
         print("No papers with JSON data found!")
         print("This could be because:")
@@ -128,5 +190,5 @@ def main():
             print(f"CORD UID: {paper['cord_uid']}")
             process_papers(paper["json_parse"])  
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
