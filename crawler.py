@@ -339,13 +339,13 @@ def generate_lexicon_and_forward_index(papers):
                 word_id_counter += 1
             
         # Get the ID for the Word
-        w_id = lexicon[word]
+            w_id = lexicon[word]
         
         # Assign the id to the documents list
-        doc_words_ids.append(w_id)
+            doc_words_ids.append(w_id)
         
         # Save this document's data
-        forward_index[doc_id] = doc_words_ids
+            forward_index[doc_id] = doc_words_ids
 
     return lexicon, forward_index
 
@@ -397,7 +397,7 @@ def main():
             paper["processed"] = processed_data
 
     # 3. Lexicon: Create the Lexicon
-    lexicon, processed_data = generate_lexicon_and_data(papers)
+    lexicon, processed_data = generate_lexicon_and_forward_index(papers)
     
     # 4. Save: Saves the Files to Disk
     save_files(lexicon, processed_data)
