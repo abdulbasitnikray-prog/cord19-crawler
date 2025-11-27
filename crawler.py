@@ -338,7 +338,10 @@ def generate_lexicon_and_forward_index(papers):
                 lexicon[word] = word_id_counter
                 word_id_counter += 1
             
+        # Get the ID for the Word
         w_id = lexicon[word]
+        
+        # Assign the id to the documents list
         doc_words_ids.append(w_id)
         
         # Save this document's data
