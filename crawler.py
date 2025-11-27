@@ -346,11 +346,11 @@ def generate_lexicon_and_forward_index(papers):
             doc_words_ids.append(w_id)
         
         # Save this document's data
-            forward_index[doc_id] = doc_words_ids
+        forward_index[doc_id] = doc_words_ids
 
     return lexicon, forward_index
 
-def save_files(lexicon, processed_data):
+def save_files(lexicon, forward_index):
     try:
         # Save Lexicon
         with open("lexicon.json", 'w', encoding='utf-8') as f:
@@ -358,9 +358,9 @@ def save_files(lexicon, processed_data):
             print(f"SUCCESS: 'lexicon.json' created with {len(lexicon)} unique words.")
 
         # Save Processed Data
-        with open("processed_papers.json", 'w', encoding='utf-8') as f:
-            js.dump(processed_data, f, indent=None)
-            print(f"SUCCESS: 'processed_papers.json' created with {len(processed_data)} documents.")
+        with open("forward_index.json", 'w', encoding='utf-8') as f:
+            js.dump(forward_index, f, indent=None)
+            print(f"SUCCESS: 'forward_index.json' created with {len(forward_index)} documents.")
             
     except Exception as e:
         print(f"Error saving files: {e}")
@@ -398,10 +398,10 @@ def main():
             paper["processed"] = processed_data
 
     # 3. Lexicon: Create the Lexicon
-    lexicon, processed_data = generate_lexicon_and_forward_index(papers)
+    lexicon, forward_index = generate_lexicon_and_forward_index(papers)
     
     # 4. Save: Saves the Files to Disk
-    save_files(lexicon, processed_data)
+    save_files(lexicon, forward_index)
     print("\n--- DONE ---")
 
 if __name__ == "__main__":
