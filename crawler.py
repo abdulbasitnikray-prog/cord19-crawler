@@ -309,12 +309,12 @@ def process_papers(json_parse, cord_uid):
                 
     return lemmatized
 
-def generate_lexicon_and_data(papers):
+def generate_lexicon_and_forward_index(papers):
     """
     Generates the Lexicon and saves the processed tokens for the Forward Index.
     """
     lexicon = {}          # Format: {"virus": 1, "cell": 2}
-    processed_data = {}   # Format: {"doc_id": ["virus", "cell", "virus"]}
+    forward_index = {}   # Format: {"doc_id": [1, 2, 3]}
     word_id_counter = 1   # We start IDs at 1
     
     print("\n--- Generating Lexicon & Processed Data ---")
@@ -328,7 +328,7 @@ def generate_lexicon_and_data(papers):
 
         # Get the list of tokens (lemmatized words) from the paper
         tokens_list = paper["processed"]["tokens"]
-        doc_words_list = []
+        doc_words_ids = []
 
         for token in tokens_list:
             word = token["lemma"]
@@ -338,13 +338,13 @@ def generate_lexicon_and_data(papers):
                 lexicon[word] = word_id_counter
                 word_id_counter += 1
             
-            # 2. Stores the word string for now
-            doc_words_list.append(word)
+        w_id = lexicon[word]
+        doc_words_ids.append(w_id)
         
         # Save this document's data
-        processed_data[doc_id] = doc_words_list
+        forward_index[doc_id] = doc_words_ids
 
-    return lexicon, processed_data
+    return lexicon, forward_index
 
 def save_files(lexicon, processed_data):
     try:
