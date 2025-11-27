@@ -285,10 +285,10 @@ def extract_text(json_parse):
     for section in body:
         text = section.get("text", "")
         lines.extend(text.splitlines())
-        if len(lines) >= 100:  
+        if len(lines) >= 35:  
             break
 
-    return lines[:100]
+    return lines[:35]
 
 def process_papers(json_parse, cord_uid):  
     if json_parse is None:
@@ -301,12 +301,13 @@ def process_papers(json_parse, cord_uid):
     sentences = sentence_segments(removed_stopword_lines)
     lemmatized = pos_lemmatization(sentences)
 
-    print(f"Processed {lemmatized['total_tokens']} tokens")
-    print(f"Content words: {lemmatized['content_words_count']}")
+    # Commented Out to Avoid alot of output cluster
+
+    #print(f"Processed {lemmatized['total_tokens']} tokens")
+    #print(f"Content words: {lemmatized['content_words_count']}")
     
-    for i, token in enumerate(lemmatized['tokens'][:10]):
-        print(f"   Token {i+1}: {token['original']} -> {token['lemma']} ({token['pos']})")
-                
+    #for i, token in enumerate(lemmatized['tokens'][:10]):
+        #print(f"   Token {i+1}: {token['original']} -> {token['lemma']} ({token['pos']})")         
     return lemmatized
 
 def generate_lexicon_and_forward_index(papers):
@@ -380,7 +381,7 @@ def main():
     # 1. Crawl: Get papers
     print("Step 1: Loading papers...")
     # Extracting papers from the Stream_Tar method instead of the local_metadatacsv_crawler
-    papers = stream_tar_dataset(metadata_path,tar_path, max_papers=50) 
+    papers = stream_tar_dataset(metadata_path,tar_path, max_papers=50000) 
     
     if not papers:
         print("No papers found.")
@@ -390,7 +391,7 @@ def main():
     print("Step 2: Preprocessing text ...")
     for i, paper in enumerate(papers):
         if paper["json_parse"] is not None:
-            # Only print every 10th paper to keep terminal clean
+            #Print every paper 
             if i % 10 == 0: print(f"  Processing paper {i+1}/{len(papers)}...")
             
             processed_data = process_papers(paper['json_parse'], paper['cord_uid'])
