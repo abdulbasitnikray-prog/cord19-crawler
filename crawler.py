@@ -7,13 +7,14 @@ import string
 import re
 import requests
 import pandas as pd
+import tarfile
 
 from nltk.stem import PorterStemmer 
 from nltk.stem import WordNetLemmatizer
 nltk.download('wordnet')
 
 #creating the base paths for the directory and the folder in which we've stored the extracted .t.gaz folders
-BASE_PATH = "C:/Users/acer/Downloads/cord-19_2020-04-10/2020-04-10"
+BASE_PATH = "D:/Cord19/cord/2022"
 EXTRACTION_FOLDER = os.path.join(BASE_PATH, "document_parses")
 
 #these two functions get our main models; the nlp model is for all our text preprocessing and the scispacy model is for our POS tagging for the lexicon
@@ -71,38 +72,81 @@ def find_json_file(paper_row):
 #for a small test release, the crawler has a max_papers argument so it will crawl the first nth papers that we ask it to crawl
 #through. if the path is correct for the folder, it will create a dictionary with cord_id, title, abstract and json_parse
 #json parse is the paper text.
-def local_metadatacsv_crawler(csv_path, max_papers=None):  
+
+#Replaced Already Present "local_metadatacsv_crawler" with a stream_tar parser
+def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
+    """
+    Reads directly from the .tar file without extracting it.
+    Matches files in the TAR to entries in metadata.csv.
+    """
+    print("Step 1: Loading metadata into memory for fast lookup...")
+    meta_lookup = {}
+    
+    # 1. Load metadata into a dictionary: { "sha_hash": {row_data} }
+    try:
+        with open(metadata_path, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                # We map the SHA (filename identifier) to the row data
+                if row['sha']: 
+                    # specific fix for multiple shas in one field
+                    for single_sha in row['sha'].split(';'):
+                        meta_lookup[single_sha.strip()] = row
+                # We can also map pmcid if needed, but sha is primary for pdf_json
+                if row['pmcid']:
+                    meta_lookup[row['pmcid']] = row
+                    
+    except Exception as e:
+        print(f"Error reading metadata: {e}")
+        return []
+
+    print(f"Loaded metadata for {len(meta_lookup)} papers.")
+    print("Step 2: Streaming through the TAR file...")
+    
     papers = []
     found_count = 0
-
-    with open(csv_path, 'r', encoding='utf-8') as within_f:
-        reader = csv.DictReader(within_f)
-
-        for i, row in enumerate(reader):
-
-            if max_papers and len(papers) >= max_papers:
-                break
+    
+    # 2. Open the TAR file as a stream
+    try:
+        with tarfile.open(tar_path, "r") as tar:
+            for member in tar:
+                # Stop if we hit the limit
+                if max_papers and found_count >= max_papers:
+                    break
                 
-            json_path = find_json_file(row)
-            paper_text = None
+                # We only care about .json files
+                if not member.isfile() or not member.name.endswith('.json'):
+                    continue
+                
+                # Extract the filename (SHA) from the path
+                # Example: document_parses/pdf_json/000a0fcbf.json -> 000a0fcbf
+                filename = os.path.basename(member.name).replace('.json', '').replace('.xml', '')
+                
+                # 3. Check if this file exists in our metadata
+                if filename in meta_lookup:
+                    meta_row = meta_lookup[filename]
+                    
+                    # Read the JSON file directly from the TAR stream
+                    f = tar.extractfile(member)
+                    if f:
+                        try:
+                            content = js.load(f)
+                            papers.append({
+                                "cord_uid": meta_row["cord_uid"],
+                                "title": meta_row["title"],
+                                "json_parse": content
+                            })
+                            found_count += 1
+                            if found_count % 100 == 0:
+                                print(f"  Streamed {found_count} papers...")
+                        except:
+                            pass # Skip malformed JSONs
+                            
+    except FileNotFoundError:
+        print(f"Error: Could not find the tar file at {tar_path}")
+        return []
 
-            if json_path:
-                try:
-                    with open(json_path, "r", encoding="utf-8") as json_infile:
-                        paper_text = js.load(json_infile)
-                    found_count += 1
-                except (js.JSONDecodeError, IOError) as e:
-                    print(f"Error loading {json_path}: {e}")
-
-            if paper_text:
-                papers.append({
-                    "cord_uid": row["cord_uid"], 
-                    "title": row["title"], 
-                    "abstract": row["abstract"], 
-                    "json_parse": paper_text
-                })
-
-    print(f"Found {len(papers)} papers with JSON data")
+    print(f"Successfully streamed {len(papers)} papers from archive.")
     return papers
 
 #word preprocessing functions from this point below 
@@ -231,27 +275,6 @@ def pos_lemmatization(sentences):
     }
     return result
 
-def create_inverted_index(papers):
-    inverted_index = {}
-
-    for paper in papers:
-        doc_id = paper["cord_uid"]
-
-        if "processed" in paper and "tokens" in paper["processed"]:
-            tokens = paper["processed"]["tokens"]
-            term_freq ={}
-
-            for token_data in tokens:
-                term = token_data["lemma"]
-                term_freq[term] =  term_freq.get(term, 0) + 1
-            
-            for term, freq in term_freq.items():
-                if term not in inverted_index:
-                    inverted_index[term] = {}
-                inverted_index[term][doc_id] = freq
-
-    return inverted_index
-    
 def extract_text(json_parse):
     if json_parse is None:
         return []
@@ -262,10 +285,10 @@ def extract_text(json_parse):
     for section in body:
         text = section.get("text", "")
         lines.extend(text.splitlines())
-        if len(lines) >= 3:  
+        if len(lines) >= 100:  
             break
 
-    return lines[:3]
+    return lines[:100]
 
 def process_papers(json_parse, cord_uid):  
     if json_parse is None:
@@ -286,67 +309,96 @@ def process_papers(json_parse, cord_uid):
                 
     return lemmatized
 
-def save_index_file(inverted_index, filename="inverted_index.json"):
-    current_dir = os.getcwd()
-    full_path = os.path.abspath(filename)
+def generate_lexicon_and_data(papers):
+    """
+    Generates the Lexicon and saves the processed tokens for the Forward Index.
+    """
+    lexicon = {}          # Format: {"virus": 1, "cell": 2}
+    processed_data = {}   # Format: {"doc_id": ["virus", "cell", "virus"]}
+    word_id_counter = 1   # We start IDs at 1
+    
+    print("\n--- Generating Lexicon & Processed Data ---")
 
-    print(f"Current directory: {current_dir}")
-    print(f"Full file path: {full_path}")
-    print(f"Inverted index size: {len(inverted_index)} terms")
+    for paper in papers:
+        doc_id = paper["cord_uid"]
+        
+        # Skip papers that crashed during preprocessing
+        if "processed" not in paper or "tokens" not in paper["processed"]:
+            continue
+
+        # Get the list of tokens (lemmatized words) from the paper
+        tokens_list = paper["processed"]["tokens"]
+        doc_words_list = []
+
+        for token in tokens_list:
+            word = token["lemma"]
+            
+            # 1. Build Lexicon: Assign a unique ID if the word hasnt been repeated
+            if word not in lexicon:
+                lexicon[word] = word_id_counter
+                word_id_counter += 1
+            
+            # 2. Stores the word string for now
+            doc_words_list.append(word)
+        
+        # Save this document's data
+        processed_data[doc_id] = doc_words_list
+
+    return lexicon, processed_data
+
+def save_files(lexicon, processed_data):
     try:
-        with open(filename, 'w', encoding='utf-8') as saved_file:
-            js.dump(inverted_index, saved_file, indent=2, ensure_ascii=False) 
-            #the ensure ascii arg is important because it allows text to be written in origianl representation
+        # Save Lexicon
+        with open("lexicon.json", 'w', encoding='utf-8') as f:
+            js.dump(lexicon, f, indent=None) # No indent to save space
+            print(f"SUCCESS: 'lexicon.json' created with {len(lexicon)} unique words.")
 
-        if os.path.exists(filename):
-            print(f"Inverted index saved to {full_path}")
-            print(f"File exists: {os.path.exists(filename)}")
-            print(f"File size: {os.path.getsize(filename)} bytes")
-        else:
-            print(f"File was not created at {full_path}")
+        # Save Processed Data
+        with open("processed_papers.json", 'w', encoding='utf-8') as f:
+            js.dump(processed_data, f, indent=None)
+            print(f"SUCCESS: 'processed_papers.json' created with {len(processed_data)} documents.")
             
     except Exception as e:
-            print(f"Error occurred while saving the index: {e}")
-    
+        print(f"Error saving files: {e}")
 
 def main():
-    print("paths being checked")
+    print("--- Starting Project Pipeline ---")
+    
+    # Check if paths exist
     metadata_path = os.path.join(BASE_PATH, "metadata.csv")
-    print(f"Metadata path exists: {os.path.exists(metadata_path)}")
-    print(f"Extraction folder exists: {os.path.exists(EXTRACTION_FOLDER)}")
-    
-    if not os.path.exists(metadata_path):
-        print(f"Error: metadata.csv not found at {metadata_path}")
-        return
-    
-    csv_path = os.path.join(BASE_PATH, "metadata.csv")
-    papers = local_metadatacsv_crawler(csv_path, max_papers=10)  
-    
-    try:
-        nlp = spacy.load("en_core_web_sm")
-        print("spaCy model loaded successfully")
-    except OSError:
-        print("spaCy model 'en_core_web_sm' not found. needs installation.")
-        nlp = None
 
+    # Checks for the TAR File
+    tar_path = os.path.join(BASE_PATH, "document_parses.tar.gz")
+    if not os.path.exists(metadata_path):
+        print(f"ERROR: Could not find metadata.csv at: {metadata_path}")
+        print("ACTION: Please edit the 'BASE_PATH' variable in the code.")
+        return
+
+    # 1. Crawl: Get papers
+    print("Step 1: Loading papers...")
+    # Extracting papers from the Stream_Tar method instead of the local_metadatacsv_crawler
+    papers = stream_tar_dataset(metadata_path,tar_path, max_papers=50) 
     
     if not papers:
-        print("No papers with JSON data found!")
-        print("This could be because:")
-        print("1. The JSON files don't exist in the expected locations")
-        print("2. The SHA/PMCID values in metadata.csv don't match the file names")
-        print("3. The document_parses folder structure is different than expected")
+        print("No papers found.")
         return
 
+    # 2. PreProcess: Clean the text
+    print("Step 2: Preprocessing text ...")
     for i, paper in enumerate(papers):
         if paper["json_parse"] is not None:
-            print(f"\n{'='*50}")
-            print(f"Processing paper {i+1}: {paper['title'][:100]}...")
+            # Only print every 10th paper to keep terminal clean
+            if i % 10 == 0: print(f"  Processing paper {i+1}/{len(papers)}...")
+            
             processed_data = process_papers(paper['json_parse'], paper['cord_uid'])
             paper["processed"] = processed_data
 
-    inverted_index = create_inverted_index(papers)
-    save_index_file(inverted_index)
+    # 3. Lexicon: Create the Lexicon
+    lexicon, processed_data = generate_lexicon_and_data(papers)
+    
+    # 4. Save: Saves the Files to Disk
+    save_files(lexicon, processed_data)
+    print("\n--- DONE ---")
 
 if __name__ == "__main__":
     main()
