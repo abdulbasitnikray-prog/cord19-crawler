@@ -24,13 +24,18 @@ def get_nlp_model():
     except OSError:
         print("Please install spaCy model: python -m spacy download en_core_web_sm")
         return None
-    
+
+# Removed heavy components not being used for indexing
 def get_scipacy_model():
+    disable_pipes =["parser","ner","textcat","custom"]
     try: 
-        return spacy.load("en_core_sci_sm")
+        return spacy.load("en_core_sci_sm",disable = disable_pipes)
     except Exception as e:
-        print(f"An exception occurred: {e}")
-        return None
+        try:
+            return spacy.load("en_core_web_sm",disable = disable_pipes)
+        except:
+            print(f"An exception occurred: {e}")
+            return None
 
 def get_lemmatizer():
     try:
