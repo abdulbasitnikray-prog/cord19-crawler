@@ -154,137 +154,28 @@ def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
     print(f"Successfully streamed {len(papers)} papers from archive.")
     return papers
 
-#word preprocessing functions from this point below 
-def remove_stop_words(para_lines):
-    nlp = get_nlp_model()
-    if nlp is None:
-        return para_lines
-        
-    cleaned_lines=[]
-
-    for line in para_lines:
-        if not line.strip():  
-            continue
-
-        doc = nlp(line)
-        filtered_words = [token.text for token in doc if not token.is_stop and not token.is_punct]
-        cleaned_lines.append(" ".join(filtered_words))
-
-    return cleaned_lines
-
-def create_stem(cleaned_lines):
-    stemmer = get_stemmer()
-    if stemmer is None:
-        return cleaned_lines
-        
-    stemmed_lines =[]
-
-    for line in cleaned_lines:
-        if not line.strip():
-            stemmed_lines.append("")
-            continue
-
-        words = line.split()
-        stemmed_words =[]
-
-        for word in words:
-            stemmed_word = stemmer.stem(word)
-            stemmed_words.append(stemmed_word)
-
-        stemmed_lines.append(" ".join(stemmed_words))
-
-    return stemmed_lines
-
-def extract_named_entity(original_lines):  
-    nlp = get_nlp_model()
-    if nlp is None:
-        return []
-        
-    entity_lines = []
-
-    for line in original_lines:  
-        if not line or not line.strip():
-            continue
-        doc = nlp(line)
-        for ent in doc.ents:
-            entity_lines.append((ent.text, ent.label_))  
-    return entity_lines
-
 #Global Constraints preventing repetitive compile of regex patterns
 
 PUNCT_PATTERN = re.compile(r'[{}]'.format(re.escape('"#$%&*+/<=>@[\\]^_`{|}~')))
 SPACE_PATTERN = re.compile(r'\s+')
 DIGIT_PATTERN = re.compile(r'\d+')
 
-def clean_text(text):
-    cleaned = []
-
-    for line in text:
-        if not line or not line.strip():
-            continue 
-
-        line = line.lower()
-        line = SPACE_PATTERN.sub(' ',line).strip()
-        line = PUNCT_PATTERN.sub('',line)
-        line = DIGIT_PATTERN.sub('',line)
-        if line.strip():  
-                cleaned.append(line)
-    return cleaned
-
-def sentence_segments(text_lines):
-    nlp = get_nlp_model()
-    if nlp is None:
-        return text_lines
-        
-    sentences =[]
-    full_text = ' '.join(text_lines)
-
-    doc = nlp(full_text)
-
-    for sent in doc.sents:
-        sentence_text = sent.text.strip()
-        if len(sentence_text) > 7:
-            sentences.append(sentence_text)
+def clean_text(lines):
+    """
+    Joins lines into one string and cleans it using pre-compiled regex.
+    Returns: Single String
+    """
+    if not lines: return ""
     
-    return sentences
-
-def pos_lemmatization(sentences):  
-    nlp_model = get_scipacy_model()
-    if nlp_model is None:
-        return {"tokens": [], "total_tokens": 0, "content_words_count": 0}
+    # 1. Join into one block
+    full_text = " ".join(lines).lower()
     
+    # 2. Apply Regex on the whole block (Very Fast)
+    full_text = SPACE_PATTERN.sub(' ', full_text)
+    full_text = PUNCT_PATTERN.sub('', full_text)
+    full_text = DIGIT_PATTERN.sub('', full_text)
     
-    if isinstance(sentences, list):
-        text = ' '.join(sentences)
-    else:
-        text = sentences
-        
-    doc = nlp_model(text)
-    indexed_tokens =[]
-    position = 0
-    
-    for token in doc:
-        if (not token.is_alpha or token.is_stop or 
-            token.is_punct or token.is_space):
-            continue
-
-        token_data = {
-            'position': position,
-            'original': token.text,
-            'lemma': token.lemma_.lower(),
-            'pos': token.pos_,  
-            'pos_tag': token.tag_,
-            'index_key': f"{token.lemma_.lower()}_{token.pos_}"
-        }
-        indexed_tokens.append(token_data)
-        position += 1
-
-    result = {
-        'tokens': indexed_tokens,
-        'total_tokens': len(indexed_tokens),
-        'content_words_count': len([t for t in indexed_tokens if t['pos'] in ['NOUN', 'VERB', 'ADJ', 'ADV']])
-    }
-    return result
+    return full_text.strip()
 
 def extract_text(json_parse):
     if json_parse is None:
@@ -301,25 +192,42 @@ def extract_text(json_parse):
 
     return lines[:35]
 
-def process_papers(json_parse, cord_uid):  
+def process_papers(json_parse, nlp):  
     if json_parse is None:
         print("Warning: No JSON parse data available")
         return
     
-    unprocessed_lines = extract_text(json_parse)
-    cleaned_lines = clean_text(unprocessed_lines)
-    removed_stopword_lines = remove_stop_words(cleaned_lines)
-    sentences = sentence_segments(removed_stopword_lines)
-    lemmatized = pos_lemmatization(sentences)
-
-    # Commented Out to Avoid alot of output cluster
-
-    #print(f"Processed {lemmatized['total_tokens']} tokens")
-    #print(f"Content words: {lemmatized['content_words_count']}")
+    # 1. Get raw text lines
+    raw_lines = extract_text(json_parse)
+    if not raw_lines: return None
     
-    #for i, token in enumerate(lemmatized['tokens'][:10]):
-        #print(f"   Token {i+1}: {token['original']} -> {token['lemma']} ({token['pos']})")         
-    return lemmatized
+    # 2. Clean and Join (New Helper)
+    full_text = clean_text_to_string(raw_lines)
+    if not full_text: return None
+    
+    # 3. Increase limit just in case (though 35 lines won't hit it)
+    nlp.max_length = 1500000 
+    
+    # 4. Run the Model ONCE (Tokenize + Tag + Lemmatize)
+    doc = nlp(full_text) 
+    
+    indexed_tokens = []
+    
+    # 5. Fast Iteration
+    for token in doc:
+        # Combined Filter: Stop words, Punctuation, Numbers, Short words
+        if (token.is_stop or token.is_punct or token.is_space or 
+            token.like_num or len(token.text) < 2):
+            continue
+
+        # We only store the lemma. 
+        # Position is implicit by the order in the list if needed later.
+        token_data = {
+            'lemma': token.lemma_
+        }
+        indexed_tokens.append(token_data)
+
+    return {"tokens": indexed_tokens}
 
 def generate_lexicon_and_forward_index(papers):
     """
@@ -403,7 +311,7 @@ def main():
     for i, paper in enumerate(papers):
         if paper["json_parse"] is not None:
             #Print every paper 
-            if i % 10 == 0: print(f"  Processing paper {i+1}/{len(papers)}...")
+            if i % 1 == 0: print(f"  Processing paper {i+1}/{len(papers)}...")
             
             processed_data = process_papers(paper['json_parse'], paper['cord_uid'])
             paper["processed"] = processed_data
