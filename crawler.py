@@ -210,6 +210,12 @@ def extract_named_entity(original_lines):
             entity_lines.append((ent.text, ent.label_))  
     return entity_lines
 
+#Global Constraints preventing repetitive compile of regex patterns
+
+PUNCT_PATTERN = re.compile(r'[{}]'.format(re.escape('"#$%&*+/<=>@[\\]^_`{|}~')))
+SPACE_PATTERN = re.compile(r'\s+')
+DIGIT_PATTERN = re.compile(r'\d+')
+
 def clean_text(text):
     cleaned = []
 
@@ -218,9 +224,9 @@ def clean_text(text):
             continue 
 
         line = line.lower()
-        line = re.sub(r'\s+', ' ', line).strip()
-        line = re.sub(r'[{}]'.format(re.escape('"#$%&*+/<=>@[\\]^_`{|}~')), '', line)
-        line = re.sub(r'\d+', '', line)
+        line = SPACE_PATTERN.sub(' ',line).strip()
+        line = PUNCT_PATTERN.sub('',line)
+        line = DIGIT_PATTERN.sub('',line)
         if line.strip():  
                 cleaned.append(line)
     return cleaned
