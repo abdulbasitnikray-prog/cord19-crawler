@@ -108,7 +108,7 @@ def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
     print(f"Loaded metadata for {len(meta_lookup)} papers.")
     print("Step 2: Streaming through the TAR file...")
     
-    papers = []
+    
     found_count = 0
     
     # 2. Open the TAR file as a stream
@@ -136,11 +136,11 @@ def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
                     if f:
                         try:
                             content = js.load(f)
-                            papers.append({
+                            yield{
                                 "cord_uid": meta_row["cord_uid"],
                                 "title": meta_row["title"],
                                 "json_parse": content
-                            })
+                            }
                             found_count += 1
                             if found_count % 100 == 0:
                                 print(f"  Streamed {found_count} papers...")
@@ -151,8 +151,7 @@ def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
         print(f"Error: Could not find the tar file at {tar_path}")
         return []
 
-    print(f"Successfully streamed {len(papers)} papers from archive.")
-    return papers
+    print(f"Successfully streamed {found_count} papers from archive.")
 
 #Global Constraints preventing repetitive compile of regex patterns
 
@@ -229,10 +228,12 @@ def process_papers(json_parse, nlp):
 
     return {"tokens": indexed_tokens}
 
+# Merged the following method within the main for pipeline implementation
+"""
 def generate_lexicon_and_forward_index(papers):
-    """
+    
     Generates the Lexicon and saves the processed tokens for the Forward Index.
-    """
+
     lexicon = {}          # Format: {"virus": 1, "cell": 2}
     forward_index = {}   # Format: {"doc_id": [1, 2, 3]}
     word_id_counter = 1   # We start IDs at 1
@@ -268,7 +269,7 @@ def generate_lexicon_and_forward_index(papers):
         forward_index[doc_id] = doc_words_ids
 
     return lexicon, forward_index
-
+"""
 def save_files(lexicon, forward_index):
     try:
         # Save Lexicon
@@ -299,27 +300,58 @@ def main():
     # 0. Load Model
     nlp = get_scipacy_model()
     if not nlp: return
-    # 1. Crawl: Get papers
-    print("Step 1: Loading papers...")
-    # Extracting papers from the Stream_Tar method instead of the local_metadatacsv_crawler
-    papers = stream_tar_dataset(metadata_path,tar_path, max_papers=1000) 
+
+    # Merged the Previous Lexicon & ForwardIndex Function within the main
+    # Lexi_FI: Initializition of Dicts
+    lexicon = {}          # Format: {"virus": 1, "cell": 2}
+    forward_index = {}   # Format: {"doc_id": [1, 2, 3]}
+    word_id_counter = 1   # We start IDs at 1
     
-    if not papers:
+    # 1. Crawl: Get papers
+    print("Step 1: Loading papers as a stream...")
+    # Extracting papers from the Stream_Tar method instead of the local_metadatacsv_crawler
+    paper_stream = stream_tar_dataset(metadata_path,tar_path, max_papers=100) 
+    
+    if not paper_stream:
         print("No papers found.")
         return
 
     # 2. PreProcess: Clean the text
     print("Step 2: Preprocessing text ...")
-    for i, paper in enumerate(papers):
+    print("\n--- Generating Lexicon & Forward Index ---")
+    for i, paper in enumerate(paper_stream):
         if paper["json_parse"] is not None:
             #Print every paper 
-            if i % 1 == 0: print(f"  Processing paper {i+1}/{len(papers)}...")
+            if i % 1 == 0: print(f"  Processing paper {i+1} ...")
             
             processed_data = process_papers(paper['json_parse'], nlp)
-            paper["processed"] = processed_data
 
-    # 3. Lexicon: Create the Lexicon
-    lexicon, forward_index = generate_lexicon_and_forward_index(papers)
+
+        # Skip papers that crashed during preprocessing
+        if not processed_data or "tokens" not in processed_data:
+            continue
+
+        # Get the list of tokens (lemmatized words) from the paper
+        doc_id = paper["cord_uid"]
+        tokens_list = processed_data["tokens"]
+        doc_words_ids = []
+
+        for token in tokens_list:
+            word = token["lemma"]
+            
+            # 1. Build Lexicon: Assign a unique ID if the word hasnt been repeated
+            if word not in lexicon:
+                lexicon[word] = word_id_counter
+                word_id_counter += 1
+            
+        # Get the ID for the Word
+            w_id = lexicon[word]
+        
+        # Assign the id to the documents list
+            doc_words_ids.append(w_id)
+        
+        # Save this document's data
+        forward_index[doc_id] = doc_words_ids
     
     # 4. Save: Saves the Files to Disk
     save_files(lexicon, forward_index)
