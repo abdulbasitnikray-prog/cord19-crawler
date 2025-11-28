@@ -142,8 +142,6 @@ def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
                                 "json_parse": content
                             }
                             found_count += 1
-                            if found_count % 100 == 0:
-                                print(f"  Streamed {found_count} papers...")
                         except:
                             pass # Skip malformed JSONs
                             
@@ -157,7 +155,7 @@ def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
 
 PUNCT_PATTERN = re.compile(r'[{}]'.format(re.escape('"#$%&*+/<=>@[\\]^_`{|}~')))
 SPACE_PATTERN = re.compile(r'\s+')
-DIGIT_PATTERN = re.compile(r'\d+')
+DIGIT_PATTERN = re.compile(r'\b\d+\b')
 
 def clean_text(lines):
     """
@@ -270,18 +268,21 @@ def generate_lexicon_and_forward_index(papers):
 
     return lexicon, forward_index
 """
-def save_files(lexicon, forward_index):
+def save_files(lexicon, forward_index,inverted_index):
     try:
         # Save Lexicon
         with open("lexicon.json", 'w', encoding='utf-8') as f:
             js.dump(lexicon, f, indent=None) # No indent to save space
             print(f"SUCCESS: 'lexicon.json' created with {len(lexicon)} unique words.")
 
-        # Save Processed Data
+        # Save Forward Index
         with open("forward_index.json", 'w', encoding='utf-8') as f:
             js.dump(forward_index, f, indent=None)
             print(f"SUCCESS: 'forward_index.json' created with {len(forward_index)} documents.")
-            
+        # Save Inverted Index
+        with open("inverted_index.json", 'w', encoding='utf-8') as f:
+            js.dump(inverted_index, f, indent=None)
+            print(f"SUCCESS: 'inverted_index.json' ({len(inverted_index)} terms)")
     except Exception as e:
         print(f"Error saving files: {e}")
 
@@ -305,6 +306,7 @@ def main():
     # Lexi_FI: Initializition of Dicts
     lexicon = {}          # Format: {"virus": 1, "cell": 2}
     forward_index = {}   # Format: {"doc_id": [1, 2, 3]}
+    inverted_index = {}  # Format {"1": [doc1,doc2,doc3]}
     word_id_counter = 1   # We start IDs at 1
     
     # 1. Crawl: Get papers
@@ -322,8 +324,7 @@ def main():
     for i, paper in enumerate(paper_stream):
         if paper["json_parse"] is not None:
             #Print every paper 
-            if i % 1 == 0: print(f"  Processing paper {i+1} ...")
-            
+            if i % 1000 == 0: print(f"  Processing paper {i+1} - {i+999} ...")
             processed_data = process_papers(paper['json_parse'], nlp)
 
 
@@ -344,17 +345,24 @@ def main():
                 lexicon[word] = word_id_counter
                 word_id_counter += 1
             
-        # Get the ID for the Word
+            # Get the ID for the Word
             w_id = lexicon[word]
         
-        # Assign the id to the documents list
+            # Assign the id to the documents list
             doc_words_ids.append(w_id)
+            # Update Inverted Index (Map Word ID -> Doc ID)
+            if w_id not in inverted_index:
+                inverted_index[w_id] = {}
+            
+            # Increment frequency: {doc_id: count}
+            # Using .get() for safe incrementing
+            inverted_index[w_id][doc_id] = inverted_index[w_id].get(doc_id, 0) + 1
         
         # Save this document's data
         forward_index[doc_id] = doc_words_ids
     
     # 4. Save: Saves the Files to Disk
-    save_files(lexicon, forward_index)
+    save_files(lexicon, forward_index,inverted_index)
     print("\n--- DONE ---")
 
 if __name__ == "__main__":
