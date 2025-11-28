@@ -2,28 +2,11 @@ import json as js
 import os
 import csv
 import spacy 
-import nltk 
-import string 
 import re
-import requests
-import pandas as pd
 import tarfile
-
-from nltk.stem import PorterStemmer 
-from nltk.stem import WordNetLemmatizer
-nltk.download('wordnet')
 
 #creating the base paths for the directory and the folder in which we've stored the extracted .t.gaz folders
 BASE_PATH = "D:/Cord19/cord/2022"
-EXTRACTION_FOLDER = os.path.join(BASE_PATH, "document_parses")
-
-#these two functions get our main models; the nlp model is for all our text preprocessing and the scispacy model is for our POS tagging for the lexicon
-def get_nlp_model():
-    try:
-        return spacy.load("en_core_web_sm")
-    except OSError:
-        print("Please install spaCy model: python -m spacy download en_core_web_sm")
-        return None
 
 # Removed heavy components not being used for indexing
 def get_scipacy_model():
@@ -37,47 +20,9 @@ def get_scipacy_model():
             print(f"An exception occurred: {e}")
             return None
 
-def get_lemmatizer():
-    try:
-        return WordNetLemmatizer()
-    except Exception as e:
-        print(f"An exception occurred: {e}")
-        return None
-
-def get_stemmer():
-    try:
-        return PorterStemmer()
-    except Exception as e:
-        print(f"An exception occurred: {e}")
-        return None
-
 #each paper will have a different directory depending on if it is in one of the three subfolders and then if it is a pdf or a pmc paper
 #so we'll define the sub-folders and then we'll check the parameter given in the csv file if it has a "has_pdf_parse/has_pmc_xml_parse" or both
 #depending on which one we have, we'll use the pmc_id(has_pmc_xml_parse) or sha(has_pdf_parse) and create the path using os.path.join(), checking to see if the path joined exists
-def find_json_file(paper_row):
-    if not os.path.exists(EXTRACTION_FOLDER):
-        return None
-    
-    sub_folders = ["biorxiv_medrxiv", "comm_use_subset", "noncomm_use_subset", "custom_license"]
-
-    if paper_row["has_pdf_parse"] == "True" and paper_row["sha"]:
-        for folder in sub_folders:
-            pdf_json_path = os.path.join(EXTRACTION_FOLDER, folder, "pdf_json", paper_row["sha"] + ".json")
-            if os.path.exists(pdf_json_path):
-                return pdf_json_path
-    
-    if paper_row["has_pmc_xml_parse"] == "True" and paper_row["pmcid"]:
-        for folder in sub_folders:
-            pmc_json_path = os.path.join(EXTRACTION_FOLDER, folder, "pmc_json", paper_row["pmcid"] + ".xml.json")
-            if os.path.exists(pmc_json_path):
-                return pmc_json_path
-    
-    return None
-
-#for a small test release, the crawler has a max_papers argument so it will crawl the first nth papers that we ask it to crawl
-#through. if the path is correct for the folder, it will create a dictionary with cord_id, title, abstract and json_parse
-#json parse is the paper text.
-
 #Replaced Already Present "local_metadatacsv_crawler" with a stream_tar parser
 def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
     """
@@ -226,48 +171,6 @@ def process_papers(json_parse, nlp):
 
     return {"tokens": indexed_tokens}
 
-# Merged the following method within the main for pipeline implementation
-"""
-def generate_lexicon_and_forward_index(papers):
-    
-    Generates the Lexicon and saves the processed tokens for the Forward Index.
-
-    lexicon = {}          # Format: {"virus": 1, "cell": 2}
-    forward_index = {}   # Format: {"doc_id": [1, 2, 3]}
-    word_id_counter = 1   # We start IDs at 1
-    
-    print("\n--- Generating Lexicon & Processed Data ---")
-
-    for paper in papers:
-        doc_id = paper["cord_uid"]
-        
-        # Skip papers that crashed during preprocessing
-        if "processed" not in paper or "tokens" not in paper["processed"]:
-            continue
-
-        # Get the list of tokens (lemmatized words) from the paper
-        tokens_list = paper["processed"]["tokens"]
-        doc_words_ids = []
-
-        for token in tokens_list:
-            word = token["lemma"]
-            
-            # 1. Build Lexicon: Assign a unique ID if the word hasnt been repeated
-            if word not in lexicon:
-                lexicon[word] = word_id_counter
-                word_id_counter += 1
-            
-        # Get the ID for the Word
-            w_id = lexicon[word]
-        
-        # Assign the id to the documents list
-            doc_words_ids.append(w_id)
-        
-        # Save this document's data
-        forward_index[doc_id] = doc_words_ids
-
-    return lexicon, forward_index
-"""
 def save_files(lexicon, forward_index,inverted_index):
     try:
         # Save Lexicon
