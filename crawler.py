@@ -202,7 +202,7 @@ def process_papers(json_parse, nlp):
     if not raw_lines: return None
     
     # 2. Clean and Join (New Helper)
-    full_text = clean_text_to_string(raw_lines)
+    full_text = clean_text(raw_lines)
     if not full_text: return None
     
     # 3. Increase limit just in case (though 35 lines won't hit it)
@@ -296,11 +296,13 @@ def main():
         print(f"ERROR: Could not find metadata.csv at: {metadata_path}")
         print("ACTION: Please edit the 'BASE_PATH' variable in the code.")
         return
-
+    # 0. Load Model
+    nlp = get_scipacy_model()
+    if not nlp: return
     # 1. Crawl: Get papers
     print("Step 1: Loading papers...")
     # Extracting papers from the Stream_Tar method instead of the local_metadatacsv_crawler
-    papers = stream_tar_dataset(metadata_path,tar_path, max_papers=50000) 
+    papers = stream_tar_dataset(metadata_path,tar_path, max_papers=1000) 
     
     if not papers:
         print("No papers found.")
@@ -313,7 +315,7 @@ def main():
             #Print every paper 
             if i % 1 == 0: print(f"  Processing paper {i+1}/{len(papers)}...")
             
-            processed_data = process_papers(paper['json_parse'], paper['cord_uid'])
+            processed_data = process_papers(paper['json_parse'], nlp)
             paper["processed"] = processed_data
 
     # 3. Lexicon: Create the Lexicon
