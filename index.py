@@ -1,11 +1,27 @@
-
 import json as js 
 import os
+import csv
 import spacy 
+import nltk 
+import string 
 import re
-import multiprocessing
-from concurrent.futures import ProcessPoolExecutor
+import requests
+import pandas as pd
+import tarfile
+import time
 
+from nltk.stem import PorterStemmer 
+from nltk.stem import WordNetLemmatizer
+nltk.download('wordnet')
+
+#importing the crawler functions we need
+from crawler import get_scipacy_model, stream_tar_dataset, process_papers, get_paper_stream, process_with_chunks
+
+#creating the base paths for the directory and the folder in which we've stored the extracted .t.gaz folders
+BASE_PATH = "C:/Users/acer/Downloads/cord-19_2020-04-10/2020-04-10"
+EXTRACTION_FOLDER = os.path.join(BASE_PATH, "document_parses")
+
+#these two functions get our main models; the nlp model is for all our text preprocessing and the scispacy model is for our POS tagging for the lexicon
 def get_nlp_model():
     try:
         return spacy.load("en_core_web_sm")
@@ -13,210 +29,141 @@ def get_nlp_model():
         print("Please install spaCy model: python -m spacy download en_core_web_sm")
         return None
 
-def clean_text(text):
-    cleaned = []
-    for line in text:
-        if not line or not line.strip():
-            continue 
-        line = line.lower()
-        line = re.sub(r'\s+', ' ', line).strip()
-        line = re.sub(r'[{}]'.format(re.escape('"#$%&*+/<=>@[\\]^_`{|}~')), '', line)
-        line = re.sub(r'\d+', '', line)
-        if line.strip():  
-            cleaned.append(line)
-    return cleaned
-
-def remove_stop_words(para_lines):
-    nlp = get_nlp_model()
-    if nlp is None:
-        return para_lines
-        
-    cleaned_lines = []
-    for line in para_lines:
-        if not line.strip():  
-            continue
-        doc = nlp(line)
-        filtered_words = [token.text for token in doc if not token.is_stop and not token.is_punct]
-        cleaned_lines.append(" ".join(filtered_words))
-    return cleaned_lines
-
-def sentence_segments(text_lines):
-    nlp = get_nlp_model()
-    if nlp is None:
-        return text_lines
-        
-    sentences = []
-    full_text = ' '.join(text_lines)
-    doc = nlp(full_text)
-
-    for sent in doc.sents:
-        sentence_text = sent.text.strip()
-        if len(sentence_text) > 7:
-            sentences.append(sentence_text)
-    return sentences
-
-def pos_lemmatization(sentences):  
-    if isinstance(sentences, list):
-        text = ' '.join(sentences)
-    else:
-        text = sentences
-        
-    nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
-    doc = nlp(text)
-    
-    tokens = []
-    for token in doc:
-        if token.is_alpha and not token.is_stop and not token.is_punct:
-            tokens.append({
-                'lemma': token.lemma_.lower(),
-                'pos': token.pos_,  
-                'index_key': f"{token.lemma_.lower()}_{token.pos_}",
-                'original': token.text
-            })
-    
-    return {
-        'tokens': tokens,
-        'total_tokens': len(tokens),
-        'content_words_count': len([t for t in tokens if t['pos'] in ['NOUN', 'VERB', 'ADJ', 'ADV']])
-    }
-
-def extract_text(json_parse):
-    if json_parse is None:
-        return []
-    
-    body = json_parse.get("body_text", [])
-    lines = []
-    
-    for section in body:
-        text = section.get("text", "")
-        lines.extend(text.splitlines())
-        if len(lines) >= 3:  
-            break
-
-    return lines[:3]
-
-def process_papers(json_parse, cord_uid):  
-    if json_parse is None:
-        print("Warning: No JSON parse data available")
-        return
-    
-    unprocessed_lines = extract_text(json_parse)
-    cleaned_lines = clean_text(unprocessed_lines)
-    removed_stopword_lines = remove_stop_words(cleaned_lines)
-    sentences = sentence_segments(removed_stopword_lines)
-    lemmatized = pos_lemmatization(sentences)
-
-    print(f"Processed {lemmatized['total_tokens']} tokens for {cord_uid}")
-    return lemmatized
-
-def process_chunk(chunk):
-    results = []
-    for paper in chunk:
-        try:
-            if paper["json_parse"] is not None:
-                processed_data = process_papers(paper['json_parse'], paper['cord_uid'])
-                paper["processed"] = processed_data
-            results.append(paper)
-        except Exception as e:
-            print(f"Error processing paper {paper.get('cord_uid', 'unknown')}: {e}")
-            results.append(paper)  
-    return results
-
-def process_parallel(papers, chunk_size=100):
-    print(f"Processing {len(papers)} papers in parallel...")
-    
-    chunks = [papers[i:i + chunk_size] for i in range(0, len(papers), chunk_size)]
-    processed_papers = []
-
-    with ProcessPoolExecutor(max_workers=8) as executor:
-        for i, chunk_result in enumerate(executor.map(process_chunk, chunks)):
-            processed_papers.extend(chunk_result)
-            print(f"Completed chunk {i+1}/{len(chunks)}")
-    
-    return processed_papers
-
-def build_lexicon(papers):
-    lexicon = {}
-    word_id = 1
-    
-    print(f"Building lexicon from {len(papers)} processed papers...")
-    
-    for i, paper in enumerate(papers):
-        if i % 100 == 0:
-            print(f"Processing paper {i+1}/{len(papers)} for lexicon...")
-            
-        if "processed" in paper and "tokens" in paper["processed"]:
-            for token in paper["processed"]["tokens"]:
-                word_key = token['index_key']  
-                
-                if word_key not in lexicon:
-                    lexicon[word_key] = {
-                        'word_id': word_id,
-                        'word': token['lemma'],
-                        'pos': token['pos'],
-                        'doc_frequency': 1,
-                        'total_frequency': 1
-                    }
-                    word_id += 1
-                else:
-                    lexicon[word_key]['total_frequency'] += 1
-    
-    print(f"Built lexicon with {len(lexicon)} unique terms")
-    return lexicon
-
-def create_inverted_index(papers):
-    inverted_index = {}
-    for paper in papers:
-        doc_id = paper["cord_uid"]
-        if "processed" in paper and "tokens" in paper["processed"]:
-            tokens = paper["processed"]["tokens"]
-            term_freq = {}
-            for token_data in tokens:
-                term = token_data["lemma"]
-                term_freq[term] = term_freq.get(term, 0) + 1
-            
-            for term, freq in term_freq.items():
-                if term not in inverted_index:
-                    inverted_index[term] = {}
-                inverted_index[term][doc_id] = freq
-    return inverted_index
-
-def save_lexicon(lexicon, filename="lexicon.json"):
-    with open(filename, 'w', encoding='utf-8') as f:
-        js.dump(lexicon, f, indent=2, ensure_ascii=False)
-    print(f"Lexicon saved to {filename}")
-
-def save_index_file(inverted_index, filename="inverted_index.json"):
+def get_lemmatizer():
     try:
-        with open(filename, 'w', encoding='utf-8') as saved_file:
-            js.dump(inverted_index, saved_file, indent=2, ensure_ascii=False)
-        print(f"Inverted index saved to {filename}")
-        print(f"Index size: {len(inverted_index)} terms")
+        return WordNetLemmatizer()
     except Exception as e:
-        print(f"Error saving index: {e}")
+        print(f"An exception occurred: {e}")
+        return None
+
+def get_stemmer():
+    try:
+        return PorterStemmer()
+    except Exception as e:
+        print(f"An exception occurred: {e}")
+        return None
+
+def generate_indexes_from_stream(paper_stream, max_papers=None):
+    """
+    Generate indexes directly from the paper stream without storing all processed papers in memory.
+    sso more memory-efficient for large datasets like ours
+    
+    Returns:
+        lexicon: {"word": word_id}
+        forward_index: {"doc_id": [word_id1, word_id2, ...]}
+        inverted_index: {"word_id": {"doc_id": frequency}}
+    """
+    lexicon = {}
+    forward_index = {}
+    inverted_index = {}
+    word_id_counter = 1
+    
+    print("\n--- Generating Indexes from Stream ---")
+    
+    #only load scipacy once
+    nlp = get_scipacy_model()
+    if not nlp:
+        print("ERROR: Could not load the spaCy model")
+        return {}, {}, {}
+    
+    processed_count = 0
+    start_time = time.time()
+    
+    for i, paper in enumerate(paper_stream):
+        if max_papers and i >= max_papers:
+            break
+            
+        #process paper
+        processed_data = process_papers(paper['json_parse'], nlp, paper['cord_uid'])
+        
+        #skip papers that crashed during preprocessing
+        if not processed_data or "tokens" not in processed_data:
+            continue
+            
+        doc_id = paper["cord_uid"]
+        tokens_list = processed_data["tokens"]
+        doc_words_ids = []
+
+        for token in tokens_list:
+            word = token["lemma"]
+            
+            #this part constructs the lexicon
+            if word not in lexicon:
+                lexicon[word] = word_id_counter
+                word_id_counter += 1
+            
+            #get the ID for the Word
+            w_id = lexicon[word]
+        
+            #assign the id to the documents list
+            doc_words_ids.append(w_id)
+            
+            #update Inverted Index
+            if w_id not in inverted_index:
+                inverted_index[w_id] = {}
+            
+            inverted_index[w_id][doc_id] = inverted_index[w_id].get(doc_id, 0) + 1
+        
+        #save to forward index
+        forward_index[doc_id] = doc_words_ids
+        processed_count += 1
+        
+        #progress reporting
+        if processed_count % 100 == 0:
+            elapsed_time = time.time() - start_time
+            papers_per_second = processed_count / elapsed_time
+            print(f"Processed {processed_count} papers | "
+                  f"Speed: {papers_per_second:.1f} papers/sec | "
+                  f"Unique words: {len(lexicon)}")
+    
+    total_time = time.time() - start_time
+    print(f"Indexing completed in {total_time/60:.2f} minutes")
+    print(f"Final stats: {processed_count} papers, {len(lexicon)} unique words")
+    
+    return lexicon, forward_index, inverted_index
+
+def save_index_files(lexicon, forward_index, inverted_index, output_dir="."):
+    """
+    Save all index files to disk.
+    """
+    try:
+        # Ensure output directory exists
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Save Lexicon
+        lexicon_path = os.path.join(output_dir, "lexicon.json")
+        with open(lexicon_path, 'w', encoding='utf-8') as f:
+            js.dump(lexicon, f, indent=None)
+            print(f"SUCCESS: 'lexicon.json' created with {len(lexicon)} unique words.")
+
+        # Save Forward Index
+        forward_index_path = os.path.join(output_dir, "forward_index.json")
+        with open(forward_index_path, 'w', encoding='utf-8') as f:
+            js.dump(forward_index, f, indent=None)
+            print(f"SUCCESS: 'forward_index.json' created with {len(forward_index)} documents.")
+            
+        # Save Inverted Index
+        inverted_index_path = os.path.join(output_dir, "inverted_index.json")
+        with open(inverted_index_path, 'w', encoding='utf-8') as f:
+            js.dump(inverted_index, f, indent=None)
+            print(f"SUCCESS: 'inverted_index.json' created with {len(inverted_index)} terms.")
+            
+    except Exception as e:
+        print(f"Error saving files: {e}")
 
 def main():
-    input_file = "crawled_papers.json"
+    print("--Starting Indexing--")
     
-    if not os.path.exists(input_file):
-        print(f"Error: {input_file} not found. crawler.py needs to be run first.")
+    #get paper stream and generate indexes directly
+    paper_stream = get_paper_stream(max_papers=None)
+    if not paper_stream:
+        print("ERROR: Could not get paper stream")
         return
+        
+    lexicon, forward_index, inverted_index = generate_indexes_from_stream(paper_stream, max_papers=None)
+    save_index_files(lexicon, forward_index, inverted_index)
     
-    print(f"crawled papers from {input_file}.")
-    with open(input_file, 'r', encoding='utf-8') as f:
-        papers = js.load(f)
-    
-    print(f"Loaded {len(papers)} papers for indexing")
-
-    processed_papers = process_parallel(papers, chunk_size=100)
-    lexicon = build_lexicon(processed_papers)
-    save_lexicon(lexicon)
-    
-
-    inverted_index = create_inverted_index(processed_papers)
-    save_index_file(inverted_index, "inverted_index.json")
-    
-    print("Indexing complete!")
+    print("\n--Indexing Complete--")
 
 if __name__ == "__main__":
     main()
