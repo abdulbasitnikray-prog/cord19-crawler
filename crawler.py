@@ -215,7 +215,7 @@ def main():
     # 1. Crawl: Get papers
     print("Step 1: Loading papers as a stream...")
     # Extracting papers from the Stream_Tar method instead of the local_metadatacsv_crawler
-    paper_stream = stream_tar_dataset(metadata_path,tar_path, max_papers=100) 
+    paper_stream = stream_tar_dataset(metadata_path,tar_path, max_papers=50000) 
     
     if not paper_stream:
         print("No papers found.")
