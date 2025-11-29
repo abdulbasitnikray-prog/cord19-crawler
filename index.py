@@ -56,6 +56,7 @@ def generate_indexes_from_stream(paper_stream, max_papers=None):
     lexicon = {}
     forward_index = {}
     inverted_index = {}
+    backward_index = {}
     word_id_counter = 1
     
     print("\n--- Generating Indexes from Stream ---")
@@ -64,7 +65,7 @@ def generate_indexes_from_stream(paper_stream, max_papers=None):
     nlp = get_scipacy_model()
     if not nlp:
         print("ERROR: Could not load the spaCy model")
-        return {}, {}, {}
+        return {}, {}, {}, {}
     
     processed_count = 0
     start_time = time.time()
@@ -83,9 +84,11 @@ def generate_indexes_from_stream(paper_stream, max_papers=None):
         doc_id = paper["cord_uid"]
         tokens_list = processed_data["tokens"]
         doc_words_ids = []
+        lemma_list =[]
 
         for token in tokens_list:
             word = token["lemma"]
+            lemma_list.append(word)
             
             #this part constructs the lexicon
             if word not in lexicon:
@@ -106,6 +109,8 @@ def generate_indexes_from_stream(paper_stream, max_papers=None):
         
         #save to forward index
         forward_index[doc_id] = doc_words_ids
+        #save to forward index
+        backward_index[doc_id] = lemma_list
         processed_count += 1
         
         #progress reporting
@@ -120,7 +125,7 @@ def generate_indexes_from_stream(paper_stream, max_papers=None):
     print(f"Indexing completed in {total_time/60:.2f} minutes")
     print(f"Final stats: {processed_count} papers, {len(lexicon)} unique words")
     
-    return lexicon, forward_index, inverted_index
+    return lexicon, forward_index, inverted_index, backward_index
 
 def save_index_files(lexicon, forward_index, inverted_index, output_dir="."):
     """
