@@ -1,0 +1,1376 @@
+{
+  "paper_id": "PMC302018",
+  "metadata": {
+    "title": "Conservation of polyamine regulation by translational frameshifting from yeast to mammals",
+    "authors": [
+      {
+        "first": "Ivaylo",
+        "middle": [
+          "P."
+        ],
+        "last": "Ivanov",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Senya",
+        "middle": [],
+        "last": "Matsufuji",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Yasuko",
+        "middle": [],
+        "last": "Murakami",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Raymond",
+        "middle": [
+          "F."
+        ],
+        "last": "Gesteland",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "John",
+        "middle": [
+          "F."
+        ],
+        "last": "Atkins",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      }
+    ]
+  },
+  "body_text": [
+    {
+      "text": "The efficiency of +1 ribosomal frameshifting at a specific codon is used as a sensor to regulate polyamine levels in mammalian cells. The frameshifting occurs in decoding the gene antizyme 1, which has two partially overlapping open reading frames (ORFs). Protein sequencing showed that the reading-frame shift occurs at the last codon of ORF1, causing a proportion of ribosomes to enter ORF2 to synthesize a transframe protein (Matsufuji et al., 1995). ORF2 encodes the main functional domains (Matsufuji et al., 1990; Miyazaki et al., 1992) of antizyme but has no ribosome initiation site of its own. The antizyme 1 protein binds to ornithine decarboxylase (ODC) (Murakami et al., 1992a; Li and Coffino, 1993, 1994), inhibits it (Heller et al., 1976) and targets it for degradation by the 26S proteosome without ubiquitylation (Murakami et al., 1992b, 1999). ODC catalyzes the first and usually rate-limiting step in the synthesis of polyamines, conversion of ornithine to putrescine. Putrescine is a substrate for the synthesis of spermidine and spermine. Because of its inhibition of ODC, antizyme 1 is a negative regulator of the synthesis of polyamines. In addition, antizyme 1 is a negative regulator of the polyamine transporter (Mitchell et al., 1994; Suzuki et al., 1994; Sakata et al., 1997). As discovered by Matsufuji and colleagues (Gesteland et al., 1992) and Rom and Kahana (1994), increasing polyamine levels elevate frameshifting in decoding antizyme 1 mRNA and so increase the level of antizyme 1. Since antizyme 1 negatively regulates the synthesis and uptake of polyamines, the frameshifting is the sensor for an autoregulatory circuit. A second mammalian paralog of antizyme, antizyme 2, has very similar properties to antizyme 1, including the regulatory frameshifting, but does not stimulate degradation of ODC under certain conditions where antizyme 1 is active (Ivanov et al., 1998a; Zhu et al., 1999; Y.Murakami, S.Matsufuji, I.P.Ivanov, R.F.Gesteland and J.F.Atkins, in preparation). Just like antizyme 1, antizyme 2 mRNA is ubiquitously expressed in the body but is 16 times less abundant than mRNA of antizyme 1 (Ivanov et al., 1998a). In addition to antizyme 1 and 2, mammals have a third paralog of the gene, antizyme 3 (also encoded by two ORFs), which is expressed only during spermatogenesis (Ivanov et al., 2000). Zebrafish also have multiple antizyme genes, which differ in their expression patterns and activities (Saito et al., 2000).",
+      "cite_spans": [
+        {
+          "start": 429,
+          "end": 451,
+          "mention": "Matsufuji et al., 1995",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 496,
+          "end": 518,
+          "mention": "Matsufuji et al., 1990",
+          "ref_id": "BIBREF13"
+        },
+        {
+          "start": 520,
+          "end": 541,
+          "mention": "Miyazaki et al., 1992",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 666,
+          "end": 688,
+          "mention": "Murakami et al., 1992a",
+          "ref_id": "BIBREF20"
+        },
+        {
+          "start": 690,
+          "end": 710,
+          "mention": "Li and Coffino, 1993",
+          "ref_id": "BIBREF9"
+        },
+        {
+          "start": 712,
+          "end": 716,
+          "mention": "1994",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 732,
+          "end": 751,
+          "mention": "Heller et al., 1976",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 830,
+          "end": 852,
+          "mention": "Murakami et al., 1992b",
+          "ref_id": "BIBREF21"
+        },
+        {
+          "start": 854,
+          "end": 858,
+          "mention": "1999",
+          "ref_id": "BIBREF23"
+        },
+        {
+          "start": 1238,
+          "end": 1259,
+          "mention": "Mitchell et al., 1994",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 1261,
+          "end": 1280,
+          "mention": "Suzuki et al., 1994",
+          "ref_id": "BIBREF32"
+        },
+        {
+          "start": 1282,
+          "end": 1301,
+          "mention": "Sakata et al., 1997",
+          "ref_id": "BIBREF30"
+        },
+        {
+          "start": 1347,
+          "end": 1369,
+          "mention": "Gesteland et al., 1992",
+          "ref_id": "BIBREF44"
+        },
+        {
+          "start": 1375,
+          "end": 1396,
+          "mention": "Rom and Kahana (1994)",
+          "ref_id": "BIBREF28"
+        },
+        {
+          "start": 1888,
+          "end": 1908,
+          "mention": "Ivanov et al., 1998a",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 1910,
+          "end": 1926,
+          "mention": "Zhu et al., 1999",
+          "ref_id": "BIBREF40"
+        },
+        {
+          "start": 2143,
+          "end": 2163,
+          "mention": "Ivanov et al., 1998a",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 2328,
+          "end": 2347,
+          "mention": "Ivanov et al., 2000",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 2453,
+          "end": 2471,
+          "mention": "Saito et al., 2000",
+          "ref_id": "BIBREF29"
+        }
+      ],
+      "section": "Introduction",
+      "ref_spans": []
+    },
+    {
+      "text": "Numerous studies have addressed the regulation of fungal ODC in response to exogenously added polyamines. In the cases examined, Physarum polycephalum (Mitchell and Wilson, 1983), Saccharomyces cerevisiae (Fonzi, 1989; Toth and Coffino, 1999) and Neurospora crassa (Barnett et al., 1988; Williams et al., 1992), added polyamines, especially spermidine, result in significant repression of ODC activity. The mechanisms of repression seem to vary from fungus to fungus and are apparently different from the mechanism of polyamine-dependent regulation of ODC in higher eukaryotes. In some cases, the existence of an antizyme-like protein has been suggested but has either been disproved, as in the case of N.crassa (Barnett et al., 1988), or has never been substantiated, as is the case with S.cerevisiae.",
+      "cite_spans": [
+        {
+          "start": 152,
+          "end": 177,
+          "mention": "Mitchell and Wilson, 1983",
+          "ref_id": "BIBREF16"
+        },
+        {
+          "start": 206,
+          "end": 217,
+          "mention": "Fonzi, 1989",
+          "ref_id": "BIBREF42"
+        },
+        {
+          "start": 219,
+          "end": 241,
+          "mention": "Toth and Coffino, 1999",
+          "ref_id": "BIBREF36"
+        },
+        {
+          "start": 266,
+          "end": 286,
+          "mention": "Barnett et al., 1988",
+          "ref_id": "BIBREF22"
+        },
+        {
+          "start": 288,
+          "end": 309,
+          "mention": "Williams et al., 1992",
+          "ref_id": "BIBREF39"
+        },
+        {
+          "start": 713,
+          "end": 733,
+          "mention": "Barnett et al., 1988",
+          "ref_id": "BIBREF22"
+        }
+      ],
+      "section": "Introduction",
+      "ref_spans": []
+    },
+    {
+      "text": "As expected from their small cationic nature and ability to neutralize negative charges locally, polyamines play key roles in processes ranging from the functioning of certain ion channels (Williams, 1997), nucleic acid packaging, DNA replication, apoptosis, transcription and translation. The role of polyamines can be complex as illustrated by the transfer of the butylamine moiety of spermidine to a lysine residue to form hypusine in mammalian translation initiation factor eIF-5A, the only known substrate for this reaction (Tome et al., 1997; Lee et al., 1999). Spermine negatively regulates the growth of prostatic carcinoma cells at their primary site (Smith et al., 1995), but at later stages of tumor progression it fails to induce antizyme, which correlates with cells becoming refractory to spermine (Koike et al., 1999). Lack of antizyme function is also important in the early de-regulation of cellular proliferation in oral tumors (Tsuji et al., 1998) and probably others. The levels of polyamines are altered in many tumors, and inhibitors of polyamine synthesis are being tested for antiproliferative and cell death effects. The synthesis of ODC varies during the cell cycle in normal cells (Linden et al., 1985; Fredlund et al., 1995). It is induced by many growth stimuli and is constitutively elevated in transformed cells (Pegg, 1988; Auvinen et al., 1992) with some phosphorylated ODC being translocated to the surface membrane where it is important for mitotic cytoskeleton rearrangement events (Heiskala et al., 1999).",
+      "cite_spans": [
+        {
+          "start": 190,
+          "end": 204,
+          "mention": "Williams, 1997",
+          "ref_id": "BIBREF38"
+        },
+        {
+          "start": 530,
+          "end": 547,
+          "mention": "Tome et al., 1997",
+          "ref_id": "BIBREF35"
+        },
+        {
+          "start": 549,
+          "end": 565,
+          "mention": "Lee et al., 1999",
+          "ref_id": "BIBREF8"
+        },
+        {
+          "start": 661,
+          "end": 679,
+          "mention": "Smith et al., 1995",
+          "ref_id": "BIBREF31"
+        },
+        {
+          "start": 813,
+          "end": 831,
+          "mention": "Koike et al., 1999",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 947,
+          "end": 965,
+          "mention": "Tsuji et al., 1998",
+          "ref_id": "BIBREF37"
+        },
+        {
+          "start": 1209,
+          "end": 1228,
+          "mention": "Linden et al., 1985",
+          "ref_id": "BIBREF12"
+        },
+        {
+          "start": 1230,
+          "end": 1251,
+          "mention": "Fredlund et al., 1995",
+          "ref_id": "BIBREF43"
+        },
+        {
+          "start": 1344,
+          "end": 1354,
+          "mention": "Pegg, 1988",
+          "ref_id": "BIBREF25"
+        },
+        {
+          "start": 1356,
+          "end": 1376,
+          "mention": "Auvinen et al., 1992",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 1519,
+          "end": 1540,
+          "mention": "Heiskala et al., 1999",
+          "ref_id": "BIBREF45"
+        }
+      ],
+      "section": "Introduction",
+      "ref_spans": []
+    },
+    {
+      "text": "Antizyme is one example of certain mRNA-contained signals that can elevate specific frameshifting >1000-fold above the background level of normal translational errors. In addition to antizyme, frameshifting is also involved in the decoding of some bacterial and yeast genes and especially in many mammalian Retroviruses and Coronaviruses, plant viruses and bacterial insertion sequences (Atkins et al., 1999). The site of frameshifting in both mammalian antizyme 1 and 2 mRNAs is UCC UGA, where quadruplet translocation occurs at UCCU (underlined) to shift reading to the +1 frame, immediately before the UGA stop codon of the initiating frame (Matsufuji et al., 1995; Ivanov et al., 1998a). For the frameshifting to occur with an efficiency of 20% or more, it is important that the 3\u2032 base of the quadruplet is the first base of a stop codon. Other important features are a pseudoknot just 3\u2032 of the shift site and a specific sequence 5\u2032 of the shift site (Matsufuji et al., 1995; Ivanov et al., 1998a). A pseudoknot 3\u2032 of the shift site is a common stimulator for eukaryotic \u20131 frameshifting, but the synthesis of antizyme is the only known case utilizing +1 frameshifting.",
+      "cite_spans": [
+        {
+          "start": 388,
+          "end": 407,
+          "mention": "Atkins et al., 1999",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 645,
+          "end": 667,
+          "mention": "Matsufuji et al., 1995",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 669,
+          "end": 689,
+          "mention": "Ivanov et al., 1998a",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 958,
+          "end": 980,
+          "mention": "Matsufuji et al., 1995",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 982,
+          "end": 1002,
+          "mention": "Ivanov et al., 1998a",
+          "ref_id": "BIBREF2"
+        }
+      ],
+      "section": "Introduction",
+      "ref_spans": []
+    },
+    {
+      "text": "Comparative analysis of RNA sequences from different organisms is informative about important features and the different options selected by evolution. Since most of the known examples of programmed frameshifting are in viruses or chromosomal mobile elements, the opportunity for comparison of frameshift cassettes in divergent organisms where the time of divergence can be approximated is limited. A start has been made with the frameshifting required for bacterial release factor 2 expression (Persson and Atkins, 1998), but antizyme provides the first opportunity for such a comparison in eukaryotes. Antizyme genes in genetically tractable lower eukaryotes would be helpful for understanding the functionally important interactions responsible for autoregulatory programmed frameshifting.",
+      "cite_spans": [
+        {
+          "start": 496,
+          "end": 520,
+          "mention": "Persson and Atkins, 1998",
+          "ref_id": "BIBREF27"
+        }
+      ],
+      "section": "Introduction",
+      "ref_spans": []
+    },
+    {
+      "text": "A search for DNA sequences encoding protein sequences homologous to Drosophila melanogaster antizyme (Ivanov et al., 1998b) and Homo sapiens antizyme 1 identified the same S.pombe anonymous cDNA clone (DDBJ/EMBL/GenBank accession No. D89228). The similarity is limited (\u223c10% identity, 24% similarity to both human antizyme 1 and D.melanogaster antizyme); however, it is highest in regions that are most highly conserved among the previously identified antizymes (Figure 1A). Closer examination of the cDNA nucleotide sequence provided further evidence that it encodes an S.pombe homolog of antizyme. The initiating AUG codon for the ORF that is similar to higher eukaryotic antizymes (ORF2 of those genes) is not the 5\u2032-most AUG in this cDNA. In fact, there are eight AUGs closer to the 5\u2032 end. The first or the second AUGs would initiate translation of an ORF (ORF1) that overlaps the longer downstream ORF (ORF2) such that a +1 translational frameshifting event in the overlap would generate a protein product analogous to the products of antizyme genes from higher eukaryotes. Furthermore, the last 12 nucleotides of ORF1 (UGG-UGC-UCC-UGA) are identical to the last 12 nucleotides of mammalian antizyme 1 ORF1s, including the frameshift site. Eleven of these 12 nucleotides are identical to the corresponding regions of all previously identified antizyme genes (Figure 1B). Previous experiments with the mammalian frameshift sequence tested in S.pombe have shown that this short 12 nucleotide sequence, by itself, is sufficient to stimulate measurable levels (up to 0.5%) of +1 frameshifting (Ivanov et al., 1998c). To confirm the ORF configuration of the putative S.pombe antizyme gene, a region corresponding to the two overlapping ORFs plus \u223c80 nucleotides of the 5\u2032 UTR and 370 nucleotides of the 3\u2032 UTR, was amplified from both S.pombe genomic DNA and a cDNA library. The sequence of the amplified DNA confirmed that there are indeed two overlapping ORFs with the deduced configuration. This sequence (DDBJ/EMBL/GenBank accession No. AF217277) differs from the previously sequenced cDNA clone by three nucleotides (two in the coding region and one in the 3\u2032 UTR); one changes an alanine codon to proline, another is a silent mutation within a proline codon. Since the sequences from the cDNA library and genomic DNA are identical, we conclude that the differences with clone No. D89228 are most likely due to strain variation. This gene contains no introns within the amplified region.",
+      "cite_spans": [
+        {
+          "start": 102,
+          "end": 122,
+          "mention": "Ivanov et al., 1998b",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 1596,
+          "end": 1616,
+          "mention": "Ivanov et al., 1998c",
+          "ref_id": "BIBREF4"
+        }
+      ],
+      "section": "Identification of an antizyme gene in Schizosaccharomyces pombe ::: Results",
+      "ref_spans": [
+        {
+          "start": 470,
+          "end": 471,
+          "mention": "1",
+          "ref_id": null
+        },
+        {
+          "start": 1372,
+          "end": 1373,
+          "mention": "1",
+          "ref_id": null
+        }
+      ]
+    },
+    {
+      "text": "The S.pombe protein was tested for antizyme activity using a gene fusion with glutathione S-transferase (GST). In this construct, ORF1 and ORF2 of antizyme are fused in-frame by deleting the T nucleotide that encodes U of the stop codon of ORF1. This GST\u2013antizyme fusion gene was expressed in Escherichia coli and the protein was purified by affinity chromatography. ODC inhibitory activity was tested by incubating the recombinant antizyme protein with an S.pombe crude extract and then assaying the mixture for ODC activity. The results (Figure 2) show that the recombinant protein can inhibit S.pombe ODC. GST alone (1 \u00b5g) does not inhibit S.pombe ODC (data not shown). In light of these results, the S.pombe gene will be called S.pombe ODC antizyme (SPA). Interestingly, the S.pombe ODC was also inhibited by mouse antizyme 1 and antizyme 2 (both expressed as GST fusions); however, the yeast fusion protein did not inhibit mouse ODC (data not shown).",
+      "cite_spans": [],
+      "section": "Identification of an antizyme gene in Schizosaccharomyces pombe ::: Results",
+      "ref_spans": [
+        {
+          "start": 547,
+          "end": 548,
+          "mention": "2",
+          "ref_id": null
+        }
+      ]
+    },
+    {
+      "text": "Although the effects of overexpression of antizyme on cellular physiology have been tested previously in mammalian cells, the physiological changes associated with complete absence of antizyme activity have not yet been investigated because of the complication of multiple antizymes. The single S.pombe antizyme provides the chance to explore a knockout. SPA deletion strains were generated by replacing the two ORFs of the gene with the ORFs of either URA4 or LEU2 (see Materials and methods). Complete deletion of SPA (both ORFs) did not affect the viability of S.pombe cells in rich (YE) or minimal (MM) media. Temperature had no differential effect on mutant and wild-type cell growth. Similarly, the growth rates, mating efficiencies and overall morphology of the knockout strains are apparently indistinguishable from those of wild-type cells (results not shown).",
+      "cite_spans": [],
+      "section": "Deletion and overexpression of SPA ::: Results",
+      "ref_spans": []
+    },
+    {
+      "text": "In wild-type S.pombe cells the most abundant polyamine is spermidine followed by putrescine (Figure 3). Spermine and cadaverine are found in much smaller amounts. This distribution of polyamine content is very similar to that in other fungi for which polyamine concentrations have been measured (for references, see review by Tabor and Tabor, 1985). The effect of SPA deletion on cellular polyamine contents was examined in both exponentially growing and stationary phase cells (Figure 3). The cellular concentrations of putrescine, spermidine and cadaverine (but not spermine) were higher in the knockout strains than in wild-type cells. The greatest effect was seen on putrescine and cadaverine content, with smaller effects on spermidine, presumably because eukaryotic ODC activity directly catalyzes decarboxylation of both ornithine and lysine to produce putrescine and cadaverine, respectively (Pegg and McGill, 1979), but subsequent regulatory events affect homeostasis of spermidine and spermine. The effect of inactivating antizyme on the polyamine contents in exponentially growing cells is modest (<2-fold in all cases). The effect becomes very pronounced in cells in stationary phase with up to 40- and 10-fold increases of putrescine and cadaverine contents, respectively, in the knockout strains.",
+      "cite_spans": [
+        {
+          "start": 326,
+          "end": 347,
+          "mention": "Tabor and Tabor, 1985",
+          "ref_id": "BIBREF34"
+        },
+        {
+          "start": 901,
+          "end": 922,
+          "mention": "Pegg and McGill, 1979",
+          "ref_id": "BIBREF26"
+        }
+      ],
+      "section": "Deletion and overexpression of SPA ::: Results",
+      "ref_spans": [
+        {
+          "start": 100,
+          "end": 101,
+          "mention": "3",
+          "ref_id": null
+        },
+        {
+          "start": 486,
+          "end": 487,
+          "mention": "3",
+          "ref_id": null
+        }
+      ]
+    },
+    {
+      "text": "To test overexpression of SPA, two versions of the gene were cloned into pREP3 expression vector behind a strong, thiamine-repressible promoter (nmt1). One had the wild-type SPA sequence while in the second, ORF1 and ORF2 are fused in-frame. SPA wild type and an SPA deletion strain were transformed with each of the overexpression constructs. Derepression of the nmt1 promoter is a gradual process since it requires dilution of the intracellular pool of thiamine (the repressor) through cell division. After 2.5 days of exponential growth under derepressed conditions, yeast strains transformed with either SPA overexpression construct show significant increases in doubling time (Figure 4A). The growth inhibition is greater with the construct expressing the in-frame version of SPA and after prolonged incubation (5\u20137 days); these cells cease growth and accumulate in G1 as determined by flow cytometry (data not shown). The fact that the in-frame overexpression construct, which differs by a single nucleotide from the wild-type construct, confers a more severe phenotype is consistent with the hypothesis that translational frameshifting is required for expression of SPA. The growth phenotype associated with SPA overexpression is only partially relieved by adding 100 \u00b5M putrescine to the media (1 mM had no further effect) (data not shown). To see whether the slower growth is correlated with aberrant polyamine levels the polyamine contents of the deletion strain carrying in-frame SPA overexpression vector were measured under derepressed and repressed conditions, in both cases after 2 days of exponential growth (Figure 4B). As expected, overexpression of SPA results in significant reduction in the intracellular levels of all four polyamines. After longer (4\u20135 days) incubation under derepressed conditions, no putrescine and cadaverine can be detected (data not shown).",
+      "cite_spans": [],
+      "section": "Deletion and overexpression of SPA ::: Results",
+      "ref_spans": [
+        {
+          "start": 689,
+          "end": 690,
+          "mention": "4",
+          "ref_id": null
+        },
+        {
+          "start": 1632,
+          "end": 1633,
+          "mention": "4",
+          "ref_id": null
+        }
+      ]
+    },
+    {
+      "text": "Previously, we developed an assay for measuring antizyme translational frameshifting in both S.cerevisiae (Matsufuji et al., 1996) and S.pombe (Ivanov et al., 1998c). Briefly, the nucleotide sequence to be assayed is inserted between GST and lacZ, such that ORF1 of the assayed sequence is fused in-frame to GST, while ORF2 is fused in-frame to lacZ. \u03b2-galactosidase activity provides a measure of frameshifting efficiency. To determine whether translational frameshifting occurs in the overlap of ORF1 and ORF2 of SPA, a region of SPA including all but the first codon of ORF1 plus 180 nucleotides downstream of the ORF1 stop codon was tested. +1 frameshifting occurred at 2.2% compared with a construct in which ORF1 and ORF2 are fused in-frame. This result is consistent with +1 frameshifting being crucial for expression of SPA.",
+      "cite_spans": [
+        {
+          "start": 107,
+          "end": 129,
+          "mention": "Matsufuji et al., 1996",
+          "ref_id": "BIBREF15"
+        },
+        {
+          "start": 144,
+          "end": 164,
+          "mention": "Ivanov et al., 1998c",
+          "ref_id": "BIBREF4"
+        }
+      ],
+      "section": "Translational frameshifting during expression of SPA ::: Results",
+      "ref_spans": []
+    },
+    {
+      "text": "Previous experiments have shown that the frameshift cassette of mammalian antizyme 1 can direct efficient +1 frameshifting when tested in S.pombe. The reverse experiment was conducted here. The SPA gene was translated in vitro in rabbit reticulocyte lysate and its resulting frameshift efficiency measured. With no addition of polyamines, frameshifting efficiency is \u223c1.5%. Addition of spermidine to the translation mixture to a final concentration of 1 mM results in a 3.7-fold increase in frameshifting to \u223c5.5%, a level even higher than that observed in the endogenous system in vivo (autoradiogram not shown).",
+      "cite_spans": [],
+      "section": "Translational frameshifting during expression of SPA ::: Results",
+      "ref_spans": []
+    },
+    {
+      "text": "The observed efficiency of frameshifting with the SPA frameshifting cassette in vivo in S.pombe is significantly more than that expected from its limited nucleotide similarity to the antizyme frameshift sites of higher eukaryotes. This prompted a search for additional stimulatory elements within the SPA frameshift cassette. The following experiments were done in a strain carrying deletion of SPA (high polyamines) because it gives higher frameshifting and higher \u03b2-galactosidase activity in general; however, we obtained similar ratios for mutant to wild-type frameshifting efficiency in a strain with the intact SPA gene. Deleting 5\u2032 sequences up to the third to last sense codon of ORF1 has little or no effect on frameshifting efficiency. Deleting all but the last sense codon (UCC) of ORF1 leads to a 4- to 5-fold reduction in frameshifting efficiency (Figure 5A). This implies that the conservation of the six nucleotides 5\u2032 of the UCC-UGA frameshift site is due to their importance for stimulating +1 frameshifting. It also suggests that no additional ORF1 sequences of SPA stimulate the +1 recoding event. The 180 nucleotide 3\u2032 region was searched for possible structure by computer RNA folding algorithms plus visual inspection. The algorithms predicted several minimal structures in that region. 3\u2032 deletion constructs (constructs del.3,3\u2032\u201381,3\u2032) tested the importance of any putative structure on the frameshifting efficiency. The results (Figure 5B and C) show that all of these deletions lead to a significant (\u223c10-fold) reduction in +1 frameshifting, indicating the presence of a major 3\u2032 stimulatory element in the 180 nucleotide region immediately following the frameshift site of SPA. However, the results indicate that none of the putative RNA structures in this region are sufficient for the activity of this element. Several additional 3\u2032 deletions delineated the boundaries of this stimulatory element from the frameshift site to 150 and 180 nucleotides downstream (since construct del.150,3\u2032 stimulates 5.5-fold more +1 frameshifting than del.129,3\u2032, 150 nucleotides downstream probably contain most of the 3\u2032 stimulator).",
+      "cite_spans": [],
+      "section": "Translational frameshifting during expression of SPA ::: Results",
+      "ref_spans": [
+        {
+          "start": 867,
+          "end": 868,
+          "mention": "5",
+          "ref_id": null
+        },
+        {
+          "start": 1460,
+          "end": 1461,
+          "mention": "5",
+          "ref_id": null
+        }
+      ]
+    },
+    {
+      "text": "In the experiments described above, two of the characteristics of the autoregulatory circuit of mammalian antizyme 1 were confirmed: SPA inhibition of ODC and the +1 translational frameshifting. The key question left is whether the recoding event is responsive to polyamine levels in cells. As shown above, overexpression of SPA leads to significant reduction of polyamine levels in S.pombe. An SPA+ strain was co-transformed with an SPA wild-type overexpressing plasmid (cells overexpressing wild-type SPA grow slowly but continuously) and a construct that monitors the +1 frameshifting from an SPA frameshift sequence. The +1 frameshifting was compared with that in SPA non-overexpressing cells (in both cases frameshifting was measured relative to in-frame control). The results (Figure 6) show a significant reduction (6.5-fold) in frameshifting efficiency in SPA-overproducing cells that correlates with a decrease of polyamine content (4.5-fold for putrescine and 3.9-fold for spermidine). This indicates that polyamines modulate the frameshifting efficiency of SPA. An alternative but less likely possibility is that SPA overexpression reduces frameshifting because high levels of SPA transcript titrate some factor limiting for frameshifting.",
+      "cite_spans": [],
+      "section": "Translational frameshifting during expression of SPA ::: Results",
+      "ref_spans": [
+        {
+          "start": 790,
+          "end": 791,
+          "mention": "6",
+          "ref_id": null
+        }
+      ]
+    },
+    {
+      "text": "The SPA frameshift signals direct 2-fold more frameshifting in \u0394spa::LEU2 cells (4.4%) than in SPA+ cells (in both cases the measurement is done during stationary phase); however, the relatively high standard deviations for both measurements make it difficult to draw firm conclusions from this particular result.",
+      "cite_spans": [],
+      "section": "Translational frameshifting during expression of SPA ::: Results",
+      "ref_spans": []
+    },
+    {
+      "text": "A search of Caenorhabditis elegans expressed sequence tag (EST) sequences with mammalian antizyme 1 sequence identified 20 clones. These sequences could be deconvoluted into a contiguous cDNA sequence. Primers designed on the basis of this sequence were used to PCR amplify and subclone this cDNA from a C.elegans cDNA library. The sequence of the subcloned cDNA was confirmed (DDBJ/EMBL/GenBank accession No. AF217278); the subsequently released genomic sequence of this C.elegans gene (DDBJ/EMBL/GenBank accession No. AF040659) confirms our cDNA data. The amino acid sequence deduced from the cDNA sequence revealed that the longer ORF has similarity to previously reported antizyme sequences (overall 27% identity, 39% similarity to human antizyme 1; 19% identity, 34% similarity to Drosophila antizyme). These similarities are higher than that of SPA to these two antizyme genes and again are concentrated in the regions most highly conserved among previously identified antizymes (Figure 1A). Just like mammalian antizymes, the longer ORF (ORF2) lacks an appropriate in-frame initiation codon, and expression could be provided by initiation in a short upstream overlapping ORF (ORF1) leading to +1 ribosomal frameshifting in the overlap. The putative C.elegans antizyme frameshift site (the nucleotides proximal to the end of ORF1) has 18 of 26 nucleotides identical to the consensus sequence for antizyme frameshift sites (Figure 1B).",
+      "cite_spans": [],
+      "section": "Identification of antizyme genes in nematodes ::: Results",
+      "ref_spans": [
+        {
+          "start": 993,
+          "end": 994,
+          "mention": "1",
+          "ref_id": null
+        },
+        {
+          "start": 1436,
+          "end": 1437,
+          "mention": "1",
+          "ref_id": null
+        }
+      ]
+    },
+    {
+      "text": "Frameshifting for expression of C.elegans antizyme was investigated in heterologous systems. Two constructs containing the entire antizyme cDNA, one with the wild-type sequence and one with a single nucleotide deletion that fuses ORF1 to ORF2 in-frame (in-frame control), were transcribed in vitro and the RNA was translated in rabbit reticulocyte lysate. The products were examined by SDS\u2013PAGE (Figure 7). The main product from both constructs has an apparent Mr of 21 kDa, slightly greater than the predicted Mr of 17.7 kDa [aberrant, slower than expected, mobility is observed with antizyme proteins from other species (Ivanov et al., 1998a)]. From the ratio of wild-type to in-frame product, we estimate that the efficiency of frameshifting of C.elegans antizyme in reticulocyte lysate is \u223c0.8%, which is somewhat lower than SPA frameshifting in the same system. Addition of spermidine to the translation reactions almost doubles the efficiency of frameshifting to \u223c1.5% (the exact numbers are not easy to determine because of difficulty in defining background values). The frameshifting properties of C.elegans antizyme mRNA were also tested in vivo in S.pombe cells. A sequence including all but the first codon of ORF1 plus 180 nucleotides downstream was inserted between GST and lacZ of the PIU-LAC plasmid. Comparison of the \u03b2-galactosidase activity of cells (\u0394spa::LEU2 strain) transformed with the wild-type construct and the in-frame control constructs indicated 3.5% +1 frameshifting. From the frameshifting observed in the heterologous systems, as well as the sequence considerations discussed above, we conclude that expression of this C.elegans gene requires ribosomal frameshifting.",
+      "cite_spans": [
+        {
+          "start": 623,
+          "end": 643,
+          "mention": "Ivanov et al., 1998a",
+          "ref_id": "BIBREF2"
+        }
+      ],
+      "section": "Identification of antizyme genes in nematodes ::: Results",
+      "ref_spans": [
+        {
+          "start": 403,
+          "end": 404,
+          "mention": "7",
+          "ref_id": null
+        }
+      ]
+    },
+    {
+      "text": "Searching the EST database with the newly discovered C.elegans antizyme identified antizyme orthologs in four other nematode species. In two cases (Necator americanus and Haemonchus contortus), the cDNA sequences in the database were sufficient to make contigs of the complete coding regions. In the other two cases [Onchocerca volvulus (DDBJ/EMBL/GenBank accession No. AF217279) and Pristioncus pacificus (DDBJ/EMBL/GenBank accession No. AF217280)] the complete cDNA sequences were obtained by PCR amplifying and sequencing the full genes from cDNA libraries. As with the previously identified eukaryotic antizyme genes, the ORF configuration of the newly found nematode orthologs implies the necessity for +1 frameshifting for synthesis of full-length protein.",
+      "cite_spans": [],
+      "section": "Identification of antizyme genes in nematodes ::: Results",
+      "ref_spans": []
+    },
+    {
+      "text": "The C.elegans antizyme mRNA frameshift site UUU-UGA is unique, differing from the UCC-UGA of previously known antizyme mRNAs. The C.elegans antizyme gene shares this feature with N.americanus and H.contortus but not with P.pacificus and O.volvulus antizymes. The phylogenetic tree of nematode antizyme protein sequences matches exactly the phylogenetic relationship (Blaxter, 1998) of the nematodes expressing them, indicating that these gene sequences are the result of divergent evolution within the nematode lineage (data not shown). These results also show that the UUU-UGA frameshift site evolved after the last common ancestor of P.pacificus and C.elegans but before the divergence of C.elegans, N.americanus and H.contortus (probably 450\u2013500 million years ago).",
+      "cite_spans": [
+        {
+          "start": 367,
+          "end": 380,
+          "mention": "Blaxter, 1998",
+          "ref_id": "BIBREF33"
+        }
+      ],
+      "section": "Identification of antizyme genes in nematodes ::: Results",
+      "ref_spans": []
+    },
+    {
+      "text": "The ability of UUU-UGA sequence to direct +1 frameshifting was further tested in a mammalian system in the context of the mammalian antizyme mRNA (i.e. in the presence of the 3\u2032 RNA pseudoknot and 5\u2032 stimulator). A BMV-coat-protein\u2013antizyme 1 gene fusion construct, which has a TCC-TGA to TTT-TGA substitution, was transcribed and then translated in a rabbit reticulocyte lysate. Eleven percent frameshift efficiency was seen in the absence of exogenously added polyamines, 2.2 times the efficiency seen with the UCC-UGA transcript. The frameshift efficiency becomes 18% when 0.6 mM spermidine is added, which is 1.3 times that with the wild type (Matsufuji et al., 1995). Similar results were obtained in cultured mammalian (Cos7) cells transfected with TTT-TGA mutant construct, the frameshift being higher than that of wild-type construct in both high- and low-polyamine conditions (our unpublished results). These results demonstrate that the putative C.elegans frameshift site (UUU-UGA) is, if anything, shiftier than UCC-UGA in the antizyme 1 context and is subject to polyamine stimulation.",
+      "cite_spans": [
+        {
+          "start": 648,
+          "end": 670,
+          "mention": "Matsufuji et al., 1995",
+          "ref_id": "BIBREF14"
+        }
+      ],
+      "section": "Identification of antizyme genes in nematodes ::: Results",
+      "ref_spans": []
+    },
+    {
+      "text": "The results presented show that the yeast S.pombe has a homolog of mammalian antizyme. This is the first documented example of antizyme-type regulation of ODC in a lower eukaryote.",
+      "cite_spans": [],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "Deleting SPA from the yeast genome has no detectable effect on viability or any other overt phenotypic effect but, as expected, it results in altered accumulation of polyamines in the cell. Interestingly, the effect is most pronounced in cells in stationary phase, where the knockout cells accumulate up to 40 times more putrescine than wild-type counterparts. This compares with a <2-fold increase of putrescine in exponentially growing cells. A likely explanation for this observation is that the usual rate of ornithine decarboxylation in exponentially growing cells is close to capacity given \u2018normal\u2019 concentrations of substrate, enzyme and product. At the same time, all newly synthesized polyamines are continuously diluted through cell growth and division at a rate that is almost identical to the rate of maximum capacity synthesis. Cells in stationary phase can no longer dilute newly synthesized polyamines, and more importantly lack an effective antizyme- independent mechanism of shutting off ODC. This suggests that SPA is the primary regulator of ODC activity in S.pombe, not only during cell growth (short term regulation) but also in non-dividing cells (longer term regulation).",
+      "cite_spans": [],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "Overexpression of SPA (5\u20137 days derepression) leads to complete depletion of intracellular putrescine. This result implies that in S.pombe ornithine decarboxylation is the only source of putrescine synthesis (the pathway from arginine via agmatine is not utilized). The complete depletion of cadaverine in SPA overexpressing cells suggests that ODC is the only enzyme in S.pombe that can decarboxylate lysine, which is also the case in rat tissues (Pegg and McGill, 1979).",
+      "cite_spans": [
+        {
+          "start": 449,
+          "end": 470,
+          "mention": "Pegg and McGill, 1979",
+          "ref_id": "BIBREF26"
+        }
+      ],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "It is somewhat perplexing that addition of putrescine to the media leads to only partial relief of the growth phenotype associated with SPA overexpression. There are two likely explanations. (i) Perhaps S.pombe imports putrescine poorly. (ii) Alternatively, like the mammalian system, maybe SPA inhibits not only ODC but also the polyamine transporter. Further experiments will help to distinguish between these two models.",
+      "cite_spans": [],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "It is unclear how widespread the antizyme gene is within the fungal kingdom. We have identified and cloned antizyme homologs from two other fission yeasts (Schizosaccharomyces octosporus and Schizosaccharomyces japonicus) and from two distantly related fungi (Botryotinia fuckeliana and Emericella nidulans) (our unpublished results). The antizyme frameshift site of the latter two fungi has evolved in a unique way different from all other known antizymes, but nevertheless even these two distantly related fungi have conserved the autoregulatory +1 frameshifting. The fact that the yeast S.pombe has an antizyme gene suggests the possibility that the higher eukaryotic metazoans may all have an antizyme gene.",
+      "cite_spans": [],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "The only previously reported antizyme activity in unicellular organisms is from E.coli, but recent analyses suggest that E.coli does not have a true antizyme (Ivanov et al., 1998d). This makes SPA the first bona fide antizyme in a unicellular organism.",
+      "cite_spans": [
+        {
+          "start": 159,
+          "end": 179,
+          "mention": "Ivanov et al., 1998d",
+          "ref_id": "BIBREF5"
+        }
+      ],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "The remarkable similarity of the core sequence important for antizyme frameshifting from S.pombe to humans could be due to convergent or divergent evolution. The near identity of this sequence in worms, Drosophila, Xenopus, zebrafish and humans argues against convergent evolution, as if antizyme frameshifting arose in a common ancestor perhaps more than one billion years ago.",
+      "cite_spans": [],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "Three cis-acting RNA elements are known to stimulate mammalian antizyme 1 frameshifting. One is a 50 nucleotide sequence immediately 5\u2032 of the shift site (Matsufuji et al., 1995; our unpublished results). A second stimulator is the UGA stop codon of ORF1 and the third is an RNA pseudoknot starting 3 nucleotides 3\u2032 of the UGA stop codon. Among frameshift sites of the previously identified antizymes from mammals all the way to Drosophila, there is substantial similarity in the sequences immediately 5\u2032 of the shift site. Sixteen of the last 18 nucleotides of ORF1 are completely conserved in these genes. Schizosaccharomyces pombe and C.elegans antizymes have 9 of 9 and 6 of 9 (14 out of 19 in O.volvulus) nucleotides identical to the consensus, respectively. For the 5\u2032 sequences, generally, the more distantly related two antizymes are, the more the similarity is confined to the 3\u2032 end of that region. Our SPA ORF1 deletion data show that mutation of nucleotides that are part of the 5\u2032 consensus sequence leads to reduced frameshifting efficiency. This is another indication that conservation of nucleotide sequence in this region is because of its importance for stimulating efficient +1 frameshifting. It is quite striking that in all antizyme gene sequences identified so far, including a number of unpublished ones, ORF1 ends with a UGA stop codon. This is particularly surprising since any of the other two stop codons can substitute for UGA to stimulate antizyme 1 frameshifting, although slightly less efficiently, in vitro (Matsufuji et al., 1995) and in vivo (our unpublished results).",
+      "cite_spans": [
+        {
+          "start": 155,
+          "end": 177,
+          "mention": "Matsufuji et al., 1995",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 1540,
+          "end": 1562,
+          "mention": "Matsufuji et al., 1995",
+          "ref_id": "BIBREF14"
+        }
+      ],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "The 3\u2032 pseudoknot that stimulates frameshifting in antizyme 1 is highly conserved in all known vertebrate antizymes, including mammalian antizyme 2 (Figure 1B). None of the invertebrate antizyme mRNAs identified so far, including those presented here, has a sequence in the equivalent region that can be simply folded to a comparable RNA structure. However, sequences immediately 3\u2032 of the frameshift site are conserved between invertebrates and vertebrates. The conservation of this region between Drosophila and the vertebrate counterparts has already been noted (Ivanov et al., 1998b). The C.elegans antizyme gene contains the sequence YGYCCCYCA (Y = pyrimidine) in this region, which is identical to the consensus. The antizyme genes from the other four nematodes also have a similar sequence (Figure 1B). The significance of this similarity is not clear [in fact, sequences in this region appear to play no role in antizyme 1 in vitro frameshifting outside of the RNA pseudoknot context (Matsufuji et al., 1995)].",
+      "cite_spans": [
+        {
+          "start": 566,
+          "end": 586,
+          "mention": "Ivanov et al., 1998b",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 993,
+          "end": 1015,
+          "mention": "Matsufuji et al., 1995",
+          "ref_id": "BIBREF14"
+        }
+      ],
+      "section": "Discussion",
+      "ref_spans": [
+        {
+          "start": 156,
+          "end": 157,
+          "mention": "1",
+          "ref_id": null
+        },
+        {
+          "start": 805,
+          "end": 806,
+          "mention": "1",
+          "ref_id": null
+        }
+      ]
+    },
+    {
+      "text": "Only two examples are known where RNA elements 3\u2032 of the frameshift site stimulate +1 frameshifting. One is the RNA pseudoknot of mammalian antizyme 1 and the second is a short RNA sequence immediately following the frameshift site of Ty3 (Farabaugh et al., 1993). Additional examples would be very helpful in deciphering the role such elements play in the mechanism of +1 frameshifting. It is currently not known how many and which of the invertebrate antizyme genes contain 3\u2032 frameshift stimulators. The results presented here show that an S.pombe 3\u2032 stimulator enhances frameshifting \u223c10-fold. This stimulator appears completely different from the 3\u2032 RNA pseudoknot in vertebrates. Our deletion experiments indicate that none of the predicted RNA structures contained within the minimally required 3\u2032 region [up to 150\u2013180 nucleotides downstream of the frameshift site (Figure 5C)] are sufficient to confer the stimulatory effect. The SPA 3\u2032 stimulator may act directly through sequence or may have an unusual RNA structure involving non-Watson\u2013Crick base pairing. More detailed mutagenesis combined with phylogenetic analysis would be required to discern the nature of the 3\u2032 stimulator of SPA.",
+      "cite_spans": [
+        {
+          "start": 240,
+          "end": 262,
+          "mention": "Farabaugh et al., 1993",
+          "ref_id": "BIBREF41"
+        }
+      ],
+      "section": "Discussion",
+      "ref_spans": [
+        {
+          "start": 881,
+          "end": 882,
+          "mention": "5",
+          "ref_id": null
+        }
+      ]
+    },
+    {
+      "text": "The nematode antizymes were analyzed for the presence of possible 5\u2032 or 3\u2032 stimulators flanking the core frameshift site. Computer RNA folding programs did not identify any potentially interesting structure. More importantly, phylogenetic analysis with the five identified nematode antizymes failed to identify any conservation of primary RNA sequence (or for that matter potential secondary structure) outside of the core region that is shared between two or more members. This could indicate that no such extra cis-acting stimulators exist in nematode antizymes or that they are located in a very different place within the mRNA, for example the 3\u2032 untranslated region (the latter suggestion is not supported by our sequence analysis).",
+      "cite_spans": [],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "A common mechanism for frameshifting is re-pairing of the peptidyl tRNA in the new reading frame. However, an alternative mechanism whereby the peptidyl tRNA merely occludes the first base of the next codon, has been documented for yeast Ty3 frameshifting (Farabaugh et al., 1993). Results of experiments with some mutants of the mammalian antizyme 1 shift site pointed to an occlusion mechanism (Matsufuji et al., 1995). However, the mechanism with the wild-type, UCC-UGA, shift site is not clear. For C.elegans antizyme the UUU-UGA sequence would be an obvious candidate for a re-pairing since Phe-tRNA could pair perfectly with UUU in both frames. But with UCC-UGA the Ser-tRNA first reading UCC could at best pair two out of three with CCU. This important problem warrants further investigation.",
+      "cite_spans": [
+        {
+          "start": 257,
+          "end": 279,
+          "mention": "Farabaugh et al., 1993",
+          "ref_id": "BIBREF41"
+        },
+        {
+          "start": 397,
+          "end": 419,
+          "mention": "Matsufuji et al., 1995",
+          "ref_id": "BIBREF14"
+        }
+      ],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "The frameshift efficiency of SPA frameshift site is lower than that observed with mammalian antizyme 1 even when both are tested in the same organism (S.pombe) [for the frameshift efficiency of antizyme 1 cassette in S.pombe, see Ivanov et al. (1998c)]. It is possible that the observed efficiencies for S.pombe antizyme are artificially low because the constructs do not include all the cis-acting stimulatory elements. On the other hand there is no reason why a lower level of frameshifting does not correctly reflect the evolved balance with the other characteristics of the complex system such as relative protein stabilities.",
+      "cite_spans": [
+        {
+          "start": 230,
+          "end": 251,
+          "mention": "Ivanov et al. (1998c)",
+          "ref_id": "BIBREF4"
+        }
+      ],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "Like other core cellular processes, the antizyme polyamine regulatory scheme is conserved from yeast S.pombe to human. It is not obvious why this very special mechanism is so exquisitely preserved over vast evolutionary time. Perhaps there is another whole aspect to the system that our experiments do not yet detect. From this viewpoint it would seem very important to exploit the genetics systems of S.pombe and C.elegans to understand more thoroughly the physiological effects of perturbing the antizyme system.",
+      "cite_spans": [],
+      "section": "Discussion",
+      "ref_spans": []
+    },
+    {
+      "text": "The SPA gene was amplified using the following primers: 5\u2032-CAAAACAAGTTTTCATTATTGGTTTTTTTTAAATCAATCCCC (sense) and 5\u2032-CGTAAATCCAATCTAAATTTAATCTTCAACTAAATCATGAAAAGCCTC (antisense). The S.pombe cDNA library used as a template in the amplification was kindly provided by R.Rowley (University of Utah). The C.elegans antizyme gene was amplified using the following primers: 5\u2032-CCCAGGAATTCCTCGAGTATTTTGA GTATAATTTTAC (sense) and 5\u2032-CGGCCGCTCGAGTTAGACCTT GTAGCTCATGATG (antisense). This same amplified DNA was used to make the constructs for in vitro transcription and translation of C.elegans antizyme by cloning it into pTZ18U plasmid using the SacI and HindIII sites incorporated in the two primers. The in-frame construct was made using a two-step PCR. The cDNA sequences of O.volvulus and P.pacificus antizyme genes were obtained by performing 5\u2032 and 3\u2032 RACE PCR with cDNA libraries, which were kindly provided by Ralf Sommer (P.pacificus) and Susan Haynes (O.volvulus). The SPA overexpression constructs were made by amplifying the gene with the primers 5\u2032-GCATCCGAATTCCCAAATCCAAGCATCATACGCC (sense) and 5\u2032-GCATCCGGATCCGCCAGTGTTCTTACTTTGAGA TGC (antisense), and then inserting BamHI-digested product between the MscI and BamHI sites of pREP3 plasmid. The in-frame construct was made by two-step PCR and subsequently all in-frame SPA constructs described below were made by one-step PCR using this plasmid\u2019s DNA as a template. To make the constructs for frameshift assays in S.pombe, DNA fragments with a given nucleotide length (as described in the main text), were amplified from both the SPA and C.elegans antizyme constructs described above. These fragments were then cloned between the KpnI and BstEII sites of PIU-LAC plasmid (Ivanov et al., 1998c). The PCR primers included an \u2018AC\u2019 spacer between the 5\u2032 cloning site (BstEII) and the antizyme sequences in order to correct the reading frame. The in vivo frameshifting assays in S.pombe (strains ura4-D18 leu1-32 ade6-M216 h\u2013 and \u0394spa::LEU2 ura4-D18 leu1-32 ade6-M216 h\u2013) were done as described (Ivanov et al., 1998c). The plasmid for GST\u2013SPA expression was made by PCR amplifying SPA (all but the first codon of ORF1 through the downstream ORF2) from an in-frame template and cloning the product into the EcoRI and XhoI restriction sites of pGEX-5X-3 plasmid. The antizyme frameshift site in the BMV-coat-antizyme fusion construct (C3NE) (Matsufuji et al., 1995) was mutated with a two-step PCR. To generate the two knockout strains, \u0394spa::URA4 and \u0394spa::LEU2, both ORFs of SPA were replaced exactly with the ORF of either URA4 or LEU2. To accomplish this, two pairs of primers amplified URA4 and LEU2 such that 50\u201360 nucleotides, which normally flank the two ORFs of SPA, flank the ORFs of the two genes. The amplified DNA products were gel purified and 2 \u00b5g of each were used to electroporate into ura4-D18 leu1-32 ade6-M216 h\u2013 cells. URA+ and LEU+ transformants were selected by growth on URA\u2013 and LEU\u2013 media, respectively. PCR screen and partial sequencing, with primers flanking the regions used for the homologous recombination, confirmed the SPA disruptions. All DNA clones were sequenced with automated sequencing machines (ABI 100).",
+      "cite_spans": [
+        {
+          "start": 1731,
+          "end": 1751,
+          "mention": "Ivanov et al., 1998c",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 2050,
+          "end": 2070,
+          "mention": "Ivanov et al., 1998c",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 2394,
+          "end": 2416,
+          "mention": "Matsufuji et al., 1995",
+          "ref_id": "BIBREF14"
+        }
+      ],
+      "section": "DNA manipulation and sequencing ::: Materials and methods",
+      "ref_spans": []
+    },
+    {
+      "text": "Schizosaccharomyces pombe ODC active crude extracts were prepared as follows: S.pombe (strain 1519, leu1-32, h\u2013) provided by R.Rowley was grown to OD600 0.7 in 50 ml of minimal media + LEU. Ten milligrams of lysing enzymes (Sigma) were added, followed by continued incubation for 30 min at 30\u00b0C. Cells were harvested and washed once with cold homogenization buffer [25 mM Tris\u2013HCl pH 7, 0.25 M sucrose, 1 mM dithiothreitol (DTT), 20 \u00b5M pyridoxal-5-phosphate, 2 mM EDTA] then resuspended in 0.75 ml of homogenization buffer. Cells were broken open and the lysate was clarified by centrifugation at 10 000 r.p.m. for 15 min at 4\u00b0C. Extracts were dialyzed overnight in dialysis buffer (25 mM Tris\u2013HCl pH 7.4, 1 mM DTT, 20 \u00b5M pyridoxal-5-phosphate, 0.1 mM EDTA). A volume of 25 \u00b5l of extract was used for each ODC assay. ODC activity was assayed by measuring the release of 14CO2 from l-[1-14C]ornithine (Amersham) as described (Nishiyama et al., 1988). Each reaction took 1 h. Pre-incubation of S.pombe extract with 0.1 mM difluoromethyl ornithine (DFMO) for 15 min led to >99% inhibition of 14CO2 release.",
+      "cite_spans": [
+        {
+          "start": 925,
+          "end": 947,
+          "mention": "Nishiyama et al., 1988",
+          "ref_id": "BIBREF24"
+        }
+      ],
+      "section": "ODC antizyme assays ::: Materials and methods",
+      "ref_spans": []
+    },
+    {
+      "text": "The cells were collected by centrifugation, washed twice with 1 ml of phosphate-buffered saline (PBS) and then the pellet was frozen at \u201380\u00b0C until use. The pellet was resuspended in 0.1 ml of PBS. An aliquot of the suspension was mixed with an equal volume of 8% perchloric acid, vortexed for 1 min, kept on ice for 5 min and centrifuged at 15 000 r.p.m., 4\u00b0C for 5 min. Ten microliters of the supernatant were subjected to polyamine analysis using fluorometry on high-performance liquid chromatography as described previously (Murakami et al., 1989). Protein concentrations were determined with the BCA protein assay kit (Pierce).",
+      "cite_spans": [
+        {
+          "start": 529,
+          "end": 550,
+          "mention": "Murakami et al., 1989",
+          "ref_id": "BIBREF19"
+        }
+      ],
+      "section": "Polyamine measurements ::: Materials and methods",
+      "ref_spans": []
+    },
+    {
+      "text": "The experiments with the BMV-coat-antizyme fusion constructs were performed as described previously (Matsufuji et al., 1995). All other plasmid DNA templates were prepared using QIAGEN Miniprep Kit and then digested with HindIII. Transcripts for SPA in vitro translation were made from PCR templates that had a T7 promoter incorporated into the PCR primers. Linearized DNA (1 \u00b5g) was used as a template for in vitro transcription with Ambion MEGAshortscriptTM T7 Kit. The DNase-treated RNAs were recovered and resuspended in 40 \u00b5l of RNase-free water. One microliter of each specified transcript suspension was used in each in vitro translation reaction [0.5 \u00b5l of 1 mM amino acid mix \u2013Met, 7 \u00b5l of reticulocyte lysate (Promega), 0.5 \u00b5l of [35S]Met (Amersham)] to a total volume of 10 \u00b5l. The reactions were stopped by adding 1 \u00b5l of RNase (10 mg/ml). The frameshift efficiencies were quantified as described (Ivanov et al., 1998a).",
+      "cite_spans": [
+        {
+          "start": 101,
+          "end": 123,
+          "mention": "Matsufuji et al., 1995",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 910,
+          "end": 930,
+          "mention": "Ivanov et al., 1998a",
+          "ref_id": "BIBREF2"
+        }
+      ],
+      "section": "In vitro transcription and translation ::: Materials and methods",
+      "ref_spans": []
+    }
+  ],
+  "ref_entries": {},
+  "back_matter": [],
+  "bib_entries": {
+    "BIBREF0": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "The RNA World",
+      "volume": "",
+      "issn": "",
+      "pages": "637-673",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF1": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Proc. Natl Acad. Sci. USA",
+      "volume": "73",
+      "issn": "",
+      "pages": "1858-1862",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF2": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Genomics",
+      "volume": "52",
+      "issn": "",
+      "pages": "119-129",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF3": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Mol. Cell. Biol.",
+      "volume": "18",
+      "issn": "",
+      "pages": "1553-1561",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF4": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "RNA",
+      "volume": "4",
+      "issn": "",
+      "pages": "1230-1238",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF5": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Mol. Microbiol.",
+      "volume": "29",
+      "issn": "",
+      "pages": "1521-1522",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF6": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Proc. Natl Acad. Sci. USA",
+      "volume": "",
+      "issn": "",
+      "pages": null,
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF7": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Cancer Res.",
+      "volume": "59",
+      "issn": "",
+      "pages": "6109-6112",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF8": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Biochem. J.",
+      "volume": "340",
+      "issn": "",
+      "pages": "273-281",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF9": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Mol. Cell. Biol.",
+      "volume": "13",
+      "issn": "",
+      "pages": "2377-2383",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF10": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Mol. Cell. Biol.",
+      "volume": "14",
+      "issn": "",
+      "pages": "87-92",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF11": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Nature",
+      "volume": "360",
+      "issn": "",
+      "pages": "355-358",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF12": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "J. Cell Physiol.",
+      "volume": "125",
+      "issn": "",
+      "pages": "273-276",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF13": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "J. Biochem.",
+      "volume": "108",
+      "issn": "",
+      "pages": "365-371",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF14": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Cell",
+      "volume": "80",
+      "issn": "",
+      "pages": "1360-1370",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF15": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "EMBO J.",
+      "volume": "15",
+      "issn": "",
+      "pages": "1360-1370",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF16": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Biochem. J.",
+      "volume": "214",
+      "issn": "",
+      "pages": "345-351",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF17": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Biochem. J.",
+      "volume": "299",
+      "issn": "",
+      "pages": "19-22",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF18": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Gene",
+      "volume": "113",
+      "issn": "",
+      "pages": "191-197",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF19": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Eur. J. Biochem.",
+      "volume": "180",
+      "issn": "",
+      "pages": "181-184",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF20": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "J. Biol. Chem.",
+      "volume": "267",
+      "issn": "",
+      "pages": "13138-13141",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF21": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Nature",
+      "volume": "360",
+      "issn": "",
+      "pages": "597-599",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF22": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "J. Biol. Chem.",
+      "volume": "263",
+      "issn": "",
+      "pages": "10005-10008",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF23": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Mol. Cell. Biol.",
+      "volume": "19",
+      "issn": "",
+      "pages": "7216-7227",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF24": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Prep. Biochem.",
+      "volume": "18",
+      "issn": "",
+      "pages": "227-238",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF25": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Cancer Res.",
+      "volume": "48",
+      "issn": "",
+      "pages": "759-774",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF26": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Biochim. Biophys. Acta",
+      "volume": "568",
+      "issn": "",
+      "pages": "416-427",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF27": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "J. Bacteriol.",
+      "volume": "180",
+      "issn": "",
+      "pages": "3462-3466",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF28": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Proc. Natl Acad. Sci. USA",
+      "volume": "91",
+      "issn": "",
+      "pages": "3959-3963",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF29": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Biochem. J.",
+      "volume": "345",
+      "issn": "",
+      "pages": "99-106",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF30": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Biochem. Biophys. Res. Commun.",
+      "volume": "238",
+      "issn": "",
+      "pages": "415-419",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF31": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Nature Med.",
+      "volume": "1",
+      "issn": "",
+      "pages": "1040-1045",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF32": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Proc. Natl Acad. Sci. USA",
+      "volume": "91",
+      "issn": "",
+      "pages": "8930-8934",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF33": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Science",
+      "volume": "282",
+      "issn": "",
+      "pages": "2041-2046",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF34": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Microbiol. Rev.",
+      "volume": "49",
+      "issn": "",
+      "pages": "81-99",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF35": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Biochem. J.",
+      "volume": "328",
+      "issn": "",
+      "pages": "847-854",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF36": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "J. Biol. Chem.",
+      "volume": "274",
+      "issn": "",
+      "pages": "25921-25926",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF37": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Oncogene",
+      "volume": "16",
+      "issn": "",
+      "pages": "3379-3385",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF38": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Biochem. J.",
+      "volume": "325",
+      "issn": "",
+      "pages": "289-297",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF39": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Mol. Cell. Biol.",
+      "volume": "12",
+      "issn": "",
+      "pages": "347-359",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF40": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "J. Biol. Chem.",
+      "volume": "274",
+      "issn": "",
+      "pages": "26425-26430",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF41": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Cell",
+      "volume": "74",
+      "issn": "",
+      "pages": "93-103",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF42": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "J. Biol. Chem.",
+      "volume": "264",
+      "issn": "",
+      "pages": "18110-18118",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF43": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Exp. Cell Res.",
+      "volume": "216",
+      "issn": "",
+      "pages": "86-92",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF44": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "Science",
+      "volume": "257",
+      "issn": "",
+      "pages": "1640-1641",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF45": {
+      "title": "",
+      "authors": [],
+      "year": null,
+      "venue": "EMBO J.",
+      "volume": "18",
+      "issn": "",
+      "pages": "1214-1222",
+      "other_ids": {
+        "DOI": []
+      }
+    }
+  }
+}

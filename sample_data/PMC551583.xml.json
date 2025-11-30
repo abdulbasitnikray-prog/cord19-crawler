@@ -1,0 +1,1297 @@
+{
+  "paper_id": "PMC551583",
+  "metadata": {
+    "title": "A Gene Encoding Sialic-Acid-Specific 9-O-Acetylesterase Found in\nHuman Adult Testis",
+    "authors": [
+      {
+        "first": "Hu",
+        "middle": [],
+        "last": "Zhu",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Hsiao",
+        "middle": [],
+        "last": "Chang Chan",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Zuoming",
+        "middle": [],
+        "last": "Zhou",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Jianming",
+        "middle": [],
+        "last": "Li",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Hui",
+        "middle": [],
+        "last": "Zhu",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Lanlan",
+        "middle": [],
+        "last": "Yin",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Ming",
+        "middle": [],
+        "last": "Xu",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Lijun",
+        "middle": [],
+        "last": "Cheng",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Jiahao",
+        "middle": [],
+        "last": "Sha",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      }
+    ]
+  },
+  "body_text": [
+    {
+      "text": "Sialic acids are a diverse family of acidic nine-carbon sugars\nthat are frequently found as terminal units of oligosaccharide\nchains on different glycoconjugates in higher invertebrates and\nvertebrates [1, \n2]. As a part of determinants in many\nglycoproteins [3, \n4], sialic acids play an important role in\nintercellular and/or intermolecular recognition [5]. The\n9-O-acetylation and de-O-acetylation are the most common\nmodifications of sialic acids found in mammalian cell surface\nsialoglycoconjugates, which can alter its size, hydrophobicity,\nnet charge, and antigenicity [2, \n6, \n7]. These modifications can\nregulate a variety of biological phenomena, including endogenous\nlectin recognition, tumor antigenicity, virus binding, and\ncomplement activation [8, \n9].",
+      "cite_spans": [
+        {
+          "start": 203,
+          "end": 204,
+          "mention": "1",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 207,
+          "end": 208,
+          "mention": "2",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 260,
+          "end": 261,
+          "mention": "3",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 264,
+          "end": 265,
+          "mention": "4",
+          "ref_id": "BIBREF20"
+        },
+        {
+          "start": 356,
+          "end": 357,
+          "mention": "5",
+          "ref_id": "BIBREF21"
+        },
+        {
+          "start": 577,
+          "end": 578,
+          "mention": "2",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 581,
+          "end": 582,
+          "mention": "6",
+          "ref_id": "BIBREF22"
+        },
+        {
+          "start": 585,
+          "end": 586,
+          "mention": "7",
+          "ref_id": "BIBREF23"
+        },
+        {
+          "start": 760,
+          "end": 761,
+          "mention": "8",
+          "ref_id": "BIBREF24"
+        },
+        {
+          "start": 764,
+          "end": 765,
+          "mention": "9",
+          "ref_id": "BIBREF25"
+        }
+      ],
+      "section": "INTRODUCTION",
+      "ref_spans": []
+    },
+    {
+      "text": "Enzymes specifically capable of removing O-acetyl esters from the\n9-position of sialic acids are sialic-acid-specific\n9-O-acetylesterase. The enzymes in mammals have two forms, one is\ncytosolic sialic-acid-specific 9-O-acetylesterase (Cse) in the\ncytosolic fraction and another is lysosome sialic-acid-specific\n9-O-acetylesterase (Lse) in the lysosomal/endosomal compartment\n[10]. Lse is likely to participate in the terminal lysosomal\ndegradation of 9-O-acetylated sialoglycoconjugates, while Cse is\nlikely to salvage any 9-O-acetylated molecules that escape the\ninitial action of the Lse enzyme. The process of de-O-acetylation\nof sialic acid, which is catalyzed by sialic-acid-specific\n9-O-acetylesterase, has been implicated in organogenesis and\ncellular differentiation [2, \n5].",
+      "cite_spans": [
+        {
+          "start": 376,
+          "end": 378,
+          "mention": "10",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 776,
+          "end": 777,
+          "mention": "2",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 780,
+          "end": 781,
+          "mention": "5",
+          "ref_id": "BIBREF21"
+        }
+      ],
+      "section": "INTRODUCTION",
+      "ref_spans": []
+    },
+    {
+      "text": "Spermatogenesis is a complicated process of germ cell\ndifferentiation in adult testis, which is established during\ntesticular development. There are five types of germ cells, each\nat a specific developmental stage, found in the seminiferous\ntubules: spermatogonia, primary spermatocytes, secondary\nspermatocytes, spermatids and sperms. They can be divided into\nthree groups according to their DNA content: 4N DNA content cells\n(4C cells), 2N DNA content cells (2C cells), and 1N DNA content\ncells (1C cells). The separation of these cells enables\nresearchers to investigate the molecular mechanisms underlying\ntesticular development and/or spermatogenesis. In the present\nstudy, we separated the 2C and 4C cells of seminiferous tubules\nin human adult testis by flow cytometry, and identified human\nH-Lse by differential display RT-PCR. The expression pattern of\nH-Lse was found to be developmentally regulated and\nstage-specific, indicating its possible role in testicular\ndevelopment and/or germ cell differentiation.",
+      "cite_spans": [],
+      "section": "INTRODUCTION",
+      "ref_spans": []
+    },
+    {
+      "text": "Human testes were obtained from Donation Center of Nanjing Medical\nUniversity with consent of relatives. The seminiferous\ntubules were collected in DMEM/F12, which contained collagenase,\nand washed to remove the Leydig cells  as well as interstitial\ncells. Trypsin treatment and a brief treatment  with\nDNase I were used to release the spermatogenic cells from\nseminiferous tubules. The suspension of cells was filtered with\nnylon mesh.",
+      "cite_spans": [],
+      "section": "Preparation of disaggregated seminiferous tubules cells for the SORT ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "Disaggregated spermatogenic cells were suspended at\n1 \u00d7 106 cells/mL in 0.5 M sodium citrate\nsolution (PH 2.35) with fresh 0.1% DEPC overnight at\nroom temperature and at 4\u00b0C for two days; they\nwere centrifuged and resuspended in 0.5 M sodium citrate\nsolution (PH 4.5) with fresh 0.1% DEPC for at\nleast 1 day. The day before use, the cells were\ncentrifuged and resuspended in PBS with 10 mM HEPES (PH\n7.0), 0.1  BSA, and fresh 0.1  DEPC. Then the cells\nwere spun down and resuspended in PBS with\n100 \u03bcg/mL\nPI (propidium iodide) and fresh 0.1% DEPC. The cells\nwere stained overnight at 4\u00b0C [11].",
+      "cite_spans": [
+        {
+          "start": 589,
+          "end": 591,
+          "mention": "11",
+          "ref_id": "BIBREF2"
+        }
+      ],
+      "section": "Preparation of disaggregated seminiferous tubules cells for the SORT ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "The flow cytometry (FCM) used in this research was\nFACSVantage SE (Becton Dickinson, Calif)\nequipped with argon laser (power: 200 mW, wavelength:\n488 nm); a 585 nm/42 nm filter set was used before the FL2\ndetector. Cellquest (Becton Dickinson) was used for sorting\nand the sorting mode was Normal-R. Drops per sort were\n3 and drop delay was 13.6. The density of cells for sorting was\nabout 1 \u00d7 106 cells/mL.",
+      "cite_spans": [],
+      "section": "Flow sorting of 2C cells and 4C cells ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "Isolation of total RNA from 2C cells and 4C cells was performed\nwith Trizol Reagent (Gibco BRL, Ontario). One hundred\nnanograms of total RNA was used for differential display RT-PCR\n[12]. The first chain cDNA was synthesized by using T12G,\nT12C, and T12A oligo (dT) primers, and then was used as template\nin PCR. PCR was performed as follows: 94\u00b0C, 1 minute;\n37\u00b0C, 1 minute; 72\u00b0C, 2 minutes for 40 cycles. Ten\nmicrolitres of the PCR products from the two cells were run on a\n1.5% agarose gel. The fragments highly or specifically displayed\nin 4C cells were excised and purified. This DNA was reamplified\nwith the same combination of primers and then subcloned into\nPinpoint Xa1-T vector (Promega, USA).",
+      "cite_spans": [
+        {
+          "start": 183,
+          "end": 185,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        }
+      ],
+      "section": "RNA isolation and differential display PCR ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "The colonies of full-length cDNA were screened by PCR.\nHuman Testis Large-Insert  cDNA Library (Clontech, Calif) was first converted into\nplasmid cDNA Library, and then an arrayed cDNA library in 96-well\nplates was made according to the method of Munroe [13, \n14].\nIn this arrayed cDNA library 1.54 \u00d7 106 colonies were\nscreened by PCR.",
+      "cite_spans": [
+        {
+          "start": 255,
+          "end": 257,
+          "mention": "13",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 260,
+          "end": 262,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        }
+      ],
+      "section": "cDNA library screening ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "Multiple tissue northern (MTN) blots (Clontech) were\nhybridized with the 32P-labeled probes. The probe\ncorresponding to 1378\u20131634 bp of H-Lse was used for\nhybridization. After stringent wash, the blot was placed on the\nstorage phosphor screen (Packard, USA)  and\nexposed for 3 hours in the dark. The signal was detected at the\nCyclone storage phosphor system (Packard).",
+      "cite_spans": [],
+      "section": "Northern blot analysis ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "The Stanford TNG Radiation Hybrid Panel (Research Genetics,\nHuntsville, Ala) was used to map the chromosomal localization of\nHSE with primers HSEmapF (5\u2032-ATGAACACCGTCTCCACC-3\u2032) and HSEmapR\n(5\u2032-AAATCTGAAGGACCCATC-3\u2032), according to the\nmanufacturer's instructions. After 35 cycles of amplification, the\nreaction products were separated on a 1.5% agarose gel. The\npositive amplification was labeled as 1 and the negative one was\nlabeled as 0. The results were analyzed through the Stanford\ngenome center web server to determine the probable chromosomal location.",
+      "cite_spans": [],
+      "section": "Chromosome mapping of H-Lse ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "RNA DIG-labeled probes were made by in vitro transcription. T7\nand SP6 promoter sequences were incorporated into the two sides\nof the templates (195\u2013553 bp of H-Lse) by PCR, sense and\nantisense probes were made using DIG-RNA labeling mix (Roche,\nUSA) according to the manufacturer's instructions.\nAfter fixation, paraffin embedding, mounting, and sectioning,\nsections of human embryonic and adult testes were prehybridized in\nhybridization buffer (DIG Easy Hyb, Roche, Germany) at\n42\u00b0C for 2 hours. Hybridization was carried in\nhybridization buffer containing appropriate probes at 65\u00b0C\nfor 16 hours in humidity chamber.",
+      "cite_spans": [],
+      "section": "In situ hybridization of human testis ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "Subcellular localization of HSEI and HSEII was performed by the\nmethod of green fluorescent protein. pEGFP-C2-HSEI AND\npEGFP-C2-HSEII were constructed using two sets of primers (HSEI:\n5\u2032-GGGGAATTCAATGATATGGTGCTGCAG-3\u2032 and\n5\u2032-GGGGTCGACATTTAGCAACATTGCTCTG-3\u2032; HSEII:\n5\u2032-GGGGAATTCATGGTCGCGCCGGGGCTTG-3\u2032 and\n5\u2032-GGGGTCGACATTTAGCAACATTGCTCTG-3\u2032) and EcoRI/SalI\nrestriction sites of pEGFP-C2. Recombinant vectors were\n transfected into BxPC-3 cells (BxPC-3 cell is a\ncell lineage of adenocarcinoma from pancreas) by Lipofectin\nreagent (Gibco BRL). Cells were imaged 40 hours after\ntransfection on the fluorescence microscope.",
+      "cite_spans": [],
+      "section": "Subcellular localization of H-Lse ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "After being stained with PI and measured by the FCM, three groups\nof cells in seminiferous tubules of human adult testis were\ndetected (Figure 1), 2C and 4C cells were\nsubsequently sorted. A clone was identified by differential\ndisplay RT-PCR, which was highly expressed in the 4C cells\n(Figure 2) and with high homology (86%) to  a mouse\nlysosome sialic acid 9-O-acetylesterase. The clone was named H-Lse.",
+      "cite_spans": [],
+      "section": "Identification of H-Lse by differential display RT-PCR ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 136,
+          "end": 144,
+          "mention": "Figure 1",
+          "ref_id": "FIGREF0"
+        },
+        {
+          "start": 288,
+          "end": 296,
+          "mention": "Figure 2",
+          "ref_id": "FIGREF1"
+        }
+      ]
+    },
+    {
+      "text": "In the two rounds of screening in the arrayed cDNA library, the\nplasmid containing full-length H-Lse (GenBank accession number:\nAF303378) was found. H-Lse is 2750 bp in length, encoding a\nputative protein of 523 amino acids with a molecular weight of\n58 kd. Its isoelectric point is 7.19. The N terminus \n(1\u201318 aa) of the protein is a region containing hydrophobic amino acid\nresidues, which may be a signal peptide. By comparison of the\nprotein sequences (Figure 3), we hypothesized that\nH-Lse is the human counterpart of mouse lysosome sialic acid\n9-O-acetylesterase.",
+      "cite_spans": [],
+      "section": "Structural characteristic of H-Lse ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 457,
+          "end": 465,
+          "mention": "Figure 3",
+          "ref_id": "FIGREF2"
+        }
+      ]
+    },
+    {
+      "text": "After PCR amplification, the results can be shown as a pattern\n(000000001000101000000110000010000000110000010000010000010010000000100000000001001001000001).\nRetrieving results from the Stanford genome center web server shows that HSE is localized in the human 11q24\n(Figure 4).",
+      "cite_spans": [],
+      "section": "Chromosome localization of H-Lse ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 267,
+          "end": 275,
+          "mention": "Figure 4",
+          "ref_id": "FIGREF3"
+        }
+      ]
+    },
+    {
+      "text": "The distribution of H-Lse in various human tissues was analyzed\nby Northern blot (Figure 5) and the results showed\nthe presence of three distinct mRNA species at approximately\n2.7 kb, 6.0 kb, and 7.5 kb. The expected transcript of\nH-Lse was approximately 2.7 kb and it was consistently\nexpressed in all the tissues examined with high expression found\nin the testis, prostate, and colon. The transcript of\napproximately 7.5 kb was exclusively expressed\nin the colon. The transcript of approximately\n6.0 kb was distributed in the testis, colon,\nsmall intestine, prostate, and thymus, with the highest level of\nexpression found in the testis.",
+      "cite_spans": [],
+      "section": "Northern blot analysis of human tissue ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 82,
+          "end": 90,
+          "mention": "Figure 5",
+          "ref_id": "FIGREF4"
+        }
+      ]
+    },
+    {
+      "text": "To examine a possible role of H-Lse in testicular development\nand/or spermatogenesis, in situ hybridization experiments were\nconducted to compare H-Lse expression in human embryonic and\nadult testes since spermatogenesis is not initiated in the embryo\nand there is no meiosis in embryonic seminiferous tubules. The\nresults showed that no signal was detected in the embryonic\ntestis, while positive signals were detected in spermatocytes but\nnot spermatogonia in the seminiferous tubules of adult testis.\nSignals were associated with germ cells but not other somatic\ncells in the testis, that is, Sertoli and Leydig cells. Negative\ncontrol of sense probes confirmed the specificity of the results\n(Figure 6).",
+      "cite_spans": [],
+      "section": "Developmental and spermatogenic stage-specific localization of H-Lse ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 697,
+          "end": 705,
+          "mention": "Figure 6",
+          "ref_id": "FIGREF5"
+        }
+      ]
+    },
+    {
+      "text": "The subcellular localization of H-Lse\nfusion proteins was visualized by transiently transfecting H-Lse\ngene fused with GFP into BXPC-3 cells. As shown in Figure 7,\nthe control cells transfected with GFP protein alone exhibited\nfluorescence evenly distributed throughout the cytoplasm, while\nGFP-H-Lse fusion protein was compartmentalized in numerous large\ndense-core vesicles in the cytoplasm.",
+      "cite_spans": [],
+      "section": "Lysosomal localization of H-Lse ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 154,
+          "end": 162,
+          "mention": "Figure 7",
+          "ref_id": "FIGREF6"
+        }
+      ]
+    },
+    {
+      "text": "Spermatogenesis is a developmental program that occurs in\nmitotic, meiotic, and postmeiotic phases. In the mitotic phase,\nspermatogonia proliferate to expand the quantity of germ cells;\nin the meiotic phase, spermatocytes accomplish chromosomal\nsynapsis and genetic recombination before two meiotic divisions;\nand in the postmeiotic phase, haploid spermatids are remodeled\ninto spermatozoa by the processes of acrosome formation, nuclear\ncondensation, flagellar development, and loss of the majority of\ncytoplasm. Under the control of intrinsic and extrinsic factors,\nspermatogenesis is characterized by the expression of a spectrum\nof genes that are cell-type-specific or stage-specific. They are\nthought to play an essential role in spermatogenesis at\nparticular stages. For example, MutS homologue 5 is\nrequired for chromosome pairing, CPEB and SCP3 are\nrequired for synaptonemal complex assembly and chromosome\nsynapsis in primary spermatocytes [15, \n16, 17].",
+      "cite_spans": [
+        {
+          "start": 950,
+          "end": 952,
+          "mention": "15",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 955,
+          "end": 957,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 959,
+          "end": 961,
+          "mention": "17",
+          "ref_id": "BIBREF8"
+        }
+      ],
+      "section": "DISCUSSION",
+      "ref_spans": []
+    },
+    {
+      "text": "In the present study, we have identified a gene, H-Lse,\nfrom human adult testis with high\nhomology to mouse Lse. The subcellular localization of\nGFP-H-Lse fusion protein showed that H-Lse is concentrated in\nvesicle-like structures in the cytoplasm, presumably the\nlysosomes, indicating that H-Lse is likely to be the lysosome\nform of sialic-acid-specific 9-O-acetylesterase. However, our\nnorthern blot analysis shows transcripts of different sizes with\ndifferent tissue distributions. They may be the tissue-specific\ntranscripts of H-Lse since others have reported that there are\nmultiple transcripts of mouse sialic-acid-specific\n9-O-acetylesterase [2, \n10, 18]. The wide distribution of the\n expected transcript of H-Lse, approximately\n2.7 kbp,  in all tissues examined suggests an\nessential role of H-Lse in cellular functions.",
+      "cite_spans": [
+        {
+          "start": 651,
+          "end": 652,
+          "mention": "2",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 655,
+          "end": 657,
+          "mention": "10",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 659,
+          "end": 661,
+          "mention": "18",
+          "ref_id": "BIBREF9"
+        }
+      ],
+      "section": "DISCUSSION",
+      "ref_spans": []
+    },
+    {
+      "text": "As the most common modification  of sialic acids found in\nmammalian cell surface sialoglycoconjugates, 9-O-acetylation and\nde-O-acetylation play an important role in the transition of\nantigenicity and transformation of intercellular cross-talk.\n9-O-acetylation of sialic acids can mask some epitopes. For\nexample, natural ligands of the B-cell adhesion molecule CD22\nbeta can be masked by 9-O-acetylation of sialic acids [19].\nSimilarly, it can inhibit binding of sialoadhesin, a\nmacrophage-restricted and sialic-acid-dependent adhesion molecule\n[20]. On the other hand, 9-O-acetylation of sialic acids can\nform novel epitopes. Influenza virus C haemagglutinin\nspecifically requires 9-O-acetylated sialic acids for binding to\nhost cells [21]. Incubation of red blood cells with sialate\n9-O-acetylesterase rendered the erythrocytes resistant against\nagglutination by influenza C virus [22]. O-acetylation of\ndisialoganglioside GD3 by human melanoma cells has been reported\nto create a unique antigenic determinant [23]. Modifications\nof sialic acids may be an important mechanism underlying the\ninteraction/cross-talk between different types of cells. The\nessential role of sialic acids modification in cellular\ncommunications may explain the presently observed wide\ndistribution of H-Lse in all examined tissues.",
+      "cite_spans": [
+        {
+          "start": 422,
+          "end": 424,
+          "mention": "19",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 547,
+          "end": 549,
+          "mention": "20",
+          "ref_id": "BIBREF12"
+        },
+        {
+          "start": 738,
+          "end": 740,
+          "mention": "21",
+          "ref_id": "BIBREF13"
+        },
+        {
+          "start": 885,
+          "end": 887,
+          "mention": "22",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 1014,
+          "end": 1016,
+          "mention": "23",
+          "ref_id": "BIBREF15"
+        }
+      ],
+      "section": "DISCUSSION",
+      "ref_spans": []
+    },
+    {
+      "text": "The present study suggests that the expression of H-Lse is\ndevelopmentally regulated and spermatogenic stage-specific. The\nevidence for this includes: (1) lack of expression in embryonic\ntestis; (2) association of high level of mRNA detected by\nDD-RT-PCR with the 4C but not 2C cells in adult testes; and (3)\ndetection of in situ hybridization signal in spermatocytes but\nnot spermatogonia or other somatic cells. In the absence of\nspermatogenesis, embryonic testis contains only two distinct cell\ntypes, spermatogonia and Sertoli cells, while the seminiferous\nepithelium of adult testis consists of germ cells at different\nstages of spermatogensis. The 4C cells found in adult testis\ninclude the primary spermatocytes and spermatogonia of G2/M\nstage, while 2C cells include spermatogonia of G0/G1 stage,\nsecondary spermatocytes, and Sertoli cells. The absence of H-Lse\nmRNA in embryonic testis and the high level of its mRNA in the 4C\ncells of adult testis suggest that its expression is restricted\nto spermatocytes, particularly the primary spermatocytes.\nTogether with the in situ hybridization results showing mRNA of\nH-Lse restricted to spermatocytes, but not spermatogonia, Sertoli\ncells or interstitial cells, these data suggest that\nH-Lse is likely to be involved in the process of spermatogenesis,\nalthough its role in testicular development cannot be entirely\nruled out. Unfortunately, due to the deformation of the available\nhuman testes, we were not able to make further distinction\nbetween primary and secondary spermatocytes. What has been\nclearly shown by the present data is that H-Lse is only present\nat a stage beyond spermatogonia, suggesting its possible role in\nthe differentiation of germ cells.",
+      "cite_spans": [],
+      "section": "DISCUSSION",
+      "ref_spans": []
+    },
+    {
+      "text": "Interestingly, the processes of 9-O-acetylation and\nde-O-acetylation of sialic acid have been implicated in\norganogenesis and cellular differentiation, since alteration of\nthese processes could lead to interruption of cellular\ndevelopment such as embryogenesis. Transgenic mice constitutively\noverexpressed the 9-O-acetyl-sialic-acid-specific esterase of\ninfluenza C that has been found to arrest embryo development at the\ntwo-cells stage. It has also been reported that in vitro\ndevelopment of embryonic stem cells shows that the expression\nlevel of Lse is low at the initiation of the development, and\nfollowed by an increase at later stages [24]. In transgenic\nmice with selective expression of 9-O-acetyl-sialic-acid-specific\nesterase in retina and the adrenal gland, these organs showed\nvarious abnormalities in organization, while all other tissues\nappeared normal [25]. Lse has also been considered to play a\nkey role in the differentiation of B lymphocyte [2], since\nit is expressed in late but not early B lymphocyte. The presently\nobserved development-dependent pattern of H-Lse expression is\nconsistent with that found in other cell types: absence or low\nexpression at early stage of differentiation but high at later\nstages. Taken together, 9-O-acetyl esters in sialic acids appear\nto be important for development or cellular differentiation.",
+      "cite_spans": [
+        {
+          "start": 645,
+          "end": 647,
+          "mention": "24",
+          "ref_id": "BIBREF16"
+        },
+        {
+          "start": 872,
+          "end": 874,
+          "mention": "25",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 965,
+          "end": 966,
+          "mention": "2",
+          "ref_id": "BIBREF11"
+        }
+      ],
+      "section": "DISCUSSION",
+      "ref_spans": []
+    },
+    {
+      "text": "Spermatogenesis is a multiple-staged continuous progress of\ncellular differentiation. It has been reported that some cell\nsurface glycoconjugates are modified during the early steps of\nspermatogenesis, and influence the differentiation of\nspermatogenic cells [26]. As nine-carbon sugars commonly found in\nmany glycoproteins of spermatogenic cells, sialic acids represent\na target for cell surface modification,  that is, removal of\n9-O-acetyl esters by enzymes such as Lse.  Modification of sialic\nacids may result in alteration in cell-cell communication,  that is,\nSertoli cells and germ cells interaction, thereby influencing the\ndifferentiation of spermatogenic cells. Thus, future studies on\nthe presently identified H-Lse may provide insight into molecular\nmechanisms underlying testicular development and/or germ cell\ndifferentiation during spermatogenesis in humans.",
+      "cite_spans": [
+        {
+          "start": 260,
+          "end": 262,
+          "mention": "26",
+          "ref_id": "BIBREF18"
+        }
+      ],
+      "section": "DISCUSSION",
+      "ref_spans": []
+    }
+  ],
+  "ref_entries": {
+    "FIGREF0": {
+      "text": "Figure 1: Flow sorting of 2C cells and 4C cells of seminiferous tubules from human\ntestis. Three populations of cells are identified according to fluorescence intensity (FL2-A) and width of the\nemitted fluorescence (FL2-W). 4C and 2C cells are sorted: T, 4C; D, 2C; H, 1C.",
+      "type": "figure"
+    },
+    "FIGREF1": {
+      "text": "Figure 2: DD-RT-PCR results of 4C and 2C cells. H-Lse is highly expressed in 4C cells.",
+      "type": "figure"
+    },
+    "FIGREF2": {
+      "text": "Figure 3: Alignment of amino acid sequences of H-Lse, mouse cytosolic\nsialic-acid-specific 9-O-acetylesterase (m-Cse), and mouse\nlysosome sialic-acid-specific 9-O-acetylesterase (m-Lse).\nResidues in the black boxes represent the identical region of the\nthree proteins and residues in the gray boxes represent the\nconserved region.",
+      "type": "figure"
+    },
+    "FIGREF3": {
+      "text": "Figure 4: The results of radiation hybrid of H-Lse gene.\n(a) The PCR amplification of 90 clones of the Stanford TNG\nRadiation Hybrid Panel. (b) The scheme of human chromosome\nlocalization of H-Lse gene.",
+      "type": "figure"
+    },
+    "FIGREF4": {
+      "text": "Figure 5: Northern blot of H-Lse gene. Three distinct mRNA species at approximately\n2.7 kb, 6.0 kb, and 7.5 kb are detected in MTN membranes; beta-actin is the control.",
+      "type": "figure"
+    },
+    "FIGREF5": {
+      "text": "Figure 6: Detection of H-Lse mRNA in human embryonic and adult\ntestes by in situ hybridization with antisense probes (a), (b),\nand (c) and sense probe (d). (a) Human embryonic testis (6\nmonths) (400\u00d7); (b) human adult testis (100\u00d7); (c),\n(d) human adult testis (400\u00d7): Leydig cells (L),\nspermatogonia (Sg), and spermatocytes (Sc).",
+      "type": "figure"
+    },
+    "FIGREF6": {
+      "text": "Figure 7: Distribution of GFP-H-Lse fusion protein in BXPC-3\ncells. (a) GFP protein is evenly distributed throughout the\ncytoplasm. (b) GFP-H-Lse is compartmentalized in numerous large\ndense-core vesicles in the cytoplasm.",
+      "type": "figure"
+    }
+  },
+  "back_matter": [],
+  "bib_entries": {
+    "BIBREF0": {
+      "title": "Biological Roles of Sialic Acids",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Rosenberg",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Schengrund",
+          "suffix": ""
+        }
+      ],
+      "year": 1976,
+      "venue": "",
+      "volume": "",
+      "issn": "",
+      "pages": null,
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF1": {
+      "title": "Lysosomal and cytosolic sialic acid 9-O-acetylesterase activities\ncan be encoded by one gene via differential usage of a signal peptide-encoding\nexon at the N terminus",
+      "authors": [
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Takematsu",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Diaz",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Stoddart",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Zhang",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Varki",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "J Biol Chem",
+      "volume": "274",
+      "issn": "36",
+      "pages": "25623-25631",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF2": {
+      "title": "Preparation of spermatogonia, spermatocytes, and round spermatids\nfor analysis of gene expression using fluorescence-activated cell sorting",
+      "authors": [
+        {
+          "first": "L.L",
+          "middle": [],
+          "last": "Mays-Hoopes",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Bolen",
+          "suffix": ""
+        },
+        {
+          "first": "A.D",
+          "middle": [],
+          "last": "Riggs",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Singer-Sam",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Biol Reprod",
+      "volume": "53",
+      "issn": "5",
+      "pages": "1003-1011",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF3": {
+      "title": "Differential display of eukaryotic messenger\nRNA by means of the polymerase chain reaction",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Liang",
+          "suffix": ""
+        },
+        {
+          "first": "A.B",
+          "middle": [],
+          "last": "Pardee",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Science",
+      "volume": "257",
+      "issn": "5072",
+      "pages": "967-971",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF4": {
+      "title": "Systematic screening of yeast artificial-chromosome libraries by use of the polymerase chain reaction",
+      "authors": [
+        {
+          "first": "E.D",
+          "middle": [],
+          "last": "Green",
+          "suffix": ""
+        },
+        {
+          "first": "M.V",
+          "middle": [],
+          "last": "Olson",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "Proc Natl Acad Sci USA",
+      "volume": "87",
+      "issn": "3",
+      "pages": "1213-1217",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF5": {
+      "title": "Systematic screening of an arrayed cDNA library by PCR",
+      "authors": [
+        {
+          "first": "D.J",
+          "middle": [],
+          "last": "Munroe",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Loebbert",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Bric",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Proc Natl Acad Sci USA",
+      "volume": "92",
+      "issn": "6",
+      "pages": "2209-2213",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF6": {
+      "title": "Mammalian MutS homologue 5 is required for chromosome pairing in meiosis",
+      "authors": [
+        {
+          "first": "W",
+          "middle": [],
+          "last": "Edelmann",
+          "suffix": ""
+        },
+        {
+          "first": "P.E",
+          "middle": [],
+          "last": "Cohen",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Kneitz",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Nat Genet",
+      "volume": "21",
+      "issn": "1",
+      "pages": "123-127",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF7": {
+      "title": "Germ cell differentiation and synaptonemal\ncomplex formation are disrupted in CPEB knockout mice",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Tay",
+          "suffix": ""
+        },
+        {
+          "first": "J.D",
+          "middle": [],
+          "last": "Richter",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Dev Cell",
+      "volume": "1",
+      "issn": "2",
+      "pages": "201-213",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF8": {
+      "title": "The murine SCP3 gene is required for synaptonemal complex\nassembly, chromosome synapsis, and male fertility",
+      "authors": [
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Yuan",
+          "suffix": ""
+        },
+        {
+          "first": "J.G",
+          "middle": [],
+          "last": "Liu",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Zhao",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Brundell",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Daneholt",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Hoog",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Mol Cell",
+      "volume": "5",
+      "issn": "1",
+      "pages": "73-83",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF9": {
+      "title": "Molecular cloning of the cDNA encoding a murine sialic acid-specific 9-O-acetylesterase and RNA expression in cells of hematopoietic and non-hematopoietic origin",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Stoddart",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Zhang",
+          "suffix": ""
+        },
+        {
+          "first": "C.J",
+          "middle": [],
+          "last": "Paige",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Nucleic Acid Res",
+      "volume": "24",
+      "issn": "20",
+      "pages": "4003-4008",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF10": {
+      "title": "Natural ligands of the B cell adhesion molecule CD22 beta can be\nmasked by 9-O-acetylation of sialic acids",
+      "authors": [
+        {
+          "first": "E.R",
+          "middle": [],
+          "last": "Sjoberg",
+          "suffix": ""
+        },
+        {
+          "first": "L.D",
+          "middle": [],
+          "last": "Powell",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Klein",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Varki",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "J Cell Biol",
+      "volume": "126",
+      "issn": "2",
+      "pages": "549-562",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF11": {
+      "title": "Sialic Acids: Chemistry, Metabolism and Function. Cell Biology Monographs",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Schauer",
+          "suffix": ""
+        }
+      ],
+      "year": 1982,
+      "venue": "",
+      "volume": "",
+      "issn": "",
+      "pages": null,
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF12": {
+      "title": "Modifications of cell surface sialic acids modulate cell adhesion\nmediated by sialoadhesin and CD22",
+      "authors": [
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Kelm",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Schauer",
+          "suffix": ""
+        },
+        {
+          "first": "J.C",
+          "middle": [],
+          "last": "Manuguerra",
+          "suffix": ""
+        },
+        {
+          "first": "H.J",
+          "middle": [],
+          "last": "Gross",
+          "suffix": ""
+        },
+        {
+          "first": "P.R",
+          "middle": [],
+          "last": "Crocker",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Glycoconj J",
+      "volume": "11",
+      "issn": "6",
+      "pages": "576-585",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF13": {
+      "title": "The surface receptor is a major determinant of the cell tropism of\ninfluenza C virus",
+      "authors": [
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Herrler",
+          "suffix": ""
+        },
+        {
+          "first": "H.D",
+          "middle": [],
+          "last": "Klenk",
+          "suffix": ""
+        }
+      ],
+      "year": 1987,
+      "venue": "Virology",
+      "volume": "159",
+      "issn": "1",
+      "pages": "102-108",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF14": {
+      "title": "Hemagglutinating encephalomyelitis virus attaches to\nN-acetyl-9-O-acetylneuraminic acid-containing receptors on\nerythrocytes: comparison with bovine coronavirus and influenza C virus",
+      "authors": [
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Schultze",
+          "suffix": ""
+        },
+        {
+          "first": "H.J",
+          "middle": [],
+          "last": "Gross",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Brossmer",
+          "suffix": ""
+        },
+        {
+          "first": "H.D",
+          "middle": [],
+          "last": "Klenk",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Herrler",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "Virus Res",
+      "volume": "16",
+      "issn": "2",
+      "pages": "185-194",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF15": {
+      "title": "O-Acetylatoin of disialoganglioside GD3 by human melanoma cells\ncreates a unique antigenic determinant",
+      "authors": [
+        {
+          "first": "D.A",
+          "middle": [],
+          "last": "Cheresh",
+          "suffix": ""
+        },
+        {
+          "first": "R.A",
+          "middle": [],
+          "last": "Reisfeld",
+          "suffix": ""
+        },
+        {
+          "first": "A.P",
+          "middle": [],
+          "last": "Varki",
+          "suffix": ""
+        }
+      ],
+      "year": 1984,
+      "venue": "Science",
+      "volume": "225",
+      "issn": "4664",
+      "pages": "844-846",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF16": {
+      "title": "Differential display by PCR: novel findings and applications",
+      "authors": [
+        {
+          "first": "M.J",
+          "middle": [],
+          "last": "Guimaraes",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Lee",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Zlotnik",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "McClanahan",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Nucleic Acids Res",
+      "volume": "23",
+      "issn": "10",
+      "pages": "1832-1833",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF17": {
+      "title": "Developmental abnormalities in transgenic mice expressing a sialic\nacid-specific 9-O-acetylesterase",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Varki",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Hooshmand",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Diaz",
+          "suffix": ""
+        },
+        {
+          "first": "N.M",
+          "middle": [],
+          "last": "Varki",
+          "suffix": ""
+        },
+        {
+          "first": "S.M",
+          "middle": [],
+          "last": "Hedrick",
+          "suffix": ""
+        }
+      ],
+      "year": 1991,
+      "venue": "Cell",
+      "volume": "65",
+      "issn": "1",
+      "pages": "65-74",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF18": {
+      "title": "Glycan residues of N- and O-linked oligosaccharides in the\npremeiotic spermatogenetic cells of the urodele amphibian Pleurodeles\nwaltl characterize by means of lectin histochemistry",
+      "authors": [
+        {
+          "first": "F.J",
+          "middle": [],
+          "last": "Saez",
+          "suffix": ""
+        },
+        {
+          "first": "J.F",
+          "middle": [],
+          "last": "Madrid",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Aparicio",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Alonso",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Hernandez",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Tissue Cell",
+      "volume": "32",
+      "issn": "4",
+      "pages": "302-311",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF19": {
+      "title": "Selectins and their ligands: current concepts and controversies",
+      "authors": [
+        {
+          "first": "G.S",
+          "middle": [],
+          "last": "Kansas",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Blood",
+      "volume": "88",
+      "issn": "9",
+      "pages": "3259-3287",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF20": {
+      "title": "I-type lectins",
+      "authors": [
+        {
+          "first": "L.D",
+          "middle": [],
+          "last": "Powell",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Varki",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "J Biol Chem",
+      "volume": "270",
+      "issn": "24",
+      "pages": "14243-14246",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF21": {
+      "title": "Sialic acids as ligands in recognition phenomena",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Varki",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "FASEB J",
+      "volume": "11",
+      "issn": "4",
+      "pages": "248-255",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF22": {
+      "title": "Substrate specificity of neuraminidases",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Drzeniek",
+          "suffix": ""
+        }
+      ],
+      "year": 1973,
+      "venue": "Histochem J",
+      "volume": "5",
+      "issn": "3",
+      "pages": "271-290",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF23": {
+      "title": "A neuraminidase from Streptococcus\nsanguis that can release O-acetylated sialic acids",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Varki",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Diaz",
+          "suffix": ""
+        }
+      ],
+      "year": 1983,
+      "venue": "J Biol Chem",
+      "volume": "258",
+      "issn": "20",
+      "pages": "12465-12471",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF24": {
+      "title": "Biosynthesis and function of N- and O-substituted sialic acids",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Schauer",
+          "suffix": ""
+        }
+      ],
+      "year": 1991,
+      "venue": "Glycobiology",
+      "volume": "1",
+      "issn": "5",
+      "pages": "449-452",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF25": {
+      "title": "Diversity in the sialic acids",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Varki",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Glycobiology",
+      "volume": "2",
+      "issn": "1",
+      "pages": "25-40",
+      "other_ids": {
+        "DOI": []
+      }
+    }
+  }
+}

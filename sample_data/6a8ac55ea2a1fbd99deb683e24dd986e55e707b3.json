@@ -1,0 +1,2078 @@
+{
+  "paper_id": "6a8ac55ea2a1fbd99deb683e24dd986e55e707b3",
+  "metadata": {
+    "title": "Herpes simplex virus type 1 and normal protein permeability in the lungs of critically ill patients: a case of low pathogenicity?",
+    "authors": [
+      {
+        "first": "Joanne",
+        "middle": [],
+        "last": "Verheij",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "VU University Medical Center",
+          "location": {
+            "settlement": "Amsterdam",
+            "country": "The Netherlands"
+          }
+        },
+        "email": ""
+      },
+      {
+        "first": "Johan",
+        "middle": [],
+        "last": "Ab",
+        "suffix": "",
+        "affiliation": {},
+        "email": ""
+      },
+      {
+        "first": "",
+        "middle": [],
+        "last": "Groeneveld",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "VU University Medical Center",
+          "location": {
+            "settlement": "Amsterdam",
+            "country": "The Netherlands"
+          }
+        },
+        "email": "johan.groeneveld@vumc.nl"
+      },
+      {
+        "first": "Albertus",
+        "middle": [],
+        "last": "Beishuizen",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "VU University Medical Center",
+          "location": {
+            "settlement": "Amsterdam",
+            "country": "The Netherlands"
+          }
+        },
+        "email": ""
+      },
+      {
+        "first": "Arthur",
+        "middle": [],
+        "last": "Van Lingen",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "VU University Medical Center",
+          "location": {
+            "settlement": "Amsterdam",
+            "country": "The Netherlands"
+          }
+        },
+        "email": ""
+      },
+      {
+        "first": "Alberdina",
+        "middle": [
+          "M"
+        ],
+        "last": "Simoons-Smit",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "VU University Medical Center",
+          "location": {
+            "settlement": "Amsterdam",
+            "country": "The Netherlands"
+          }
+        },
+        "email": ""
+      },
+      {
+        "first": "Rob",
+        "middle": [],
+        "last": "Jm",
+        "suffix": "",
+        "affiliation": {},
+        "email": ""
+      },
+      {
+        "first": "Strack",
+        "middle": [],
+        "last": "Van Schijndel",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "VU University Medical Center",
+          "location": {
+            "settlement": "Amsterdam",
+            "country": "The Netherlands"
+          }
+        },
+        "email": ""
+      }
+    ]
+  },
+  "abstract": [
+    {
+      "text": "Corresponding author: AB Johan Groeneveld, johan.groeneveld@vumc.nl R139 ALI = acute lung injury; ARDS = acute respiratory distress syndrome; CPM = counts per minute; HSV = herpes simplex virus; LIS = lung injury score; PLI = pulmonary leak index; RBC = red blood cell.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    },
+    {
+      "text": "Introduction We conducted the present study to evaluate the pathogenicity of late respiratory infections with herpes simplex virus (HSV)-1 in critically ill patients. Methods The study was conducted in four critically ill patients with persistent pulmonary infiltrates of unknown origin and in whom HSV-1 was isolated from tracheal aspirate or bronchoalveolar lavage fluid. At a median of 7 days (range 1-11 days) after mechanical ventilatory support had been initiated, the pulmonary leak index for gallium-67-labelled transferrin (upper limit of normal 14.1 \u00d7 10 -3 /min) was determined. Results The pulmonary leak index ranged between 7.5 and 14.0 \u00d7 10 -3 /min in the patients studied. Two of the four patients were administered a course of aciclovir, and all four patients survived. Conclusion The normal capillary permeability observed in the lungs suggests that that HSV-1 is not pathogenic in the critically ill. Our findings suggest that isolation of the virus represents reactivation during the course of serious illness, and that immunodepression is responsible rather than relatively harmless primary or superimposed infection in the lungs.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    }
+  ],
+  "body_text": [
+    {
+      "text": "In some critically ill patients herpes simplex virus (HSV)-1 is isolated from the upper or lower respiratory tract [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] . Immunodepressed patients may be susceptible to transmission and acquisition of viral diseases; alternatively, viral reactivation may occur and may contribute relatively little to morbidity and mortality. Indeed, reactivation of human herpesvirus-6 is common in critically ill patients and does not worsen outcome [16, 17] . In immunocompetent patients, however, isolation of HSV-1 may be associated with viral pneumonia, even if reactivation rather than primary infection is responsible [6, 8, 18] . HSV-1 has been associated with acute respiratory distress syndrome (ARDS) and ventilator-associated pneumonia in the critically ill [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] , as either a primary or a superimposed infection. However, there are few reports of the virus eliciting an infectious host response, as demonstrated by a rise in serum antibodies, by bronchoscopic airway disease, by 'typical' findings on computed tomography of the lungs, or by the presence of giant cells or nuclear inclusion bodies on cytology or biopsy of the lower respiratory tract [3, 5, 9, 10, 18] . Indeed, Tuxen and coworkers [4] observed that prophylactic antiviral therapy in ARDS prevented respiratory HSV-1 emergence but it had no impact on duration of mechanical ventilation or on patient outcome. The pathogenicity of the virus therefore remains unknown, and the rare association in the critically ill of HSV-1 isolation with mortality may represent reactivation of the virus in immunodepressed patients with multiple organ failure and poor outcome [1, 2, 11, 14, 15] , rather than a symptomatic primary infection or superinfection contributing to death.",
+      "cite_spans": [
+        {
+          "start": 115,
+          "end": 118,
+          "text": "[1]",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 119,
+          "end": 122,
+          "text": "[2]",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 123,
+          "end": 126,
+          "text": "[3]",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 127,
+          "end": 130,
+          "text": "[4]",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 131,
+          "end": 134,
+          "text": "[5]",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 135,
+          "end": 138,
+          "text": "[6]",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 139,
+          "end": 142,
+          "text": "[7]",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 143,
+          "end": 146,
+          "text": "[8]",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 147,
+          "end": 150,
+          "text": "[9]",
+          "ref_id": "BIBREF8"
+        },
+        {
+          "start": 151,
+          "end": 155,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        },
+        {
+          "start": 156,
+          "end": 160,
+          "text": "[11]",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 161,
+          "end": 165,
+          "text": "[12]",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 166,
+          "end": 170,
+          "text": "[13]",
+          "ref_id": "BIBREF12"
+        },
+        {
+          "start": 171,
+          "end": 175,
+          "text": "[14]",
+          "ref_id": "BIBREF13"
+        },
+        {
+          "start": 176,
+          "end": 180,
+          "text": "[15]",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 496,
+          "end": 500,
+          "text": "[16,",
+          "ref_id": "BIBREF15"
+        },
+        {
+          "start": 501,
+          "end": 504,
+          "text": "17]",
+          "ref_id": null
+        },
+        {
+          "start": 670,
+          "end": 673,
+          "text": "[6,",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 674,
+          "end": 676,
+          "text": "8,",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 677,
+          "end": 680,
+          "text": "18]",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 815,
+          "end": 818,
+          "text": "[1]",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 819,
+          "end": 822,
+          "text": "[2]",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 823,
+          "end": 826,
+          "text": "[3]",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 827,
+          "end": 830,
+          "text": "[4]",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 831,
+          "end": 834,
+          "text": "[5]",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 835,
+          "end": 838,
+          "text": "[6]",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 839,
+          "end": 842,
+          "text": "[7]",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 843,
+          "end": 846,
+          "text": "[8]",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 847,
+          "end": 850,
+          "text": "[9]",
+          "ref_id": "BIBREF8"
+        },
+        {
+          "start": 851,
+          "end": 855,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        },
+        {
+          "start": 856,
+          "end": 860,
+          "text": "[11]",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 861,
+          "end": 865,
+          "text": "[12]",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 866,
+          "end": 870,
+          "text": "[13]",
+          "ref_id": "BIBREF12"
+        },
+        {
+          "start": 871,
+          "end": 875,
+          "text": "[14]",
+          "ref_id": "BIBREF13"
+        },
+        {
+          "start": 1264,
+          "end": 1267,
+          "text": "[3,",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 1268,
+          "end": 1270,
+          "text": "5,",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 1271,
+          "end": 1273,
+          "text": "9,",
+          "ref_id": "BIBREF8"
+        },
+        {
+          "start": 1274,
+          "end": 1277,
+          "text": "10,",
+          "ref_id": "BIBREF9"
+        },
+        {
+          "start": 1278,
+          "end": 1281,
+          "text": "18]",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 1312,
+          "end": 1315,
+          "text": "[4]",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 1741,
+          "end": 1744,
+          "text": "[1,",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 1745,
+          "end": 1747,
+          "text": "2,",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 1748,
+          "end": 1751,
+          "text": "11,",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 1752,
+          "end": 1755,
+          "text": "14,",
+          "ref_id": "BIBREF13"
+        },
+        {
+          "start": 1756,
+          "end": 1759,
+          "text": "15]",
+          "ref_id": "BIBREF14"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Introduction"
+    },
+    {
+      "text": "Assessing pulmonary capillary protein permeability noninvasively at the bedside to yield the pulmonary leak index (PLI) could help in determining the extent of tissue injury, as was previously described [18] [19] [20] . This radionuclide technique involves gallium-67-labelled transferrin ( 67 Gatransferrin) and technetium-99m-labelled red blood cells ( 99m Tc-RBCs). In bacterial pneumonia, for instance, the PLI is elevated and the increase above normal directly relates to the severity of pneumonia, expressed as the lung injury score (LIS) [19] . In patients with acute lung injury (ALI) or ARDS during the course of bacterial pneumonia, the PLI is uniformly and greatly elevated above normal (up to 14.1 \u00d7 10 -3 /min) when LIS is greater than 2.5; the PLI is also elevated in 80% of patients with mild injury and a LIS between 1.5 and 2.5 [19] . Hence, the technique is a direct measure of permeability and an indirect measure of capillary injury in the lungs. The PLI is also elevated in interstitial lung disease [21] .",
+      "cite_spans": [
+        {
+          "start": 203,
+          "end": 207,
+          "text": "[18]",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 208,
+          "end": 212,
+          "text": "[19]",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 213,
+          "end": 217,
+          "text": "[20]",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 545,
+          "end": 549,
+          "text": "[19]",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 845,
+          "end": 849,
+          "text": "[19]",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 1021,
+          "end": 1025,
+          "text": "[21]",
+          "ref_id": "BIBREF20"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Introduction"
+    },
+    {
+      "text": "In order to help differentiate between symptomatic and asymptomatic viral shedding and spread, which could inform the decision regarding whether to institute antiviral therapy and help in determining the pathogenicity of the virus, we measured the PLI in four consecutive critically ill patients with persistent pulmonary infiltrates of unknown origin on ventilatory support, in whom a HSV-1 had been isolated.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Introduction"
+    },
+    {
+      "text": "We studied a small series of consecutive patients in whom respiratory secretions, sent for viral culture because of persistent pulmonary infiltrates of unknown origin, were found to be positive for HSV-1 (Table 1) . Tracheal aspirates or bronchoalveolar lavage fluid were transported directly to the microbiology laboratory or placed in viral transport medium (Copan Diagnostics Inc., Corona, CA, USA). For isolation of HSV-1, specimens were inoculated using standard procedures in triplicate flat bottom tubes on human embryonal lung fibroblasts and incubated at 37\u00b0C. Cultures were studied three times weekly for 10 days to identify the presence of a cytopathic effect. If a cytopathic effect, indicating the presence of HSV-1, was apparent or otherwise at days 2 and 7, the cells were fixed in methanol:acetone (1:1) and typed by immunofluorescence with labelled specific HSV-1 and HSV-2 antibodies (Syva Mikrotac HSV-1/HSV-2 typing kit, Palo Alto, CA, USA). In the four patients studied, the results were available within 3 days after samples had been inoculated in culture medium.",
+      "cite_spans": [],
+      "ref_spans": [
+        {
+          "start": 204,
+          "end": 213,
+          "text": "(Table 1)",
+          "ref_id": "TABREF0"
+        }
+      ],
+      "section": "Patients and measurements"
+    },
+    {
+      "text": "On the day of specimen collection for viral culture, demographic, chest radiographic and respiratory data were recorded, as were clinical features. In three out of four patients on mechanical ventilation after intubation, the total respiratory compliance was calculated from ventilator settings as follows (ml/cmH 2 O): tidal volume/(plateau -end-expiratory pressure). From the radiographic score (ranging from 0 to 4 depending on the number of quadrants with radiographic opacities), the ratio of arterial oxygen tension to fractional inspired oxygen, the level of positive end-expiratory pressure and the compliance, the LIS was calculated [22] . (LIS ranges between 0 and 4, with values up to 2.5 denoting ALI and those above 2.5 ARDS.) None of the patients had visible oropharyngeal vesicles.",
+      "cite_spans": [
+        {
+          "start": 642,
+          "end": 646,
+          "text": "[22]",
+          "ref_id": "BIBREF21"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Patients and measurements"
+    },
+    {
+      "text": "To characterize further the persistent pulmonary infiltrates, the PLI was measured using a modification to a method described previously [19, 20] . Because this is a routine procedure, informed consent was waived. Autologous RBCs were labeled with 99m Tc (11 MBq, physical half-life 6 hours; Mallincrodt Diagnostica, Petten, The Netherlands), using a modified in vitro method. Ten minutes after injection of the labelled RBCs, transferrin was labelled in vivo, following intravenous injection of 67 Ga-citrate (6 MBq, physical half-life 78 hours; Mallincrodt Diagnostica). Patients were in the supine position, and two scintillation detection probes were positioned over the right and left lung apices. The probe system (manufactured by Eurorad C.T.T., Strasbourg, France) consists of two small cesium iodide scintillators (15 \u00d7 15 \u00d7 15 mm 3 ), each in a 2-mm tungsten and 1-mm aluminium housing cover (35 mm in diameter and 40 mm in height). The front end of each probe has an aluminium flange attached (3 mm in thickness and 70 mm in diameter) to facilitate easy fixation to the patient's chest with tape. Each probe weighs approximately 255 g. The probe signals are led into a dual amplifier, from which the output is fed into a multichannel analyzer system connected to a personal computer. Because the probes have separate channels, there is no electronic crossover.",
+      "cite_spans": [
+        {
+          "start": 137,
+          "end": 141,
+          "text": "[19,",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 142,
+          "end": 145,
+          "text": "20]",
+          "ref_id": "BIBREF19"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Radionuclide method"
+    },
+    {
+      "text": "Starting at the time of the intravenous injection of 67 Ga, radioactivity was measured each minute for 1 hour. For each measurement interval, the entire spectrum of photon energies was stored on disk. During processing, the 99m Tc and 67 Ga -and plotted against time. The PLI was calculated, using linear regression analysis, from the slope of increase of the radioactivity ratio divided by the intercept, in order to correct for physical factors in radioactivity detection.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Radionuclide method"
+    },
+    {
+      "text": "By taking pulmonary blood volume and thus presumably surface area into account, the radioactivity ratio represents the ratio of extravascular to intravascular 67 Ga radioactivity. The PLI represents the transport rate of 67 Ga-transferrin from the intravascular to the extravascular spaces in the lungs, and it is therefore a measure of pulmonary capillary permeability to transferrin [19, 20] . The mean PLI from the two lungs was taken. The upper limit of normal PLI is 14.1 \u00d7 10 -3 /min. Where appropriate, numbers are summarized as median (range).",
+      "cite_spans": [
+        {
+          "start": 385,
+          "end": 389,
+          "text": "[19,",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 390,
+          "end": 393,
+          "text": "20]",
+          "ref_id": "BIBREF19"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Radionuclide method"
+    },
+    {
+      "text": "Patient data are presented in Table 1 . The patients had stayed for some time in the hospital or intensive care unit before HSV-1 was isolated, and they had been admitted primarily because of respiratory insufficiency during the course of pneumonia. Patient 4 was admitted into the coronary care unit a few days before intensive care unit admission for cardiogenic pulmonary oedema. All patients had been dependent on mechanical ventilatory support for some time before sampling. They had received adequate antibiotic therapy for pneumonia and had ALI at the time of sampling, which was of otherwise unknown origin. Table 1 shows that patients had radiographic abnormalities but without an increased PLI. Central venous pressure was not elevated, which suggests that the persistent pulmonary infiltrates were not caused by overhydration. In patients 1 and 3 a high-resolution computed tomography scan of the lungs with contrast was obtained; the findings were nonspecific, however, with alveolar consolidations and pleural fluid, even in the presence of interstitial abnormalities with a ground glass appearance in patient 3. In patient 1 a bronchoscopy was performed and there were no mucosal lesions. There was a normal distribution of lymphocyte subtypes in the lavage fluid. A transbronchial biopsy revealed interstitial inflammation with many macrophage deposits, and immunohistochemical staining for HSV-1 was negative. No multinucleated cells or cell inclusions were observed, either in bronchoalveolar lavage fluid from patient 1 or in tracheal aspirates from the other patients. In patients 1-3 concomitant isolation of bacteria by culture was regarded as bacterial colonization. Antibody testing was not done in patients 2-4 but was found to be positive for anti-HSV-1 IgG in patient 1, which is indicative of prior HSV-1 infection.",
+      "cite_spans": [],
+      "ref_spans": [
+        {
+          "start": 30,
+          "end": 37,
+          "text": "Table 1",
+          "ref_id": "TABREF0"
+        },
+        {
+          "start": 616,
+          "end": 623,
+          "text": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ],
+      "section": "Results"
+    },
+    {
+      "text": "The antiviral agent aciclovir (10 mg/kg three times daily) was started when cultures became positive in two patients, at the discretion of the treating physician. Aciclovir was withheld in the other two patients because it was presumed that the pulmonary infiltrates were not caused by HSV-1, on the basis of a normal PLI among other findings. In patient 1, who had a normal PLI, a course of steroids was initiated on the day after the PLI was measured, and was continued despite positivity for HSV-1, reported 5 days later. All patients survived until discharge from the intensive care unit.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Results"
+    },
+    {
+      "text": "The 67 Ga-transferrin PLI is a sensitive and specific measure of pulmonary capillary permeability, which is utilized for noninvasive assessment of severity of a broad range of pulmonary conditions [19] [20] [21] . The PLI roughly parallels clinical severity (i.e. the LIS) [19, 20] . Although it involves the use of relatively routine equipment, the diagnostic method has not gained broad application, partly because of its laborious nature [20] . It has the advantage that bedside measurements are possible in mechanically ventilated critically ill patients, who cannot easily be transported. Pulmonary inflammation, of whatever cause, increases the PLI up to four times normal values in the most severe forms of lung injury, including ARDS. In less severe injury, such as impending ARDS and interstitial lung disease, the PLI is also elevated, albeit to a lesser extent, as reported by us and other groups [20, 21] .",
+      "cite_spans": [
+        {
+          "start": 197,
+          "end": 201,
+          "text": "[19]",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 202,
+          "end": 206,
+          "text": "[20]",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 207,
+          "end": 211,
+          "text": "[21]",
+          "ref_id": "BIBREF20"
+        },
+        {
+          "start": 273,
+          "end": 277,
+          "text": "[19,",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 278,
+          "end": 281,
+          "text": "20]",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 441,
+          "end": 445,
+          "text": "[20]",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 908,
+          "end": 912,
+          "text": "[20,",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 913,
+          "end": 916,
+          "text": "21]",
+          "ref_id": "BIBREF20"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "The patients had in common a prior infectious episode, followed by a relatively prolonged period of respiratory insufficiency. They had persistent and nonspecific pulmonary infiltrates of unknown origin, after treatment of their primary disease, which prompted viral culture. The normal PLI observed suggests the involvement of a relatively harmless reactivation of HSV-1, rather than the presence of a primary and damaging infection. Indeed, critically ill patients with sepsis may have late immunodepression, with lymphocytic apoptosis, lymphocytopenia and T-cell anergy, promoting viral reactivation [23, 24] . Apparently, the virus must have been latent in the nerve endings of the mucous membranes of the upper respiratory tract in these patients [2, 15] . Herpesviruses (HSV-1) have frequently been isolated in vivo from respiratory secretions of patients with ARDS [3, 4] and detected in surveillance cultures from the respiratory tract of patients following burns, trauma, transplantation, major surgery and others. However, these viruses are detected in only 3% of lung biopsies from patients with prolonged and unresolving ARDS [3, 7, [9] [10] [11] [12] [13] 15] . The literature is thus widely divergent on the precise role of the virus in pulmonary disease in the critically ill and its contribution to patient morbidity and mortality [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] .",
+      "cite_spans": [
+        {
+          "start": 603,
+          "end": 607,
+          "text": "[23,",
+          "ref_id": "BIBREF22"
+        },
+        {
+          "start": 608,
+          "end": 611,
+          "text": "24]",
+          "ref_id": "BIBREF23"
+        },
+        {
+          "start": 752,
+          "end": 755,
+          "text": "[2,",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 756,
+          "end": 759,
+          "text": "15]",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 872,
+          "end": 875,
+          "text": "[3,",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 876,
+          "end": 878,
+          "text": "4]",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 1138,
+          "end": 1141,
+          "text": "[3,",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 1142,
+          "end": 1144,
+          "text": "7,",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 1145,
+          "end": 1148,
+          "text": "[9]",
+          "ref_id": "BIBREF8"
+        },
+        {
+          "start": 1149,
+          "end": 1153,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        },
+        {
+          "start": 1154,
+          "end": 1158,
+          "text": "[11]",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 1159,
+          "end": 1163,
+          "text": "[12]",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 1164,
+          "end": 1168,
+          "text": "[13]",
+          "ref_id": "BIBREF12"
+        },
+        {
+          "start": 1169,
+          "end": 1172,
+          "text": "15]",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 1347,
+          "end": 1350,
+          "text": "[1]",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 1351,
+          "end": 1354,
+          "text": "[2]",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 1355,
+          "end": 1358,
+          "text": "[3]",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 1359,
+          "end": 1362,
+          "text": "[4]",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 1363,
+          "end": 1366,
+          "text": "[5]",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 1367,
+          "end": 1370,
+          "text": "[6]",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 1371,
+          "end": 1374,
+          "text": "[7]",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 1375,
+          "end": 1378,
+          "text": "[8]",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 1379,
+          "end": 1382,
+          "text": "[9]",
+          "ref_id": "BIBREF8"
+        },
+        {
+          "start": 1383,
+          "end": 1387,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        },
+        {
+          "start": 1388,
+          "end": 1392,
+          "text": "[11]",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 1393,
+          "end": 1397,
+          "text": "[12]",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 1398,
+          "end": 1402,
+          "text": "[13]",
+          "ref_id": "BIBREF12"
+        },
+        {
+          "start": 1403,
+          "end": 1407,
+          "text": "[14]",
+          "ref_id": "BIBREF13"
+        },
+        {
+          "start": 1408,
+          "end": 1412,
+          "text": "[15]",
+          "ref_id": "BIBREF14"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "We believe that the tracheal aspirates were representative of lower respiratory tract secretions, in the absence of herpes orolabialis and oral epithelial cells in smears for Gram stain of the secretions. Concurrent colonization with other pathogens has previously been described [5, 13] . Because there was no overlap in the duration of stay of the patients, transmission of the virus from one patient to another can be excluded. This further suggests that respiratory HSV-1 infections in the critically ill may result from relatively harmless endogenous reactivation. Although the normal PLI argues against pulmonary parenchymal pathogenicity, tracheobronchitis caused by the virus [18, 25] cannot be ruled out, even in the absence of orolabial lesions, because bronchoscopy was not performed in three of the four patients, even though it was unremarkable in patient 1. The persistent pulmonary infiltrates in our patients may thus relate to slow radiographic resolution of prior bacterial or aspiration pneumonia, rather then superimposed infection. Moreover, computed tomographic images of the lung may be largely nonspecific [26] , and so the precise diagnostic criteria for HSV-1 pneumonia remain unclear. When properly standardized, for instance with respect to cell numbers in bronchoalveolar fluid or tracheal aspirates, quantitative cultures, viral RNA and DNA by polymerase chain reaction, could be helpful together with the PLI in further studies to quantitate viral load and the ratio of replication to shedding, and therefore the pathogenicity of the virus in the lower respiratory tract.",
+      "cite_spans": [
+        {
+          "start": 280,
+          "end": 283,
+          "text": "[5,",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 284,
+          "end": 287,
+          "text": "13]",
+          "ref_id": "BIBREF12"
+        },
+        {
+          "start": 684,
+          "end": 688,
+          "text": "[18,",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 689,
+          "end": 692,
+          "text": "25]",
+          "ref_id": "BIBREF24"
+        },
+        {
+          "start": 1130,
+          "end": 1134,
+          "text": "[26]",
+          "ref_id": "BIBREF25"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "In conclusion, the anecdotal data presented here suggest that isolation of HSV-1 from respiratory secretions in the critically ill patient with a persistent pulmonary infiltrate may warrant evaluation of tissue injury potentially caused by the virus to judge its pathogenicity. This could be done using a radionuclide PLI measurement, and would help to inform decisions regarding antiviral therapy, which may have adverse effects. In some patients a normal PLI may argue against viral pathogenicity, and withholding of aciclovir in such patients may be safe.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Discussion"
+    }
+  ],
+  "bib_entries": {
+    "BIBREF0": {
+      "ref_id": "b0",
+      "title": "Herpes simplex virus from the lower respiratory tract in adult respiratory distress syndrome",
+      "authors": [
+        {
+          "first": "D",
+          "middle": [
+            "V"
+          ],
+          "last": "Tuxen",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "F"
+          ],
+          "last": "Cade",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "I"
+          ],
+          "last": "Mcdonald",
+          "suffix": ""
+        },
+        {
+          "first": "Mrc",
+          "middle": [],
+          "last": "Buchanan",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "J"
+          ],
+          "last": "Clark",
+          "suffix": ""
+        },
+        {
+          "first": "Mcf",
+          "middle": [],
+          "last": "Pain",
+          "suffix": ""
+        }
+      ],
+      "year": 1982,
+      "venue": "Am Rev Respir Dis",
+      "volume": "126",
+      "issn": "",
+      "pages": "416--419",
+      "other_ids": {}
+    },
+    "BIBREF1": {
+      "ref_id": "b1",
+      "title": "Herpes simplex virus reactivation in surgical patients",
+      "authors": [
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Porteous",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Bradley",
+          "suffix": ""
+        },
+        {
+          "first": "Dnh",
+          "middle": [],
+          "last": "Hamilton",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [
+            "M"
+          ],
+          "last": "Ledingham",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [
+            "B"
+          ],
+          "last": "Clements",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "G"
+          ],
+          "last": "Robinson",
+          "suffix": ""
+        }
+      ],
+      "year": 1984,
+      "venue": "Crit Care Med",
+      "volume": "12",
+      "issn": "",
+      "pages": "626--628",
+      "other_ids": {}
+    },
+    "BIBREF2": {
+      "ref_id": "b2",
+      "title": "Herpes virus infection, an unusual source of adult respiratory distress syndrome",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Lheureux",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Verhest",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "L"
+          ],
+          "last": "Vincent",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Lienard",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Levivier",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "J"
+          ],
+          "last": "Kahn",
+          "suffix": ""
+        }
+      ],
+      "year": 1985,
+      "venue": "Eur J Respir Dis",
+      "volume": "66",
+      "issn": "",
+      "pages": "72--77",
+      "other_ids": {}
+    },
+    "BIBREF3": {
+      "ref_id": "b3",
+      "title": "Prevention of lower respiratory herpes simplex virus infection with acyclovir in patients with the adult respiratory distress syndrome",
+      "authors": [
+        {
+          "first": "D",
+          "middle": [
+            "V"
+          ],
+          "last": "Tuxen",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "W"
+          ],
+          "last": "Wilson",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "F"
+          ],
+          "last": "Cade",
+          "suffix": ""
+        }
+      ],
+      "year": 1987,
+      "venue": "Am Rev Respir Dis",
+      "volume": "136",
+      "issn": "",
+      "pages": "402--405",
+      "other_ids": {}
+    },
+    "BIBREF4": {
+      "ref_id": "b4",
+      "title": "Herpes simplex virus: the most frequently isolated pathogen in the lungs of patients with severe respiratory distress",
+      "authors": [
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Prellner",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Flamholc",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Haidl",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Lindholm",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Widell",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Scand J Infect Dis",
+      "volume": "24",
+      "issn": "",
+      "pages": "283--292",
+      "other_ids": {}
+    },
+    "BIBREF5": {
+      "ref_id": "b5",
+      "title": "Herpes simplex virus from respiratory tract secretions: epidemiology, clinical characteristics, and outcome in immunocompromised and nonimmunocompromised hosts",
+      "authors": [
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Schuller",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Spessert",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [
+            "J"
+          ],
+          "last": "Fraser",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "M"
+          ],
+          "last": "Goodenberger",
+          "suffix": ""
+        }
+      ],
+      "year": 1993,
+      "venue": "Am J Med",
+      "volume": "94",
+      "issn": "",
+      "pages": "29--33",
+      "other_ids": {}
+    },
+    "BIBREF6": {
+      "ref_id": "b6",
+      "title": "Herpes simplex virus involvement of the lower respiratory tract following surgery",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "S"
+          ],
+          "last": "Klainer",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Oud",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Randazzo",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Freiheiter",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Bisaccia",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Gerhard",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Chest",
+      "volume": "",
+      "issn": "",
+      "pages": "8--14",
+      "other_ids": {}
+    },
+    "BIBREF7": {
+      "ref_id": "b7",
+      "title": "Lower respiratory tract reactivation of herpes simplex virus. Comparison of immunocompromised and immunocompetent hosts",
+      "authors": [
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Schuller",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Chest",
+      "volume": "",
+      "issn": "",
+      "pages": "3--7",
+      "other_ids": {}
+    },
+    "BIBREF8": {
+      "ref_id": "b8",
+      "title": "Herpes simplex viral pneumonia in the postthoracotomy patient",
+      "authors": [
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Camazine",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "G"
+          ],
+          "last": "Antkowiak",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Enriqueta",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [
+            "J"
+          ],
+          "last": "Lipman",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Takita",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Chest",
+      "volume": "108",
+      "issn": "",
+      "pages": "876--879",
+      "other_ids": {}
+    },
+    "BIBREF9": {
+      "ref_id": "b9",
+      "title": "Pulmonary herpes simplex in burns patients",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [
+            "J"
+          ],
+          "last": "Byers",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "S"
+          ],
+          "last": "Hasleton",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Quigley",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Dennett",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "E"
+          ],
+          "last": "Klapper",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [
+            "M"
+          ],
+          "last": "Cleator",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [
+            "B"
+          ],
+          "last": "Faragher",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Eur Respir J",
+      "volume": "9",
+      "issn": "",
+      "pages": "2313--2317",
+      "other_ids": {}
+    },
+    "BIBREF10": {
+      "ref_id": "b10",
+      "title": "Occult herpes family viruses may increase mortality in critically ill surgical patients",
+      "authors": [
+        {
+          "first": "C",
+          "middle": [
+            "H"
+          ],
+          "last": "Cook",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "K"
+          ],
+          "last": "Yenchar",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [
+            "O"
+          ],
+          "last": "Kraner",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [
+            "A"
+          ],
+          "last": "Davies",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "M"
+          ],
+          "last": "Ferguson",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Am J Surg",
+      "volume": "176",
+      "issn": "",
+      "pages": "357--360",
+      "other_ids": {}
+    },
+    "BIBREF11": {
+      "ref_id": "b11",
+      "title": "Open-lung biopsy in patients with acute respiratory distress syndrome. Anesthesiology",
+      "authors": [
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Papazian",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Thomas",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Bregeon",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Garbe",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Zandotti",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Saux",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Gaillat",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Drancourt",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "P"
+          ],
+          "last": "Auffray",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Gouin",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "",
+      "volume": "88",
+      "issn": "",
+      "pages": "935--944",
+      "other_ids": {}
+    },
+    "BIBREF12": {
+      "ref_id": "b12",
+      "title": "Herpes simplex virus pneumonia in trauma patients",
+      "authors": [
+        {
+          "first": "G",
+          "middle": [
+            "S"
+          ],
+          "last": "Cherr",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "W"
+          ],
+          "last": "Meredith",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Chang",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "J Trauma",
+      "volume": "49",
+      "issn": "",
+      "pages": "547--549",
+      "other_ids": {}
+    },
+    "BIBREF13": {
+      "ref_id": "b13",
+      "title": "Respiratory herpes simplex virus type 1 infection/colonisation in the critically ill: marker or mediator ?",
+      "authors": [
+        {
+          "first": "J-W",
+          "middle": [],
+          "last": "Van Den Brink",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "M"
+          ],
+          "last": "Simoons-Smit",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Beishuizen",
+          "suffix": ""
+        },
+        {
+          "first": "Arj",
+          "middle": [],
+          "last": "Girbes",
+          "suffix": ""
+        },
+        {
+          "first": "Rjm",
+          "middle": [],
+          "last": "Strack Van Schijndel",
+          "suffix": ""
+        },
+        {
+          "first": "Abj",
+          "middle": [],
+          "last": "Groeneveld",
+          "suffix": ""
+        }
+      ],
+      "year": 2004,
+      "venue": "J Clin Virol",
+      "volume": "30",
+      "issn": "",
+      "pages": "68--72",
+      "other_ids": {}
+    },
+    "BIBREF14": {
+      "ref_id": "b14",
+      "title": "Herpes simplex virus in the respiraotry tract of critical care pateitns: a prospective study",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Bruynseels",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "G"
+          ],
+          "last": "Jorens",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "E"
+          ],
+          "last": "Demey",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Goossens",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "R"
+          ],
+          "last": "Pattyn",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "M"
+          ],
+          "last": "Elseviers",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Weyler",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [
+            "L"
+          ],
+          "last": "Bossaert",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Mentens",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Ieven",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Lancet",
+      "volume": "362",
+      "issn": "",
+      "pages": "1536--1541",
+      "other_ids": {}
+    },
+    "BIBREF15": {
+      "ref_id": "b15",
+      "title": "Reactivation of human herpesvirus type 6 in multiple organ failure syndrome",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Desachy",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Ranger-Rogez",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Fran\u00e7ois",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Venot",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Traccard",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Gastinne",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Denis",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Vignon",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Clin Infect Dis",
+      "volume": "32",
+      "issn": "",
+      "pages": "197--203",
+      "other_ids": {}
+    },
+    "BIBREF16": {
+      "ref_id": "b16",
+      "title": "Selective reactivation of human herpesvirus 6 variant A occurs in critically ill immunocompetent hosts",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [
+            "R"
+          ],
+          "last": "Razonable",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Fanning",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "A"
+          ],
+          "last": "Brown",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "J"
+          ],
+          "last": "Espy",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Rivero",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Wilson",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [],
+          "last": "Kremers",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [
+            "F"
+          ],
+          "last": "Smith",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "V"
+          ],
+          "last": "Paya",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "R144 17",
+      "volume": "185",
+      "issn": "",
+      "pages": "110--113",
+      "other_ids": {}
+    },
+    "BIBREF17": {
+      "ref_id": "b17",
+      "title": "Herpes simplex virus pneumonia",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "G"
+          ],
+          "last": "Ramsey",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [
+            "H"
+          ],
+          "last": "Fife",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "C"
+          ],
+          "last": "Hackman",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "D"
+          ],
+          "last": "Meyers",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Corey",
+          "suffix": ""
+        }
+      ],
+      "year": 1982,
+      "venue": "Ann Intern Med",
+      "volume": "97",
+      "issn": "",
+      "pages": "813--820",
+      "other_ids": {}
+    },
+    "BIBREF18": {
+      "ref_id": "b18",
+      "title": "The 67 Gallium-transferrin pulmonary leak index in pneumonia and associated adult respiratory distress syndrome",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "B"
+          ],
+          "last": "Groeneveld",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "G"
+          ],
+          "last": "Raijmakers",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "Clin Sci",
+      "volume": "93",
+      "issn": "",
+      "pages": "463--470",
+      "other_ids": {}
+    },
+    "BIBREF19": {
+      "ref_id": "b19",
+      "title": "Radionuclide assessment of pulmonary microvascular permeability",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "B"
+          ],
+          "last": "Groeneveld",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "Eur J Nucl Med",
+      "volume": "24",
+      "issn": "",
+      "pages": "449--461",
+      "other_ids": {}
+    },
+    "BIBREF20": {
+      "ref_id": "b20",
+      "title": "Usefulness of pulmonary vascular leakiness assessment in interstitial pneumonitis",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Ishizaka",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Hasegawa",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Nakamura",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Takagi",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Takano",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Yamaguchi",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Kubo",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Chest",
+      "volume": "119",
+      "issn": "",
+      "pages": "1455--1460",
+      "other_ids": {}
+    },
+    "BIBREF21": {
+      "ref_id": "b21",
+      "title": "Pulmonary perspectives, an expanded definition of the adult respiratory distress syndrome",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "F"
+          ],
+          "last": "Murray",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Mattay",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "M"
+          ],
+          "last": "Luce",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "R"
+          ],
+          "last": "Flick",
+          "suffix": ""
+        }
+      ],
+      "year": 1988,
+      "venue": "Am Rev Respir Dis",
+      "volume": "138",
+      "issn": "",
+      "pages": "720--723",
+      "other_ids": {}
+    },
+    "BIBREF22": {
+      "ref_id": "b22",
+      "title": "T cells and the regulation of herpes simplex virus latency and reactivation",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "A"
+          ],
+          "last": "Nash",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "J Exp Med",
+      "volume": "191",
+      "issn": "",
+      "pages": "1455--1457",
+      "other_ids": {}
+    },
+    "BIBREF23": {
+      "ref_id": "b23",
+      "title": "Sepsis syndrome: understanding the role of innate and acquired immunity",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Oberholzer",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Oberholzer",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [
+            "L"
+          ],
+          "last": "Moldawer",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Shock",
+      "volume": "16",
+      "issn": "",
+      "pages": "83--96",
+      "other_ids": {}
+    },
+    "BIBREF24": {
+      "ref_id": "b24",
+      "title": "Herpetic tracheobronchitis",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "K"
+          ],
+          "last": "Sherry",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "S"
+          ],
+          "last": "Klainer",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Wolff",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Gerhard",
+          "suffix": ""
+        }
+      ],
+      "year": 1988,
+      "venue": "Ann Intern Med",
+      "volume": "109",
+      "issn": "",
+      "pages": "229--233",
+      "other_ids": {}
+    },
+    "BIBREF25": {
+      "ref_id": "b25",
+      "title": "Herpes simplex virus 1 pneumonia: patterns on CT scans and conventional chest radiographs",
+      "authors": [
+        {
+          "first": "S",
+          "middle": [
+            "L"
+          ],
+          "last": "Aquino",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "P"
+          ],
+          "last": "Dunagan",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Chiles",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [
+            "F"
+          ],
+          "last": "Haponik",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "J Comput Assist Tomogr",
+      "volume": "22",
+      "issn": "",
+      "pages": "795--800",
+      "other_ids": {}
+    }
+  },
+  "ref_entries": {
+    "TABREF0": {
+      "text": "Clinical characteristics of study patients and ventilatory parameters",
+      "latex": null,
+      "type": "table",
+      "html": "<html><body><table><tr><td>\u00a0</td><td>\u00a0</td><td>Patient (date)\n</td><td>\u00a0</td></tr><tr><td>Characteristic/parameter </td><td>1 (September 2001) </td><td>2 (November 2001) </td><td>3 (November 2001) </td><td>4 (February 2002)\n</td></tr><tr><td>General parameters\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>Age </td><td>45 </td><td>19 </td><td>84 </td><td>78\n</td></tr><tr><td>Sex </td><td>Female </td><td>Male </td><td>Female </td><td>Male\n</td></tr><tr><td>Underlying disease </td><td>- </td><td>Nasopharyngeal carcinoma </td><td>Hypertension </td><td>Heart failure\n</td></tr><tr><td>Reason of admission </td><td>Pneumonia of unknown origin; respiratory failure </td><td>Septic shock; ALI/respiratory failure </td><td>Aspiration pneumonia; respiratory failure and shock\n</td><td>Mycoplasma pneumoniae\npneumonia\n</td></tr><tr><td>Comorbidity </td><td>- </td><td>Heart failure </td><td>Heart failure </td><td>Prior coronary artery surgery\n</td></tr><tr><td>Prior chemotherapy/radiotherapy </td><td>No </td><td>Yes </td><td>No </td><td>No\n</td></tr><tr><td>Duration of mechanical ventilation before isolation (days)\n</td><td>13 </td><td>5 </td><td>10 </td><td>1\n</td></tr><tr><td>Duration mechanical ventilation after isolation (days)\n</td><td>8 </td><td>1 </td><td>11 </td><td>6\n</td></tr><tr><td>Length of stay in ICU (days) </td><td>26 </td><td>8 </td><td>21 </td><td>42\n</td></tr><tr><td>Infectious parameters\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>Duration between sampling and reporting of positive cultures (days)\n</td><td>5 </td><td>1 </td><td>1 </td><td>1\n</td></tr><tr><td>Respiratory source of HSV-1 </td><td>BAL </td><td>TA </td><td>TA </td><td>TA\n</td></tr><tr><td>Other sources of HSV-1 </td><td>Throat, skin </td><td>Throat </td><td>- </td><td>-\n</td></tr><tr><td>Leucocytes in Gram stain of </td><td>Few lymphocytes </td><td>Few </td><td>Moderate </td><td>Few\n</td></tr><tr><td>BAL/TA fluids\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>Bacteria in culture </td><td>Streptococcus aureus ++, </td><td>Candida albicans ++ </td><td>Multiresistant </td><td>No micro-organisms\n</td></tr><tr><td>Candida albicans ++ </td><td>Pseudomonas aeruginosa, Escherichia coli\n</td><td>\u00a0</td></tr><tr><td>Serology </td><td>High IgG titre\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>Body temperature (\u00b0C) </td><td>37.4 </td><td>36.2 </td><td>37.2 </td><td>38.2\n</td></tr><tr><td>Blood leucocytes (\u00d7109/l) </td><td>16.2 </td><td>4.5 </td><td>9.5 </td><td>16.4\n</td></tr><tr><td>Antiviral therapy </td><td>Aciclovir </td><td>- </td><td>Aciclovir </td><td>-\n</td></tr><tr><td>Treatment with steroids </td><td>Prednisone\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>Respiratory parameters\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>PaO2/FiO2 (mmHg) </td><td>345 </td><td>195 </td><td>190 </td><td>98\n</td></tr><tr><td>Plateau airway pressure (cmH2O) </td><td>33 </td><td>22 </td><td>22 </td><td>20\n</td></tr><tr><td>Positive end-expiratory airway </td><td>12 </td><td>7 </td><td>7 </td><td>5\n</td></tr><tr><td>pressure (cmH2O)\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>Total respiratory compliance (ml/cmH2O) </td><td>21 </td><td>31 </td><td>31 </td><td>-\n</td></tr><tr><td>Radiographic score </td><td>4 </td><td>4 </td><td>3 </td><td>4\n</td></tr><tr><td>LIS </td><td>2.5 </td><td>2.5 </td><td>2.2 </td><td>2.3\n</td></tr><tr><td>Central venous pressure (mmHg) </td><td>10 </td><td>8 </td><td>- </td><td>-\n</td></tr><tr><td>PLI (\u00d710-3/min) </td><td>10.5 </td><td>7.5 </td><td>8.0 </td><td>14.0\n</td></tr><tr><td>Duration between sampling and PLI (days) </td><td>0 </td><td>0 </td><td>1 </td><td>2\n</td></tr></table></body></html>"
+    }
+  },
+  "back_matter": [
+    {
+      "text": "Thre authors' contributions were as follows: Joanne Verheij and Arthur van Lingen performed the PLI studies; Alberdina M Simoons-Smit performed viral studies; and AB Johan Groeneveld, Albertus Beishuizen and Rob JM Strack van Schijndel were responsible for intellectual content and writing.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Acknowledgements"
+    },
+    {
+      "text": "None declared.Available online http://ccforum.com/content/8/3/R139",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Competing interests"
+    },
+    {
+      "text": "\u2022 With help of gallium-67-transferrin and technitiumggm-red blood cells, a pulmonary leak index can be measured as an index of capillary permeability and lung injury. In 7 patients with HSV-1 from tracheal aspirate or bronchoalveloar fluid, the index was normal, suggesting low pathogenicity of the virus \u2022 Low pulmonary pathogenicity of HSV-1 in the respiratory tracts argues for relatively harmless reactivation following immunodepression\u2022 When pulmonary pathogenicity is low, antiviral therapy may be safely withheld",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Key messages"
+    }
+  ]
+}

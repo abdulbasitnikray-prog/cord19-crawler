@@ -1,0 +1,2836 @@
+{
+  "paper_id": "4df2c6eecb985fcb20da3c5ed46e3b910c7077ab",
+  "metadata": {
+    "title": "Respiratory Research Protection of pulmonary epithelial cells from oxidative stress by hMYH adenine glycosylase",
+    "authors": [
+      {
+        "first": "Ted",
+        "middle": [
+          "M"
+        ],
+        "last": "Kremer",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "Indiana University School of Medicine",
+          "location": {
+            "settlement": "Indianapolis",
+            "region": "Indiana",
+            "country": "USA"
+          }
+        },
+        "email": ""
+      },
+      {
+        "first": "Mikael",
+        "middle": [
+          "L"
+        ],
+        "last": "Rinne",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "Indiana University School of Medicine",
+          "location": {
+            "settlement": "Indianapolis",
+            "region": "Indiana",
+            "country": "USA"
+          }
+        },
+        "email": "mikaellrinne-mrinne@iupui.edu"
+      },
+      {
+        "first": "Yi",
+        "middle": [],
+        "last": "Xu",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "Indiana University School of Medicine",
+          "location": {
+            "settlement": "Indianapolis",
+            "region": "Indiana",
+            "country": "USA"
+          }
+        },
+        "email": ""
+      },
+      {
+        "first": "Ming",
+        "middle": [],
+        "last": "Chen",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "Indiana University School of Medicine",
+          "location": {
+            "settlement": "Indianapolis",
+            "region": "Indiana",
+            "country": "USA"
+          }
+        },
+        "email": ""
+      },
+      {
+        "first": "Mark",
+        "middle": [
+          "R"
+        ],
+        "last": "Kelley",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "Indiana University School of Medicine",
+          "location": {
+            "settlement": "Indianapolis",
+            "region": "Indiana",
+            "country": "USA"
+          }
+        },
+        "email": ""
+      }
+    ]
+  },
+  "abstract": [
+    {
+      "text": "Background: Oxygen toxicity is a major cause of lung injury. The base excision repair pathway is one of the most important cellular protection mechanisms that responds to oxidative DNA damage. Lesion-specific DNA repair enzymes include hOgg1, hMYH, hNTH and hMTH.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    },
+    {
+      "text": "The above lesion-specific DNA repair enzymes were expressed in human alveolar epithelial cells (A549) using the pSF91.1 retroviral vector. Cells were exposed to a 95% oxygen environment, ionizing radiation (IR), or H 2 O 2 . Cell growth analysis was performed under non-toxic conditions. Western blot analysis was performed to verify over-expression and assess endogenous expression under toxic and non-toxic conditions. Statistical analysis was performed using the paired Student's t test with significance being accepted for p < 0.05.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    },
+    {
+      "text": "Cell killing assays demonstrated cells over-expressing hMYH had improved survival to both increased oxygen and IR. Cell growth analysis of A549 cells under non-toxic conditions revealed cells over-expressing hMYH also grow at a slower rate. Western blot analysis demonstrated over-expression of each individual gene and did not result in altered endogenous expression of the others. However, it was observed that O 2 toxicity did lead to a reduced endogenous expression of hNTH in A549 cells.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    },
+    {
+      "text": "Increased expression of the DNA glycosylase repair enzyme hMYH in A549 cells exposed to O 2 and IR leads to improvements in cell survival. DNA repair through the base excision repair pathway may provide an alternative way to offset the damaging effects of O 2 and its metabolites.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    }
+  ],
+  "body_text": [
+    {
+      "text": "Oxidative stress leading to the overproduction of free radicals in the lungs is present in many clinical situations. Such clinical settings include acute respiratory distress syndrome (ARDS), infants of prematurity going on to develop bronchopulmonary dysplasia (BPD), pathogenesis of chronic obstructive pulmonary disease (COPD), asthma, cystic fibrosis, ischemia-reperfusion injury, druginduced lung toxicity, cancer and aging [1] [2] [3] [4] . Although the use of oxygen may be clinically indicated in hypoxemic situations, one must consider the potential longterm toxic side effects. For example, we know that oxygen creates cellular damage by a variety of mechanisms. Normal cellular metabolism of oxygen involves the transfer of electrons from NADH to O 2 molecules to form water (H 2 O). At normal partial pressure, 95% of oxygen molecules (O 2 ) are reduced to H 2 O and 5% are partially reduced to toxic byproducts by normal metabolism in the mitochondria [5] . These metabolites include the superoxide anion (O 2 -), hydrogen peroxide (H 2 O 2 ), and hydroxyl radicals ( \u2022 OH) all of which make up what are known as Reactive Oxygen Species (ROS) [6] . Exposure to conditions of hyperoxia as well as ionizing radiation (IR) leads to increased amounts of these ROS and their damaging effects.",
+      "cite_spans": [
+        {
+          "start": 429,
+          "end": 432,
+          "text": "[1]",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 433,
+          "end": 436,
+          "text": "[2]",
+          "ref_id": null
+        },
+        {
+          "start": 437,
+          "end": 440,
+          "text": "[3]",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 441,
+          "end": 444,
+          "text": "[4]",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 965,
+          "end": 968,
+          "text": "[5]",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 1156,
+          "end": 1159,
+          "text": "[6]",
+          "ref_id": "BIBREF6"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Background"
+    },
+    {
+      "text": "ROS are known to attack the lipids, proteins, and nucleic acids of cells and tissues [5, 7] . Lipids, including pulmonary surfactant, react with ROS to produce lipid peroxides, which cause increased membrane permeability, inactivation of surfactant, and inhibition of normal cellular enzyme processes. Proteins reacting with ROS result in decreased protein synthesis due to inhibition of ribosomal translation or destruction of formed proteins. This ultimately leads to inactivation of intracellular enzymes and transport proteins resulting in impaired cellular metabolism and accumulation of cellular waste products. Lastly, ROS cause damage to nucleic acids by leading to modified purine and pyrimidine bases, apurinic (AP) / apyrimidinic sites, and DNA protein cross-links which can lead to single strand breaks [8] .",
+      "cite_spans": [
+        {
+          "start": 85,
+          "end": 88,
+          "text": "[5,",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 89,
+          "end": 91,
+          "text": "7]",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 815,
+          "end": 818,
+          "text": "[8]",
+          "ref_id": "BIBREF8"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Background"
+    },
+    {
+      "text": "Several defense mechanisms exist to combat the damaging effects of ROS. Intracellular enzymatic systems include superoxide dismutase which eliminates the superoxide anion, catalase which catalyzes the reduction of H 2 O 2 directly to H 2 O without the production of the hydroxyl radical, and glutathione peroxidase which directly reduces H 2 O 2 and lipid peroxides. Free radical scavengers, which stop free radical chain reactions by accepting electrons, include \u03b1-tocopheral (vitamin E), ascorbic acid (vitamin C), niacin (vitamin B), riboflavin (vitamin B 2 ), vitamin A, and ceruloplasmin [1, 2, 9] . These systems usually provide enough protection against oxygen metabolism under normal conditions, but may become depleted under conditions of increased oxidative stress [7, 10] .",
+      "cite_spans": [
+        {
+          "start": 593,
+          "end": 596,
+          "text": "[1,",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 597,
+          "end": 599,
+          "text": "2,",
+          "ref_id": null
+        },
+        {
+          "start": 600,
+          "end": 602,
+          "text": "9]",
+          "ref_id": "BIBREF9"
+        },
+        {
+          "start": 775,
+          "end": 778,
+          "text": "[7,",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 779,
+          "end": 782,
+          "text": "10]",
+          "ref_id": "BIBREF10"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Background"
+    },
+    {
+      "text": "The defense mechanism of interest in this paper involves the repair of oxidative damage through the human DNA base excision repair pathway (BER). BER is the most important cellular protection mechanism that removes Base excision repair pathways for Oxidative DNA damage oxidative DNA damage [11] . Damaged bases are excised and replaced in a multi-step process. Lesion-specific DNA glycosylase repair genes initiate this process. After removal of the damaged base, the resulting AP site is cleaved by APendonuclease generating a 3'OH and 5'deoxyribose phosphate (dRP). \u03b2-polymerase, which possesses dRPase activity, cleaves the dRP residue generating a nucleotide gap and then fills in this single nucleotide gap. The final nick is sealed by DNA ligase [12] [13] [14] ( Figure 1A ).",
+      "cite_spans": [
+        {
+          "start": 291,
+          "end": 295,
+          "text": "[11]",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 753,
+          "end": 757,
+          "text": "[12]",
+          "ref_id": "BIBREF12"
+        },
+        {
+          "start": 758,
+          "end": 762,
+          "text": "[13]",
+          "ref_id": "BIBREF13"
+        },
+        {
+          "start": 763,
+          "end": 767,
+          "text": "[14]",
+          "ref_id": "BIBREF14"
+        }
+      ],
+      "ref_spans": [
+        {
+          "start": 770,
+          "end": 779,
+          "text": "Figure 1A",
+          "ref_id": "FIGREF0"
+        }
+      ],
+      "section": "Background"
+    },
+    {
+      "text": "The oxidative repair genes that we have analyzed in this study include 8-oxoguanine DNA glycosylase (hOgg1), human Mut Y homologue (hMYH), human Mut T homologue (hMTH), and endonuclease III (hNTH) all of which are present in human cells and involved in the protection of DNA from oxidative damage. The repair enzyme hOgg1 is a purine oxidation glycosylase that recognizes and excise 8-oxoguanine lesions (GO) paired with cytosine. GO can pair with both cytosine and adenine during DNA replication [15] . If repair of C/GO does not occur, then G:C to T:A transversions may result [5, [15] [16] [17] . The repair enzyme hMYH is an 8-oxoguanine mismatch glycosylase that removes adenines misincorporated opposite 8-oxoG lesions that arise through DNA replication errors [5, [18] [19] [20] . The repair enzyme hMTH hydrolyzes oxidized purine nucleoside triphosphates such as 8-oxo-dGTP, 8-oxo-GTP, 8-oxo-dATP, and 2-hydroxy-dATP, effectively removing them from the nucleotide pool and preventing their incorporation into DNA ( Figure 1B ) [21] . Lastly, the repair gene endonuclease III (hNTH) is a pyrimidine oxidation and hydration glycosylase that recognizes a wide range of damaged pyrimidines [22] . hNTH has also been shown to have a similar DNA glycosylase/AP lyase activity that can remove 8-oxoG from 8-oxoG/G, 8-oxoG/A, and 8-oxoG/C mispairs [23, 24] . Subsequent steps following hNTH are identical to those following hOgg1 ( Figure 1A ).",
+      "cite_spans": [
+        {
+          "start": 497,
+          "end": 501,
+          "text": "[15]",
+          "ref_id": "BIBREF15"
+        },
+        {
+          "start": 579,
+          "end": 582,
+          "text": "[5,",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 583,
+          "end": 587,
+          "text": "[15]",
+          "ref_id": "BIBREF15"
+        },
+        {
+          "start": 588,
+          "end": 592,
+          "text": "[16]",
+          "ref_id": "BIBREF16"
+        },
+        {
+          "start": 593,
+          "end": 597,
+          "text": "[17]",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 767,
+          "end": 770,
+          "text": "[5,",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 771,
+          "end": 775,
+          "text": "[18]",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 776,
+          "end": 780,
+          "text": "[19]",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 781,
+          "end": 785,
+          "text": "[20]",
+          "ref_id": "BIBREF20"
+        },
+        {
+          "start": 1035,
+          "end": 1039,
+          "text": "[21]",
+          "ref_id": "BIBREF21"
+        },
+        {
+          "start": 1194,
+          "end": 1198,
+          "text": "[22]",
+          "ref_id": "BIBREF22"
+        },
+        {
+          "start": 1348,
+          "end": 1352,
+          "text": "[23,",
+          "ref_id": "BIBREF23"
+        },
+        {
+          "start": 1353,
+          "end": 1356,
+          "text": "24]",
+          "ref_id": "BIBREF24"
+        }
+      ],
+      "ref_spans": [
+        {
+          "start": 1023,
+          "end": 1032,
+          "text": "Figure 1B",
+          "ref_id": "FIGREF0"
+        },
+        {
+          "start": 1432,
+          "end": 1441,
+          "text": "Figure 1A",
+          "ref_id": "FIGREF0"
+        }
+      ],
+      "section": "Background"
+    },
+    {
+      "text": "A previous study has shown that over-expression of the DNA repair gene hOgg1 leads to reduced hyperoxiainduced DNA damage in human alveolar epithelial cells [25] . The primary goal of our present study was to compare the protective effects of the four main lesion-specific DNA glycosylase repair genes by individually overexpressing each in lung cells and determining which of these provides the greatest degree of protection under conditions of increased oxidative stress.",
+      "cite_spans": [
+        {
+          "start": 157,
+          "end": 161,
+          "text": "[25]",
+          "ref_id": "BIBREF25"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Background"
+    },
+    {
+      "text": "The human alveolar epithelial cell line A549 (58 year old Caucasian male), was purchased from ATCC Cat No CCL-185. The cells were grown in DMEM (Gibco, Grand Island, NY) supplemented with 10% fetal bovine serum (FBS) (HyClone, Logan, UT) and penicillin (100 U/ml)/ streptomycin (100 \u00b5g/ml) (Gibco, Grand Island, NY).",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Cell Culture"
+    },
+    {
+      "text": "Passaging of cells was performed every 3-4 days with cells grown to 80% confluency in a 10 cm cell culture dish (Corning Incorporated, Corning, NY). Cells were kept at 37\u00b0C in a humidified, 5% CO2 incubator.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Cell Culture"
+    },
+    {
+      "text": "The retroviral vector pSF91.1, a gift from Dr. C. Baum from the University of Hamburg in Germany, was constructed with an internal ribosome entry site (IRES) upstream to the gene expressing enhanced green fluorescent protein (EGFP) as previously described [26] .",
+      "cite_spans": [
+        {
+          "start": 256,
+          "end": 260,
+          "text": "[26]",
+          "ref_id": "BIBREF26"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Retroviral Vector Construction"
+    },
+    {
+      "text": "Four DNA repair genes were individually ligated into the retroviral vector pSF91.1.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Retroviral Vector Construction"
+    },
+    {
+      "text": "hOgg1-6pcDNA3.1 was initially amplified by PCR by primers to introduce a kozak sequence at the 5' end [27] . Digestion of this product with EcoRI and SalI was performed and then hOgg1 was subcloned into digested plasmid vector pSF91.1, with T4 DNA ligase. DNA sequencing was performed to confirm integrity of the hOgg1 gene.",
+      "cite_spans": [
+        {
+          "start": 102,
+          "end": 106,
+          "text": "[27]",
+          "ref_id": "BIBREF27"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Retroviral Vector Construction"
+    },
+    {
+      "text": "hMYH/PGEX4T-1 and hMTH/PGEX4T-1 hMYH was a gift from Dr. A. McCullough (University of Texas Medical School, Galveston, TX) and hMTH was cloned in Dr. Kelley's lab. Plasmid DNA was prepared as above by digestion with EcoRI and SalI and ligated into pSF91.1 as above and sequencing was performed to confirm integrity of the genes.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Retroviral Vector Construction"
+    },
+    {
+      "text": "PGEX-6PI-hNTH1-wild type this gene was a gift from Dr. S. Mitra (University of Texas Medical School, Galveston, TX). Digestion with BamHI and SalI was performed and the hNTH1-wt fragment was ligated into the empty plasmid vector PUC18. The hNTH1-wt fragment was then excised with both sides flanked by EcoRI restriction sites and ligated into pSF91.1. Proper orientation of the gene was confirmed and sequencing was performed to determine the integrity of the gene. 2.5 \u00d7 10 5 A549 cells were suspended with the viral supernatant and plated in 1 well of a 6-well plate along with polybrene (Sigma, St. Louis, MO). This exposure was performed 6 hours per day for three days. At approximately five days from the beginning of the infection, the infected cells were analyzed using flow cytometry and sorted for EGFP expression.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Retroviral Vector Construction"
+    },
+    {
+      "text": "Cell pellets of sorted cells were resuspended in NuPage buffer (Invitrogen, Carlsbad, CA) and protein concentrations were determined using the DC protein assay (Bio-Rad, Hercules, CA). 20 ug of protein were loaded into individual lanes of a NuPage Bis-Tris Gel (Invitrogen, Carlsbad, CA). The gel was then transferred to nitrocellulose paper (Osmonics Inc, Gloucester, MA). The membranes were then blocked with 1% blocking solution (Roche Diagnostics, Indianapolis, IN) for 1 hour at room temperature and then incubated overnight at 4\u00b0C with rabbit polyclonal antibodies to hOgg1 (Novus Biologicals, Littleton, CO), hMTH (Novus Biologicals, Littleton, CO), hMYH (Oncogene Research Products, Darmstadt, Germany) and hNTH (Proteintech Group Inc, Chicago, IL) all at a dilution of 1:1000 except hNTH which was diluted 1:2500. They were then washed 2 times with TBST and 2 times with 0.5% blocking solution, 10 minutes per wash. The membranes were incubated with anti-rabbit secondary antibodies at 1:1000 for 1 hour at room temperature. Lastly, the membranes were washed 4 times with TBST, 15 minutes per wash. The membranes were briefly soaked in BM chemiluminescence blotting substrate (Roche Diagnostics, Indianapolis, IN) and then exposed to high performance autoradiography film (Amersham Biosciences, Buckinghamshire, England). Kodak Digital Science 1D Image Analysis software was utilized to quantify the region of interest (ROI) band mass of individual bands on films where visualized differences were detected.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Western Analysis"
+    },
+    {
+      "text": "Sorted EGFP positive A549 cells infected with the above DNA repair genes were counted and seeded into 96-well plates at a density of 1000 cells/well, 6 wells per gene. Six hours after seeding, individual plates were placed into an oxygen chamber supplied by Dr. L. Haneline (Wells Center for Research, Indianapolis, IN) located in a 37\u00b0C incubator. The oxygen chamber was then infused with 95% O 2 and 5% CO 2 . Individual plates were removed after 12, 24, 48, and 72 hours of exposure. Control A549 cells were incubated in a normal 37\u00b0C humidified-5% CO 2 incubator. O 2 concentrations were monitored with a MAXO 2 analyzer (Maxtec, Salt Lake City, UT). Four days from the beginning of the exposure, cells were assessed for cell growth/survival using the sulforhodamine B assay (SRB assay).",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Hyperoxic Exposure"
+    },
+    {
+      "text": "The SRB assay (Sigma, St. Louis, MO), developed by the National Cancer Institute, provides a sensitive measure of drug-induced cytotoxicity through a colorimetric endpoint that is non-destructive, indefinitely stable, and visible to the naked eye. This assay was used to assess the cell growth/survival of over-expressed cells [28] . Cold 10% TCA was used to fix the cells to the plate. After incubation for 1 hour at 4\u00b0C, the individual wells were rinsed with water. After air-drying, SRB solution was added to each well and cells were allowed to stain for 20-30 minutes. 1% acetic acid wash was used to rinse off unincorporated dye. Incorporated dye was then solubilized in 100 \u00b5l per well of 10 mM Tris. Absorbance was measured by a tunable microplate reader (Molecular Devices, Sunnyvale, CA) at a wavelength of 565 nm. Background absorbance measured at 690 nm was subtracted from the measurements at 565 nm.",
+      "cite_spans": [
+        {
+          "start": 327,
+          "end": 331,
+          "text": "[28]",
+          "ref_id": "BIBREF28"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Sulforhodamine B Assay"
+    },
+    {
+      "text": "Sorted EGFP positive A549 cells were seeded into 96-well plates at a density of 1000 cells/well. Six hours after seeding, individual plates were then exposed to radiation at doses of 250, 500, 1000, and 1500 Rads or 0. well. All the plates were placed into a 37\u00b0C humidified-5% CO 2 incubator. Every 24 hours for 4 days, 1 plate was removed and the cells were fixed and analyzed by the SRB assay looking at cell growth under non-toxic conditions. Growth curves and exponential growth equations were determined to look at the doubling time (DT) of cells infected with each repair gene of interest compared to vector infected and uninfected wild type cells.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Irradiation and H 2 O 2 Exposure"
+    },
+    {
+      "text": "All drug exposure experiments were performed at least three times and individual drug doses included 6-8 wells for each group of infected cells. Analysis of cell growth and exponential growth equations were determined using Microsoft Excel. All experiments involving drug exposures were normalized to the zero dose. Data are expressed as means \u00b1 SE. The significance of differences were calculated using the paired Student's t test with significance being accepted for p < 0.05.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Statistics"
+    },
+    {
+      "text": "The DNA repair genes hOgg1, hMYH, hMTH, and hNTH were ligated into the retroviral vector pSF91.1 ( figure 2 ). This vector, derived from a murine stem cell virus backbone, along with each individual repair gene, was used for transfection of phoenix amphotropic cells. Viral supernatant was then collected and used to stably infect A549",
+      "cite_spans": [],
+      "ref_spans": [
+        {
+          "start": 99,
+          "end": 107,
+          "text": "figure 2",
+          "ref_id": null
+        }
+      ],
+      "section": "Retroviral Constructs"
+    },
+    {
+      "text": "Western analysis of A549 cells over-expressing individual repair genes and effect on endogenous glycosylase level contained the genes of interest integrated into their DNA (data not shown).",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "cells. A heterogeneous population of A549 cells expressing EGFP was sorted so all cells used for experiments"
+    },
+    {
+      "text": "Western blot analysis was performed on sorted cells in order to verify over-expression of the four genes of interest. hOgg1, hMYH, hMTH, and hNTH were all detected at their correct position on western blots (data not shown).",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Repair Gene Expression"
+    },
+    {
+      "text": "Western analysis was also utilized to assess whether overexpression of each individual repair gene resulted in altered endogenous expression of the other repair genes under both non-toxic and toxic conditions (24 hrs of 95% O 2 and 1000 Rad). Cells over-expressing the repair genes hOgg1, hMYH, hMTH, and hNTH did not lead to altered expression of the other endogenous repair genes under the above conditions when compared to each other or pSF91.1 vector control cells ( Figure 3A ,3B,3C and 3D). hOgg1's endogenous expression was below the level of detection. The pattern of endogenous expression of hNTH was consistent for each condition when comparing cells over-expressing hOgg1, hMYH, hMTH, and pSF91.1. Reduced expression of hNTH after exposure to 95% O 2 was noted.",
+      "cite_spans": [],
+      "ref_spans": [
+        {
+          "start": 471,
+          "end": 480,
+          "text": "Figure 3A",
+          "ref_id": "FIGREF2"
+        }
+      ],
+      "section": "Repair Gene Expression"
+    },
+    {
+      "text": "Lastly, we assessed endogenous expression of each individual repair gene in cells infected with pSF91.1 following non-toxic and toxic conditions (24 hrs of 95% O 2 and 1000 Rad) at 24 and 48 hrs after the onset of exposure. Endogenous hMYH and hMTH were expressed to the same degree. hOgg1's endogenous expression was below the level of detection using western analysis (results not shown). When analyzing endogenous hNTH expression, it was noted that hyperoxia at 24 hrs and 48 hrs resulted in reduced protein expression by 93% and 64% respectively. There also was a small increase in expression of hNTH noted after 1000 Rad one day post exposure that was back to baseline by two days post exposure. ROI band mass quantification demonstrated this finding ( Figure 4A and 4B). Two or more replicates were performed for each western analysis to determine consistency of the results.",
+      "cite_spans": [],
+      "ref_spans": [
+        {
+          "start": 758,
+          "end": 767,
+          "text": "Figure 4A",
+          "ref_id": null
+        }
+      ],
+      "section": "Repair Gene Expression"
+    },
+    {
+      "text": "A549 cells expressing hMYH demonstrated increased survival after exposure to conditions with elevated levels of oxygen compared to cells expressing only the pSF91.1 vector ( Figure 5A ). Results were highly significant at all time points except after 12 hours O 2 where it almost reached a highly significant value. The differences between pSF91.1 and hMYH varied from 12% after 12 hours O 2 exposure to 7% after 72 hours O 2 exposure. A549 cells expressing hMYH also demonstrated increased survival after exposure to all doses of radiation in comparison to pSF91.1 ( Figure 5B ). These results were also highly significant at all doses of radiation except at 250 Rads where it almost reached a highly significant value. The differences between pSF91.1 and hMYH varied from 12%-14% for all doses of radiation. Also noted in these experiments was that vector control cells demonstrated no Experiments looking at the effects of H 2 O 2 on cells expressing the repair genes did not demonstrate increased survival for any of these repair genes when compared to vector control cells ( Figure 5C ). This data demonstrates that over-expression of hMYH has the ability to improve cellular survival under conditions of hyperoxia and radiation but may not be able to overcome the toxicity of H 2 O 2 .",
+      "cite_spans": [],
+      "ref_spans": [
+        {
+          "start": 174,
+          "end": 183,
+          "text": "Figure 5A",
+          "ref_id": "FIGREF3"
+        },
+        {
+          "start": 568,
+          "end": 577,
+          "text": "Figure 5B",
+          "ref_id": "FIGREF3"
+        },
+        {
+          "start": 1080,
+          "end": 1089,
+          "text": "Figure 5C",
+          "ref_id": "FIGREF3"
+        }
+      ],
+      "section": "Protection from Hyperoxia and Radiation"
+    },
+    {
+      "text": "Cell growth under normal conditions was ascertained to determine if over-expression of any of the repair genes caused an alteration in the growth of cells in the absence of oxidative stress. Wild type A549 cells and cells expressing pSF91.1, hNTH, hOgg1, and hMTH appeared to grow at similar rates with doubling times within the same range. A549 cells expressing hMYH did show a slower growth rate that resulted in significant differences in cell number by day 3. The calculated doubling time for the cells over expressing hMYH is > 3 hrs longer than the cells with the other repair genes and vector alone ( Figure 6 ). This slowing of growth may allow for more time to repair Cell survival analysis following O 2 , IR, and H 2 O 2 treatments ",
+      "cite_spans": [],
+      "ref_spans": [
+        {
+          "start": 608,
+          "end": 616,
+          "text": "Figure 6",
+          "ref_id": null
+        }
+      ],
+      "section": "Cell Growth"
+    },
+    {
+      "text": "Oxidative stress to the lung leads to cellular DNA damage as evidenced by the release of specific gene products known to regulate DNA base excision repair pathways such as p53 and p21 [29] [30] [31] . Alterations in pro-inflammatory mediators, transcription factors, and other related gene products are also observed [32] . This injury has been shown to be associated with features of both cellular necrosis and apoptosis [33] [34] [35] . The resultant cellular inflammation and death from oxidative stress has a dramatic impact on the outcome of patients in the clinical setting [7, 36] .",
+      "cite_spans": [
+        {
+          "start": 184,
+          "end": 188,
+          "text": "[29]",
+          "ref_id": "BIBREF29"
+        },
+        {
+          "start": 189,
+          "end": 193,
+          "text": "[30]",
+          "ref_id": "BIBREF30"
+        },
+        {
+          "start": 194,
+          "end": 198,
+          "text": "[31]",
+          "ref_id": "BIBREF31"
+        },
+        {
+          "start": 317,
+          "end": 321,
+          "text": "[32]",
+          "ref_id": "BIBREF32"
+        },
+        {
+          "start": 422,
+          "end": 426,
+          "text": "[33]",
+          "ref_id": "BIBREF33"
+        },
+        {
+          "start": 427,
+          "end": 431,
+          "text": "[34]",
+          "ref_id": "BIBREF34"
+        },
+        {
+          "start": 432,
+          "end": 436,
+          "text": "[35]",
+          "ref_id": "BIBREF35"
+        },
+        {
+          "start": 580,
+          "end": 583,
+          "text": "[7,",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 584,
+          "end": 587,
+          "text": "36]",
+          "ref_id": "BIBREF36"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "Most of our current clinical therapy towards oxidative stress in the lung involves both supportive measures and prevention. Research dealing with oxidative lung injury has focused mainly on enhancing antioxidant enzymatic processes and free radical scavengers [37] [38] [39] [40] . The ability to alter cellular survival by increasing specific DNA repair mechanisms may add another approach to the treatment of oxidant-mediated lung injury.",
+      "cite_spans": [
+        {
+          "start": 260,
+          "end": 264,
+          "text": "[37]",
+          "ref_id": "BIBREF37"
+        },
+        {
+          "start": 265,
+          "end": 269,
+          "text": "[38]",
+          "ref_id": "BIBREF38"
+        },
+        {
+          "start": 270,
+          "end": 274,
+          "text": "[39]",
+          "ref_id": "BIBREF39"
+        },
+        {
+          "start": 275,
+          "end": 279,
+          "text": "[40]",
+          "ref_id": "BIBREF40"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "Many investigators have used hydrogen peroxide as a substitute for hyperoxia since it is known to be one of the metabolites produced by the metabolism of oxygen. ROS such as H 2 O 2 and those produced by hyperoxia clearly lead to DNA damage but questions exist as to whether H 2 O 2 leads to the same deleterious effects upon DNA as hyperoxia. Analysis of our growth curves after exposure to H 2 O 2 in comparison to hyperoxia and IR clearly indicates that cellular protection by oxidative DNA repair genes is specific to the agent used. Because no protection was observed with over-expression of any of the repair genes following exposure to H 2 O 2 , we speculate that the damage it causes is dissimilar. It may be that its damage not only involves oxidized bases, but may also include other forms of DNA, lipid, and protein damage that are not corrected by oxidative DNA repair genes. Alternatively, the amount and type of damage evoked by H 2 O 2 could be beyond that which can be corrected by over-expressing these repair genes.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "Another form of stress known to induce damage through the formation of ROS is IR. Radiation induced free radical damage to DNA has substantial overlap with that of oxidative damage [41] [42] [43] . The protection provided by specific oxidative DNA repair genes under conditions of IR, was notable throughout our experiments only with the repair enzyme hMYH.",
+      "cite_spans": [
+        {
+          "start": 181,
+          "end": 185,
+          "text": "[41]",
+          "ref_id": "BIBREF41"
+        },
+        {
+          "start": 186,
+          "end": 190,
+          "text": "[42]",
+          "ref_id": "BIBREF42"
+        },
+        {
+          "start": 191,
+          "end": 195,
+          "text": "[43]",
+          "ref_id": "BIBREF43"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "The primary agent utilized to induce the formation of ROS was an oxygen rich environment. The use of oxygen as a stressor leading to the formation of ROS, offers a distinct advantage over IR and H 2 O 2 by mimicking the clinical situation where constant exposure to hyperoxia leads to cumulative cellular damage which further compromises repair. We determined that survival of A549 cells was also enhanced to a small degree with increased expression of the repair enzyme hMYH. This was an unexpected finding as we anticipated the repair gene hOgg1 would demonstrate the greatest protection in response to oxidative stress based on previous studies, however these experiments utilized the colony forming assay (CFA) to detect improvements in survival [25] . Additionally, the CFA may provide different results compared to the SRB assay, which allows for growth analysis over a shorter window of time. Furthermore, their study did not look at the repair enzyme hMYH and its impact on survival. Another study has investigated the repair function of hMYH in MYH-deficient murine cells. It was demonstrated that transfection of the MYH-deficient cells with a wild-type MYH expression vector increased the efficiency of A:GO repair [44] .",
+      "cite_spans": [
+        {
+          "start": 750,
+          "end": 754,
+          "text": "[25]",
+          "ref_id": "BIBREF25"
+        },
+        {
+          "start": 1226,
+          "end": 1230,
+          "text": "[44]",
+          "ref_id": "BIBREF44"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "An interesting observation noted while doing our experiments lead us to look at individual growth characteristics of cells over-expressing each of the oxidative repair enzymes. Cells over-expressing the repair enzyme hMYH clearly grow at a slower rate when compared with the other enzymes. The mechanism behind this is not understood at this point in time. The repair action of Cell growth curve and associated doubling times (DT) Figure 6 Cell growth curve and associated doubling times (DT hMYH is known to remove adenines misincorporated opposite 8-oxoG lesions. This lesion occurs when a C/GO lesion is allowed to replicate before being corrected by hOgg1. Repair by hMYH is not a final corrective measure. The product of hMYH activity is the lesion C/GO, which allows hOgg1 to have another opportunity to remove 8-oxoG opposite cytosine. We know that A549 cells possess the hOgg1 gene based on a previous study demonstrating the presence of this gene after amplification by genomic PCR [45] . We also have demonstrated endogenous activity of hOgg1 in A549 cells by using an 8-oxoguanine bioactivity assay. Therefore, our explanation of these results is that the slowed growth created by hMYH may provide a wider window of opportunity for the repair process to take place, which ultimately grants endogenous hOgg1 another opportunity to remove the 8-oxoG lesion created by oxidative stress.",
+      "cite_spans": [
+        {
+          "start": 991,
+          "end": 995,
+          "text": "[45]",
+          "ref_id": "BIBREF45"
+        }
+      ],
+      "ref_spans": [
+        {
+          "start": 431,
+          "end": 439,
+          "text": "Figure 6",
+          "ref_id": null
+        }
+      ],
+      "section": "Discussion"
+    },
+    {
+      "text": "As noted in the methods section, the SRB assay provides a sensitive measure of drug-induced cytotoxicity that is used to assess cell proliferation/survival. The reduced cell proliferation of A549 cells over-expressing hMYH under nontoxic conditions may likely underestimate the magnitude of the protective effect of this particular repair enzyme. This may in fact make the results even more significant.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "Recent studies have discovered hereditary variations of the glycosylase hMYH that may predispose to familial colorectal cancer [46, 47] . Others have looked for hMYH variants in lung cancer patients and have not identified any clear pathogenic biallelic hMYH mutations or an overrepresentation of hMYH polymorphisms [47] . The A549 cell line has not demonstrated somatic mutations in hMYH, but a single nucleotide polymorphism (SNPs) has been noted [45] . The impact on function by this SNP is unknown. It would appear that the function of hMYH is very important in preventing somatic mutations leading to cancer in the gastrointestinal tract. Although studies to date have not demonstrated this same relationship with lung cancer, we do know that the lungs are subjected to large quantities of ROS under certain conditions as discussed earlier. The formation of mutations from oxidative stress does have other deleterious effects on cells including cellular death by necrosis and apoptosis. Tissue viability is dependent upon mutation correction and replication of the surviving cells to replace those that have died. The ability to enhance cellular survival, after specific oxidative exposures, is evident after increased production of the hMYH repair gene in these experiments.",
+      "cite_spans": [
+        {
+          "start": 127,
+          "end": 131,
+          "text": "[46,",
+          "ref_id": "BIBREF46"
+        },
+        {
+          "start": 132,
+          "end": 135,
+          "text": "47]",
+          "ref_id": "BIBREF47"
+        },
+        {
+          "start": 316,
+          "end": 320,
+          "text": "[47]",
+          "ref_id": "BIBREF47"
+        },
+        {
+          "start": 449,
+          "end": 453,
+          "text": "[45]",
+          "ref_id": "BIBREF45"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "We additionally wanted to determine the level of endogenous expression of the glycosylase repair genes in the pulmonary epithelial A549 cell line. Others have demonstrated how different stressors lead to alterations in the endogenous production of specific repair genes. For example, it has been shown that endogenous gene expression of hOgg1 was elevated following exposure to crocidolite asbestos which is known to cause an increase in 8-oxoG levels [48] . It has also previously been reported that treatment of A549 cells with sodium dichromate, a prooxidant, leads to a reduction of hOgg1 protein expression that was not observed with H 2 O 2 [49] . One additional study demonstrated a dose dependent down regulation of hOgg1 protein expression in rat lung after exposure to cadmium, a known carcinogen associated with the formation of intracellular ROS [50] . In our experiments we were able to demonstrate that both hyperoxia and IR do not appear to impact the endogenous expression of hOgg1, hMYH, and hMTH at 24 and 48 hours following exposure. It was noted that endogenous hNTH was reduced after hyperoxia at 24 and 48 hours after the onset of exposure. One would speculate that this reduction in endogenous hNTH secondary to hyperoxia is related to either decreased production or increased destruction in response to O 2 exposure. Over-expression of this repair enzyme did not result in improvements in survival after O 2 exposure based on our experiments. It may be that endogenous levels are adequate to correct this specific mutational burden for these experiments.",
+      "cite_spans": [
+        {
+          "start": 452,
+          "end": 456,
+          "text": "[48]",
+          "ref_id": "BIBREF48"
+        },
+        {
+          "start": 647,
+          "end": 651,
+          "text": "[49]",
+          "ref_id": "BIBREF49"
+        },
+        {
+          "start": 858,
+          "end": 862,
+          "text": "[50]",
+          "ref_id": "BIBREF50"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "Furthermore, no previous studies have determined how cells over-expressing specific repair genes may impact endogenous expression of the other oxidative BER genes under both normal and oxidative stress conditions. We were also able to demonstrate that endogenous expression of glycosylase repair genes were not altered under these conditions secondary to the over-expression of any of these genes. This is an important finding for interpretation of survival data; protection of cells is due to the overexpression of the specific gene and not due to enhancement of other endogenous repair enzyme levels, at least for the genes studied under these conditions. Some limitations may exist in using a lung carcinoma cellline, which likely differs both in proliferative properties as well as in response to oxidative stress in comparison to primary epithelial cells. The enhanced cell growth observed with cell lines may be more reflective of undifferentiated alveolar type II cells which are likely to replace terminally differentiated alveolar type I cells after injury/ death due to oxidative stress. This may not be a true reflection of growth under non-toxic conditions when very little cell division is occurring. This is an inherent problem observed when comparing cell lines with primary cells and results need to be interpreted in a way that considers this.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "It is difficult to know how this will translate to pulmonary epithelial cells in vivo at this stage. It certainly would appear that the protection observed is modest in degree in this pulmonary epithelial cell line. Further experiments assessing the function of the repair enzyme hMYH in this model will be important to perform in order to delineate the findings of slowed growth under normal conditions and improved survivability under conditions of O 2 and IR. More research looking at the potential for combination therapy, including DNA repair mechanisms in conjunction with other antioxidant defense mechanisms may be another approach to enhancing cell survival, which may lead to better clinical outcomes. Alternatively, cell survival may not be the most important end point for hyperoxia studies. Given that 8-oxoG, if left unrepaired, leads to G:C to T:A transversions, there may be an increase in mutational burden by these cells that isn't reflected in cell survival. Further experiments studying the impact on mutation production is underway. Ultimately, experiments need to be done in animal models to determine the translation to in vivo pulmonary cells.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Discussion"
+    },
+    {
+      "text": "In summary, we have demonstrated that over-expression of the DNA glycosylase repair enzyme hMYH may enhance survival of a pulmonary epithelial cell line after exposure to conditions of IR and hyperoxia. We have also demonstrated that over-expression of hMYH leads to a slowing of growth of A549 cells under non-toxic conditions, which may in part play a role in this enhancement of survival by providing a wider window of opportunity for repair of oxidized lesions to occur. Lastly, we demonstrated that over-expression does not lead to altered endogenous expression of these repair genes. As the understanding of DNA repair mechanisms continues to grow and the evolution of gene therapy takes place, more treatment options may be available in the clinical setting to help with many disease processes including the damaging effects of oxygen and its metabolites.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Conclusions"
+    }
+  ],
+  "bib_entries": {
+    "BIBREF0": {
+      "ref_id": "b0",
+      "title": "Significance of glutathione in lung disease and implications for therapy",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "E"
+          ],
+          "last": "Morris",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [
+            "R"
+          ],
+          "last": "Bernard",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Am J Med Sci",
+      "volume": "307",
+      "issn": "",
+      "pages": "119--127",
+      "other_ids": {}
+    },
+    "BIBREF3": {
+      "ref_id": "b3",
+      "title": "Science review: Redox and oxygen-sensitive transcription factors in the regulation of oxidant-mediated lung injury: role for nuclear factor-kappaB",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "J"
+          ],
+          "last": "Haddad",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Crit Care",
+      "volume": "6",
+      "issn": "",
+      "pages": "481--490",
+      "other_ids": {}
+    },
+    "BIBREF4": {
+      "ref_id": "b4",
+      "title": "Chemogenomic identification of Ref-1/AP-1 as a therapeutic target for asthma",
+      "authors": [
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Nguyen",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "L"
+          ],
+          "last": "Teo",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Matsuda",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Eguchi",
+          "suffix": ""
+        },
+        {
+          "first": "Chi",
+          "middle": [
+            "Ey"
+          ],
+          "last": "Henderson",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "R"
+          ],
+          "last": "Jr",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Kahn",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Proc Natl Acad Sci U S A",
+      "volume": "100",
+      "issn": "",
+      "pages": "1169--1173",
+      "other_ids": {}
+    },
+    "BIBREF5": {
+      "ref_id": "b5",
+      "title": "Repair of oxidative DNA damage: mechanisms and functions",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "L"
+          ],
+          "last": "Lu",
+          "suffix": ""
+        },
+        {
+          "first": "X",
+          "middle": [],
+          "last": "Li",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Gu",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "M"
+          ],
+          "last": "Wright",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "Y"
+          ],
+          "last": "Chang",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Cell Biochem Biophys",
+      "volume": "35",
+      "issn": "",
+      "pages": "141--170",
+      "other_ids": {}
+    },
+    "BIBREF6": {
+      "ref_id": "b6",
+      "title": "Free radicals, reactive oxygen species and human disease: a critical evaluation with special reference to atherosclerosis",
+      "authors": [
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Halliwell",
+          "suffix": ""
+        }
+      ],
+      "year": 1989,
+      "venue": "Br J Exp Pathol",
+      "volume": "70",
+      "issn": "",
+      "pages": "737--757",
+      "other_ids": {}
+    },
+    "BIBREF7": {
+      "ref_id": "b7",
+      "title": "DNA damage and cell cycle checkpoints in hyperoxic lung injury: braking to facilitate repair",
+      "authors": [
+        {
+          "first": "O&apos;reilly",
+          "middle": [],
+          "last": "Ma",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Am J Physiol Lung Cell Mol Physiol",
+      "volume": "281",
+      "issn": "",
+      "pages": "291--305",
+      "other_ids": {}
+    },
+    "BIBREF8": {
+      "ref_id": "b8",
+      "title": "Free radicalinduced damage to DNA: mechanisms and measurement",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Dizdaroglu",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Jaruga",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Birincioglu",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Rodriguez",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Free Radic Biol Med",
+      "volume": "32",
+      "issn": "",
+      "pages": "1102--1115",
+      "other_ids": {}
+    },
+    "BIBREF9": {
+      "ref_id": "b9",
+      "title": "Antioxidant/pro-oxidant equilibrium regulates HIF-1alpha and NF-kappa B redox sensitivity. Evidence for inhibition by glutathione oxidation in alveolar epithelial cells",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "J"
+          ],
+          "last": "Haddad",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "E"
+          ],
+          "last": "Olver",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "C"
+          ],
+          "last": "Land",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "J Biol Chem",
+      "volume": "275",
+      "issn": "",
+      "pages": "21130--21139",
+      "other_ids": {}
+    },
+    "BIBREF10": {
+      "ref_id": "b10",
+      "title": "Importance of Se-glutathione peroxidase, catalase, and Cu/Zn-SOD for cell survival against oxidative stress",
+      "authors": [
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Michiels",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Raes",
+          "suffix": ""
+        },
+        {
+          "first": "O",
+          "middle": [],
+          "last": "Toussaint",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Remacle",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Free Radic Biol Med",
+      "volume": "17",
+      "issn": "",
+      "pages": "235--248",
+      "other_ids": {}
+    },
+    "BIBREF11": {
+      "ref_id": "b11",
+      "title": "Overlapping specificities of base excision repair, nucleotide excision repair, recombination, and translesion synthesis pathways for DNA base damage in Saccharomyces cerevisiae",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [
+            "L"
+          ],
+          "last": "Swanson",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [
+            "J"
+          ],
+          "last": "Morey",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "W"
+          ],
+          "last": "Doetsch",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Jinks-Robertson",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Mol Cell Biol",
+      "volume": "19",
+      "issn": "",
+      "pages": "2929--2935",
+      "other_ids": {}
+    },
+    "BIBREF12": {
+      "ref_id": "b12",
+      "title": "Excision of deoxyribose phosphate residues by DNA polymerase beta during DNA repair",
+      "authors": [
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Matsumoto",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Kim",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Science",
+      "volume": "269",
+      "issn": "",
+      "pages": "699--702",
+      "other_ids": {}
+    },
+    "BIBREF13": {
+      "ref_id": "b13",
+      "title": "Functional analysis of the amino-terminal 8-kDa domain of DNA polymerase beta as revealed by site-directed mutagenesis. DNA binding and 5'-deoxyribose phosphate lyase activities",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Prasad",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "A"
+          ],
+          "last": "Beard",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "Y"
+          ],
+          "last": "Chyan",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "W"
+          ],
+          "last": "Maciejewski",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [
+            "P"
+          ],
+          "last": "Mullen",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "H"
+          ],
+          "last": "Wilson",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "J Biol Chem",
+      "volume": "273",
+      "issn": "",
+      "pages": "11121--11126",
+      "other_ids": {}
+    },
+    "BIBREF14": {
+      "ref_id": "b14",
+      "title": "Complexities of the DNA base excision repair pathway for repair of oxidative DNA damage",
+      "authors": [
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Mitra",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Boldogh",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Izumi",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [
+            "K"
+          ],
+          "last": "Hazra",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Environ Mol Mutagen",
+      "volume": "38",
+      "issn": "",
+      "pages": "180--190",
+      "other_ids": {}
+    },
+    "BIBREF15": {
+      "ref_id": "b15",
+      "title": "Insertion of specific bases during DNA synthesis past the oxidation-damaged base 8-oxodG",
+      "authors": [
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Shibutani",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Takeshita",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "P"
+          ],
+          "last": "Grollman",
+          "suffix": ""
+        }
+      ],
+      "year": 1991,
+      "venue": "Nature",
+      "volume": "349",
+      "issn": "",
+      "pages": "431--434",
+      "other_ids": {}
+    },
+    "BIBREF16": {
+      "ref_id": "b16",
+      "title": "The GO system protects organisms from the mutagenic effect of the spontaneous lesion 8-hydroxyguanine (7,8-dihydro-8-oxoguanine)",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "L"
+          ],
+          "last": "Michaels",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "H"
+          ],
+          "last": "Miller",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "J Bacteriol",
+      "volume": "174",
+      "issn": "",
+      "pages": "6321--6325",
+      "other_ids": {}
+    },
+    "BIBREF17": {
+      "ref_id": "b17",
+      "title": "Mechanistic studies of ionizing radiation and oxidative mutagenesis",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "L"
+          ],
+          "last": "Wood",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Dizdaroglu",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Gajewski",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "M"
+          ],
+          "last": "Essigmann",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "",
+      "volume": "5",
+      "issn": "",
+      "pages": "7024--7032",
+      "other_ids": {}
+    },
+    "BIBREF18": {
+      "ref_id": "b18",
+      "title": "Identification of human MutY homolog (hMYH) as a repair enzyme for 2-hydroxyadenine in DNA and detection of multiple forms of hMYH located in nuclei and mitochondria",
+      "authors": [
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Ohtsubo",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Nishioka",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Imaiso",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Iwai",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Shimokawa",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Oda",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Fujiwara",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Nakabeppu",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Nucleic Acids Res",
+      "volume": "28",
+      "issn": "",
+      "pages": "1355--1364",
+      "other_ids": {}
+    },
+    "BIBREF19": {
+      "ref_id": "b19",
+      "title": "Functional expression of hMYH, a human homolog of the Escherichia coli MutY protein",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "M"
+          ],
+          "last": "Slupska",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "M"
+          ],
+          "last": "Luther",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "H"
+          ],
+          "last": "Chiang",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Yang",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "H"
+          ],
+          "last": "Miller",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "J Bacteriol",
+      "volume": "181",
+      "issn": "",
+      "pages": "6210--6213",
+      "other_ids": {}
+    },
+    "BIBREF20": {
+      "ref_id": "b20",
+      "title": "Differential subcellular localization of human MutY homolog (hMYH) and the functional activity of adenine:8-oxoguanine DNA glycosylase",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Takao",
+          "suffix": ""
+        },
+        {
+          "first": "Q",
+          "middle": [
+            "M"
+          ],
+          "last": "Zhang",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Yonei",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Yasui",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Nucleic Acids Res",
+      "volume": "27",
+      "issn": "",
+      "pages": "3638--3644",
+      "other_ids": {}
+    },
+    "BIBREF21": {
+      "ref_id": "b21",
+      "title": "The oxidized forms of dATP are substrates for the human MutT homologue, the hMTH1 protein",
+      "authors": [
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Fujikawa",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Kamiya",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Yakushiji",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Fujii",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Nakabeppu",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Kasai",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "J Biol Chem",
+      "volume": "274",
+      "issn": "",
+      "pages": "18201--18205",
+      "other_ids": {}
+    },
+    "BIBREF22": {
+      "ref_id": "b22",
+      "title": "Identification of repair enzymes for 5-formyluracil in DNA. Nth, Nei, and MutM proteins of Escherichia coli",
+      "authors": [
+        {
+          "first": "Q",
+          "middle": [
+            "M"
+          ],
+          "last": "Zhang",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Miyabe",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Matsumoto",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Kino",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Sugiyama",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Yonei",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "J Biol Chem",
+      "volume": "275",
+      "issn": "",
+      "pages": "35471--35477",
+      "other_ids": {}
+    },
+    "BIBREF23": {
+      "ref_id": "b23",
+      "title": "Characterization of a novel 8-oxoguanine-DNA glycosylase activity in Escherichia coli and identification of the enzyme as endonuclease VIII",
+      "authors": [
+        {
+          "first": "T",
+          "middle": [
+            "K"
+          ],
+          "last": "Hazra",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Izumi",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Venkataraman",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [
+            "W"
+          ],
+          "last": "Kow",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Dizdaroglu",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Mitra",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "J Biol Chem",
+      "volume": "275",
+      "issn": "",
+      "pages": "27762--27767",
+      "other_ids": {}
+    },
+    "BIBREF24": {
+      "ref_id": "b24",
+      "title": "Escherichia coli Nth and human hNTH1 DNA glycosylases are involved in removal of 8-oxoguanine from 8-oxoguanine/guanine mispairs in DNA",
+      "authors": [
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Matsumoto",
+          "suffix": ""
+        },
+        {
+          "first": "Q",
+          "middle": [
+            "M"
+          ],
+          "last": "Zhang",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Takao",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Yasui",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Yonei",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Nucleic Acids Res",
+      "volume": "29",
+      "issn": "",
+      "pages": "1975--1981",
+      "other_ids": {}
+    },
+    "BIBREF25": {
+      "ref_id": "b25",
+      "title": "Protection of human lung cells against hyperoxia using the DNA base excision repair genes hOgg1 and Fpg",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Wu",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [
+            "H"
+          ],
+          "last": "He",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Kobune",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Xu",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "R"
+          ],
+          "last": "Kelley",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "J"
+          ],
+          "last": "Martin",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Am J Respir Crit Care Med",
+      "volume": "2",
+      "issn": "",
+      "pages": "192--199",
+      "other_ids": {}
+    },
+    "BIBREF26": {
+      "ref_id": "b26",
+      "title": "Retrovirusmediated expression of the base excision repair proteins, formamidopyrimidine DNA glycosylase or human oxoguanine DNA glycosylase, protects hematopoietic cells from N,N',N\"-triethylenethiophosphoramide (thioTEPA)-induced toxicity in vitro and in vivo",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Kobune",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Xu",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Baum",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "R"
+          ],
+          "last": "Kelley",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "A"
+          ],
+          "last": "Williams",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Cancer Res",
+      "volume": "61",
+      "issn": "",
+      "pages": "5116--5125",
+      "other_ids": {}
+    },
+    "BIBREF27": {
+      "ref_id": "b27",
+      "title": "Point mutations define a sequence flanking the AUG initiator codon that modulates translation by eukaryotic ribosomes",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Kozak",
+          "suffix": ""
+        }
+      ],
+      "year": 1986,
+      "venue": "Cell",
+      "volume": "44",
+      "issn": "",
+      "pages": "283--292",
+      "other_ids": {}
+    },
+    "BIBREF28": {
+      "ref_id": "b28",
+      "title": "New colorimetric cytotoxicity assay for anticancer-drug screening",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Skehan",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Storeng",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Scudiero",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Monks",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Mcmahon",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Vistica",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "T"
+          ],
+          "last": "Warren",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Bokesch",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Kenney",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "R"
+          ],
+          "last": "Boyd",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "J Natl Cancer Inst",
+      "volume": "82",
+      "issn": "",
+      "pages": "1107--1112",
+      "other_ids": {}
+    },
+    "BIBREF29": {
+      "ref_id": "b29",
+      "title": "modulates base excision repair activity in a cell cycle-specific manner after genotoxic stress",
+      "authors": [
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Offer",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Zurer",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Banfalvi",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Reha&apos;k",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Falcovitz",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Milyavsky",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Goldfinger",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [],
+          "last": "Rotter",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Cancer Res",
+      "volume": "61",
+      "issn": "",
+      "pages": "88--96",
+      "other_ids": {}
+    },
+    "BIBREF30": {
+      "ref_id": "b30",
+      "title": "Regulatory roles of p21 and apurinic/apyrimidinic endonuclease 1 in base excision repair",
+      "authors": [
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Tom",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [
+            "A"
+          ],
+          "last": "Ranalli",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [
+            "N"
+          ],
+          "last": "Podust",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "A"
+          ],
+          "last": "Bambara",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "J Biol Chem",
+      "volume": "276",
+      "issn": "",
+      "pages": "48781--48789",
+      "other_ids": {}
+    },
+    "BIBREF31": {
+      "ref_id": "b31",
+      "title": "p53 regulation of DNA excision repair pathways",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "L"
+          ],
+          "last": "Smith",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [
+            "R"
+          ],
+          "last": "Seo",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Mutagenesis",
+      "volume": "17",
+      "issn": "",
+      "pages": "149--156",
+      "other_ids": {}
+    },
+    "BIBREF32": {
+      "ref_id": "b32",
+      "title": "Role of cyclins in epithelial response to oxidants",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Clement",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Henrion-Caude",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [],
+          "last": "Besnard",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Corroyer",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Am J Respir Crit Care Med",
+      "volume": "164",
+      "issn": "",
+      "pages": "81--85",
+      "other_ids": {}
+    },
+    "BIBREF33": {
+      "ref_id": "b33",
+      "title": "Oxygen toxicity in mouse lung: pathways to cell death",
+      "authors": [
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Barazzone",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Horowitz",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [
+            "R"
+          ],
+          "last": "Donati",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Rodriguez",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "F"
+          ],
+          "last": "Piguet",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Am J Respir Cell Mol Biol",
+      "volume": "19",
+      "issn": "",
+      "pages": "573--581",
+      "other_ids": {}
+    },
+    "BIBREF34": {
+      "ref_id": "b34",
+      "title": "Mechanisms of cell injury and death in hyperoxia: role of cytokines and Bcl-2 family proteins",
+      "authors": [
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Barazzone",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "W"
+          ],
+          "last": "White",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Am J Respir Cell Mol Biol",
+      "volume": "22",
+      "issn": "",
+      "pages": "517--519",
+      "other_ids": {}
+    },
+    "BIBREF35": {
+      "ref_id": "b35",
+      "title": "Hyperoxia in cell culture. A non-apoptotic programmed cell death",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "A"
+          ],
+          "last": "Kazzaz",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Horowitz",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Li",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [
+            "L"
+          ],
+          "last": "Mantell",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Ann N Y Acad Sci",
+      "volume": "887",
+      "issn": "",
+      "pages": "164--170",
+      "other_ids": {}
+    },
+    "BIBREF36": {
+      "ref_id": "b36",
+      "title": "Sequelae of the adult respiratory distress syndrome",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Hert",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "K"
+          ],
+          "last": "Albert",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Thorax",
+      "volume": "49",
+      "issn": "",
+      "pages": "8--13",
+      "other_ids": {}
+    },
+    "BIBREF37": {
+      "ref_id": "b37",
+      "title": "Delivery of antioxidant enzyme proteins to the lung",
+      "authors": [
+        {
+          "first": "V",
+          "middle": [
+            "R"
+          ],
+          "last": "Muzykantov",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Antioxid Redox Signal",
+      "volume": "3",
+      "issn": "",
+      "pages": "39--62",
+      "other_ids": {}
+    },
+    "BIBREF38": {
+      "ref_id": "b38",
+      "title": "Superoxide dismutase and pulmonary oxygen toxicity: lessons from transgenic and knockout mice (Review)",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "F"
+          ],
+          "last": "Tsan",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Int J Mol Med",
+      "volume": "7",
+      "issn": "",
+      "pages": "13--19",
+      "other_ids": {}
+    },
+    "BIBREF39": {
+      "ref_id": "b39",
+      "title": "Superoxide dismutase and pulmonary oxygen toxicity",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "F"
+          ],
+          "last": "Tsan",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "Proc Soc Exp Biol Med",
+      "volume": "214",
+      "issn": "",
+      "pages": "107--113",
+      "other_ids": {}
+    },
+    "BIBREF40": {
+      "ref_id": "b40",
+      "title": "Glutamine protects mitochondrial structure and function in oxygen toxicity",
+      "authors": [
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Ahmad",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "W"
+          ],
+          "last": "White",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [
+            "Y"
+          ],
+          "last": "Chang",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [
+            "K"
+          ],
+          "last": "Schneider",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "B"
+          ],
+          "last": "Allen",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Am J Physiol Lung Cell Mol Physiol",
+      "volume": "280",
+      "issn": "",
+      "pages": "779--91",
+      "other_ids": {}
+    },
+    "BIBREF41": {
+      "ref_id": "b41",
+      "title": "Formation, prevention, and repair of DNA damage by iron/hydrogen peroxide",
+      "authors": [
+        {
+          "first": "E",
+          "middle": [
+            "S"
+          ],
+          "last": "Henle",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Linn",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "J Biol Chem",
+      "volume": "272",
+      "issn": "",
+      "pages": "19095--19098",
+      "other_ids": {}
+    },
+    "BIBREF42": {
+      "ref_id": "b42",
+      "title": "Oxidative decay of DNA",
+      "authors": [
+        {
+          "first": "K",
+          "middle": [
+            "B"
+          ],
+          "last": "Beckman",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [
+            "N"
+          ],
+          "last": "Ames",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "J Biol Chem",
+      "volume": "272",
+      "issn": "",
+      "pages": "19633--19636",
+      "other_ids": {}
+    },
+    "BIBREF43": {
+      "ref_id": "b43",
+      "title": "Base excision repair processing of radiation-induced clustered DNA lesions",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "O"
+          ],
+          "last": "Blaisdell",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Harrison",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "S"
+          ],
+          "last": "Wallace",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Radiat Prot Dosimetry",
+      "volume": "97",
+      "issn": "",
+      "pages": "25--31",
+      "other_ids": {}
+    },
+    "BIBREF44": {
+      "ref_id": "b44",
+      "title": "Matsumoto Y: Replication-associated repair of adenine:8-oxoguanine mispairs by MYH",
+      "authors": [
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Hayashi",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Tominaga",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Hirano",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "E"
+          ],
+          "last": "Mckenna",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Nakabeppu",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Curr Biol",
+      "volume": "12",
+      "issn": "",
+      "pages": "335--339",
+      "other_ids": {}
+    },
+    "BIBREF45": {
+      "ref_id": "b45",
+      "title": "Somatic mutations and single nucleotide polymorphisms of base excision repair genes involved in the repair of 8-hydroxyguanine in damaged DNA",
+      "authors": [
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Shinmura",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Yamaguchi",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Saitoh",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Kohno",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Yokota",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Cancer Lett",
+      "volume": "166",
+      "issn": "",
+      "pages": "65--69",
+      "other_ids": {}
+    },
+    "BIBREF46": {
+      "ref_id": "b46",
+      "title": "Multiple colorectal adenomas, classic adenomatous polyposis, and germ-line mutations in MYH",
+      "authors": [
+        {
+          "first": "O",
+          "middle": [
+            "M"
+          ],
+          "last": "Sieber",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Lipton",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Crabtree",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Heinimann",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Fidalgo",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "K"
+          ],
+          "last": "Phillips",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "L"
+          ],
+          "last": "Bisgaard",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [
+            "F"
+          ],
+          "last": "Orntoft",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [
+            "A"
+          ],
+          "last": "Aaltonen",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "V"
+          ],
+          "last": "Hodgson",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "J"
+          ],
+          "last": "Thomas",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [
+            "P"
+          ],
+          "last": "Tomlinson",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "N Engl J Med",
+      "volume": "348",
+      "issn": "",
+      "pages": "791--799",
+      "other_ids": {}
+    },
+    "BIBREF47": {
+      "ref_id": "b47",
+      "title": "Inherited variants in MYH are unlikely to contribute to the risk of lung carcinoma",
+      "authors": [
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Al-Tassan",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Eisen",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Maynard",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Bridle",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Shah",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Fleischmann",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "R"
+          ],
+          "last": "Sampson",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "P"
+          ],
+          "last": "Cheadle",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "S"
+          ],
+          "last": "Houlston",
+          "suffix": ""
+        }
+      ],
+      "year": 2004,
+      "venue": "Hum Genet",
+      "volume": "114",
+      "issn": "",
+      "pages": "207--210",
+      "other_ids": {}
+    },
+    "BIBREF48": {
+      "ref_id": "b48",
+      "title": "Changes in DNA 8-hydroxyguanine levels, 8-hydroxyguanine repair activity, and hOGG1 and hMTH1 mRNA expression in human lung alveolar epithelial cells induced by crocidolite asbestos. Carcinogenesis",
+      "authors": [
+        {
+          "first": "H",
+          "middle": [
+            "N"
+          ],
+          "last": "Kim",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Morimoto",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Tsuda",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Ootsuyama",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Hirohashi",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Hirano",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Tanaka",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Lim",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [
+            "G"
+          ],
+          "last": "Yun",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Kasai",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "",
+      "volume": "22",
+      "issn": "",
+      "pages": "265--269",
+      "other_ids": {}
+    },
+    "BIBREF49": {
+      "ref_id": "b49",
+      "title": "Down-regulation of the DNA-repair endonuclease 8-oxo-guanine DNA glycosylase 1 (hOGG1) by sodium dichromate in cultured human A549 lung carcinoma cells",
+      "authors": [
+        {
+          "first": "N",
+          "middle": [
+            "J"
+          ],
+          "last": "Hodges",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "K"
+          ],
+          "last": "Chipman",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Carcinogenesis",
+      "volume": "23",
+      "issn": "",
+      "pages": "55--60",
+      "other_ids": {}
+    },
+    "BIBREF50": {
+      "ref_id": "b50",
+      "title": "Cadmium exposure down-regulates 8-oxoguanine DNA glycosylase expression in rat lung and alveolar epithelial cells",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [
+            "J"
+          ],
+          "last": "Potts",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "D"
+          ],
+          "last": "Watkin",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [
+            "A"
+          ],
+          "last": "Hart",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Toxicology",
+      "volume": "184",
+      "issn": "",
+      "pages": "189--202",
+      "other_ids": {}
+    }
+  },
+  "ref_entries": {
+    "FIGREF0": {
+      "text": "Base excision repair pathways for Oxidative DNA damage. (A) BER pathway demonstrating repair of 8-oxoG by the repair enzymes hOgg1 and hNTH. (B) hOgg1, hMYH, and hMTH and their respective repair function.",
+      "latex": null,
+      "type": "figure"
+    },
+    "FIGREF2": {
+      "text": "Western analysis of A549 cells over-expressing individual repair genes and effect on endogenous glycosylase level. (A) Endogenous expression of hOgg1 was not altered in A549 cells over-expressing any of the other repair genes when analyzed after non-toxic and toxic exposures. hOgg1 protein was not detectable for any of the cells under the above conditions when compared to cells over expressing hOgg1. (B) and (C) Endogenous expression of hMTH and hMYH respectively also were not altered in A549 cells over-expressing any of the other repair genes when analyzed after non-toxic and toxic exposures. (D) Endogenous expression of hNTH was analyzed under non-toxic and toxic conditions in A549 cells over-expressing the other repair genes. Reduced expression of hNTH was observed equally with all of the other genes after exposure to 95% O 2 . Endogenous expression of all four genes was equivalent under the above conditions in vector control cells; pSF91.1 (data not shown).",
+      "latex": null,
+      "type": "figure"
+    },
+    "FIGREF3": {
+      "text": "Cell survival analysis following O 2 , IR, and H 2 O 2 treatments. A549 cells over-expressing hOgg1, hMYH, hMTH and hNTH following (A) O 2 , (B) IR, and (C) H 2 O 2 . Brackets indicate statistical significance at * p < 0.05 and ** p < 0.001 compared to pSF91.1 at each individual dose for 1 representative experiment.",
+      "latex": null,
+      "type": "figure"
+    },
+    "TABREF1": {
+      "text": "Sigma, St. Louis, MO). All plates including control plates were then placed into a 37\u00b0C humidified-5% CO 2 incubator. Four days after exposure, cells were fixed and assessed for cell growth/survival by the SRB assay.Natural Cell growthSorted EGFP positive A549 cells and wild type cells were seeded individually onto four 96-well plates at 1000 cells/ Retroviral vector pSF91.1. Depiction of the retroviral vector utilized in these experiments demonstrating restriction sites and location of entry of the gene of interest between the LTR and the IRES.",
+      "latex": null,
+      "type": "table"
+    }
+  },
+  "back_matter": [
+    {
+      "text": "This work was supported by National Institutes of Health grantsNS38506, ES05865, ES03456, and P30 DK49218 supporting MRK.TK was supported on a T32 pulmonary training grant NIH-NHLBI/T32 (46886). Additional support was from The RileyChildren's Foundation.We would also like to thank Dr. Sankar Mitra for the hNTH clones, Dr. Amanda McCullough for the hMYH clones, and Dr. Laura Haneline for allowing us to use her oxygen chamber. Lastly, the Pediatric Pulmonary section at Riley Hospital for Children has been an additional provider of support and information throughout this research project.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Acknowledgements"
+    },
+    {
+      "text": "TK conducted the majority of the research experiments, performed the statistical analysis, and drafted the manuscript. MR conducted some of the cell survival experiments and participated in the design of the study. YX and XC helped with production of the lesion specific DNA repair genes. MK conceived of the study, and participated in its design and coordination. All authors read and approved the final manuscript.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Authors' contributions"
+    }
+  ]
+}

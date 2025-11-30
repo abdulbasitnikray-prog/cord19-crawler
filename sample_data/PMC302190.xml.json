@@ -1,0 +1,2493 @@
+{
+  "paper_id": "PMC302190",
+  "metadata": {
+    "title": "A Method to Identify p62's UBA Domain Interacting\n Proteins",
+    "authors": [
+      {
+        "first": "Julia",
+        "middle": [
+          "W."
+        ],
+        "last": "Pridgeon",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Thangiah",
+        "middle": [],
+        "last": "Geetha",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Marie",
+        "middle": [
+          "W."
+        ],
+        "last": "Wooten",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      }
+    ]
+  },
+  "body_text": [
+    {
+      "text": "p62 is a novel cellular protein which was initially identified in\n humans as a phosphotyrosine independent ligand of the src homology 2 (SH2)\n domain of p56\nlck \n(1, 2). p56lck\n is a member of the c-src family of cytoplasmic tyrosine kinases that is\n found predominantly in cells of lymphoid origin (3, 4). In addition to the interaction with p56\nlck\n, p62 also associates with the Ser/Thr kinase (1, 2), atypical protein kinase C (5, 6), and ubiquitin (7). In addition to the SH2 domain, p62 possesses several\n structural motifs, including a ubiquitin associated (UBA) domain that is\n capable of binding ubiquitin nonconvalently (8, 9). ",
+      "cite_spans": [
+        {
+          "start": 163,
+          "end": 164,
+          "mention": "1",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 166,
+          "end": 167,
+          "mention": "2",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 300,
+          "end": 301,
+          "mention": "3",
+          "ref_id": "BIBREF22"
+        },
+        {
+          "start": 303,
+          "end": 304,
+          "mention": "4",
+          "ref_id": "BIBREF33"
+        },
+        {
+          "start": 398,
+          "end": 399,
+          "mention": "1",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 401,
+          "end": 402,
+          "mention": "2",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 432,
+          "end": 433,
+          "mention": "5",
+          "ref_id": "BIBREF41"
+        },
+        {
+          "start": 435,
+          "end": 436,
+          "mention": "6",
+          "ref_id": "BIBREF42"
+        },
+        {
+          "start": 454,
+          "end": 455,
+          "mention": "7",
+          "ref_id": "BIBREF43"
+        },
+        {
+          "start": 631,
+          "end": 632,
+          "mention": "8",
+          "ref_id": "BIBREF44"
+        },
+        {
+          "start": 634,
+          "end": 635,
+          "mention": "9",
+          "ref_id": "BIBREF45"
+        }
+      ],
+      "section": "Introduction",
+      "ref_spans": []
+    },
+    {
+      "text": "Ubiquitin (Ub) is a small polypeptide of 76 amino acids that can be\n convalently attached to other proteins at specific lysine residues through\n chains composed of one (mono) or several ubiquitin moieties (poly). In addition\n to its classical role in protein degradation, ubiquitin is emerging as a signal\n for protein transport and processing (10-12). Conjugation of ubiquitin to substrate proteins requires\n three enzymes: a ubiquitin activating enzyme E1, a ubiquitin-conjugating enzyme\n E2, and a ubiquitin ligase E3. Initially, E1 activates ubiquitin by forming a\n high energy thioester intermediate with the C-terminal glycine using ATP. The\n activated ubiquitin is sequentially transferred to E2, then to E3 which\n catalyzes isopeptide bond formation between the activated C-terminal glycine of\n ubiquitin and e-amino group of a lysine residue of the substrate. Following the\n linkage of the first ubiquitin chain, additional molecules of ubiquitin are\n attached to lysine side chains of the previously conjugated moiety to form\n branched polyubiquitin chains. The fate of ubiquitinated substrates depends on\n the number of ubiquitin moieties conjugated, as well as, the lysine linkage of\n Ub-Ub conjugation. The conjugation of ubiquitin to eukaryotic intracellular\n proteins is one way in which those proteins are targeted to the proteasome for\n subsequent rapid degradation. This mechanism is particularly important for\n short-lived regulatory proteins such as cyclins, cyclin-dependent protein\n kinase-inhibitors, p53, the nuclear factor kappa B precursor, and IkB (13). The ubiquitin-proteasome system consists of two steps: 1)\n the target protein is conjugated with polyubiquitin molecules, which mark the\n substrate for degradation; 2) the target protein is transferred to the 26S\n proteasome, unfolded and degraded. ",
+      "cite_spans": [
+        {
+          "start": 345,
+          "end": 347,
+          "mention": "10",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 348,
+          "end": 350,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 1576,
+          "end": 1578,
+          "mention": "13",
+          "ref_id": "BIBREF4"
+        }
+      ],
+      "section": "Introduction",
+      "ref_spans": []
+    },
+    {
+      "text": "The UBA domain is a conserved sequence motif among proteins that can\n bind polyubiquitin. It is comprised of ~45 amino acids (13). The amino acids 386-434 of p62, which bind polyubiquitin,\n has been shown to possess homology to other recently described UBA domains\n (9). Interestingly, proteins with UBA domains are more\n likely to bind polyubiquitin chains over monoubiquitin, such as the yeast UBA\n protein Rad23, a highly conserved protein involved in nucleotide excision\n repair (13). Recently, it has been shown that yeast\n cells lacking two UBA proteins (Dsk2 and Rad23) are deficient in protein\n degradation and that the UBA motif is essential for their function in\n proteolysis (14).",
+      "cite_spans": [
+        {
+          "start": 126,
+          "end": 128,
+          "mention": "13",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 267,
+          "end": 268,
+          "mention": "9",
+          "ref_id": "BIBREF45"
+        },
+        {
+          "start": 484,
+          "end": 486,
+          "mention": "13",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 687,
+          "end": 689,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        }
+      ],
+      "section": "Introduction",
+      "ref_spans": []
+    },
+    {
+      "text": "In addition to the important role in recycling of amino acids from\n damaged or misfolded proteins, ubiquitin-protein conjugation also has functions\n unrelated to proteasomal targeting. For example, polyubiquitination is required\n for the internalization of several yeast and mammalian cell surface proteins\n into the endocytic pathway (15, 16). Interestingly, p62 appears to sequester ubiquitinated\n substrates into a cytoplasmic structure referred to as a sequestosome, into\n which excess ubiquitinated proteins are segregated (17).\n In addition, p62 is an immediate early response gene product for a variety of\n signals (18). Thus, p62 appears to play a novel\n regulatory role for polyubiquitinated proteins and may have an essential\n function in cell proliferation and differentiation. We have developed a method\n that will enable identification of protein(s) that interact with p62\u2019s UBA\n domain.",
+      "cite_spans": [
+        {
+          "start": 336,
+          "end": 338,
+          "mention": "15",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 340,
+          "end": 342,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 529,
+          "end": 531,
+          "mention": "17",
+          "ref_id": "BIBREF8"
+        },
+        {
+          "start": 623,
+          "end": 625,
+          "mention": "18",
+          "ref_id": "BIBREF9"
+        }
+      ],
+      "section": "Introduction",
+      "ref_spans": []
+    },
+    {
+      "text": "Human adult brain library 10\u00d796 well plates with 100 cDNAs per\n well and Gold TNT SP6 Express 96 system plate were purchased from Promega\n Corporation (Madison, WI). [35S] methionine was from ICN Biomedicals, Inc.\n (Irvine, CA). Ubiquitin was from Sigma-Aldrich Corporation (St. Louis, MO).\n Polyubiquitin K48 chains (Ub2-7 K48) were from Affiniti Research Products\n Limited (Exeter, UK). Autoradiography enhancer En3HANCE was from Perkin Elmer,\n Inc. (Wellesley, MA). JM109 competent cells were from Promega Corporation\n (Madison, WI). Ubiquitin activating enzyme E1 was from Calbiochem (La Jolla,\n CA). Ubiquitin conjugating enzyme E2 (UbcH7) was from Affiniti Research\n Products Limited (Exeter, UK). The rabbit polyclonal anti-myc antibody, mouse\n monoclonal anti-myc and anti-ubiquitin antibodies were from Santa Cruz\n Biotechnology, Inc (Santa Cruz, CA). Ubiquitin K63 only (Ub K63, ubiquitin with\n all lysines mutated to arginines except K63), Ub K29, Ub K48 were from Boston\n Biochem Inc. (Cambridge, MA). Mammalian Cell Transfection Kit was from\n Specialty Media (Phillipsburg, NJ). Agarose-immobilised p62 UBA peptide\n corresponding to the amino acid sequence of the ubiquitin-binding protein p62\n residues 387-436 (PPEADPRLIESLSQmlsmgfsdeggwltrllqtkny digaaldtiqyskh) was\n purchased from Affiniti Research Products Limited (Exeter, UK). ",
+      "cite_spans": [],
+      "section": "\nMaterials\n ::: Materials and Methods",
+      "ref_spans": []
+    },
+    {
+      "text": "To search for novel proteins that bind to the UBA domain of p62,\n we performed in vitro expression cloning (IVEC) using the ProteoLink\n IVEC system. The human adult brain library 96 well plates with 100 cDNAs per\n well was transcribed and translated employing the Gold TNT SP6 Express 96 plate\n and [35S] methionine. The TNT Quick-coupled\n transcription-translation system contained a rabbit reticulocyte lysate\n pre-mixed with most of the reaction components necessary to carry out\n transcription/translation in the lysate, including all of the amino acids\n except methionine. [35S] Methionine was used to label newly\n synthesized proteins. The reactions were set up according to the\n manufacturer\u2019s instructions. Rabbit reticulocyte lysate has been shown to be\n capable of carrying out ubiquitination of proteins that were translated in such\n an in vitro translation system (19, 20). The reactions mixtures also contained ubiquitin so that\n the newly synthesized proteins could be ubiquitinated. The reactions were\n incubated at 30\u00b0C for 2 hours. The resulting proteins were assayed to\n determine their binding ability with p62\u2019s UBA domain. Potential positive\n \u201chits\u201d were further subdivided and re-assayed to link individual clones to\n the protein of interest (Fig. 1).",
+      "cite_spans": [
+        {
+          "start": 877,
+          "end": 879,
+          "mention": "19",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 881,
+          "end": 883,
+          "mention": "20",
+          "ref_id": "BIBREF12"
+        }
+      ],
+      "section": "\n\nIn vitro\n\nexpression cloning\n ::: Materials and Methods",
+      "ref_spans": [
+        {
+          "start": 1270,
+          "end": 1271,
+          "mention": "1",
+          "ref_id": null
+        }
+      ]
+    },
+    {
+      "text": "Each translated pool was resuspended in binding buffer (25 mM\n Tris pH 7.5, 125 mM NaCl, 0.1% NP-40) and used as a source of protein in p62\n UBA pull down assays. Proteins that specifically interact with the UBA domain\n of p62 were isolated by interaction with agarose-immobilised p62-UBA peptide\n (amino acid 387-436 of p62) (5 mg) for 2 hours at 4\u00baC, then washed three times\n in washing buffer (25 mM Tris pH 7.6, 100 mM NaCl, 1% NP-40). Bound proteins\n were released by addition of SDS-sample buffer and separated by SDS-PAGE. The\n SDS-PAGE gels were fixed in 50% methanol, 10% acetic acid for 30 min, stained\n in 0.2% Commassie Brilliant Blue R-250, 45% methanol, 10% acetic acid for 15\n min, destained in 10% acetic acid, 50% methanol overnight, and enhanced in\n autoradiography enhancer En3HANCE for 1 hr and exposed to X-Ray\n film. ",
+      "cite_spans": [],
+      "section": "\np62 UBA pull down assays\n ::: Materials and Methods",
+      "ref_spans": []
+    },
+    {
+      "text": "By combining 4 pools as one mixed pool, 96 protein pools were\n divided into 24 mixed protein pools for use in p62 UBA pull down assays.\n Positive mixed protein pools were selected and individual pools were retested\n for its ability to bind p62\u2019s UBA domain. The individual cDNA pool from which\n the positive protein pool was generated was transformed into JM109 competent\n cells and plated on LB ampicillin plate. Individual colonies were chosen to\n grow overnight in 1 ml of LB media plus ampicillin. Plasmid DNA was purified\n from the cell culture and used for TNT Quick coupled in vitro\n transcription/ translation. The individual protein synthesized from each\n plasmid DNA chosen was screened for its ability to bind p62\u2019s UBA domain. To\n confirm the interaction with p62\u2019s UBA domain, the final resulting individual\n proteins were used in the coupled TNT/p62 UBA pull down assays. The cDNA\n inserts were sequenced in the Genomics Core Facility at Auburn University and\n the sequences were compared with known sequences in NCBI database by BLAST\n analysis.",
+      "cite_spans": [],
+      "section": "Library Screening ::: Materials and Methods",
+      "ref_spans": []
+    },
+    {
+      "text": "Human embryonic kidney 293 (HEK 293) cells were cultured in high\n glucose Dulbecco\u2019s modified Eagle\u2019s medium (DMEM) containing 10%\n heat-inactivated fetal calf serum and transfected with myc-tagged HSP70 plasmid\n using the Mammalian Cell Transfection Kit. Cells were harvested and lysed in 1\n ml of SDS lysis buffer (50 mM Tris-HCl pH 7.5, 150 mM NaCl, 10 mM NaF, 0.5%\n TX-100, 1 mM Na3VO4, 2 mg/ml aprotinin, 2 mg/ml\n leupeptin, 1 mM PMSF, 1% SDS) for 30 min on ice, followed by centrifugation at\n 14000 rpm for 15 min at 4\u00b0C to remove the insoluble fraction. The protein\n concentration of the supernatant was determined using the Bio-Rad DC protein\n assay reagent with bovine serum albumin (BSA) as standard. Equal amount of\n protein (750 mg) was immunoprecipitated with anti-myc and collected with\n agarose-coupled secondary antibody. To the agarose beads containing the\n immunoprecipitated HSP70, 50 ml of reaction buffer (50 mM Tris-HCl pH 7.5, 2.5\n mM MgCl2, 2 mM DTT, 2 mM ATP) was added containing 100 ng E1, 200 ng\n E2 (UbcH7), and 100 mg of E3 (Flag-tagged TRAF6) along with 5 mg GST-WT-Ub,\n GST-K29R Ub, GST-K48R Ub, GST-K63R Ub, or K63 Ub. Control samples without\n HSP70, E1, E2, E3, or GST-WT-Ub were also included. Reactions were carried out\n by continuous shaking at 37\u00b0C for 2 hours and then washed three times with\n reaction buffer. The proteins were released by boiling for 2 min in SDS-PAGE\n sample buffer, separated on 7.5% SDS-PAGE and Western blotted for\n anti-ubiquitin.",
+      "cite_spans": [],
+      "section": "\nTransfection and in vitro ubiquitination\n ::: Materials and Methods",
+      "ref_spans": []
+    },
+    {
+      "text": "To search for novel proteins that bind to the UBA domain of p62,\n we performed in vitro expression cloning (IVEC) using the ProteoLink\n IVEC system from Promega (Cat. No. L6500). The human adult brain library 96\n well plates with 100 cDNAs per well were transcribed and translated employing\n the Gold TNT SP6 Express 96 plate in the presence of [35S]\n methionine and ubiquitin (25 mg/ml, Sigma). By combining 4 protein pools as one\n mixed pool, 96 protein pools were divided into 24 mixed pools (Fig. 2A, 2B).",
+      "cite_spans": [],
+      "section": "\n\nIn vitro \n\ntranscription/translation\n ::: Results and Discussion",
+      "ref_spans": [
+        {
+          "start": 501,
+          "end": 502,
+          "mention": "2",
+          "ref_id": "FIGREF1"
+        },
+        {
+          "start": 505,
+          "end": 506,
+          "mention": "2",
+          "ref_id": "FIGREF1"
+        }
+      ]
+    },
+    {
+      "text": "Each lane contained more than 100 proteins (theoretically 400)\n with different molecular weight. Therefore, each lane appeared as a smear,\n indicating that the in vitro transcription/translation system from\n Promega worked successfully. In order to examine whether proteins synthesized\n in the IVEC system are also ubiquitinated, Western blot analysis was performed\n by blotting the newly synthesized proteins (in the presence of cold methionine\n instead of 35S methionine) with ubiquitin monoclonal antibody. In\n the mixed protein pools, each of the 24 lanes appeared as a smear, indicating\n that proteins synthesized by the IVEC system are also ubiquitinated (Fig. 3A). Furthermore, the rabbit reticulocyte lysate in the IVEC\n system can utilize different lysine linkages of ubiquitin (i.e., Ub K29, Ub\n K48, and Ub K63) for ubiquitination (Fig. 3B). In order\n to investigate whether the agarose-immobilised p62 UBA peptide has binding\n specificity, a mixed protein pool synthesized by IVEC system was tested in a\n pull down assay in the presence of agarose beads alone or in the presence of\n p62 UBA agarose beads (Fig. 3C). Our results revealed\n that proteins that bound to p62\u2019s UBA domain could not be pulled down by\n agarose beads alone, indicating that the agarose-immobilised p62 UBA peptide\n had binding specificity.",
+      "cite_spans": [],
+      "section": "\n\nIn vitro \n\ntranscription/translation\n ::: Results and Discussion",
+      "ref_spans": [
+        {
+          "start": 667,
+          "end": 668,
+          "mention": "3",
+          "ref_id": "FIGREF2"
+        },
+        {
+          "start": 848,
+          "end": 849,
+          "mention": "3",
+          "ref_id": "FIGREF2"
+        },
+        {
+          "start": 1123,
+          "end": 1124,
+          "mention": "3",
+          "ref_id": "FIGREF2"
+        }
+      ]
+    },
+    {
+      "text": "In order to identify proteins that bind to p62\u2019s UBA domain,\n p62 UBA pull down assays were performed. Out of the 24 mixed protein pools,\n several pools contained [35S] methionine-labeled bands in the\n primary p62 UBA pull down assays (Fig. 4). We chose 6\n pools (pool # 2, 4, 8, 14, 20, 21) because of their stronger signal to\n specifically identify which individual protein pool in the mixed pools has the\n ability to bind to p62\u2019s UBA domain. Therefore, a secondary screen was\n conducted on the 6 positive individual mixed pools (representing 24 individual\n protein pools) which bound with p62\u2019s UBA domain (Fig. 5). Mixed protein pool # 2 generated a positive protein with\n molecular weight of 51 KDa (Fig. 4), and only individual\n protein pool \u201cc\u201d out of the four protein pools (a, b, c, d) that comprised\n protein pool #2 had a protein with the same molecular weight (Fig. 5). Depending on the size of the protein pulled down in the\n secondary screen compared to the primary screen (Fig. 4),\n individual protein pools \u201cc\u201d, \u201ch\u201d, \u201ci\u201d, \u201co\u201d, \u201ct\u201d, and\n \u201cv\u201d were identified (Fig. 5).",
+      "cite_spans": [],
+      "section": "p62 UBA pull down and library screen ::: Results and Discussion",
+      "ref_spans": [
+        {
+          "start": 241,
+          "end": 242,
+          "mention": "4",
+          "ref_id": "FIGREF3"
+        },
+        {
+          "start": 616,
+          "end": 617,
+          "mention": "5",
+          "ref_id": "FIGREF4"
+        },
+        {
+          "start": 711,
+          "end": 712,
+          "mention": "4",
+          "ref_id": "FIGREF3"
+        },
+        {
+          "start": 879,
+          "end": 880,
+          "mention": "5",
+          "ref_id": "FIGREF4"
+        },
+        {
+          "start": 994,
+          "end": 995,
+          "mention": "4",
+          "ref_id": "FIGREF3"
+        },
+        {
+          "start": 1080,
+          "end": 1081,
+          "mention": "5",
+          "ref_id": "FIGREF4"
+        }
+      ]
+    },
+    {
+      "text": "To specifically identify which protein in the individual protein pool has the ability to bind p62\u2019s UBA domain, the cDNAs from the positive individual protein pools were then transformed into JM109 competent cells and plated out on LB ampicillin plates. Individual colonies were chosen to grow overnight in 1 ml of LB media plus ampicillin. Plasmid DNAs were purified from the cell culture and used for TNT Quick coupled in vitro transcription/translation. The individual protein synthesized from each plasmid DNA was retested for its ability to bind p62\u2019s UBA domain. By synthesizing individual protein from individual plasmid using the Gold TNT Quick coupled in vitro transcription/translation system and subjecting them to p62 UBA pull-down assays, 11 positive clones were isolated from the 6 positive individual pools. It is not surprising that 5 more clones showed binding ability with p62\u2019s UBA domain since there are 100 cDNAs in each positive individual pool and some of them could have lower binding ability and therefore showed weak signal in the mixed protein pool. It is also possible that they are not as efficiently synthesized in the mixed TNT reaction as in the individual TNT reaction in which only one cDNA was used as template. The 11 positive plasmids were sequenced and compared with known cDNA sequences in NCBI database using BLAST analysis with results shown in Table 1.",
+      "cite_spans": [],
+      "section": "p62 UBA pull down and library screen ::: Results and Discussion",
+      "ref_spans": [
+        {
+          "start": 1392,
+          "end": 1393,
+          "mention": "1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "Interestingly, the proteins identified in the screen fall into three distinct categories. One set are proteins that are associated with Alzheimer\u2019s disease, including myelin basic protein, 14-3-3 protein, syntaxin binding protein munc18, transketolase, heat shock protein HSP70, reelin, and calcium/calmodulin kinase II (Table 1). Significant decrease in the amount of myelin basic protein has been reported in the white matter of Alzheimer\u2019s disease patients, accompanied by increased quantities of b-amyloid peptides (21). The presence of b-amyloid peptides containing senile plaques and neurofibrillary tangles are the two major pathological features in the brain of patients with Alzheimer\u2019s disease (22). Interestingly, 14-3-3 proteins have also been demonstrated to be components of neurofibrillary tangles of Alzheimer\u2019s disease brains (23). Syntaxin binding protein munc18 can powerfully regulate amyloid precursor protein metabolism and b-amyloid secretion through direct and indirect interactions with X11 proteins (24). The activity of transketolase has been reported to be reduced in dementia of Alzheimer\u2019s type brain (25). Heat shock protein HSP70 expression is significantly increased in the temporal cortex of patients with Alzheimer\u2019s disease (26). Besides HSP70, other heat shock proteins are also linked with Alzheimer\u2019s disease. For example, increased synthesis of HSP27 has been suggested to play a role in preventing neuronal injury in AD (27), and alpha-crystallin heat shock protein has a close relationship with neurofibrillary tangles of AD brains (28). Reelin is a large secreted protein that controls cortical layering by signaling through the very low density lipoprotein receptor and apolipoprotein E receptor 2, thereby inducing tyrosine phosphorylation of the adaptor protein Disabled-1 (Dab1) and suppressing tau phosphorylation (29). Neurofibrillary tangles comprised of highly phosphorylated tau proteins are a key component of Alzheimer\u2019s disease (30). Enhanced activity of calcium/calmodulin kinase II has been suggested to contribute to phosphorylation of tau protein and lead to neurofibrillary tangle deposition and neuronal death in Alzheimer\u2019s disease (31). Although the relationship between p62 and neurofibrillary tangles or neuritic plaques is unclear, both neurofibrillary tangles and dystrophic neuritis of neuritic plaques are associated with ubiquitin (32), suggesting that dysfunction in ubiquitin-mediated proteolysis and the resulting accumulation of ubiquitin-conjugated proteins may contribute to the origination of dystrophic neuritis and neurofibrillary tangles. Furthermore, p62 has been recently reported to accumulate early in neurofibrillary tangles in Alzheimer\u2019s disease (33), suggesting that p62 may play an important role in Alzheimer\u2019s disease by interacting with those proteins through its UBA domain.",
+      "cite_spans": [
+        {
+          "start": 520,
+          "end": 522,
+          "mention": "21",
+          "ref_id": "BIBREF13"
+        },
+        {
+          "start": 705,
+          "end": 707,
+          "mention": "22",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 844,
+          "end": 846,
+          "mention": "23",
+          "ref_id": "BIBREF15"
+        },
+        {
+          "start": 1026,
+          "end": 1028,
+          "mention": "24",
+          "ref_id": "BIBREF16"
+        },
+        {
+          "start": 1132,
+          "end": 1134,
+          "mention": "25",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 1261,
+          "end": 1263,
+          "mention": "26",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 1462,
+          "end": 1464,
+          "mention": "27",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 1575,
+          "end": 1577,
+          "mention": "28",
+          "ref_id": "BIBREF20"
+        },
+        {
+          "start": 1863,
+          "end": 1865,
+          "mention": "29",
+          "ref_id": "BIBREF21"
+        },
+        {
+          "start": 1984,
+          "end": 1986,
+          "mention": "30",
+          "ref_id": "BIBREF23"
+        },
+        {
+          "start": 2195,
+          "end": 2197,
+          "mention": "31",
+          "ref_id": "BIBREF24"
+        },
+        {
+          "start": 2402,
+          "end": 2404,
+          "mention": "32",
+          "ref_id": "BIBREF25"
+        },
+        {
+          "start": 2734,
+          "end": 2736,
+          "mention": "33",
+          "ref_id": "BIBREF26"
+        }
+      ],
+      "section": "p62 UBA pull down and library screen ::: Results and Discussion",
+      "ref_spans": [
+        {
+          "start": 327,
+          "end": 328,
+          "mention": "1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "A second set of proteins identified in the screen that bind to p62\u2019s UBA domain are associated with brain development, including homeobox protein Meis2 and unc51 like kinase II (Table 1). Although Meis proteins are not extensively studied in humans, these proteins have been shown to be required for hindbrain development in the zebrafish (34). Unc51 like kinase II has been demonstrated to play a role in axonal elongation (35, 36), which is needed for the formation of complicated neuronal networks. The third set of proteins that exhibit ability to bind p62\u2019s UBA domain are proteins that are linked with other neurodegenerative diseases, including FK506 binding proteins and nuclear receptor corepressor I (Table 1). FK506 (tacrolimus) is a potent immunosuppressive drug used in the treatment of patients after organ transplantation and in selected autoimmune disorders (37). FK506 is activated upon binding to members of the immunophilin family of proteins, which were designated as FK506 binding proteins (38). Immunophilins are chaperone proteins and FK506 binding proteins have been suggested as therapeutics for neurological disorders (39, 40). Nuclear receptor corepressor I has been suggested to play a role in Huntington\u2019s disease because it is able to interact with huntingtin (41). The proteins identified here suggest that p62\u2019s UBA domain has the ability to interact with multiple proteins that play important roles in neurodegenerative diseases. Further screening from the whole genome-wide perspective will be necessary to define the important role that p62\u2019s UBA domain plays.",
+      "cite_spans": [
+        {
+          "start": 340,
+          "end": 342,
+          "mention": "34",
+          "ref_id": "BIBREF27"
+        },
+        {
+          "start": 425,
+          "end": 427,
+          "mention": "35",
+          "ref_id": "BIBREF28"
+        },
+        {
+          "start": 429,
+          "end": 431,
+          "mention": "36",
+          "ref_id": "BIBREF29"
+        },
+        {
+          "start": 875,
+          "end": 877,
+          "mention": "37",
+          "ref_id": "BIBREF30"
+        },
+        {
+          "start": 1012,
+          "end": 1014,
+          "mention": "38",
+          "ref_id": "BIBREF31"
+        },
+        {
+          "start": 1145,
+          "end": 1147,
+          "mention": "39",
+          "ref_id": "BIBREF32"
+        },
+        {
+          "start": 1149,
+          "end": 1151,
+          "mention": "40",
+          "ref_id": "BIBREF34"
+        },
+        {
+          "start": 1291,
+          "end": 1293,
+          "mention": "41",
+          "ref_id": "BIBREF35"
+        }
+      ],
+      "section": "p62 UBA pull down and library screen ::: Results and Discussion",
+      "ref_spans": [
+        {
+          "start": 184,
+          "end": 185,
+          "mention": "1",
+          "ref_id": "TABREF0"
+        },
+        {
+          "start": 717,
+          "end": 718,
+          "mention": "1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "It has been reported that polyubiquitin chains assembled through lysine 48 of ubiquitin act as a signal for substrate proteolysis by the 26S proteasome (42-44). In order to understand whether the proteins identified in our screen bind to the p62\u2019s UBA domain through lysine 48 (K48), polyubiquitin K48 chains were added to the p62 UBA pull down assay (Fig. 6). Inclusion of polyubiquitin K48 chains in the assay should compete for the binding of substrate to the p62\u2019s UBA domain and reduce the interaction of those proteins with the p62\u2019s UBA domain if those proteins are assembled through K48 chains. An alternative interpretation for polyubiquitin K48 chain competition is that the ubiquitin chains are competing for the same binding site as the binding partners which are either ubiquitinated or non-ubiquitinated. We randomly chose five proteins out of the 11 binding partners for the competition pull down (Fig. 6). Out of the five proteins, four proteins (# 2, 3, 4, and 5) showed reduced binding ability with p62\u2019s UBA domain when polyubiquitin K48 chains were included (Fig. 6A, 6B). However, K48 chains failed to compete with HSP70, suggesting that p62\u2019s UBA domain binds to HSP70 through a ubiquitin lysine linkage other than K48. Interestingly, it has been reported that heat shock protein 70 cognate (HSP70) is ubiquitinated by CHIP (carboxyl terminus of Hsc70-interacting protein) via ubiquitin chain synthesis that uses either K29 or K63 (45). In order to examine which lysine linkage utilized by HSP70 binds to p62\u2019s UBA domain, in vitro ubiquitination assay was performed by incubating lysates from HEK cells expressing HSP70 with E1, E2, and E3 in reaction buffer (50 mM Tris-HCl pH 7.5, 2.5 mM MgCl2, 2 mM DTT, 2 mM ATP). As control, the ubiquitination of HSP70 utilizing the rabbit reticulocyte lysate was also investigated by Western blot analysis. Our results revealed that HSP70 was ubiquitinated in the IVEC system (Fig. 7A, 7B), and the rabbit reticulocyte lysate contained enzymes such as TRAF6 (E3) and UbcH7 (E2) for in vitro ubiquitination (Fig. 7C).",
+      "cite_spans": [
+        {
+          "start": 153,
+          "end": 155,
+          "mention": "42",
+          "ref_id": "BIBREF36"
+        },
+        {
+          "start": 156,
+          "end": 158,
+          "mention": "44",
+          "ref_id": "BIBREF38"
+        },
+        {
+          "start": 1454,
+          "end": 1456,
+          "mention": "45",
+          "ref_id": "BIBREF39"
+        }
+      ],
+      "section": "\n\nIn vitro\n\nubiquitination\n ::: Results and Discussion",
+      "ref_spans": [
+        {
+          "start": 357,
+          "end": 358,
+          "mention": "6",
+          "ref_id": "FIGREF5"
+        },
+        {
+          "start": 918,
+          "end": 919,
+          "mention": "6",
+          "ref_id": "FIGREF5"
+        },
+        {
+          "start": 1084,
+          "end": 1085,
+          "mention": "6",
+          "ref_id": "FIGREF5"
+        },
+        {
+          "start": 1088,
+          "end": 1089,
+          "mention": "6",
+          "ref_id": "FIGREF5"
+        },
+        {
+          "start": 1945,
+          "end": 1946,
+          "mention": "7",
+          "ref_id": "FIGREF6"
+        },
+        {
+          "start": 1949,
+          "end": 1950,
+          "mention": "7",
+          "ref_id": "FIGREF6"
+        },
+        {
+          "start": 2075,
+          "end": 2076,
+          "mention": "7",
+          "ref_id": "FIGREF6"
+        }
+      ]
+    },
+    {
+      "text": "TRAF6 was chosen as an E3 in this in vitro ubiquitination assay due to its RING domain, a common feature of E3 ligases, and the observation that p62 is a scaffold for TRAF6 interaction (46). Therefore, in vitro ubiquitination assays using the E1-E2-E3 system were performed in the presence of either ubiquitin wild type or ubiquitin mutants (K29R, K48R, and K63R). If one lysine mutant blocks the ubiquitination of HSP70, it would suggest that the ubiquitination of HSP70 utilizes that specific lysine linkage. Our results revealed that HSP70 utilizes K63 linkage to assemble polyubiquitin chains to bind to p62\u2019s UBA domain since only the K63R ubiquitin mutant blocked the ubiquitination of HSP70 (Fig. 8A). A similar result was also observed when reactions were conducted with wild type ubiquitin or mutant ubiquitin with all lysines mutated to arginines except K63 and the ubiquitination of HSP70 occurred only in the reaction that has either intact K63 ubiquitin or wild type ubiquitin (Fig. 8B). This finding is consistent with previous reports (45), demonstrating that HSP70 is K63-polyubiquitinated. Furthermore, the in vivo interaction of HSP70 and p62 was confirmed by transfecting myc-tagged HSP70 into HEK 293 cells in the presence of the proteasome inhibitor MG132 and subjecting cell lysates to p62 immunoprecipitation and Western blot with anti-myc antibody (Fig. 8C). The interaction between HSP70 and p62 in vivo took place only when MG132 was included, suggesting that the interaction in vivo is dependent upon the ubiquitination of HSP70. The specific type of polyubiquitin chain recognized by p62\u2019s UBA domain is not yet known and studies are underway lab to determine p62\u2019s interaction with specific polyubiquitin chains, however, our preliminary studies suggest that p62\u2019s UBA domain may recognize K63 linked polyubiquitin chains.",
+      "cite_spans": [
+        {
+          "start": 186,
+          "end": 188,
+          "mention": "46",
+          "ref_id": "BIBREF40"
+        },
+        {
+          "start": 1051,
+          "end": 1053,
+          "mention": "45",
+          "ref_id": "BIBREF39"
+        }
+      ],
+      "section": "\n\nIn vitro\n\nubiquitination\n ::: Results and Discussion",
+      "ref_spans": [
+        {
+          "start": 704,
+          "end": 705,
+          "mention": "8",
+          "ref_id": "FIGREF7"
+        },
+        {
+          "start": 996,
+          "end": 997,
+          "mention": "8",
+          "ref_id": "FIGREF7"
+        },
+        {
+          "start": 1378,
+          "end": 1379,
+          "mention": "8",
+          "ref_id": "FIGREF7"
+        }
+      ]
+    },
+    {
+      "text": "In summary, for the first time, we demonstrate a systematic approach to identify UBA domain binding proteins from a proteome wide perspective. This approach could be readily adapted to high throughput screening. Using the rabbit reticulocyte lysate in vitro expression cloning system, we have successfully identified eleven proteins in the human adult brain that interact with the UBA domain of p62, and the majority of the eleven proteins are associated with neurodegenerative disorders, such as Alzheimer\u2019s disease. This is a very interesting finding since 9600 cDNAs have been screened and only 11 of them showed binding specificity with p62\u2019s UBA domain. Studies are underway to unfold the functional roles of p62 in the ubiquitin system. Our approach provides an easy route to the characterization of UBA domain binding proteins at the level of the whole proteome, its application will unfold the important roles that p62\u2019s UBA domain plays. This method could be easily adapted to identify proteins that interact with other UBA domains as well.",
+      "cite_spans": [],
+      "section": "\n\nIn vitro\n\nubiquitination\n ::: Results and Discussion",
+      "ref_spans": []
+    }
+  ],
+  "ref_entries": {
+    "TABREF0": {
+      "text": "Table 1: Sequencing result of individual cDNA/Protein that binds to p62\u2019s UBA domain\n",
+      "type": "table"
+    },
+    "FIGREF1": {
+      "text": "Fig. 2:  96 protein pools were generated by employing\n TNT Quick Coupled in vitro transcription/translation system. The 96 protein\n pools were then divided into 24 mixed protein pools by combining four protein\n pools as one mixed protein pool. A: 1 day exposure; B: 3 days exposure.",
+      "type": "figure"
+    },
+    "FIGREF2": {
+      "text": "Fig. 3:  A: Mixed protein pools. 96 protein pools were generated by\n employing TNT Quick Coupled in vitro transcription/translation system. The 96\n protein pools were divided into 24 mixed protein pools and separated by\n SDS-PAGE, followed by immunoblotting with ubiquitin monoclonal antibody. B:\n Proteins synthesized in the IVEC system in the absence of ubiquitin (lane 1) or\n presence of wild type ubiquitin (lane 2), ubiquitin K29 (lane 3), ubiquitin K48\n (lane 4), and ubiquitin K63 (lane 5). C: Proteins synthesized in the IVEC\n system were labeled by 35S methionine and used for pull down assays. Lane 1:\n proteins recovered with agarose beads alone; Lane 2: proteins recovered with\n p62 UBA agarose beads.",
+      "type": "figure"
+    },
+    "FIGREF3": {
+      "text": "Fig. 4:  The 24 mixed proteins pools were incubated with\n agarose-immobilised p62 UBA beads for 2 hours at 4\u00baC and washed three times in\n washing buffer. Bound proteins were released by boiling for 2 min in SDS-PAGE\n sample buffer and separated on 10% SDS-PAGE. Positive \u201chits\u201d were marked by\n arrows and the positive protein pools were selected for subsequent\n deconvulation.",
+      "type": "figure"
+    },
+    "FIGREF4": {
+      "text": "Fig. 5:  The 6 positive mix protein pools (# 2, 4, 8, 14, 20, 21 from\n Fig. 4) representing 24 individual protein pools were\n incubated with agarose-immobilised p62 UBA beads for 2 hours at 4\u00baC and the\n beads were washed three times in washing buffer. Bound proteins were released\n by boiling for 2 min in SDS-PAGE sample buffer and separated on 10% SDS-PAGE.\n Positive \u201chits\u201d were marked by arrows and the positive individual protein\n pools were underlined.",
+      "type": "figure"
+    },
+    "FIGREF5": {
+      "text": "Fig. 6:  A: The individual proteins were synthesized by employing TNT Quick Coupled in vitro transcription/translation system and incubated with 5 mg agarose-immobilised p62 UBA beads +/- polyubiquitin K48 chains for 2 hours at 4\u00baC. The beads were washed three times in washing buffer and bound proteins were released by boiling for 2 min in SDS-PAGE sample buffer and separated on 10% SDS-PAGE. B: The autoradiogram was scanned and the relative amount of protein (%) bound to p62\u2019s UBA domain +/- polyubiquitin K48 chains was graphed. The amount of protein bound to p62\u2019s UBA domain without addition of polyubiquitin K48 chains was considered 100%. 1: HSP70; 2: Meis2; 3: 14-3-3; 4: Reelin; 5: MBP.",
+      "type": "figure"
+    },
+    "FIGREF6": {
+      "text": "Fig. 7:  A: HSP70 Protein was synthesized employing TNT Quick Coupled in vitro transcription/translation system in the presence of ubiquitin, resolved on 10% SDS-PAGE gels, transferred to nitrocellulose membrane and western blotted with ubiquitin monoclonal antibody. B: HSP70 Protein was synthesized employing TNT Quick Coupled in vitro transcription/translation system in the presence of ubiquitin and 35S-methionine, resolved on 10% SDS-PAGE and exposed to X-ray film. C: Western blot of rabbit reticulocyte lysate with TRAF6 (E3) and UbcH7 (E2).",
+      "type": "figure"
+    },
+    "FIGREF7": {
+      "text": "Fig. 8:  A: myc-tagged HSP70 protein expressed in HEK cells was immunoprecipitated by myc-polyclonal antibody and used as a source of substrate for in vitro ubiquitination +/- E1, E2, E3, WT-Ub, Ub K29R, Ub K48R, Ub K63R. The reactions were separated on 10% SDS-PAGE and Western blotted with myc monoclonal antibody (bottom panel) to detect HSP70 or with ubiquitin monoclonal antibody (top panel) to detect ubiquitination. B: myc-tagged HSP70 protein expressed in HEK cells was immunoprecipitated by myc-polyclonal antibody and used as a source of substrate for in vitro ubiquitination in the absence or presence of wild type ubiquitin or Ub K63R or Ub K63. The reactions were separated on 10% SDS-PAGE and Western blotted with myc monoclonal antibody (bottom panel) to detect HSP70 or with ubiquitin monoclonal antibody (top panel) to detect ubiquitination. C: In vivo interaction of HSP70 and p62. Transfection of myc-tagged HSP70 into HEK293 cells was performed and the cell lysates were subjected to immunoprecipitation with p62 polyclonal antibody, followed by Western blot with anti-myc monoclonal antibody.",
+      "type": "figure"
+    }
+  },
+  "back_matter": [],
+  "bib_entries": {
+    "BIBREF0": {
+      "title": "Phosphotyrosine-independent binding of a 62-kDa protein to the src homology 2 (SH2) domain of p56lck and its regulation by phosphorylation of Ser-59 in the lck unique N-terminal region.",
+      "authors": [
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Park",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Chung",
+          "suffix": ""
+        },
+        {
+          "first": "CT",
+          "middle": [],
+          "last": "Walsh",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Yun",
+          "suffix": ""
+        },
+        {
+          "first": "JL",
+          "middle": [],
+          "last": "Strominger",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Shin",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Proc Natl Acad Sci",
+      "volume": "92",
+      "issn": "",
+      "pages": "12338-12342",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF1": {
+      "title": "Themes and variations on ubiquitylation.",
+      "authors": [
+        {
+          "first": "AM",
+          "middle": [],
+          "last": "Weissman",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Nat Rev Mol Cell Bio",
+      "volume": "2",
+      "issn": "",
+      "pages": "169-178",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF2": {
+      "title": "Ubiquitin enters the new millennium.",
+      "authors": [
+        {
+          "first": "CM",
+          "middle": [],
+          "last": "Pickart",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Mol Cell",
+      "volume": "8",
+      "issn": "",
+      "pages": "499-504",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF3": {
+      "title": "A new ticket for entry into budding vesicles-ubiquitin.",
+      "authors": [
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Hicke",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Cell",
+      "volume": "106",
+      "issn": "",
+      "pages": "527-530",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF4": {
+      "title": "The UBA domain: a sequence motif present in multiple enzyme classes of the ubiquitination pathway.",
+      "authors": [
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Hofmann",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Bucher",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "TIBS",
+      "volume": "21",
+      "issn": "",
+      "pages": "172-173",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF5": {
+      "title": "Recognition of specific ubiquitin conjugates is important for the proteolytic functions of the ubiquitin-associated domain proteins Dsk2 and Rad23.",
+      "authors": [
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Rao",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Sastry",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "J Biol Chem",
+      "volume": "277",
+      "issn": "",
+      "pages": "11691-11695",
+      "other_ids": {
+        "DOI": [
+          "10.1074/jbc.M200245200"
+        ]
+      }
+    },
+    "BIBREF6": {
+      "title": "Ubiquitination of a yeast plasma membrane receptor signals its ligand-stimulated endocytosis.",
+      "authors": [
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Hicke",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Riezman",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Cell",
+      "volume": "84",
+      "issn": "",
+      "pages": "277-287",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF7": {
+      "title": "Ubiquitin-dependent internalization and down-regulation of plasma membrane proteins.",
+      "authors": [
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Hicke",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "FASEB J",
+      "volume": "11",
+      "issn": "",
+      "pages": "1215-1226",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF8": {
+      "title": "p62 and the sequestosome, a novel mechanism for protein metabolism.",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Shin",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Arch Pharm Res",
+      "volume": "21",
+      "issn": "",
+      "pages": "829-833",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF9": {
+      "title": "Immediate early response of the p62 gene encoding a non-proteasomal multiubiquitin chain binding protein.",
+      "authors": [
+        {
+          "first": "YH",
+          "middle": [],
+          "last": "Lee",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Ko",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Joung",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Shin",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "FEBS Lett",
+      "volume": "438",
+      "issn": "",
+      "pages": "297-300",
+      "other_ids": {
+        "DOI": [
+          "10.1016/S0014-5793(98)01323-4"
+        ]
+      }
+    },
+    "BIBREF10": {
+      "title": "Cotranslational ubiquitination of cystic fibrosis transmembrane conductance regulator in vitro.",
+      "authors": [
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Sato",
+          "suffix": ""
+        },
+        {
+          "first": "CL",
+          "middle": [],
+          "last": "Ward",
+          "suffix": ""
+        },
+        {
+          "first": "RR",
+          "middle": [],
+          "last": "Kopito",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "J Biol Chem",
+      "volume": "273",
+      "issn": "",
+      "pages": "7189-7192",
+      "other_ids": {
+        "DOI": [
+          "10.1074/jbc.273.13.7189"
+        ]
+      }
+    },
+    "BIBREF11": {
+      "title": "Molecular cloning of a phosphotyrosine-independent ligand of the p56lck SH2 domain.",
+      "authors": [
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Joung",
+          "suffix": ""
+        },
+        {
+          "first": "JL",
+          "middle": [],
+          "last": "Strominger",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Shin",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Proc Natl Acad Sci",
+      "volume": "93",
+      "issn": "",
+      "pages": "5991-5995",
+      "other_ids": {
+        "DOI": [
+          "10.1073/pnas.93.12.5991"
+        ]
+      }
+    },
+    "BIBREF12": {
+      "title": "A region of the coronavirus infectious bronchitis virus a1 polyprotein encoding the 3C-like protease domain is subject to rapid turnover when expressed in rabbit reticulocyte lysate.",
+      "authors": [
+        {
+          "first": "KW",
+          "middle": [],
+          "last": "Tibbles",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Brierley",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Cavanagh",
+          "suffix": ""
+        },
+        {
+          "first": "TD",
+          "middle": [],
+          "last": "Brown",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "J Gen Virol",
+      "volume": "76",
+      "issn": "",
+      "pages": "3059-3070",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF13": {
+      "title": "Increased A\u03b2 peptide and reduced cholesterol and myelin proteins characterize white matter degeneration in Alzheimer\u2019s Disease.",
+      "authors": [
+        {
+          "first": "AE",
+          "middle": [],
+          "last": "Roher",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Weiss",
+          "suffix": ""
+        },
+        {
+          "first": "TA",
+          "middle": [],
+          "last": "Kokjohn",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Kuo",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [],
+          "last": "Kalback",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Anthony",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Watson",
+          "suffix": ""
+        },
+        {
+          "first": "DC",
+          "middle": [],
+          "last": "Leuhers",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Walker",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Emmerling",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [],
+          "last": "Goux",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Beach",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Biochemistry",
+      "volume": "41",
+      "issn": "",
+      "pages": "11080-11090",
+      "other_ids": {
+        "DOI": [
+          "10.1021/bi026173d"
+        ]
+      }
+    },
+    "BIBREF14": {
+      "title": "The precursor of Alzheimer's disease amyloid A4 protein resembles a cell-surface receptor.",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Kang",
+          "suffix": ""
+        },
+        {
+          "first": "HG",
+          "middle": [],
+          "last": "Lemaire",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Unterbeck",
+          "suffix": ""
+        },
+        {
+          "first": "JM",
+          "middle": [],
+          "last": "Salbaum",
+          "suffix": ""
+        },
+        {
+          "first": "CL",
+          "middle": [],
+          "last": "Masters",
+          "suffix": ""
+        },
+        {
+          "first": "KH",
+          "middle": [],
+          "last": "Grzeschik",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Multhaup",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Beyreuther",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Muller-Hill",
+          "suffix": ""
+        }
+      ],
+      "year": 1987,
+      "venue": "Nature",
+      "volume": "325",
+      "issn": "",
+      "pages": "733-736",
+      "other_ids": {
+        "DOI": [
+          "10.1038/325733a0"
+        ]
+      }
+    },
+    "BIBREF15": {
+      "title": "Neurofibrillary tangles of Alzheimer's disease brains contain 14-3-3 proteins.",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Layfield",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Fergusson",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Aitken",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Lowe",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Landon",
+          "suffix": ""
+        },
+        {
+          "first": "RJ",
+          "middle": [],
+          "last": "Mayer",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Neurosci Lett",
+      "volume": "209",
+      "issn": "",
+      "pages": "57-60",
+      "other_ids": {
+        "DOI": [
+          "10.1016/0304-3940(96)12598-2"
+        ]
+      }
+    },
+    "BIBREF16": {
+      "title": "Synergistic effects of Munc18a and X11 proteins on amyloid precursor protein metabolism.",
+      "authors": [
+        {
+          "first": "CS",
+          "middle": [],
+          "last": "Ho",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [],
+          "last": "Marinescu",
+          "suffix": ""
+        },
+        {
+          "first": "ML",
+          "middle": [],
+          "last": "Steinhilb",
+          "suffix": ""
+        },
+        {
+          "first": "JR",
+          "middle": [],
+          "last": "Gaut",
+          "suffix": ""
+        },
+        {
+          "first": "RS",
+          "middle": [],
+          "last": "Turner",
+          "suffix": ""
+        },
+        {
+          "first": "EL",
+          "middle": [],
+          "last": "Stuenkel",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "J Biol Chem",
+      "volume": "277",
+      "issn": "",
+      "pages": "27021-27028",
+      "other_ids": {
+        "DOI": [
+          "10.1074/jbc.M201823200"
+        ]
+      }
+    },
+    "BIBREF17": {
+      "title": "Thiamin and Alzheimer's disease.",
+      "authors": [
+        {
+          "first": "JP",
+          "middle": [],
+          "last": "Blass",
+          "suffix": ""
+        },
+        {
+          "first": "KF",
+          "middle": [],
+          "last": "Sheu",
+          "suffix": ""
+        },
+        {
+          "first": "AJ",
+          "middle": [],
+          "last": "Cooper",
+          "suffix": ""
+        },
+        {
+          "first": "EH",
+          "middle": [],
+          "last": "Jung",
+          "suffix": ""
+        },
+        {
+          "first": "GE",
+          "middle": [],
+          "last": "Gibson",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "J Nutr Sci Vitaminol",
+      "volume": "Spec No",
+      "issn": "",
+      "pages": "401-404",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF18": {
+      "title": "Heat-shock protein 70 levels in brain of patients with Down syndrome and Alzheimer's disease.",
+      "authors": [
+        {
+          "first": "BC",
+          "middle": [],
+          "last": "Yoo",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Seidl",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Cairns",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Lubec",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "J Neural Transm",
+      "volume": "57",
+      "issn": "",
+      "pages": "315-322",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF19": {
+      "title": "Increased expression of heat-shock protein 27KDa in Alzheimer disease: a preliminary study.",
+      "authors": [
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Renkawek",
+          "suffix": ""
+        },
+        {
+          "first": "GJ",
+          "middle": [],
+          "last": "Bosman",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Gaestel",
+          "suffix": ""
+        }
+      ],
+      "year": 1993,
+      "venue": "Neuroreport",
+      "volume": "5",
+      "issn": "",
+      "pages": "14-16",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF20": {
+      "title": "The relationship between alpha-crystallin and neurofibrillary tangles in Alzheimer's disease.",
+      "authors": [
+        {
+          "first": "JJ",
+          "middle": [],
+          "last": "Mao",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Katayama",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Watanabe",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Harada",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Noda",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Yamamura",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Nakamura",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Neuropath Appl Neuro",
+      "volume": "27",
+      "issn": "",
+      "pages": "180-188",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF21": {
+      "title": "Reelin-mediated signaling locally regulates protein kinase B/Akt and glycogen synthase kinase 3\u03b2.",
+      "authors": [
+        {
+          "first": "U",
+          "middle": [],
+          "last": "Beffert",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Morfini",
+          "suffix": ""
+        },
+        {
+          "first": "HH",
+          "middle": [],
+          "last": "Bock",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Reyna",
+          "suffix": ""
+        },
+        {
+          "first": "ST",
+          "middle": [],
+          "last": "Brady",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Herz",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "J Biol Chem",
+      "volume": "277",
+      "issn": "",
+      "pages": "49958-49964",
+      "other_ids": {
+        "DOI": [
+          "10.1074/jbc.M209205200"
+        ]
+      }
+    },
+    "BIBREF22": {
+      "title": "The when and how of Src regulation.",
+      "authors": [
+        {
+          "first": "JA",
+          "middle": [],
+          "last": "Cooper",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Howell",
+          "suffix": ""
+        }
+      ],
+      "year": 1993,
+      "venue": "Cell",
+      "volume": "73",
+      "issn": "",
+      "pages": "1051-1054",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF23": {
+      "title": "Apolipoprotein E and Reelin ligands modulate tau phosphorylation through an apolipoprotein E receptor/disabled-1/glycogen synthase kinase-3\u03b2 cascade.",
+      "authors": [
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Ohkubo",
+          "suffix": ""
+        },
+        {
+          "first": "YD",
+          "middle": [],
+          "last": "Lee",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Morishima",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Terashima",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Kikkawa",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Tohyama",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Sakanaka",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Tanaka",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Maeda",
+          "suffix": ""
+        },
+        {
+          "first": "MP",
+          "middle": [],
+          "last": "Vitek",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Mitsuda",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "FASEB J",
+      "volume": "17",
+      "issn": "",
+      "pages": "295-297",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF24": {
+      "title": "Hippocampal neurons predisposed to neurofibrillary tangle formation are enriched in type II calcium/calmodulin-dependent protein kinase.",
+      "authors": [
+        {
+          "first": "AC",
+          "middle": [],
+          "last": "McKee",
+          "suffix": ""
+        },
+        {
+          "first": "KS",
+          "middle": [],
+          "last": "Kosik",
+          "suffix": ""
+        },
+        {
+          "first": "MB",
+          "middle": [],
+          "last": "Kennedy",
+          "suffix": ""
+        },
+        {
+          "first": "NW",
+          "middle": [],
+          "last": "Kowall",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "J Neuropath Exp Neur",
+      "volume": "49",
+      "issn": "",
+      "pages": "49-63",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF25": {
+      "title": "Ubiquitin is detected in neurofibrillary tangles and senile plaque neurites of Alzheimer disease brains.",
+      "authors": [
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Perry",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Friedman",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Shaw",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [],
+          "last": "Chau",
+          "suffix": ""
+        }
+      ],
+      "year": 1987,
+      "venue": "Proc Natl Acad Sci",
+      "volume": "84",
+      "issn": "",
+      "pages": "3033-3036",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF26": {
+      "title": "Early accumulation of p62 in neurofibrillary tangles in Alzheimer's disease: possible role in tangle formation.",
+      "authors": [
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Kuusisto",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Salminen",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Alafuzoff",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Neuropath Appl Neuro",
+      "volume": "28",
+      "issn": "",
+      "pages": "228-237",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF27": {
+      "title": "Meis family proteins are required for hindbrain development in the zebrafish.",
+      "authors": [
+        {
+          "first": "SK",
+          "middle": [],
+          "last": "Choe",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Vlachakis",
+          "suffix": ""
+        },
+        {
+          "first": "CG",
+          "middle": [],
+          "last": "Sagerstrom",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Development",
+      "volume": "129",
+      "issn": "",
+      "pages": "585-595",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF28": {
+      "title": "Axonal guidance mutants of Caenorhabditis elegans identified by filling sensory neurons with fluorescein dyes.",
+      "authors": [
+        {
+          "first": "EM",
+          "middle": [],
+          "last": "Hedgecock",
+          "suffix": ""
+        },
+        {
+          "first": "JG",
+          "middle": [],
+          "last": "Culotti",
+          "suffix": ""
+        },
+        {
+          "first": "JN",
+          "middle": [],
+          "last": "Thomson",
+          "suffix": ""
+        },
+        {
+          "first": "LA",
+          "middle": [],
+          "last": "Perkins",
+          "suffix": ""
+        }
+      ],
+      "year": 1985,
+      "venue": "Dev Bio",
+      "volume": "111",
+      "issn": "",
+      "pages": "158-170",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF29": {
+      "title": "Interaction of the Unc-51-like kinase and microtubule-associated protein light chain 3 related proteins in the brain: possible role of vesicular transport in axonal elongation.",
+      "authors": [
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Okazaki",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Yan",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Yuasa",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Ueno",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Kominami",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Masuho",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Koga",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Muramatsu",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Mol Brain Res",
+      "volume": "85",
+      "issn": "",
+      "pages": "1-12",
+      "other_ids": {
+        "DOI": [
+          "10.1016/S0169-328X(00)00218-7"
+        ]
+      }
+    },
+    "BIBREF30": {
+      "title": "FK506 in solid organ transplantation.",
+      "authors": [
+        {
+          "first": "JJ",
+          "middle": [],
+          "last": "Fung",
+          "suffix": ""
+        },
+        {
+          "first": "TE",
+          "middle": [],
+          "last": "Starzl",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Ther Drug Monit",
+      "volume": "17",
+      "issn": "",
+      "pages": "592-595",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF31": {
+      "title": "The mechanism of action of cyclosporin A and FK506.",
+      "authors": [
+        {
+          "first": "SL",
+          "middle": [],
+          "last": "Schreiber",
+          "suffix": ""
+        },
+        {
+          "first": "GR",
+          "middle": [],
+          "last": "Crabtree",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Immunol Today",
+      "volume": "13",
+      "issn": "",
+      "pages": "136-142",
+      "other_ids": {
+        "DOI": [
+          "10.1016/0167-5699(92)90111-J"
+        ]
+      }
+    },
+    "BIBREF32": {
+      "title": "FKBP ligands as novel therapeutics for neurological disorders.",
+      "authors": [
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Christner",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Herdegen",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Fischer",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Mini-Reviews in Medicinal Chemistry",
+      "volume": "1",
+      "issn": "",
+      "pages": "377-397",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF33": {
+      "title": "Signal transduction by lymphocyte antigen receptors.",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Weiss",
+          "suffix": ""
+        },
+        {
+          "first": "DR",
+          "middle": [],
+          "last": "Littman",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Cell",
+      "volume": "76",
+      "issn": "",
+      "pages": "263-274",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF34": {
+      "title": "The immunosuppressant drug FK506 is a potent trophic agent for human fetal neurons.",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Avramut",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Zeevi",
+          "suffix": ""
+        },
+        {
+          "first": "CL",
+          "middle": [],
+          "last": "Achim",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Dev Brain Res",
+      "volume": "132",
+      "issn": "",
+      "pages": "151-157",
+      "other_ids": {
+        "DOI": [
+          "10.1016/S0165-3806(01)00307-8"
+        ]
+      }
+    },
+    "BIBREF35": {
+      "title": "Aberrant interactions of transcriptional repressor proteins with the Huntington's disease gene product, huntingtin.",
+      "authors": [
+        {
+          "first": "JM",
+          "middle": [],
+          "last": "Boutell",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Thomas",
+          "suffix": ""
+        },
+        {
+          "first": "JW",
+          "middle": [],
+          "last": "Neal",
+          "suffix": ""
+        },
+        {
+          "first": "VJ",
+          "middle": [],
+          "last": "Weston",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Duce",
+          "suffix": ""
+        },
+        {
+          "first": "PS",
+          "middle": [],
+          "last": "Harper",
+          "suffix": ""
+        },
+        {
+          "first": "AL",
+          "middle": [],
+          "last": "Jones",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Hum Mol Genet",
+      "volume": "8",
+      "issn": "",
+      "pages": "1647-1655",
+      "other_ids": {
+        "DOI": [
+          "10.1093/hmg/8.9.1647"
+        ]
+      }
+    },
+    "BIBREF36": {
+      "title": "A multiubiquitin chain is confined to specific lysine in a targeted short-lived protein.",
+      "authors": [
+        {
+          "first": "V",
+          "middle": [],
+          "last": "Chau",
+          "suffix": ""
+        },
+        {
+          "first": "JW",
+          "middle": [],
+          "last": "Tobias",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Bachmair",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Marriott",
+          "suffix": ""
+        },
+        {
+          "first": "DJ",
+          "middle": [],
+          "last": "Ecker",
+          "suffix": ""
+        },
+        {
+          "first": "DK",
+          "middle": [],
+          "last": "Gonda",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Varshavsky",
+          "suffix": ""
+        }
+      ],
+      "year": 1989,
+      "venue": "Science",
+      "volume": "243",
+      "issn": "",
+      "pages": "1576-1583",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF37": {
+      "title": "A uniform isopeptide-linked multiubiquitin chain is sufficient to target substrate for degradation in ubiquitin-mediated proteolysis.",
+      "authors": [
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Gregori",
+          "suffix": ""
+        },
+        {
+          "first": "MS",
+          "middle": [],
+          "last": "Poosch",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Cousins",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [],
+          "last": "Chau",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "J Biol Chem",
+      "volume": "265",
+      "issn": "",
+      "pages": "8354-8357",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF38": {
+      "title": "Inhibition of proteolysis and cell cycle progression in a multiubiquitination-deficient yeast mutant.",
+      "authors": [
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Finley",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Sadis",
+          "suffix": ""
+        },
+        {
+          "first": "BP",
+          "middle": [],
+          "last": "Monia",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Boucher",
+          "suffix": ""
+        },
+        {
+          "first": "DJ",
+          "middle": [],
+          "last": "Ecker",
+          "suffix": ""
+        },
+        {
+          "first": "ST",
+          "middle": [],
+          "last": "Crooke",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [],
+          "last": "Chau",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Mol Cell Biol",
+      "volume": "14",
+      "issn": "",
+      "pages": "5501-5509",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF39": {
+      "title": "CHIP is a U-box-dependent E3 ubiquitin ligase: identification of Hsc70 as a target for ubiquitylation.",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Jiang",
+          "suffix": ""
+        },
+        {
+          "first": "CA",
+          "middle": [],
+          "last": "Ballinger",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Wu",
+          "suffix": ""
+        },
+        {
+          "first": "Q",
+          "middle": [],
+          "last": "Dai",
+          "suffix": ""
+        },
+        {
+          "first": "DM",
+          "middle": [],
+          "last": "Cyr",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Hohfeld",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Patterson",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "J Biol Chem",
+      "volume": "276",
+      "issn": "",
+      "pages": "42938-42944",
+      "other_ids": {
+        "DOI": [
+          "10.1074/jbc.M101968200"
+        ]
+      }
+    },
+    "BIBREF40": {
+      "title": "The atypical protein kinase C-interacting protein p62 is a scaffold for NF-kappaB activation by nerve growth factor.",
+      "authors": [
+        {
+          "first": "MW",
+          "middle": [],
+          "last": "Wooten",
+          "suffix": ""
+        },
+        {
+          "first": "ML",
+          "middle": [],
+          "last": "Seibenhener",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [],
+          "last": "Mamidipudi",
+          "suffix": ""
+        },
+        {
+          "first": "MT",
+          "middle": [],
+          "last": "Diaz-Meco",
+          "suffix": ""
+        },
+        {
+          "first": "PA",
+          "middle": [],
+          "last": "Barker",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Moscat",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "J Biol Chem",
+      "volume": "276",
+      "issn": "",
+      "pages": "7709-7712",
+      "other_ids": {
+        "DOI": [
+          "10.1074/jbc.C000869200"
+        ]
+      }
+    },
+    "BIBREF41": {
+      "title": "Interaction of protein kinase C zeta with ZIP, a novel protein kinase C-binding protein.",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Puls",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Schmidt",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Grawe",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Stabel",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "Proc Natl Acad Sci",
+      "volume": "94",
+      "issn": "",
+      "pages": "6191-6196",
+      "other_ids": {
+        "DOI": [
+          "10.1073/pnas.94.12.6191"
+        ]
+      }
+    },
+    "BIBREF42": {
+      "title": "Localization of atypical protein kinase C isoforms into lysosome-targeted endosomes through interaction with p62.",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Sanchez",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "De Carcer",
+          "suffix": ""
+        },
+        {
+          "first": "IV",
+          "middle": [],
+          "last": "Sandoval",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Moscat",
+          "suffix": ""
+        },
+        {
+          "first": "MT",
+          "middle": [],
+          "last": "Diaz-Meco",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Mol Cel Biol",
+      "volume": "18",
+      "issn": "",
+      "pages": "3069-3080",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF43": {
+      "title": "p62, a phosphotyrosine-independent ligand of the SH2 domain of p56lck, belongs to a new class of ubiquitin-binding protein.",
+      "authors": [
+        {
+          "first": "RK",
+          "middle": [],
+          "last": "Vadlamundi",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Joung",
+          "suffix": ""
+        },
+        {
+          "first": "JL",
+          "middle": [],
+          "last": "Strominger",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Shin",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "J Biol Chem",
+      "volume": "271",
+      "issn": "",
+      "pages": "20235-20237",
+      "other_ids": {
+        "DOI": [
+          "10.1074/jbc.271.34.20235"
+        ]
+      }
+    },
+    "BIBREF44": {
+      "title": "UBA domains of DNA damage-inducible proteins interact with ubiquitin.",
+      "authors": [
+        {
+          "first": "BL",
+          "middle": [],
+          "last": "Bertolaet",
+          "suffix": ""
+        },
+        {
+          "first": "DJ",
+          "middle": [],
+          "last": "Clarke",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Wolff",
+          "suffix": ""
+        },
+        {
+          "first": "MH",
+          "middle": [],
+          "last": "Watson",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Henze",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Divita",
+          "suffix": ""
+        },
+        {
+          "first": "SI",
+          "middle": [],
+          "last": "Reed",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Nat Struct Biol",
+      "volume": "8",
+      "issn": "",
+      "pages": "417-422",
+      "other_ids": {
+        "DOI": [
+          "10.1038/87575"
+        ]
+      }
+    },
+    "BIBREF45": {
+      "title": "Structure and functional properties of the ubiquitin-binding protein p62.",
+      "authors": [
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Geetha",
+          "suffix": ""
+        },
+        {
+          "first": "MW",
+          "middle": [],
+          "last": "Wooten",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "FEBS Lett",
+      "volume": "512",
+      "issn": "",
+      "pages": "19-24",
+      "other_ids": {
+        "DOI": [
+          "10.1016/S0014-5793(02)02286-X"
+        ]
+      }
+    }
+  }
+}

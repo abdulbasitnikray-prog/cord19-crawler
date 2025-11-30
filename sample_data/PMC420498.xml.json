@@ -1,0 +1,544 @@
+{
+  "paper_id": "PMC420498",
+  "metadata": {
+    "title": "Multi-faceted, multi-versatile microarray: simultaneous detection of many viruses and their expression profiles",
+    "authors": [
+      {
+        "first": "Biehuoy",
+        "middle": [],
+        "last": "Shieh",
+        "suffix": "",
+        "email": "bhshieh@csmu.edu.tw",
+        "affiliation": {}
+      },
+      {
+        "first": "Ching",
+        "middle": [],
+        "last": "Li",
+        "suffix": "",
+        "email": "chingli@csmu.edu.tw",
+        "affiliation": {}
+      }
+    ]
+  },
+  "body_text": [
+    {
+      "text": "Microarray technology has been proven to be a powerful tool with great potential for biological and medical uses. In this technique, recombinant DNA fragments or synthesized oligonucleotides affixed on the surface of glass slides or nylon membranes are used for detecting complementary nucleic acid sequences (frequently representing a few hundred to >10,000 genes/expressed sequence tags) as well as for genotyping microorganisms and for profiling the gene-expression patterns in cells from higher organisms [1].",
+      "cite_spans": [
+        {
+          "start": 510,
+          "end": 511,
+          "mention": "1",
+          "ref_id": "BIBREF0"
+        }
+      ],
+      "section": "",
+      "ref_spans": []
+    },
+    {
+      "text": "A new report by Ghedin, et al. [2] in Retrovirology describes the successful use of a multi-virus array (termed multivirus-chip) to detect multiple viral co-infections in cultured cells as well as to study viral gene expression and promoter activities (Figure 1). Ghedin's multivirus-chip contains genes from eight human viruses including human immunodeficiency virus type 1 (HIV-1). Conceptually, this chip can be used to detect viral co-infections in AIDS patients who are frequently rendered susceptible to additional opportunistic infections. In developing their multivirus-chip, Ghedin, et al. tested more than 250 ORFs from HIV-1, human T cell leukemia virus types 1 (HTLV-1) and 2 (HTLV-2), hepatitis C virus (HCV), Epstein-Barr virus (EBV), human herpesvirus 6A (HHV6A) and 6B (HHV6B), and Kaposi's sarcoma-associated herpesvirus (KSHV) which were PCR-amplified and spotted on glass slides. They then hybridized their slides with Cy3- or Cy5-labeled genomic DNA or cDNAs derived from various virus-infected cells. Their multivirus-chip was found to be highly specific and sensitive for detecting different viral genomic sequences in cell lines. Moreover, the chip could also detect the effect of various drugs on viral gene expression. In such instance, cell lines latently infected with HIV-1 and KSHV were used to generate profiles of viral gene expression in the presence of cyclin-dependent kinase inhibitor (CKI), Roscovitine, which was applied to cells to suppress the reactivation of latently infected viruses.",
+      "cite_spans": [
+        {
+          "start": 32,
+          "end": 33,
+          "mention": "2",
+          "ref_id": "BIBREF1"
+        }
+      ],
+      "section": "",
+      "ref_spans": [
+        {
+          "start": 260,
+          "end": 261,
+          "mention": "1",
+          "ref_id": "FIGREF0"
+        }
+      ]
+    },
+    {
+      "text": "Ghedin, et al. [2] also studied the role of cellular chromatin structure on viral gene expression using their multivirus-chip. They employed the chromatin immunoprecipitation technique (ChIP) [3] to isolate cellular DNA fragments that were bound to phosphorylated histone H3 (P-H3). These DNA fragments were hybridized to the viral ORFs contained on the multivirus-chip to investigate the role of phospho-H3 on viral gene expression. They showed that whether transcriptionally active or silent the chromatin state played a role in regulating the expression of KSHV genes under the different cellular context.",
+      "cite_spans": [
+        {
+          "start": 16,
+          "end": 17,
+          "mention": "2",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 193,
+          "end": 194,
+          "mention": "3",
+          "ref_id": "BIBREF2"
+        }
+      ],
+      "section": "",
+      "ref_spans": []
+    },
+    {
+      "text": "Current routine clinical diagnostics employ PCR, Southern blotting, Northern blotting, DNA sequencing and microarray hybridization to detect and characterize genes of interest in biomedicine. PCR is generally regarded as the most sensitive diagnostic method. However, Iyer, et al. [4] have shown that the sensitivity of cDNA-chip hybridization is comparable to that of TaqMan-driven quantitative PCR assay, and that the microarray hybridization technique is less likely to be complicated by high false positive rates due to carry-over contaminations. Furthermore, using microarrays, the viral gene transcripts in infected cells can be easily detected by hybridization without any prior amplification steps, and the microarray technique requires much less experimental material when compared to Southern or Northern blotting and can provide high sensitivity in the setting of large throughput.",
+      "cite_spans": [
+        {
+          "start": 282,
+          "end": 283,
+          "mention": "4",
+          "ref_id": "BIBREF3"
+        }
+      ],
+      "section": "",
+      "ref_spans": []
+    },
+    {
+      "text": "In view of the above, the multivirus-chip described in Retrovirology [2] holds several advantages over other more commonly used techniques (e.g. PCR, DNA sequencing) for the diagnosis of viral infections. First, this chip provides a more accurate diagnosis of viral infection by simultaneously evaluating the transcription of all viral genes, and can use such cumulative data to correlate infection with clinical disease manifestations. Second, the high throughput and flexible synthesis nature of DNA microarray construction can allow scientists to tailor-make and rapidly alter arrays to match evolving emergence of new pathogens. The SARS genome chip made by the US NIAID, NIH is a good example [5] of how diagnostic arrays can be developed quickly and be used in a timely manner.",
+      "cite_spans": [
+        {
+          "start": 70,
+          "end": 71,
+          "mention": "2",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 699,
+          "end": 700,
+          "mention": "5",
+          "ref_id": "BIBREF4"
+        }
+      ],
+      "section": "",
+      "ref_spans": []
+    },
+    {
+      "text": "Finally, the most novel application described by Ghedin, et al. is their use of microarrays to correlate the cellular \"histone code\" [6] with the promoter activity of KSHV. Usually the transcription of a gene located on chromosomal DNA is influenced not only by the cis-acting elements (or DNA-binding motifs), but also by the structure of chromatin. The latter can be vary depending on the post-translational modifications of histone proteins. Methylation, acetylation, and/or phosphorylation of certain amino acid residues at the amino terminal \"tails\" of histone H3 and/or H4 can indeed influence chromatin structure. Thus accumulating evidence has shown that chromatin-associated proteins and their modifications play vital roles in many physiological processes such as growth, differentiation, and development in mammals, plants and fungi [6,7]. Many studies have used DNA array technology to investigate viral gene expression or to genotype viral isolates; however, none has used this technique to study the influence of cellular chromatin structure on viral gene expression [1]. Ghedin, et al. [2] demonstrated that only DNA fragments derived from ChIP of latent BCBL-1 cell genomic DNA captured using phospho-H3 antibody bound specifically to the KSHV ORF on the multivirus-chip. This result suggests that latent KSHV genome in BCBL-1 cells is packed into a nucleosomal structure and that histone H3 proteins near the viral promoter can be phosphorylated at serines to make the DNA at the promoter region less tightly packed with histones and more easily accessible to transcription factors.",
+      "cite_spans": [
+        {
+          "start": 134,
+          "end": 135,
+          "mention": "6",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 845,
+          "end": 846,
+          "mention": "6",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 847,
+          "end": 848,
+          "mention": "7",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 1082,
+          "end": 1083,
+          "mention": "1",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 1102,
+          "end": 1103,
+          "mention": "2",
+          "ref_id": "BIBREF1"
+        }
+      ],
+      "section": "",
+      "ref_spans": []
+    },
+    {
+      "text": "In conclusion, the multivirus-chip improvements developed by Ghedin, et al. [2] provide versatile clinical and basic uses. In the near future, such chips are likely to be used to detect viral co-infections in many different clinical settings.",
+      "cite_spans": [
+        {
+          "start": 77,
+          "end": 78,
+          "mention": "2",
+          "ref_id": "BIBREF1"
+        }
+      ],
+      "section": "",
+      "ref_spans": []
+    },
+    {
+      "text": "PCR, polymerase chain reaction",
+      "cite_spans": [],
+      "section": "List of abbreviations used",
+      "ref_spans": []
+    },
+    {
+      "text": "HIV-1, human immunodeficiency virus type 1",
+      "cite_spans": [],
+      "section": "List of abbreviations used",
+      "ref_spans": []
+    },
+    {
+      "text": "ORF, open reading frame",
+      "cite_spans": [],
+      "section": "List of abbreviations used",
+      "ref_spans": []
+    },
+    {
+      "text": "HTLV-1 and HTLV-2, human T cell leukemia virus types 1 and 2",
+      "cite_spans": [],
+      "section": "List of abbreviations used",
+      "ref_spans": []
+    },
+    {
+      "text": "HCV, hepatitis C virus",
+      "cite_spans": [],
+      "section": "List of abbreviations used",
+      "ref_spans": []
+    },
+    {
+      "text": "EBV, Epstein-Barr virus",
+      "cite_spans": [],
+      "section": "List of abbreviations used",
+      "ref_spans": []
+    },
+    {
+      "text": "HHV 6A and HHV6B, human herpesvirus types 6A and 6B",
+      "cite_spans": [],
+      "section": "List of abbreviations used",
+      "ref_spans": []
+    },
+    {
+      "text": "KSHV, Kaposi's sarcoma-associated herpesvirus",
+      "cite_spans": [],
+      "section": "List of abbreviations used",
+      "ref_spans": []
+    },
+    {
+      "text": "ChIP, chromatin immunoprecipitation technique",
+      "cite_spans": [],
+      "section": "List of abbreviations used",
+      "ref_spans": []
+    },
+    {
+      "text": "P-H3, phosphorylated histone H3",
+      "cite_spans": [],
+      "section": "List of abbreviations used",
+      "ref_spans": []
+    },
+    {
+      "text": "None declared.",
+      "cite_spans": [],
+      "section": "Competing interests",
+      "ref_spans": []
+    },
+    {
+      "text": "Both authors have worked on the development of microarray technology for a long time through mutual collaboration on studies on viral gene expression and disease progression.",
+      "cite_spans": [],
+      "section": "Authors' contributions",
+      "ref_spans": []
+    }
+  ],
+  "ref_entries": {
+    "FIGREF0": {
+      "text": "Figure 1: Schematic drawing of the multivirus-chip that possesses multiple functions. The multi-virus array used in the study conducted by Ghedin, et al. contains more than 250 DNA spots derived from PCR amplification of ORFs from eight human pathogenic viruses. These viruses include HIV-1, HTLV-1, HTLV-2, EBV, HHV-6A, HHV-6B, KSHV, and HCV. Depending on how the DNA targets are prepared, the multivirus-chip can be simultaneously used to detect viral genomic sequences, profile viral gene expression patterns, and investigate the relationship between cellular chromatin structure and viral gene transcription. Therefore, this multi-purpose DNA array is functionally versatile and would be very useful in both clinical diagnoses and biomedical research.",
+      "type": "figure"
+    }
+  },
+  "back_matter": [],
+  "bib_entries": {
+    "BIBREF0": {
+      "title": "The use of DNA array technology in studies of ocular viral pathogenesis",
+      "authors": [
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Natarajan",
+          "suffix": ""
+        },
+        {
+          "first": "LA",
+          "middle": [],
+          "last": "Shepard",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Chodosh",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "DNA Cell Biol",
+      "volume": "21",
+      "issn": "",
+      "pages": "483-490",
+      "other_ids": {
+        "DOI": [
+          "10.1089/10445490260099782"
+        ]
+      }
+    },
+    "BIBREF1": {
+      "title": "Use of a multi-virus array for the study of human pathogens: gene expression studies and ChIP-chip analysis",
+      "authors": [
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Ghedin",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Pumfery",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "de la Fuente",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Yao",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Miller",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [],
+          "last": "Lacoste",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Quackenbush",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Jacobson",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Kashanchi",
+          "suffix": ""
+        }
+      ],
+      "year": 2004,
+      "venue": "Retrovirology",
+      "volume": "1",
+      "issn": "",
+      "pages": null,
+      "other_ids": {
+        "DOI": [
+          "10.1186/1742-4690-1-10"
+        ]
+      }
+    },
+    "BIBREF2": {
+      "title": "In vivo cross-linking and immunoprecipitation for studying dynamic protein: DNA associations in a chromatin environment",
+      "authors": [
+        {
+          "first": "MH",
+          "middle": [],
+          "last": "Kuo",
+          "suffix": ""
+        },
+        {
+          "first": "CD",
+          "middle": [],
+          "last": "Allis",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Methods",
+      "volume": "19",
+      "issn": "",
+      "pages": "425-433",
+      "other_ids": {
+        "DOI": [
+          "10.1006/meth.1999.0879"
+        ]
+      }
+    },
+    "BIBREF3": {
+      "title": "The transcriptional program in the response of human fibroblasts to serum",
+      "authors": [
+        {
+          "first": "VR",
+          "middle": [],
+          "last": "Iyer",
+          "suffix": ""
+        },
+        {
+          "first": "MB",
+          "middle": [],
+          "last": "Eisen",
+          "suffix": ""
+        },
+        {
+          "first": "DT",
+          "middle": [],
+          "last": "Ross",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Schuler",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Moore",
+          "suffix": ""
+        },
+        {
+          "first": "JC",
+          "middle": [],
+          "last": "Lee",
+          "suffix": ""
+        },
+        {
+          "first": "JM",
+          "middle": [],
+          "last": "Trent",
+          "suffix": ""
+        },
+        {
+          "first": "LM",
+          "middle": [],
+          "last": "Staudt",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Hudson",
+          "suffix": "Jr"
+        },
+        {
+          "first": "MS",
+          "middle": [],
+          "last": "Boguski",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Lashkari",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Shalon",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Botstein",
+          "suffix": ""
+        },
+        {
+          "first": "PO",
+          "middle": [],
+          "last": "Brown",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Science",
+      "volume": "283",
+      "issn": "",
+      "pages": "83-87",
+      "other_ids": {
+        "DOI": [
+          "10.1126/science.283.5398.83"
+        ]
+      }
+    },
+    "BIBREF4": {
+      "title": "SARS genome chip available to scientists: the NIAID hopes that widespread access to the SARS genome chip will catalyse research into effective treatments for the virus",
+      "authors": [
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Frankish",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Lancet",
+      "volume": "361",
+      "issn": "",
+      "pages": null,
+      "other_ids": {
+        "DOI": [
+          "10.1016/S0140-6736(03)13791-9"
+        ]
+      }
+    },
+    "BIBREF5": {
+      "title": "Translating the histone code",
+      "authors": [
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Jenuwein",
+          "suffix": ""
+        },
+        {
+          "first": "CD",
+          "middle": [],
+          "last": "Allis",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Science",
+      "volume": "293",
+      "issn": "",
+      "pages": "1074-1080",
+      "other_ids": {
+        "DOI": [
+          "10.1126/science.1063127"
+        ]
+      }
+    },
+    "BIBREF6": {
+      "title": "Heterochromatin and epigenetic control of gene expression",
+      "authors": [
+        {
+          "first": "SIS",
+          "middle": [],
+          "last": "Grewal",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Moazed",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Science",
+      "volume": "301",
+      "issn": "",
+      "pages": "798-802",
+      "other_ids": {
+        "DOI": [
+          "10.1126/science.1086887"
+        ]
+      }
+    }
+  }
+}

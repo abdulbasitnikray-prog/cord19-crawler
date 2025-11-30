@@ -1,0 +1,3987 @@
+{
+  "paper_id": "3bb07ea10432f7738413dff9816809cc90f03f99",
+  "metadata": {
+    "title": "ICU = intensive care unit; MOD = multiple organ dysfunction; RBC = red blood cell; RCT = randomized controlled trial; TRICC = Transfusion Requirements In Critical Care (trial). Debate: Transfusing to normal haemoglobin levels will not improve outcome",
+    "authors": [
+      {
+        "first": "Gonzalo",
+        "middle": [],
+        "last": "Alvarez",
+        "suffix": "",
+        "affiliation": {},
+        "email": ""
+      },
+      {
+        "first": "Paul",
+        "middle": [
+          "C"
+        ],
+        "last": "H\u00e9bert",
+        "suffix": "",
+        "affiliation": {},
+        "email": ""
+      },
+      {
+        "first": "Sharyn",
+        "middle": [],
+        "last": "Szick",
+        "suffix": "",
+        "affiliation": {},
+        "email": ""
+      }
+    ]
+  },
+  "abstract": [
+    {
+      "text": "It has recently been shown [10] that critically ill patients are able to tolerate lower levels of haemoglobin than was previously believed. The practice of adhering to a lower Commentary Abstract Recent evidence suggests that critically ill patients are able to tolerate lower levels of haemoglobin than was previously believed. It is our goal to show that transfusing to a level of 100 g/l does not improve mortality and other clinically important outcomes in a critical care setting. Although many questions remain, many laboratory and clinical studies, including a recent randomized controlled trial (RCT), have established that transfusing to normal haemoglobin concentrations does not improve organ failure and mortality in the critically ill patient. In addition, a restrictive transfusion strategy will reduce exposure to allogeneic transfusions, result in more efficient use of red blood cells (RBCs), save blood overall, and decrease health care costs.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    }
+  ],
+  "body_text": [
+    {
+      "text": "Anaemia is a common condition in critically ill patients, and RBC transfusions are often used in the treatment and management of this patient population. In fact, one study [1] reported that 25% of all critically ill patients received RBC transfusions. Many laboratory studies [2] [3] [4] [5] [6] [7] [8] have examined the physiological responses (ie compensatory mechanisms) of the body to anaemia, which include the following [9] : increased cardiac output, decreased blood viscosity, capillary changes, increased oxygen extraction, and other tissue adaptations to meet oxygen requirements. Although critically ill patients are affected by a number of factors that predispose them to the adverse consequences of anaemia, persistence of this condition is of particular concern because it may cause the compensatory mechanisms in these patients to become impaired, risking oxygen deprivation in vital organs [9] . However, critically ill patients may also be at increased risk from the adverse effects of RBC transfusions, such as pulmonary oedema from volume overload, immune suppression resulting in increased risk of infection, and microcirculatory injury from poorly deformable RBCs.",
+      "cite_spans": [
+        {
+          "start": 173,
+          "end": 176,
+          "text": "[1]",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 277,
+          "end": 280,
+          "text": "[2]",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 281,
+          "end": 284,
+          "text": "[3]",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 285,
+          "end": 288,
+          "text": "[4]",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 289,
+          "end": 292,
+          "text": "[5]",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 293,
+          "end": 296,
+          "text": "[6]",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 297,
+          "end": 300,
+          "text": "[7]",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 301,
+          "end": 304,
+          "text": "[8]",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 428,
+          "end": 431,
+          "text": "[9]",
+          "ref_id": "BIBREF8"
+        },
+        {
+          "start": 908,
+          "end": 911,
+          "text": "[9]",
+          "ref_id": "BIBREF8"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Introduction"
+    },
+    {
+      "text": "It is the aim of the present commentary to justify the statement 'Transfusing to normal haemoglobin concentration will not improve outcome.' If we define normal haemoglobin as being greater than 115 g/l for women and greater than 125 g/l for men, then there is no evidence in the literature to justify maintaining such high concentrations by the use of RBC transfusions in any anaemic patient. There may, however, be some debate about adopting a transfusion threshold of 100 g/l, which is well below 'normal'. transfusion threshold would, obviously, reduce the number of allogeneic RBCs transfused. It is our goal to impress upon the reader that transfusing to a level equal to or greater than 100 g/l does not improve mortality and other clinically important outcomes in a critical care setting. We first explore the reasons why a reduction in the total number of allogeneic blood transfusions would be beneficial. Second, we examine the current evidence for using a lower transfusion strategy, specifically that employed in the Transfusion Requirements In Critical Care (TRICC) trial.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Introduction"
+    },
+    {
+      "text": "RBC transfusions have inherent risks that may be categorized as follows [11] [12] [13] [14] [15] : transfusion-transmitted infections; immune-related reactions (acute or delayed haemolytic reactions, febrile, allergic, anaphylactic reactions and graft-versus-host disease); and nonimmunerelated reactions (fluid overload, hypothermia, electrolyte toxicity and iron overload).",
+      "cite_spans": [
+        {
+          "start": 72,
+          "end": 76,
+          "text": "[11]",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 77,
+          "end": 81,
+          "text": "[12]",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 82,
+          "end": 86,
+          "text": "[13]",
+          "ref_id": "BIBREF12"
+        },
+        {
+          "start": 87,
+          "end": 91,
+          "text": "[14]",
+          "ref_id": "BIBREF13"
+        },
+        {
+          "start": 92,
+          "end": 96,
+          "text": "[15]",
+          "ref_id": "BIBREF14"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Potential consequences of allogeneic red blood cell transfusion"
+    },
+    {
+      "text": "Major improvements in donor screening procedures and laboratory testing have dramatically improved the safety of the blood supply [16] . Currently, the risk of transmitting an infectious agent through blood transfusion ranges from 1:100,000 for hepatitis B virus to 1:1,000,000 for HIV (Canadian Blood Services, personal communication, 2000). The most important threats to the blood supply remain new and unknown pathogens. More recently, concern has focused on the potential transmission of prions through RBCs. Also, infectious agents with long latency periods pose particular risks to young individuals who require RBCs, such as multiple trauma victims. The risk : benefit ratio for a 24-year-old trauma victim with a 50-year life expectancy differs markedly from that for a person aged 80 years who is undergoing coronary artery bypass surgery. In summary, because there is a risk of transmitting diseases through the blood supply, we should always strive to use RBCs according to the best available evidence in order to ensure that we do more good than harm to our patients.",
+      "cite_spans": [
+        {
+          "start": 130,
+          "end": 134,
+          "text": "[16]",
+          "ref_id": "BIBREF15"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Potential consequences of allogeneic red blood cell transfusion"
+    },
+    {
+      "text": "It is a long-standing observation [17] [18] [19] [20] [21] that blood transfusions are associated with immune suppression. This clinical phenomenon was first observed in renal transplant patients who had received blood transfusions while on dialysis before the transplant [22] , and has been observed repeatedly in transplant centres around the world [23, 24] . Recently, Opelz et al [25] reported a multicentre clinical trial in which all renal allograft recipients received modern immunosuppressive regimens. Those patients who were allocated to receive three allogeneic RBC units before renal transplant had a 1-year graft survival rate of 90%, as compared with 82% for patients who were not transfused (P = 0.02). These data suggest that there are long-term immunosuppressive effects following transfusion of nonleukocyte-reduced allogeneic RBCs.",
+      "cite_spans": [
+        {
+          "start": 34,
+          "end": 38,
+          "text": "[17]",
+          "ref_id": "BIBREF16"
+        },
+        {
+          "start": 39,
+          "end": 43,
+          "text": "[18]",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 44,
+          "end": 48,
+          "text": "[19]",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 49,
+          "end": 53,
+          "text": "[20]",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 54,
+          "end": 58,
+          "text": "[21]",
+          "ref_id": "BIBREF20"
+        },
+        {
+          "start": 272,
+          "end": 276,
+          "text": "[22]",
+          "ref_id": "BIBREF21"
+        },
+        {
+          "start": 351,
+          "end": 355,
+          "text": "[23,",
+          "ref_id": "BIBREF22"
+        },
+        {
+          "start": 356,
+          "end": 359,
+          "text": "24]",
+          "ref_id": "BIBREF23"
+        },
+        {
+          "start": 384,
+          "end": 388,
+          "text": "[25]",
+          "ref_id": "BIBREF24"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Potential consequences of allogeneic red blood cell transfusion"
+    },
+    {
+      "text": "A large number of studies [26] [27] [28] [29] [30] [31] [32] [33] [34] have also suggested that allogeneic transfusions accelerate cancer growth, perhaps due to altered immune surveillance. These altered immune responses after allogeneic RBC transfusions may also predispose critically ill transfusion recipients to nosocomial infections [35] [36] [37] [38] [39] [40] and increased rates of multiplesystem organ failure [41] , which may ultimately result in higher mortality rates. However, most studies that examined the association between cancer recurrence and postoperative infection after transfusion [42, 43] only provided weak causal inferences because of poor study design and the lack of independence between allogeneic RBC transfusions and the potential complication.",
+      "cite_spans": [
+        {
+          "start": 26,
+          "end": 30,
+          "text": "[26]",
+          "ref_id": "BIBREF25"
+        },
+        {
+          "start": 31,
+          "end": 35,
+          "text": "[27]",
+          "ref_id": "BIBREF26"
+        },
+        {
+          "start": 36,
+          "end": 40,
+          "text": "[28]",
+          "ref_id": "BIBREF27"
+        },
+        {
+          "start": 41,
+          "end": 45,
+          "text": "[29]",
+          "ref_id": "BIBREF28"
+        },
+        {
+          "start": 46,
+          "end": 50,
+          "text": "[30]",
+          "ref_id": "BIBREF29"
+        },
+        {
+          "start": 51,
+          "end": 55,
+          "text": "[31]",
+          "ref_id": "BIBREF30"
+        },
+        {
+          "start": 56,
+          "end": 60,
+          "text": "[32]",
+          "ref_id": "BIBREF31"
+        },
+        {
+          "start": 61,
+          "end": 65,
+          "text": "[33]",
+          "ref_id": "BIBREF32"
+        },
+        {
+          "start": 66,
+          "end": 70,
+          "text": "[34]",
+          "ref_id": "BIBREF33"
+        },
+        {
+          "start": 338,
+          "end": 342,
+          "text": "[35]",
+          "ref_id": "BIBREF34"
+        },
+        {
+          "start": 343,
+          "end": 347,
+          "text": "[36]",
+          "ref_id": "BIBREF35"
+        },
+        {
+          "start": 348,
+          "end": 352,
+          "text": "[37]",
+          "ref_id": "BIBREF36"
+        },
+        {
+          "start": 353,
+          "end": 357,
+          "text": "[38]",
+          "ref_id": "BIBREF37"
+        },
+        {
+          "start": 358,
+          "end": 362,
+          "text": "[39]",
+          "ref_id": "BIBREF38"
+        },
+        {
+          "start": 363,
+          "end": 367,
+          "text": "[40]",
+          "ref_id": "BIBREF39"
+        },
+        {
+          "start": 420,
+          "end": 424,
+          "text": "[41]",
+          "ref_id": "BIBREF40"
+        },
+        {
+          "start": 606,
+          "end": 610,
+          "text": "[42,",
+          "ref_id": "BIBREF42"
+        },
+        {
+          "start": 611,
+          "end": 614,
+          "text": "43]",
+          "ref_id": "BIBREF43"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Potential consequences of allogeneic red blood cell transfusion"
+    },
+    {
+      "text": "A recent meta-analysis [44] combined the results from seven RCTs, and was unable to detect clinically important decreases in mortality and postoperative infections. We added the results of a new RCT by van de Watering et al [45] to the above meta-analysis. The relative risk for allcause mortality was 1.05 (95% confidence interval 0.88-1.25), and was 1.10 (95% confidence interval 0.85-1.43) for postoperative infections. However, this meta-analysis excluded two positive RCTs [40, 46] because of the significant statistical heterogeneity introduced by these two studies. If all available RCTs are combined, ignoring heterogeneity, then the relative risk difference for postoperative infections across all studies is 1.60 (95% confidence interval 1.00-2.56; P = 0.05). Thus, the available evidence suggests that universal prestorage leukoreduction could have clinical effects that range from none to decreasing rates of infection by as much as 50% in high-risk patients. In summary, despite convincing laboratory evidence and some supportive clinical studies, the clinical significance of the immunosuppressive effects of allogeneic RBC transfusions have not been clearly established [47] . More importantly, the impact of a leukoreduction programme has not been studied in a large population of patients who are expected to have significant exposure to allogeneic RBCs.",
+      "cite_spans": [
+        {
+          "start": 23,
+          "end": 27,
+          "text": "[44]",
+          "ref_id": "BIBREF44"
+        },
+        {
+          "start": 224,
+          "end": 228,
+          "text": "[45]",
+          "ref_id": "BIBREF45"
+        },
+        {
+          "start": 478,
+          "end": 482,
+          "text": "[40,",
+          "ref_id": "BIBREF39"
+        },
+        {
+          "start": 483,
+          "end": 486,
+          "text": "46]",
+          "ref_id": "BIBREF46"
+        },
+        {
+          "start": 1185,
+          "end": 1189,
+          "text": "[47]",
+          "ref_id": "BIBREF47"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Potential consequences of allogeneic red blood cell transfusion"
+    },
+    {
+      "text": "The majority of complications from allogeneic RBC transfusion, however, are no more frequent in the intensive care setting than in other patient populations, with the possible exception of pulmonary oedema, hypothermia and electrolyte disturbance. Hypothermia and electrolyte disturbances occur most frequently with massive transfusions. In critically ill patients, the optimal effective circulatory volume may be difficult to determine, and as a consequence pulmonary oedema may be a much more frequent complication of RBC transfusion than in other patient populations. This may explain the significantly higher rate of pulmonary oedema in patients transfused using a threshold of 100 g/l (5.3% in the restrictive transfusion group versus 10.7% in the liberal transfusion group; P < 0.01), as reported in the TRICC trial [10] . As an alternative explanation, the more frequent use of RBCs might have resulted in more frequent episodes of transfusion-related acute lung injury in the liberal strategy group (7.7% in the restrictive strategy versus 11.4% in the liberal strategy; P = 0.06), as reported in the TRICC trial.",
+      "cite_spans": [
+        {
+          "start": 822,
+          "end": 826,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Potential consequences of allogeneic red blood cell transfusion"
+    },
+    {
+      "text": "Clinical evidence is also insufficient to definitively establish a correlation between the age of RBCs being transfused and patient mortality; however, laboratory evidence has shown many storage-related changes that may result in impairment of blood flow and oxygen delivery at the microcirculatory level. Marik et al [48] demonstrated an association between a fall in gastric intramucosal pH and transfusion of RBCs stored for longer than 15 days. In addition, there is ample laboratory evidence that prolonged RBC storage adversely affects RBCs, potentially results in the generation of cytokines, and alters host immune function. In another study, Fitzgerald et al [49] , using an animal model of transfusion, consistently observed a lack of efficacy of transfused, stored rat blood to improve tissue oxygen consumption as compared with fresh cells or other blood substitutes.",
+      "cite_spans": [
+        {
+          "start": 318,
+          "end": 322,
+          "text": "[48]",
+          "ref_id": "BIBREF48"
+        },
+        {
+          "start": 668,
+          "end": 672,
+          "text": "[49]",
+          "ref_id": "BIBREF49"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Potential consequences of allogeneic red blood cell transfusion"
+    },
+    {
+      "text": "Three retrospective clinical studies tested the association between the age of transfused blood and duration of stay in the intensive care unit (ICU) [50] and mortality [51, 52] . Martin et al [50] observed a statistically significant association between the transfusion of aged blood (>14 days old) and increased duration of ICU stay (P = 0.003) in 698 critically ill patients. In patients who received a transfusion, aged RBCs was the only predictor of duration of stay (P < 0.0001). In survivors, only median age of blood was predictive of duration of stay (P < 0.0001). Purdy et al [51] demonstrated a negative correlation (r = -0.73) between the proportion of RBC units of a given age transfused to survivors and increasing age of RBCs in patients admitted to the ICU with a diagnosis of severe sepsis (n = 31). Those investigators also noted that these latter units were more likely to be older. A recently reported study by Vamvakas and Carven [52] evaluated the effect of duration of RBC storage on postoperative pneumonia in 416 consecutive patients undergoing coronary artery bypass grafting. Those investigators noted an adjusted increase of 1% in the risk of postoperative pneumonia per day of average increase in the duration of RBC storage (P < 0.005) in transfused patients. Each of these three studies also noted that patients who received a large number of RBC units had a higher mortality. Although these risks are relatively small when viewed collectively, they become significant when one considers that 25% of all critically ill patients in Canada are transfused during their ICU stay [1] .",
+      "cite_spans": [
+        {
+          "start": 150,
+          "end": 154,
+          "text": "[50]",
+          "ref_id": "BIBREF50"
+        },
+        {
+          "start": 169,
+          "end": 173,
+          "text": "[51,",
+          "ref_id": "BIBREF52"
+        },
+        {
+          "start": 174,
+          "end": 177,
+          "text": "52]",
+          "ref_id": "BIBREF53"
+        },
+        {
+          "start": 193,
+          "end": 197,
+          "text": "[50]",
+          "ref_id": "BIBREF50"
+        },
+        {
+          "start": 586,
+          "end": 590,
+          "text": "[51]",
+          "ref_id": "BIBREF52"
+        },
+        {
+          "start": 951,
+          "end": 955,
+          "text": "[52]",
+          "ref_id": "BIBREF53"
+        },
+        {
+          "start": 1606,
+          "end": 1609,
+          "text": "[1]",
+          "ref_id": "BIBREF0"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Potential consequences of allogeneic red blood cell transfusion"
+    },
+    {
+      "text": "Until recently, physicians have depended on clinical judgement when deciding at what haemoglobin level to transfuse a critically ill patient. As a result, significant variation has been shown to exist in transfusion practice among Canadian critical care physicians [53] , which is due largely to a lack of published data on the subject. An arbitrary haemoglobin level of 100 g/l has historically been used as a threshold to transfuse critically ill patients.",
+      "cite_spans": [
+        {
+          "start": 265,
+          "end": 269,
+          "text": "[53]",
+          "ref_id": "BIBREF54"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Transfusion strategies"
+    },
+    {
+      "text": "Six observational studies investigated the importance of anaemia on transfusion practices in various settings. Of these, three large cohort studies, which were performed in different patient populations (intensive care [1] , coronary artery bypass surgery [54] and hip fractures [55]), reached different conclusions. RBC transfusions in particular improved outcome in critically ill patients with cardiovascular disease, but increased the risk of myocardial infarction in coronary artery bypass surgery patients. Transfusion had no impact on short-term or long-term mortality in hip-fracture patients. Three smaller studies [56] [57] [58] evaluated the relationship between anaemia and adverse outcomes in vascular disease patients. Although increased numbers of ischaemic events were observed in anaemic patients, the validity of these studies is uncertain, given that the decision to transfuse a patient was often correlated with illness burden of the patient. It is also possible that comorbidity was not adequately adjusted for in those studies.",
+      "cite_spans": [
+        {
+          "start": 219,
+          "end": 222,
+          "text": "[1]",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 256,
+          "end": 260,
+          "text": "[54]",
+          "ref_id": "BIBREF55"
+        },
+        {
+          "start": 624,
+          "end": 628,
+          "text": "[56]",
+          "ref_id": "BIBREF56"
+        },
+        {
+          "start": 629,
+          "end": 633,
+          "text": "[57]",
+          "ref_id": "BIBREF57"
+        },
+        {
+          "start": 634,
+          "end": 638,
+          "text": "[58]",
+          "ref_id": "BIBREF58"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Transfusion strategies"
+    },
+    {
+      "text": "Transfusion thresholds were compared in 10 randomized clinical trials [10, [59] [60] [61] [62] [63] [64] [65] [66] [67] . Although the clinical settings varied, each trial randomized patients to be transfused on the basis of a 'conservative' or a 'liberal' strategy. The definitions of conservative and liberal strategies varied, and actually overlapped between studies. Of these 10 trials, only three included more than 100 patients and only one trial evaluated the impact of transfusion on symptoms. In the first trial of patients undergoing elective coronary artery bypass surgery [65] , the differences between perioperative haemoglobin levels were small, event rates were very low, and there were no differences in any outcome. In the second trial [67] , patients undergoing knee arthroplasty were randomly assigned to receive autologous blood transfusion immediately after surgery or to receive autologous blood if haemoglobin level fell below 9 g/dl [67] . Again, no differences in outcome were observed. The third trial of hip fracture patients undergoing surgical repair [64] found no differences in outcomes; however, five deaths were recorded at 60 days after surgery in the symptomatic group, and two deaths occurred in the 10 g/dl group. The numbers of patients in these trials were too small to evaluate the effect of lower transfusion triggers on clinically important outcomes such as mortality, morbidity and functional status.",
+      "cite_spans": [
+        {
+          "start": 70,
+          "end": 74,
+          "text": "[10,",
+          "ref_id": "BIBREF9"
+        },
+        {
+          "start": 75,
+          "end": 79,
+          "text": "[59]",
+          "ref_id": "BIBREF59"
+        },
+        {
+          "start": 80,
+          "end": 84,
+          "text": "[60]",
+          "ref_id": "BIBREF60"
+        },
+        {
+          "start": 85,
+          "end": 89,
+          "text": "[61]",
+          "ref_id": "BIBREF61"
+        },
+        {
+          "start": 90,
+          "end": 94,
+          "text": "[62]",
+          "ref_id": "BIBREF62"
+        },
+        {
+          "start": 95,
+          "end": 99,
+          "text": "[63]",
+          "ref_id": "BIBREF63"
+        },
+        {
+          "start": 100,
+          "end": 104,
+          "text": "[64]",
+          "ref_id": "BIBREF64"
+        },
+        {
+          "start": 105,
+          "end": 109,
+          "text": "[65]",
+          "ref_id": "BIBREF65"
+        },
+        {
+          "start": 110,
+          "end": 114,
+          "text": "[66]",
+          "ref_id": "BIBREF66"
+        },
+        {
+          "start": 115,
+          "end": 119,
+          "text": "[67]",
+          "ref_id": "BIBREF67"
+        },
+        {
+          "start": 584,
+          "end": 588,
+          "text": "[65]",
+          "ref_id": "BIBREF65"
+        },
+        {
+          "start": 753,
+          "end": 757,
+          "text": "[67]",
+          "ref_id": "BIBREF67"
+        },
+        {
+          "start": 957,
+          "end": 961,
+          "text": "[67]",
+          "ref_id": "BIBREF67"
+        },
+        {
+          "start": 1080,
+          "end": 1084,
+          "text": "[64]",
+          "ref_id": "BIBREF64"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Transfusion strategies"
+    },
+    {
+      "text": "In 1999, Hebert et al [10] reported the results of the TRICC trial. Patients (n = 838) were randomized either to a restrictive strategy (haemoglobin concentration maintained between 70 and 90 g/l, with a trigger set at 70 g/l) or to a liberal strategy (haemoglobin concentration maintained between 100 and 120 g/l, with a trigger at 100 g/l). To date, the TRICC trial is the only large study that has investigated these parameters. The groups were comparable at baseline. The average daily haemoglobin concentration ranged from 85 \u00b1 7.2 g/l in the restrictive group to 107 \u00b1 7.3 g/l in the liberal group (P < 0.01). The average number of transfusions was reduced by 52% in the restrictive group (2.6 \u00b1 4.1 versus 5.6 \u00b1 5.3 RBCs/patient; P < 0.01). Cardiac events, primarily pulmonary oedema and myocardial infarction, were more frequent in the liberal strategy (P < 0.01; Table 1 ). On examination of composite outcomes, the number of patients with multiorgan failure was found to be substantially increased in both groups, with the results being marginally better in the restrictive strategy group (20.6% versus 26.0%; P = 0.07; Table 2 ). Overall, the restrictive transfusion group showed a lower 30-day mortality (18.7% versus 23.3%; P = 0.11; Fig. 1 ). Kaplan-Meier survival curves, however, were significantly different in the subgroup of patients with an Acute Physiology and Chronic Health Evaluation II score of 20 or less (P = 0.02; Fig. 2 ). In addition, although 60-day mortality (22.8% versus 26.5%; P = 0.23) and ICU mortality (13.9% versus 16.2%; P = 0.29) were not statistically significant, they did show a consistent trend in terms of absolute values that favoured the restrictive strategy. The key observation from the TRICC trial is not that the restrictive strategy is better, but rather that it is at worst equivalent to the liberal strategy and at best superior to the liberal strategy.",
+      "cite_spans": [
+        {
+          "start": 22,
+          "end": 26,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        }
+      ],
+      "ref_spans": [
+        {
+          "start": 872,
+          "end": 879,
+          "text": "Table 1",
+          "ref_id": "TABREF0"
+        },
+        {
+          "start": 1130,
+          "end": 1137,
+          "text": "Table 2",
+          "ref_id": "TABREF1"
+        },
+        {
+          "start": 1247,
+          "end": 1253,
+          "text": "Fig. 1",
+          "ref_id": null
+        },
+        {
+          "start": 1442,
+          "end": 1448,
+          "text": "Fig. 2",
+          "ref_id": null
+        }
+      ],
+      "section": "Transfusion strategies"
+    },
+    {
+      "text": "At this juncture, preclinical and clinical evidence support the adoption of a more restrictive transfusion strategy in most critically ill patients. However, there remain divergent views regarding the risks and benefits of treating anaemia in patients with cardiovascular disease. Laboratory-based studies [68, 69] suggest that patients with cardiovascular disease may require higher haemoglobin concentrations to maintain oxygen delivery in partially occluded or diseased coronary arteries. Studies to demonstrate how anaemia affects contractile function of the left ventricle have rarely shown important effects above haemoglobin concentrations of 70 g/l. Indeed, it is more important to address the underlying pathophysiological causes of the acute coronary syndrome with proven therapy such as aspirin and \u03b2-blockers, rather than treating mild-to-moderate anaemia as an initial step. If the effects of RBC transfusion were either limited or increased then there would be no debate; however, the use of allogeneic RBCs has been shown to be associated with immunomodulation [12, 47] and/or alteration in the delivery of oxygen in the microcirculation [70, 71] , resulting in increased rates of infections and organ failure.",
+      "cite_spans": [
+        {
+          "start": 306,
+          "end": 310,
+          "text": "[68,",
+          "ref_id": "BIBREF68"
+        },
+        {
+          "start": 311,
+          "end": 314,
+          "text": "69]",
+          "ref_id": "BIBREF69"
+        },
+        {
+          "start": 1076,
+          "end": 1080,
+          "text": "[12,",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 1081,
+          "end": 1084,
+          "text": "47]",
+          "ref_id": "BIBREF47"
+        },
+        {
+          "start": 1153,
+          "end": 1157,
+          "text": "[70,",
+          "ref_id": "BIBREF70"
+        },
+        {
+          "start": 1158,
+          "end": 1161,
+          "text": "71]",
+          "ref_id": "BIBREF71"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Subgroups that are at increased risk from anaemia"
+    },
+    {
+      "text": "Few clinical studies have attempted to elucidate the risk : benefit ratio of anaemia and transfusion in cardiac patients. Two small RCTs [62, 72] examined transfusion practice in patients undergoing coronary artery bypass grafting, and concluded that a conservative approach to the administration of RBCs may be safe. However, two recent cohort studies suggested that anaemia may increase the risk of mortality in critical illness [73] and following surgery in patients with cardiovascular disease [74] . There were 418 and 420 patients in the restrictive and liberal transfusion groups, respectively. *Difference calculated by subtracting mean values of restrictive group from those of liberal group. \u2020 Three patients were lost to 60-day mortality rate; therefore n = 835. \u2021 Nonsurvivors are considered to have all organs failing on date of death. \u00a7 Changes in MOD score from baseline, while also incorporating adjustment for death. Data from H\u00e9bert et al [10] .",
+      "cite_spans": [
+        {
+          "start": 137,
+          "end": 141,
+          "text": "[62,",
+          "ref_id": "BIBREF62"
+        },
+        {
+          "start": 142,
+          "end": 145,
+          "text": "72]",
+          "ref_id": "BIBREF73"
+        },
+        {
+          "start": 431,
+          "end": 435,
+          "text": "[73]",
+          "ref_id": "BIBREF74"
+        },
+        {
+          "start": 498,
+          "end": 502,
+          "text": "[74]",
+          "ref_id": "BIBREF76"
+        },
+        {
+          "start": 957,
+          "end": 961,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Subgroups that are at increased risk from anaemia"
+    },
+    {
+      "text": "In a study of Jehovah's Witnesses (a group that refuses RBC transfusion on religious grounds) undergoing surgical procedures [74] , it was noted that mortality was significantly increased in patients with cardiac disease after a decrease in haemoglobin levels from 100-110 g/l to 60-69 g/l. In that study, patients with no cardiac disease and similar changes in haemoglobin levels showed no increase in mortality, which is in accordance with the results of the TRICC trial [10] . In the study by H\u00e9bert et al. [73] of 4470 critically ill patients, a correlation between Critical Care Vol 5 No 2 Alvarez et al [10] .",
+      "cite_spans": [
+        {
+          "start": 125,
+          "end": 129,
+          "text": "[74]",
+          "ref_id": "BIBREF76"
+        },
+        {
+          "start": 473,
+          "end": 477,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        },
+        {
+          "start": 510,
+          "end": 514,
+          "text": "[73]",
+          "ref_id": "BIBREF74"
+        },
+        {
+          "start": 609,
+          "end": 613,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Subgroups that are at increased risk from anaemia"
+    },
+    {
+      "text": "Kaplan-Meier estimates of survival in the 30 days after admission to the ICU in the restrictive and liberal transfusion strategy groups (all patients). Data from H\u00e9bert et al [10] .",
+      "cite_spans": [
+        {
+          "start": 175,
+          "end": 179,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Figure 1"
+    },
+    {
+      "text": "Kaplan-Meier estimates of survival in the 30 days after admission to the ICU in the restrictive and liberal transfusion strategy groups (patients with APACHE II score \u226420). Data from H\u00e9bert et al [10] .",
+      "cite_spans": [
+        {
+          "start": 196,
+          "end": 200,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Figure 2"
+    },
+    {
+      "text": "anaemia and mortality rates was observed. Those investigators also found that the risk of anaemia appeared to decrease with RBC transfusion in patients with cardiac disease. In patients with cardiac disease, mortality increased when haemoglobin concentrations were below 95 g/l, as compared with anaemic patients with other diagnoses (55% versus 42%; P = 0.09). In the subgroup of patients with cardiac disease, increasing haemoglobin values in anaemic patients was associated with improved survival (odds ratio 0.80 for each 10 g/l increase; P = 0.012). One possible explanation for the discrepancy between the TRICC trial and this observational study may be that the attending physicians who recruited patients into the study did not enter those patients who were considered to have severe cardiac disease.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Figure 2"
+    },
+    {
+      "text": "H\u00e9bert et al. [73] sought to examine further whether a restrictive transfusion strategy was at least as effective as a liberal strategy in critically ill patients with cardiac disease. In the subgroup of patients with cardiovascular disease from the TRICC trial, those investigators suggested that most haemodynamically stable critically ill patients with cardiovascular disease may be transfused when haemoglobin concentrations fall below 70 g/l, and that the hemoglobin concentration should be maintained between 70 and 90 g/l. Average daily haemoglobin concentrations were 85 \u00b1 6.2 g/l in the restrictive transfusion group and 103 \u00b1 6.7 g/l in the liberal transfusion group (P < 0.01). In the 357 patients with cardiovascular disease, the 30-day mortality rate was 23% in the restrictive transfusion group versus 23% in the liberal group (95% confidence interval of the difference -8.4% to 9.1%; P = 1.00). Other mortality rates, including 60-day (26% versus 27%; P = 0.90), ICU (19% versus 16%; P = 0.49) and hospital mortality (27% versus 28%; P = 0.81), were not significantly different between groups. Kaplan-Meier survival curves comparing time to death demonstrated similar trends in the two groups ( Fig. 3 ; P = 0.98). The multiple organ dysfunction (MOD) scores, during the entire study period, were also not significantly different between groups (8.6 \u00b1 4.9 versus 9.0 \u00b1 4.4; P = 0.40), but the change in MOD score from baseline values was significantly lower in the restrictive group than in the liberal group (0.2 \u00b1 4.2 versus 1.3 \u00b1 4.4; P = 0.02).",
+      "cite_spans": [
+        {
+          "start": 14,
+          "end": 18,
+          "text": "[73]",
+          "ref_id": "BIBREF74"
+        }
+      ],
+      "ref_spans": [
+        {
+          "start": 1210,
+          "end": 1216,
+          "text": "Fig. 3",
+          "ref_id": "FIGREF1"
+        }
+      ],
+      "section": "Figure 2"
+    },
+    {
+      "text": "Combined measures of morbidity and mortality, or composite outcomes, were also examined. When all patients who died were given a score of 24, the total MOD score between groups was not different (P = 0.39), or were the changes in MOD scores significantly different from baseline (2.7 \u00b1 6.9 versus 4.0 \u00b1 7.3; P = 0.08). Among the specific subset of cardiac patients with ischaemic heart disease (n = 257), there were no discernible differences in 30-day and 60-day as well as ICU mortality rates. However, a nonsignificant (P = 0.3) decrease in overall survival rate in the restrictive group was noted in those patients with confirmed ischaemic heart disease, severe peripheral vascular disease or severe comorbid cardiac disease (Fig. 4) .",
+      "cite_spans": [],
+      "ref_spans": [
+        {
+          "start": 729,
+          "end": 737,
+          "text": "(Fig. 4)",
+          "ref_id": null
+        }
+      ],
+      "section": "Figure 2"
+    },
+    {
+      "text": "In conclusion, a restrictive RBC transfusion strategy generally appears to be safe in most critically ill patients with cardiovascular disease, with the possible exception of patients experiencing acute myocardial infarction or unstable angina. ",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Figure 2"
+    },
+    {
+      "text": "Survival over 30 days in patients with ischemic heart disease in the restrictive and liberal allogeneic RBC transfusion strategy groups. This graph illustrates Kaplan-Meier survival curves for all patients with ischemic heart disease in both study groups. There is no difference in mortality in patients in the restrictive group (dashed line) as compared to the liberal group (solid line) (P = 0.30).",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Figure 4"
+    },
+    {
+      "text": "The need to reduce the amount of allogeneic blood transfusions in order to reduce the associated risks has been firmly established. RBCs are associated with clinically important immune suppression, and stored RBCs have been shown to cause adverse microcirculatory effects that result in increased organ failure.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Conclusion"
+    },
+    {
+      "text": "The question for some time has been whether critically ill patients are able to tolerate lower levels of haemoglobin without deleterious effects, thus reducing the amount of exposure to allogeneic transfusions. In the only large RCT, H\u00e9bert et al [10] established that there was no difference in mortality rates between restrictive and liberal transfusion strategies in noncardiac, critically ill patients. Although those investigators were able to show convincing trends that the liberal strategy may in fact be deleterious in terms of absolute values, statistical significance was not achieved. However, the fact that no difference between the two strategies was achieved is of great importance, because this means that the total number of transfusions can be reduced by approximately half without any impact on mortality. In addition, these findings are easily put into clinical practice. Although many questions remain, the TRICC trial and many laboratory and clinical studies have established that transfusing to normal haemoglobin concentrations does not improve organ failure and mortality in the critically ill patient. As such, a restrictive transfusion strategy will reduce exposure to allogeneic transfusions, result in more efficient use of RBCs, save blood overall, and decrease health care costs.",
+      "cite_spans": [
+        {
+          "start": 247,
+          "end": 251,
+          "text": "[10]",
+          "ref_id": "BIBREF9"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Conclusion"
+    }
+  ],
+  "bib_entries": {
+    "BIBREF0": {
+      "ref_id": "b0",
+      "title": "A Canadian survey of transfusion practices in critically ill patients",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "C"
+          ],
+          "last": "Hebert",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Wells",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Martin",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Tweeddale",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Marshall",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Blajchman",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Pagliarello",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Schweitzer",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Calder",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Crit Care Med",
+      "volume": "26",
+      "issn": "",
+      "pages": "482--487",
+      "other_ids": {}
+    },
+    "BIBREF1": {
+      "ref_id": "b1",
+      "title": "Acute normovolemic anemia: effect on the adequacy and distribution of coronary blood flow",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Brazier",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Cooper",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "V"
+          ],
+          "last": "Maloney",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Buckberg",
+          "suffix": ""
+        }
+      ],
+      "year": 1973,
+      "venue": "Surg Forum",
+      "volume": "24",
+      "issn": "",
+      "pages": "203--204",
+      "other_ids": {}
+    },
+    "BIBREF2": {
+      "ref_id": "b2",
+      "title": "Blood viscosity and cardiac output in acute experimental anemia",
+      "authors": [
+        {
+          "first": "N",
+          "middle": [
+            "O"
+          ],
+          "last": "Fowler",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "C"
+          ],
+          "last": "Holmes",
+          "suffix": ""
+        }
+      ],
+      "year": 1975,
+      "venue": "J Appl Physiol",
+      "volume": "39",
+      "issn": "",
+      "pages": "453--456",
+      "other_ids": {}
+    },
+    "BIBREF3": {
+      "ref_id": "b3",
+      "title": "Ventricular performance in acute normovolemic anemia and effects of beta blockade",
+      "authors": [
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Escobar",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [
+            "L"
+          ],
+          "last": "Jones",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Rapaport",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "F"
+          ],
+          "last": "Murray",
+          "suffix": ""
+        }
+      ],
+      "year": 1966,
+      "venue": "Am J Physiol",
+      "volume": "211",
+      "issn": "",
+      "pages": "877--884",
+      "other_ids": {}
+    },
+    "BIBREF4": {
+      "ref_id": "b4",
+      "title": "Some circulatory effects of experimental hypovolemic anemia",
+      "authors": [
+        {
+          "first": "N",
+          "middle": [
+            "O"
+          ],
+          "last": "Fowler",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Shabetai",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Anderson",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "R"
+          ],
+          "last": "Braunstein",
+          "suffix": ""
+        }
+      ],
+      "year": 1960,
+      "venue": "Am Heart J",
+      "volume": "60",
+      "issn": "",
+      "pages": "551--561",
+      "other_ids": {}
+    },
+    "BIBREF5": {
+      "ref_id": "b5",
+      "title": "The adequacy of subendocardial oxygen delivery. The interaction of determinants of flow, arterial oxygen content and myocardial oxygen need",
+      "authors": [
+        {
+          "first": "D",
+          "middle": [
+            "J"
+          ],
+          "last": "Cole",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "C"
+          ],
+          "last": "Drummond",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "M"
+          ],
+          "last": "Shapiro",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "E"
+          ],
+          "last": "Hertzog",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [
+            "S"
+          ],
+          "last": "Brauer",
+          "suffix": ""
+        }
+      ],
+      "year": 1974,
+      "venue": "Circulation",
+      "volume": "49",
+      "issn": "",
+      "pages": "968--977",
+      "other_ids": {}
+    },
+    "BIBREF6": {
+      "ref_id": "b6",
+      "title": "Physiologic effects of acute anemia: implications for a reduced transfusion trigger",
+      "authors": [
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Levine",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Rosen",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Sehgal",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Gould",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Sehgal",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Moss",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "Transfusion",
+      "volume": "30",
+      "issn": "",
+      "pages": "11--14",
+      "other_ids": {}
+    },
+    "BIBREF7": {
+      "ref_id": "b7",
+      "title": "Effects of polycythemia and anemia on cardiac output and other circulatory factors",
+      "authors": [
+        {
+          "first": "T",
+          "middle": [
+            "Q"
+          ],
+          "last": "Richardson",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "C"
+          ],
+          "last": "Guyton",
+          "suffix": ""
+        }
+      ],
+      "year": 1959,
+      "venue": "Am J Physiol",
+      "volume": "197",
+      "issn": "",
+      "pages": "1167--1170",
+      "other_ids": {}
+    },
+    "BIBREF8": {
+      "ref_id": "b8",
+      "title": "Transfusion triggers and Occam's rusty razor",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "J"
+          ],
+          "last": "Marini",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Crit Care Med",
+      "volume": "26",
+      "issn": "",
+      "pages": "1775--1776",
+      "other_ids": {}
+    },
+    "BIBREF9": {
+      "ref_id": "b9",
+      "title": "The Transfusion Requirements in Critical Care Investigators: A multicenter, randomized, controlled clinical trial of transfusion requirements in critical care",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "C"
+          ],
+          "last": "Hebert",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Wells",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Blajchman",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Marshall",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Martin",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Pagliarello",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Tweeddale",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Schweitzer",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Yetisir",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "N Engl J Med",
+      "volume": "340",
+      "issn": "",
+      "pages": "409--417",
+      "other_ids": {}
+    },
+    "BIBREF10": {
+      "ref_id": "b10",
+      "title": "The risks of blood transfusion: the relative influence of acquired immunodeficiency syndrome and non-A, non-B hepatitis",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "L"
+          ],
+          "last": "Carson",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [
+            "B"
+          ],
+          "last": "Russell",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "I"
+          ],
+          "last": "Taragin",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [
+            "A"
+          ],
+          "last": "Sonnenberg",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "E"
+          ],
+          "last": "Duff",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Bauer",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Am J Med",
+      "volume": "92",
+      "issn": "",
+      "pages": "45--52",
+      "other_ids": {}
+    },
+    "BIBREF11": {
+      "ref_id": "b11",
+      "title": "Current issues in transfusion therapy. 1. Risks of infection",
+      "authors": [
+        {
+          "first": "C",
+          "middle": [
+            "M"
+          ],
+          "last": "Coffin",
+          "suffix": ""
+        }
+      ],
+      "year": 1986,
+      "venue": "Postgrad Med",
+      "volume": "80",
+      "issn": "",
+      "pages": "219--224",
+      "other_ids": {}
+    },
+    "BIBREF12": {
+      "ref_id": "b12",
+      "title": "Perioperative haemotherapy: II. Risks and complications of blood transfusion",
+      "authors": [
+        {
+          "first": "E",
+          "middle": [
+            "T"
+          ],
+          "last": "Crosby",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Can J Anesth",
+      "volume": "39",
+      "issn": "",
+      "pages": "822--837",
+      "other_ids": {}
+    },
+    "BIBREF13": {
+      "ref_id": "b13",
+      "title": "Transfusion risks",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [
+            "J"
+          ],
+          "last": "Faust",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Warner",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "Int Anesthesiol Clin",
+      "volume": "28",
+      "issn": "",
+      "pages": "184--189",
+      "other_ids": {}
+    },
+    "BIBREF14": {
+      "ref_id": "b14",
+      "title": "Risks of transfusion",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Warner",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "J"
+          ],
+          "last": "Faust",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "Anesth Clin N Am",
+      "volume": "8",
+      "issn": "",
+      "pages": "501--517",
+      "other_ids": {}
+    },
+    "BIBREF15": {
+      "ref_id": "b15",
+      "title": "on behalf of the current TTI Study: Prospective investigation of transfusion transmitted infection in recipients of over 20000 units of blood",
+      "authors": [
+        {
+          "first": "Fam",
+          "middle": [],
+          "last": "Regan",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Hewitt",
+          "suffix": ""
+        },
+        {
+          "first": "Jaj",
+          "middle": [],
+          "last": "Barbara",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Contreras",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Br Med J",
+      "volume": "320",
+      "issn": "",
+      "pages": "403--406",
+      "other_ids": {}
+    },
+    "BIBREF16": {
+      "ref_id": "b16",
+      "title": "Transfusion-associated immunomodulation and universal white cell reduction: are we putting the cart before the horse? Transfusion",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Blajchman",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "",
+      "volume": "39",
+      "issn": "",
+      "pages": "1--6",
+      "other_ids": {}
+    },
+    "BIBREF17": {
+      "ref_id": "b17",
+      "title": "Mechanisms of transfusioninduced immunosuppression",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "E"
+          ],
+          "last": "Brunson",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "W"
+          ],
+          "last": "Alexander",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "Transfusion",
+      "volume": "30",
+      "issn": "",
+      "pages": "651--658",
+      "other_ids": {}
+    },
+    "BIBREF18": {
+      "ref_id": "b18",
+      "title": "Immunomodulatory aspects of transfusions. A once and future risk?",
+      "authors": [
+        {
+          "first": "H",
+          "middle": [
+            "G"
+          ],
+          "last": "Klein",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Anesthesiology",
+      "volume": "91",
+      "issn": "",
+      "pages": "861--865",
+      "other_ids": {}
+    },
+    "BIBREF19": {
+      "ref_id": "b19",
+      "title": "Immunosuppressive effects of blood transfusion in anaesthesia and surgery",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Salo",
+          "suffix": ""
+        }
+      ],
+      "year": 1988,
+      "venue": "Acta Anaesthesiol Scand",
+      "volume": "32",
+      "issn": "",
+      "pages": "26--34",
+      "other_ids": {}
+    },
+    "BIBREF20": {
+      "ref_id": "b20",
+      "title": "Transfusion-induced immunosuppression",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Shelby",
+          "suffix": ""
+        }
+      ],
+      "year": 1987,
+      "venue": "J Burn Care Rehab",
+      "volume": "8",
+      "issn": "",
+      "pages": "546--548",
+      "other_ids": {}
+    },
+    "BIBREF21": {
+      "ref_id": "b21",
+      "title": "Effect of blood transfusions on subsequent kidney transplants",
+      "authors": [
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Opelz",
+          "suffix": ""
+        },
+        {
+          "first": "Dps",
+          "middle": [],
+          "last": "Sengar",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "R"
+          ],
+          "last": "Mickey",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "I"
+          ],
+          "last": "Terasaki",
+          "suffix": ""
+        }
+      ],
+      "year": 1973,
+      "venue": "Transplant Proc",
+      "volume": "5",
+      "issn": "",
+      "pages": "253--259",
+      "other_ids": {}
+    },
+    "BIBREF22": {
+      "ref_id": "b22",
+      "title": "Annotation. Blood transfusion and renal transplantation",
+      "authors": [
+        {
+          "first": "D",
+          "middle": [
+            "P"
+          ],
+          "last": "Singal",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Ludwin",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Blajchman",
+          "suffix": ""
+        }
+      ],
+      "year": 1985,
+      "venue": "Br J Haematol",
+      "volume": "61",
+      "issn": "",
+      "pages": "595--602",
+      "other_ids": {}
+    },
+    "BIBREF23": {
+      "ref_id": "b23",
+      "title": "Immunological effects of blood transfusion",
+      "authors": [
+        {
+          "first": "D",
+          "middle": [
+            "P"
+          ],
+          "last": "Singal",
+          "suffix": ""
+        }
+      ],
+      "year": 1989,
+      "venue": "Immunotherapy of Disease",
+      "volume": "",
+      "issn": "",
+      "pages": "",
+      "other_ids": {}
+    },
+    "BIBREF24": {
+      "ref_id": "b24",
+      "title": "Prospective evaluation of pretransplant blood transfusions in cadaver kidney recipients",
+      "authors": [
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Opelz",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Vanrentergehm",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Kirsta",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "Transplantation",
+      "volume": "63",
+      "issn": "",
+      "pages": "964--967",
+      "other_ids": {}
+    },
+    "BIBREF25": {
+      "ref_id": "b25",
+      "title": "Perioperative transfusions associated with colorectal cancer surgery: clinical judgement versus the hematocrit",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "I"
+          ],
+          "last": "Tartter",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Quintero",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "M"
+          ],
+          "last": "Barron",
+          "suffix": ""
+        }
+      ],
+      "year": 1986,
+      "venue": "World J Surg",
+      "volume": "10",
+      "issn": "",
+      "pages": "516--521",
+      "other_ids": {}
+    },
+    "BIBREF26": {
+      "ref_id": "b26",
+      "title": "Red for danger: blood transfusion and colorectal cancer",
+      "authors": [
+        {
+          "first": "L",
+          "middle": [
+            "P"
+          ],
+          "last": "Fielding",
+          "suffix": ""
+        }
+      ],
+      "year": 1985,
+      "venue": "Br Med J",
+      "volume": "291",
+      "issn": "",
+      "pages": "841--842",
+      "other_ids": {}
+    },
+    "BIBREF27": {
+      "ref_id": "b27",
+      "title": "Blood transfusion and tumor growth: studies in animal models",
+      "authors": [
+        {
+          "first": "D",
+          "middle": [
+            "P"
+          ],
+          "last": "Singal",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Shirwadkar",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Blajchman",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Cellular Immune Mechanisms and Tumor Dormancy",
+      "volume": "",
+      "issn": "",
+      "pages": "169--181",
+      "other_ids": {}
+    },
+    "BIBREF28": {
+      "ref_id": "b28",
+      "title": "The relationship of blood transfusion, tumor staging, and cancer recurrence",
+      "authors": [
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Blumberg",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Chuang-Stein",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "M"
+          ],
+          "last": "Heal",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "Transfusion",
+      "volume": "30",
+      "issn": "",
+      "pages": "291--294",
+      "other_ids": {}
+    },
+    "BIBREF29": {
+      "ref_id": "b29",
+      "title": "Association between transfusion of whole blood and recurrence of cancer",
+      "authors": [
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Blumberg",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "M"
+          ],
+          "last": "Heal",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Murphy",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "M"
+          ],
+          "last": "Agarwal",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Chuang",
+          "suffix": ""
+        }
+      ],
+      "year": 1986,
+      "venue": "Br Med J",
+      "volume": "293",
+      "issn": "",
+      "pages": "530--533",
+      "other_ids": {}
+    },
+    "BIBREF30": {
+      "ref_id": "b30",
+      "title": "Transfusion and host defenses against cancer recurrence and infection",
+      "authors": [
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Blumberg",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "M"
+          ],
+          "last": "Heal",
+          "suffix": ""
+        }
+      ],
+      "year": 1989,
+      "venue": "Transfusion",
+      "volume": "29",
+      "issn": "",
+      "pages": "236--245",
+      "other_ids": {}
+    },
+    "BIBREF31": {
+      "ref_id": "b31",
+      "title": "Relation between cancer of the colon and blood transfusion",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "D"
+          ],
+          "last": "Frankish",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "K"
+          ],
+          "last": "Mcnee",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "G"
+          ],
+          "last": "Alley",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "G"
+          ],
+          "last": "Woodfield",
+          "suffix": ""
+        }
+      ],
+      "year": 1985,
+      "venue": "Br Med J",
+      "volume": "290",
+      "issn": "",
+      "pages": "1827--1827",
+      "other_ids": {}
+    },
+    "BIBREF32": {
+      "ref_id": "b32",
+      "title": "Relationship between blood transfusion and tumour behaviour",
+      "authors": [
+        {
+          "first": "Dma",
+          "middle": [],
+          "last": "Francis",
+          "suffix": ""
+        }
+      ],
+      "year": 1991,
+      "venue": "Br J Surg",
+      "volume": "78",
+      "issn": "",
+      "pages": "1420--1428",
+      "other_ids": {}
+    },
+    "BIBREF33": {
+      "ref_id": "b33",
+      "title": "Perioperative blood transfusion and outcome after resection for colorectal carcinoma",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Chung",
+          "suffix": ""
+        },
+        {
+          "first": "O",
+          "middle": [
+            "K"
+          ],
+          "last": "Steinmetz",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "H"
+          ],
+          "last": "Gordon",
+          "suffix": ""
+        }
+      ],
+      "year": 1993,
+      "venue": "Br J Surg",
+      "volume": "80",
+      "issn": "",
+      "pages": "427--432",
+      "other_ids": {}
+    },
+    "BIBREF34": {
+      "ref_id": "b34",
+      "title": "Risk of infection after penetrating abdominal trauma",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [
+            "L"
+          ],
+          "last": "Nichols",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "W"
+          ],
+          "last": "Smith",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "B"
+          ],
+          "last": "Klein",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "D"
+          ],
+          "last": "Trunkey",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "H"
+          ],
+          "last": "Cooper",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "F"
+          ],
+          "last": "Adinolfi",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Mills",
+          "suffix": ""
+        }
+      ],
+      "year": 1984,
+      "venue": "N Engl J Med",
+      "volume": "311",
+      "issn": "",
+      "pages": "1065--1070",
+      "other_ids": {}
+    },
+    "BIBREF35": {
+      "ref_id": "b35",
+      "title": "Beneficial effects of autologous blood transfusion on infectious complications after colorectal cancer surgery",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "M"
+          ],
+          "last": "Heiss",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [],
+          "last": "Memple",
+          "suffix": ""
+        },
+        {
+          "first": "K-W",
+          "middle": [],
+          "last": "Jauch",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Delanoff",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Mayer",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Mempel",
+          "suffix": ""
+        },
+        {
+          "first": "H-J",
+          "middle": [],
+          "last": "Eissner",
+          "suffix": ""
+        },
+        {
+          "first": "F-W",
+          "middle": [],
+          "last": "Schildberg",
+          "suffix": ""
+        }
+      ],
+      "year": 1993,
+      "venue": "Lancet",
+      "volume": "342",
+      "issn": "",
+      "pages": "1328--1333",
+      "other_ids": {}
+    },
+    "BIBREF36": {
+      "ref_id": "b36",
+      "title": "Postoperative infections following autologous and homologous blood transfusions",
+      "authors": [
+        {
+          "first": "C",
+          "middle": [
+            "K"
+          ],
+          "last": "Mezrow",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Bergstein",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "I"
+          ],
+          "last": "Tartter",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Transfusion",
+      "volume": "32",
+      "issn": "",
+      "pages": "27--30",
+      "other_ids": {}
+    },
+    "BIBREF37": {
+      "ref_id": "b37",
+      "title": "Infection or suspected infection after hip replacement surgery with autologous or homologous blood transfusions",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Murphy",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "M"
+          ],
+          "last": "Heal",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Blumberg",
+          "suffix": ""
+        }
+      ],
+      "year": 1991,
+      "venue": "Transfusion",
+      "volume": "31",
+      "issn": "",
+      "pages": "212--217",
+      "other_ids": {}
+    },
+    "BIBREF38": {
+      "ref_id": "b38",
+      "title": "Homologous blood transfusion as a risk factor for postoperative infection after coronary artery bypass graft operations",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "J"
+          ],
+          "last": "Murphy",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Connery",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [
+            "L"
+          ],
+          "last": "Hicks",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Blumberg",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "J Thorac Cardiovasc Surg",
+      "volume": "104",
+      "issn": "",
+      "pages": "1092--1099",
+      "other_ids": {}
+    },
+    "BIBREF39": {
+      "ref_id": "b39",
+      "title": "Postoperative infection and natural killer cell function following blood transfusion in patients undergoing elective colorectal surgery",
+      "authors": [
+        {
+          "first": "L",
+          "middle": [
+            "S"
+          ],
+          "last": "Jensen",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "J"
+          ],
+          "last": "Andersen",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "M"
+          ],
+          "last": "Christiansen",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Hokland",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "O"
+          ],
+          "last": "Juhl",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Madsen",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Mortensen",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Moller-Nielsen",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Hanberg-Sorensen",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Hokland",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Br J Surg",
+      "volume": "79",
+      "issn": "",
+      "pages": "513--516",
+      "other_ids": {}
+    },
+    "BIBREF40": {
+      "ref_id": "b40",
+      "title": "The multiple organ dysfunction (MOD) score: a reliable descriptor of a complex clinical outcome",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "C"
+          ],
+          "last": "Marshall",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "J"
+          ],
+          "last": "Sibbald",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "A"
+          ],
+          "last": "Cook",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "D"
+          ],
+          "last": "Roy",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [
+            "V"
+          ],
+          "last": "Christou",
+          "suffix": ""
+        }
+      ],
+      "year": null,
+      "venue": "",
+      "volume": "",
+      "issn": "",
+      "pages": "",
+      "other_ids": {}
+    },
+    "BIBREF42": {
+      "ref_id": "b42",
+      "title": "Perioperative haemotherapy: I. Indications for blood component transfusion",
+      "authors": [
+        {
+          "first": "E",
+          "middle": [
+            "T"
+          ],
+          "last": "Crosby",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Can J Anesth",
+      "volume": "39",
+      "issn": "",
+      "pages": "695--707",
+      "other_ids": {}
+    },
+    "BIBREF43": {
+      "ref_id": "b43",
+      "title": "Perioperative blood transfusion and colorectal cancer recurrence: a qualitative statistical overview and meta-analysis",
+      "authors": [
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Vamvakas",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "B"
+          ],
+          "last": "Moore",
+          "suffix": ""
+        }
+      ],
+      "year": 1993,
+      "venue": "Transfusion",
+      "volume": "33",
+      "issn": "",
+      "pages": "754--765",
+      "other_ids": {}
+    },
+    "BIBREF44": {
+      "ref_id": "b44",
+      "title": "Perioperative allogeneic blood transfusion does not cause adverse sequelae in patients with cancer: a meta-analysis of unconfounded studies",
+      "authors": [
+        {
+          "first": "F",
+          "middle": [
+            "A"
+          ],
+          "last": "Mcalister",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "D"
+          ],
+          "last": "Clark",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "S"
+          ],
+          "last": "Wells",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Laupacis",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Br J Surg",
+      "volume": "85",
+      "issn": "",
+      "pages": "171--178",
+      "other_ids": {}
+    },
+    "BIBREF45": {
+      "ref_id": "b45",
+      "title": "Beneficial effects of leukocyte depletion of transfused blood on postoperative complications in patients undergoing cardiac surgery. A randomized clinical trial",
+      "authors": [
+        {
+          "first": "Lmg",
+          "middle": [],
+          "last": "Van De Watering",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Hermans",
+          "suffix": ""
+        },
+        {
+          "first": "Jga",
+          "middle": [],
+          "last": "Houbiers",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "J"
+          ],
+          "last": "Van Den Broek",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Bouter",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Boer",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "S"
+          ],
+          "last": "Harvey",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "A"
+          ],
+          "last": "Huysmans",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Brand",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Circulation",
+      "volume": "97",
+      "issn": "",
+      "pages": "562--568",
+      "other_ids": {}
+    },
+    "BIBREF46": {
+      "ref_id": "b46",
+      "title": "Randomised comparison of leucocyte-depleted versus buffy-coat-poor blood transfusion and complications after colorectal surgery",
+      "authors": [
+        {
+          "first": "L",
+          "middle": [
+            "S"
+          ],
+          "last": "Jensen",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Kissmeyer-Nielsen",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Wolff",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Qvist",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Lancet",
+      "volume": "348",
+      "issn": "",
+      "pages": "841--845",
+      "other_ids": {}
+    },
+    "BIBREF47": {
+      "ref_id": "b47",
+      "title": "Biologic effects of leukocytes present in transfused cellular blood products",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "O"
+          ],
+          "last": "Bordin",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [
+            "M"
+          ],
+          "last": "Heddle",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Blajchman",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Blood",
+      "volume": "84",
+      "issn": "",
+      "pages": "1703--1721",
+      "other_ids": {}
+    },
+    "BIBREF48": {
+      "ref_id": "b48",
+      "title": "Effect of stored-blood transfusion on oxygen delivery in patients with sepsis",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "E"
+          ],
+          "last": "Marik",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "J"
+          ],
+          "last": "Sibbald",
+          "suffix": ""
+        }
+      ],
+      "year": 1993,
+      "venue": "JAMA",
+      "volume": "269",
+      "issn": "",
+      "pages": "3024--3029",
+      "other_ids": {}
+    },
+    "BIBREF49": {
+      "ref_id": "b49",
+      "title": "Transfusing red blood cells stored in citrate phosphate dextrose adenine-1 for 28 days fails to improve tissue oxygenation in rats",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [
+            "D"
+          ],
+          "last": "Fitzgerald",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "M"
+          ],
+          "last": "Martin",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [
+            "E"
+          ],
+          "last": "Dietz",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [
+            "S"
+          ],
+          "last": "Doig",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "F"
+          ],
+          "last": "Potter",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "J"
+          ],
+          "last": "Sibbald",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "Crit Care Med",
+      "volume": "25",
+      "issn": "",
+      "pages": "726--732",
+      "other_ids": {}
+    },
+    "BIBREF50": {
+      "ref_id": "b50",
+      "title": "Age of transfused red blood cells is associated with ICU length of stay",
+      "authors": [
+        {
+          "first": "C",
+          "middle": [
+            "M"
+          ],
+          "last": "Martin",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "J"
+          ],
+          "last": "Sibbald",
+          "suffix": ""
+        },
+        {
+          "first": "X",
+          "middle": [],
+          "last": "Lu",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Hebert",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Schweitzer",
+          "suffix": ""
+        }
+      ],
+      "year": null,
+      "venue": "",
+      "volume": "",
+      "issn": "",
+      "pages": "",
+      "other_ids": {}
+    },
+    "BIBREF52": {
+      "ref_id": "b52",
+      "title": "Association of mortality with age of blood transfused in septic ICU patients",
+      "authors": [
+        {
+          "first": "F",
+          "middle": [
+            "R"
+          ],
+          "last": "Purdy",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "G"
+          ],
+          "last": "Tweeddale",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "M"
+          ],
+          "last": "Merrick",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "Can J Anaesth",
+      "volume": "44",
+      "issn": "",
+      "pages": "1256--1261",
+      "other_ids": {}
+    },
+    "BIBREF53": {
+      "ref_id": "b53",
+      "title": "Transfusion and postoperative pneumonia in coronary artery bypass graft surgery: effect of the length of storage of transfused red cells",
+      "authors": [
+        {
+          "first": "E",
+          "middle": [
+            "C"
+          ],
+          "last": "Vamvakas",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "H"
+          ],
+          "last": "Carven",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Transfusion",
+      "volume": "39",
+      "issn": "",
+      "pages": "701--710",
+      "other_ids": {}
+    },
+    "BIBREF54": {
+      "ref_id": "b54",
+      "title": "Variation in red cell transfusion practice in the intensive care unit: a multicentre cohort study",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "C"
+          ],
+          "last": "Hebert",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Wells",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Martin",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Tweeddale",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Marshall",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Blajchman",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Pagliarello",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Sandham",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Schweitzer",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Boisvert",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Calder",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Crit Care",
+      "volume": "3",
+      "issn": "",
+      "pages": "57--63",
+      "other_ids": {}
+    },
+    "BIBREF55": {
+      "ref_id": "b55",
+      "title": "Risk of bacterial infection associated with allogeneic blood transfusion among patients undergoing hip fracture repair",
+      "authors": [
+        {
+          "first": "B",
+          "middle": [
+            "D"
+          ],
+          "last": "Spiess",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Sassetti",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "J"
+          ],
+          "last": "Mccarthy",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "F"
+          ],
+          "last": "Narbone",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [
+            "J"
+          ],
+          "last": "Tuman",
+          "suffix": ""
+        },
+        {
+          "first": "Ad ;",
+          "middle": [],
+          "last": "Ivankovich",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "L"
+          ],
+          "last": "Carson",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "G"
+          ],
+          "last": "Altman",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Duff",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Noveck",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "P"
+          ],
+          "last": "Weinstein",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [
+            "A"
+          ],
+          "last": "Sonnenberg",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "I"
+          ],
+          "last": "Hudson",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Provenzano",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Transfusion",
+      "volume": "32",
+      "issn": "",
+      "pages": "665--669",
+      "other_ids": {}
+    },
+    "BIBREF56": {
+      "ref_id": "b56",
+      "title": "Blood conservation in coronary artery surgery",
+      "authors": [
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Paone",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Spencer",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [
+            "A"
+          ],
+          "last": "Silverman",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Surgery",
+      "volume": "116",
+      "issn": "",
+      "pages": "672--678",
+      "other_ids": {}
+    },
+    "BIBREF57": {
+      "ref_id": "b57",
+      "title": "Relationship between postoperative anemia and cardiac morbidity in high-risk vascular patients in the intensive care unit",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "H"
+          ],
+          "last": "Nelson",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [
+            "A"
+          ],
+          "last": "Fleisher",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "H"
+          ],
+          "last": "Rosenbaum",
+          "suffix": ""
+        }
+      ],
+      "year": 1993,
+      "venue": "Crit Care Med",
+      "volume": "21",
+      "issn": "",
+      "pages": "860--866",
+      "other_ids": {}
+    },
+    "BIBREF58": {
+      "ref_id": "b58",
+      "title": "The effect of hemodilution on regional myocardial function in the presence of coronary stenosis",
+      "authors": [
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Hagl",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [],
+          "last": "Heimisch",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Meisner",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Erben",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Baum",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Mendler",
+          "suffix": ""
+        }
+      ],
+      "year": 1977,
+      "venue": "Basic Res Cardiol",
+      "volume": "72",
+      "issn": "",
+      "pages": "344--364",
+      "other_ids": {}
+    },
+    "BIBREF59": {
+      "ref_id": "b59",
+      "title": "Effect of early blood transfusion on gastrointestinal haemorrhage",
+      "authors": [
+        {
+          "first": "S",
+          "middle": [
+            "D"
+          ],
+          "last": "Blair",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "B"
+          ],
+          "last": "Janvrin",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "N"
+          ],
+          "last": "Mccollum",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "M"
+          ],
+          "last": "Greenhalgh",
+          "suffix": ""
+        }
+      ],
+      "year": 1986,
+      "venue": "Br J Surg",
+      "volume": "73",
+      "issn": "",
+      "pages": "783--785",
+      "other_ids": {}
+    },
+    "BIBREF60": {
+      "ref_id": "b60",
+      "title": "Influence of hematocrit on cardiopulmonary function after acute hemorrhage",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "B"
+          ],
+          "last": "Fortune",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "J"
+          ],
+          "last": "Feustel",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Saifi",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "H"
+          ],
+          "last": "Stratton",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "C"
+          ],
+          "last": "Newell",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "M"
+          ],
+          "last": "Shah",
+          "suffix": ""
+        }
+      ],
+      "year": 1987,
+      "venue": "J Trauma",
+      "volume": "27",
+      "issn": "",
+      "pages": "243--249",
+      "other_ids": {}
+    },
+    "BIBREF61": {
+      "ref_id": "b61",
+      "title": "The illness of trauma",
+      "authors": [
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Topley",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "R"
+          ],
+          "last": "Fisher",
+          "suffix": ""
+        }
+      ],
+      "year": 1956,
+      "venue": "Br J Clin Prac",
+      "volume": "",
+      "issn": "",
+      "pages": "770--776",
+      "other_ids": {}
+    },
+    "BIBREF62": {
+      "ref_id": "b62",
+      "title": "Comparison of two transfusion strategies after elective operations for myocardial revascularization",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [
+            "G"
+          ],
+          "last": "Johnson",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "L"
+          ],
+          "last": "Thurer",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "S"
+          ],
+          "last": "Kruskall",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Sirois",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [
+            "V"
+          ],
+          "last": "Gervino",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Critchlow",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "M"
+          ],
+          "last": "Weintraub",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "J Thorac Cardiovasc Surg",
+      "volume": "104",
+      "issn": "",
+      "pages": "307--314",
+      "other_ids": {}
+    },
+    "BIBREF63": {
+      "ref_id": "b63",
+      "title": "Transfusion requirements in critical care. A pilot study",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "C"
+          ],
+          "last": "Hebert",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [
+            "A"
+          ],
+          "last": "Wells",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "C"
+          ],
+          "last": "Marshall",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "M"
+          ],
+          "last": "Martin",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Tweeddale",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Pagliarello",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Blajchman",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "JAMA",
+      "volume": "273",
+      "issn": "",
+      "pages": "1439--1444",
+      "other_ids": {}
+    },
+    "BIBREF64": {
+      "ref_id": "b64",
+      "title": "A pilot randomized trial comparing symptomatic vs. hemoglobin-level-driven red blood cell transfusions following hip fracture",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "L"
+          ],
+          "last": "Carson",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "L"
+          ],
+          "last": "Terrin",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [
+            "B"
+          ],
+          "last": "Barton",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "G"
+          ],
+          "last": "Aaron",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "G"
+          ],
+          "last": "Greenburg",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "A"
+          ],
+          "last": "Heck",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Magaziner",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [
+            "E"
+          ],
+          "last": "Merlino",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Bunce",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Mcclelland",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Duff",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Noveck",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Transfusion",
+      "volume": "38",
+      "issn": "",
+      "pages": "522--529",
+      "other_ids": {}
+    },
+    "BIBREF65": {
+      "ref_id": "b65",
+      "title": "Lowering the hemoglobin threshold for transfusion in coronary artery bypass procedures: effect on patient outcome",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "W"
+          ],
+          "last": "Bracey",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Radovancevic",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "A"
+          ],
+          "last": "Riggs",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Houston",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Cozart",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "K"
+          ],
+          "last": "Vaughn",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Radovancevic",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "A"
+          ],
+          "last": "Mcallister",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "A"
+          ],
+          "last": "Cooley",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Transfusion",
+      "volume": "39",
+      "issn": "",
+      "pages": "1070--1077",
+      "other_ids": {}
+    },
+    "BIBREF66": {
+      "ref_id": "b66",
+      "title": "A prospective, randomized trial limiting perioperative red blood cell transfusions in vascular patients",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [
+            "L"
+          ],
+          "last": "Bush",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "C"
+          ],
+          "last": "Pevec",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "W"
+          ],
+          "last": "Holcroft",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "Am J Surg",
+      "volume": "174",
+      "issn": "",
+      "pages": "143--148",
+      "other_ids": {}
+    },
+    "BIBREF67": {
+      "ref_id": "b67",
+      "title": "Predonated autologous blood transfusions after total knee arthroplasty",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "A"
+          ],
+          "last": "Lotke",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [],
+          "last": "Barth",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "P"
+          ],
+          "last": "Garino",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [
+            "F"
+          ],
+          "last": "Cook",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "J Arthroplasty",
+      "volume": "14",
+      "issn": "",
+      "pages": "647--650",
+      "other_ids": {}
+    },
+    "BIBREF68": {
+      "ref_id": "b68",
+      "title": "Coronary and cardiovascular dynamics and oxygen availability during acute normovolemic anemia",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "S"
+          ],
+          "last": "Geha",
+          "suffix": ""
+        }
+      ],
+      "year": 1976,
+      "venue": "Surgery",
+      "volume": "80",
+      "issn": "",
+      "pages": "47--53",
+      "other_ids": {}
+    },
+    "BIBREF69": {
+      "ref_id": "b69",
+      "title": "Graded coronary stenosis and coronary flow during acute normovolemic anemia",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "S"
+          ],
+          "last": "Geha",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "E"
+          ],
+          "last": "Baue",
+          "suffix": ""
+        }
+      ],
+      "year": 1978,
+      "venue": "World J Surg",
+      "volume": "2",
+      "issn": "",
+      "pages": "645--652",
+      "other_ids": {}
+    },
+    "BIBREF70": {
+      "ref_id": "b70",
+      "title": "Acceptable hematocrit levels in surgical patients",
+      "authors": [
+        {
+          "first": "Kfw",
+          "middle": [],
+          "last": "Messmer",
+          "suffix": ""
+        }
+      ],
+      "year": 1987,
+      "venue": "World J Surg",
+      "volume": "11",
+      "issn": "",
+      "pages": "41--46",
+      "other_ids": {}
+    },
+    "BIBREF71": {
+      "ref_id": "b71",
+      "title": "Quantitative evidence of microcirculatory compromise in skeletal muscle of normotensive hyperdynamic septic sheep",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Hersch",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "D"
+          ],
+          "last": "Bersten",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [
+            "S"
+          ],
+          "last": "Rutledge",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Troster",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Groom",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "J"
+          ],
+          "last": "Sibbald",
+          "suffix": ""
+        }
+      ],
+      "year": null,
+      "venue": "",
+      "volume": "",
+      "issn": "",
+      "pages": "",
+      "other_ids": {}
+    },
+    "BIBREF73": {
+      "ref_id": "b73",
+      "title": "Limitations of blood conservation",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [
+            "D"
+          ],
+          "last": "Weisel",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "C"
+          ],
+          "last": "Charlesworth",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [
+            "L"
+          ],
+          "last": "Mickleborough",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "E"
+          ],
+          "last": "Fremes",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Ivanov",
+          "suffix": ""
+        },
+        {
+          "first": "Dag",
+          "middle": [],
+          "last": "Mickle",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "J"
+          ],
+          "last": "Teasdale",
+          "suffix": ""
+        },
+        {
+          "first": "Mfx",
+          "middle": [],
+          "last": "Glynn",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "E"
+          ],
+          "last": "Scully",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [
+            "S"
+          ],
+          "last": "Goldman",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "J"
+          ],
+          "last": "Baird",
+          "suffix": ""
+        }
+      ],
+      "year": 1984,
+      "venue": "J Thorac Cardiovasc Surg",
+      "volume": "88",
+      "issn": "",
+      "pages": "26--38",
+      "other_ids": {}
+    },
+    "BIBREF74": {
+      "ref_id": "b74",
+      "title": "Does transfusion practice affect mortality in critically ill patients?",
+      "authors": [
+        {
+          "first": "P",
+          "middle": [
+            "C"
+          ],
+          "last": "Hebert",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Wells",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Tweeddale",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "Martin",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Marshall",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Pham",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Blajchman",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Schweitzer",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Pagliarello",
+          "suffix": ""
+        }
+      ],
+      "year": null,
+      "venue": "",
+      "volume": "",
+      "issn": "",
+      "pages": "",
+      "other_ids": {}
+    },
+    "BIBREF76": {
+      "ref_id": "b76",
+      "title": "Effect of anaemia and cardiovascular disease on surgical mortality and morbidity",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "L"
+          ],
+          "last": "Carson",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Duff",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "M"
+          ],
+          "last": "Poses",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "A"
+          ],
+          "last": "Berlin",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "K"
+          ],
+          "last": "Spence",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Trout",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Noveck",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [
+            "L"
+          ],
+          "last": "Strom",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Lancet",
+      "volume": "348",
+      "issn": "",
+      "pages": "1055--1060",
+      "other_ids": {}
+    }
+  },
+  "ref_entries": {
+    "FIGREF1": {
+      "text": "Survival over 30 days in all cardiac patients in the restrictive and liberal allogeneic RBC transfusion groups. This graph illustrates Kaplan-Meier survival curves for all cardiac patients in both study groups. There is no difference in mortality in patients in the restrictive group (dashed line) as compared to the liberal group (solid line) (P = 0.95).",
+      "latex": null,
+      "type": "figure"
+    },
+    "TABREF0": {
+      "text": "Outcomes from the TRICC trial",
+      "latex": null,
+      "type": "table",
+      "html": "<html><body><table><tr><td>Outcome measure </td><td>Restrictive transfusion strategy </td><td>Liberal transfusion strategy </td><td>Absolute difference between groups* </td><td>95% Confidence interval </td><td>P\n</td></tr><tr><td>Mortality rates (n [%])\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>30-day </td><td>78 (18.7) </td><td>98 (23.3) </td><td>4.7 </td><td>-0.84 to 10.2 </td><td>0.11\n</td></tr><tr><td>60-day\u2020 </td><td>95 (22.8) </td><td>111 (26.5) </td><td>3.7 </td><td>-2.1 to 9.5 </td><td>0.23\n</td></tr><tr><td>ICU </td><td>56 (13.9) </td><td>68 (16.2) </td><td>2.3 </td><td>-2.0 to 7.6 </td><td>0.29\n</td></tr><tr><td>Hospital </td><td>93 (22.3) </td><td>118 (28.1) </td><td>5.8 </td><td>-0.3 to 11.7 </td><td>0.05\n</td></tr><tr><td>Organ dysfunction (mean \u00b1 standard deviation)\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>MOD score </td><td>8.3 \u00b1 4.6 </td><td>8.8 \u00b1 4.4 </td><td>0.5 </td><td>-0.1 to 1.1 </td><td>0.1\n</td></tr><tr><td>MOD score\u2021 </td><td>10.7 \u00b1 7.5 </td><td>11.8 \u00b1 7.7 </td><td>1.1 </td><td>0.8 to 2.2 </td><td>0.03\n</td></tr><tr><td>MOD score\u00a7 </td><td>3.2 \u00b1 7.0 </td><td>4.2 \u00b1 7.4 </td><td>1 </td><td>0.1 to 2.0 </td><td>0.04\n</td></tr><tr><td>Organ failure (n [%])\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>0 Failures </td><td>100 (23.9) </td><td>81 (19.3)\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>1 Failure </td><td>136 (32.5) </td><td>149 (35.6)\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>2 Failures </td><td>109 (26.1) </td><td>108 (26.0)\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>3 Failures </td><td>51 (12.2) </td><td>63 (15.0)\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>&gt;3 Failures </td><td>22 (5.3) </td><td>18 (4.3) </td><td>1.8 </td><td>-3.4 to 7.1 </td><td>0.36\n</td></tr><tr><td>Duration of stay (mean \u00b1 standard deviation)\n</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td><td>\u00a0</td></tr><tr><td>ICU (days) </td><td>11.0 \u00b1 10.7 </td><td>11.5 \u00b1 11.3 </td><td>0.5 </td><td>-1.0 to 2.1 </td><td>0.53\n</td></tr><tr><td>Hospital (days) </td><td>34.8 \u00b1 19.5 </td><td>35.5 \u00b1 19.4 </td><td>0.7 </td><td>-1.9 to 3.4 </td><td>0.58\n</td></tr></table></body></html>"
+    },
+    "TABREF1": {
+      "text": "Complications that occurred during the patients' stays in the ICUThere were 418 and 420 patients in the restrictive and liberal transfusion groups, respectively. *Patients may have had more than one type of complication. \u2020 In some cases, the number of patients in a group was too small to allow calculation of the 95% confidence interval. \u2021 This category includes transfusion reactions, haemolytic anaemia, disseminated intravascular coagulation and other blood dyscrasias. \u00a7 This category includes gastrointestinal bleeding, bowel perforation and ischaemic bowel syndrome. \u00b6 This category includes cerebrovascular accidents and encephalopathies. **This category includes hypovolaemic shock, cardiogenic shock and all other types of shock, except septic shock. ARDS, acute respiratory distress syndrome. Data from H\u00e9bert et al",
+      "latex": null,
+      "type": "table"
+    },
+    "TABREF2": {
+      "text": "Table 2\nComplications that occurred during the patients' stays in the ICU",
+      "latex": null,
+      "type": "table",
+      "html": "<html><body><table><tr><td>Complication* </td><td>Restrictive transfusion strategy group (n [%]) </td><td>Liberal transfusion strategy group (n [%]) </td><td>Absolute difference between groups (%) </td><td>95% Confidence interval\u2020 </td><td>P\n</td></tr><tr><td>Cardiac </td><td>55 (13.2) </td><td>88 (21.0) </td><td>7.8 </td><td>2.7 to 12.9 </td><td>&lt;0.01\n</td></tr><tr><td>Myocardial infarction </td><td>3 (0.7) </td><td>12 (2.9) </td><td>2.1 </td><td>- </td><td>0.02\n</td></tr><tr><td>Pulmonary oedema </td><td>22 (5.3) </td><td>45 (10.7) </td><td>5.5 </td><td>1.8 to 9.1 </td><td>&lt;0.01\n</td></tr><tr><td>Angina </td><td>5 (1.2) </td><td>9 (2.1) </td><td>0.9 </td><td>- </td><td>0.28\n</td></tr><tr><td>Cardiac arrest </td><td>29 (6.9) </td><td>33 (7.9) </td><td>0.9 </td><td>-2.6 to 4.5 </td><td>0.6\n</td></tr><tr><td>Pulmonary </td><td>106 (25.4) </td><td>122 (29.1) </td><td>3.7 </td><td>-2.3 to 9.7 </td><td>0.22\n</td></tr><tr><td>ARDS </td><td>32 (7.7) </td><td>48 (11.4) </td><td>3.8 </td><td>-0.2 to 7.8 </td><td>0.06\n</td></tr><tr><td>Pneumonia </td><td>87 (20.8) </td><td>86 (20.5) </td><td>-0.3 </td><td>-5.8 to 5.1 </td><td>0.92\n</td></tr><tr><td>Infectious </td><td>42 (10.1) </td><td>50 (11.9) </td><td>1.9 </td><td>-2.4 to 6.1 </td><td>0.38\n</td></tr><tr><td>Bacteraemia </td><td>30 (7.2) </td><td>40 (9.5) </td><td>2.3 </td><td>-1.4 to 6.1 </td><td>0.22\n</td></tr><tr><td>Line sepsis </td><td>21 (5.1) </td><td>17 (4.0) </td><td>-1 </td><td>-3.8 to 1.8 </td><td>0.5\n</td></tr><tr><td>Septic shock </td><td>41(9.8) </td><td>29(6.9) </td><td>-2.9 </td><td>-6.7 to 0.8 </td><td>0.13\n</td></tr><tr><td>Haematological\u2021 </td><td>10 (2.4) </td><td>10 (2.4) </td><td>0 </td><td>-2.1 to 2.1 </td><td>1\n</td></tr><tr><td>Gastrointestinal\u00a7 </td><td>13 (3.1) </td><td>19 (4.5) </td><td>1.4 </td><td>-1.2 to 4.0 </td><td>0.28\n</td></tr><tr><td>Neurological\u00b6 </td><td>25 (6.0) </td><td>33 (7.9) </td><td>1.9 </td><td>-1.6 to 5.3 </td><td>0.28\n</td></tr><tr><td>Shock** </td><td>67 (16.0) </td><td>55 (13.1) </td><td>-2.9 </td><td>-7.7 to 1.8 </td><td>0.23\n</td></tr><tr><td>Any complication </td><td>205 (49.0) </td><td>228 (54.3) </td><td>5.2 </td><td>-1.5 to 12.0 </td><td>0.12\n</td></tr></table></body></html>"
+    }
+  },
+  "back_matter": [
+    {
+      "text": "Dr H\u00e9bert is a Career Scientist of the Ontario Ministry of Health.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Acknowledgement"
+    }
+  ]
+}

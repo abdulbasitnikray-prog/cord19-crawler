@@ -1,0 +1,519 @@
+{
+  "paper_id": "30a4842a2e257f725cc041e32fd682c495111a50",
+  "metadata": {
+    "title": "Multi-faceted, multi-versatile microarray: simultaneous detection of many viruses and their expression profiles",
+    "authors": [
+      {
+        "first": "Biehuoy",
+        "middle": [],
+        "last": "Shieh",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "Chung Shan Medical University",
+          "location": {
+            "addrLine": "110, Sec. 1, Chien Kuo N. Rd",
+            "postCode": "402",
+            "settlement": "Taichung",
+            "country": "Taiwan"
+          }
+        },
+        "email": "bhshieh@csmu.edu.tw"
+      },
+      {
+        "first": "Ching",
+        "middle": [],
+        "last": "Li",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "",
+          "institution": "Chung Shan Medical University",
+          "location": {
+            "addrLine": "110, Sec. 1, Chien Kuo N. Rd",
+            "postCode": "402",
+            "settlement": "Taichung",
+            "country": "Taiwan"
+          }
+        },
+        "email": "chingli@csmu.edu.tw"
+      }
+    ]
+  },
+  "abstract": [
+    {
+      "text": "There are hundreds of viruses that infect different human organs and cause diseases. Some fatal emerging viral infections have become serious public health issues worldwide. Early diagnosis and subsequent treatment are therefore essential for fighting viral infections. Current diagnostic techniques frequently employ polymerase chain reaction (PCR)-based methods to quickly detect the pathogenic viruses and establish the etiology of the disease or illness. However, the fast PCR method suffers from many drawbacks such as a high false-positive rate and the ability to detect only one or a few gene targets at a time. Microarray technology solves the problems of the PCR limitations and can be effectively applied to all fields of molecular medicine. Recently, a report in Retrovirology described a multi-virus DNA array that contains more than 250 open reading frames from eight human viruses including human immunodeficiency virus type 1. This array can be used to detect multiple viral co-infections in cells and in vivo. Another benefit of this kind of multi-virus array is in studying promoter activity and viral gene expression and correlating such readouts with the progression of disease and reactivation of latent infections. Thus, the virus DNA-chip development reported in Retrovirology is an important advance in diagnostic application which could be a potent clinical tool for characterizing viral co-infections in AIDS as well as other patients.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    }
+  ],
+  "body_text": [
+    {
+      "text": "There are hundreds of viruses that infect different human organs and cause diseases. Some fatal emerging viral infections have become serious public health issues worldwide. Early diagnosis and subsequent treatment are therefore essential for fighting viral infections. Current diagnostic techniques frequently employ polymerase chain reaction (PCR)-based methods to quickly detect the pathogenic viruses and establish the etiology of the disease or illness. However, the fast PCR method suffers from many drawbacks such as a high false-positive rate and the ability to detect only one or a few gene targets at a time. Microarray technology solves the problems of the PCR limitations and can be effectively applied to all fields of molecular medicine. Recently, a report in Retrovirology described a multi-virus DNA array that contains more than 250 open reading frames from eight human viruses including human immunodeficiency virus type 1. This array can be used to detect multiple viral co-infections in cells and in vivo. Another benefit of this kind of multi-virus array is in studying promoter activity and viral gene expression and correlating such readouts with the progression of disease and reactivation of latent infections. Thus, the virus DNA-chip development reported in Retrovirology is an important advance in diagnostic application which could be a potent clinical tool for characterizing viral co-infections in AIDS as well as other patients.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    },
+    {
+      "text": "Microarray technology has been proven to be a powerful tool with great potential for biological and medical uses. In this technique, recombinant DNA fragments or synthesized oligonucleotides affixed on the surface of glass slides or nylon membranes are used for detecting complementary nucleic acid sequences (frequently representing a few hundred to >10,000 genes/expressed sequence tags) as well as for genotyping microorganisms and for profiling the gene-expression patterns in cells from higher organisms [1].",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    },
+    {
+      "text": "A new report by Ghedin, et al. [2] in Retrovirology describes the successful use of a multi-virus array (termed multivi-rus-chip) to detect multiple viral co-infections in cultured cells as well as to study viral gene expression and promoter activities (Figure 1 ). Ghedin's multivirus-chip contains genes from eight human viruses including human immunodeficiency virus type 1 (HIV-1). Conceptually, this chip can be used to detect viral co-infections in AIDS patients who are frequently rendered susceptible to additional opportunistic infections. In developing their multivirus-chip, Ghedin, et al. tested more than 250 ORFs from HIV-1, human T cell leukemia virus types 1 (HTLV-1) and 2 (HTLV-2), hepatitis C virus (HCV), Epstein-Barr virus (EBV), human herpesvirus 6A (HHV6A) and 6B (HHV6B), and Kaposi's sarcoma-associated herpesvirus (KSHV) which were PCR-amplified and spotted on glass slides. They then hybridized their slides with Cy3-or Cy5labeled genomic DNA or cDNAs derived from various virus-infected cells. Their multivirus-chip was found to be highly specific and sensitive for detecting different viral genomic sequences in cell lines. Moreover, the chip could also detect the effect of various drugs on viral gene expression. In such instance, cell lines latently infected with HIV-1 and KSHV were used to generate profiles of viral gene expression in the presence of cyclin-dependent Schematic drawing of the multivirus-chip that possesses multiple functions kinase inhibitor (CKI), Roscovitine, which was applied to cells to suppress the reactivation of latently infected viruses.",
+      "cite_spans": [
+        {
+          "start": 31,
+          "end": 34,
+          "text": "[2]",
+          "ref_id": "BIBREF1"
+        }
+      ],
+      "ref_spans": [
+        {
+          "start": 253,
+          "end": 262,
+          "text": "(Figure 1",
+          "ref_id": "FIGREF0"
+        }
+      ],
+      "section": "Abstract"
+    },
+    {
+      "text": "Ghedin, et al. [2] also studied the role of cellular chromatin structure on viral gene expression using their multivirus-chip.",
+      "cite_spans": [
+        {
+          "start": 15,
+          "end": 18,
+          "text": "[2]",
+          "ref_id": "BIBREF1"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Abstract"
+    },
+    {
+      "text": "They employed the chromatin immunoprecipitation technique (ChIP) [3] to isolate cellular DNA fragments that were bound to phosphorylated histone H3 (P-H3). These DNA fragments were hybridized to the viral ORFs contained on the multivirus-chip to investigate the role of phospho-H3 on viral gene expression. They showed that whether transcriptionally active or silent the chromatin state played a role in regulating the expression of KSHV genes under the different cellular context. Current routine clinical diagnostics employ PCR, Southern blotting, Northern blotting, DNA sequencing and microarray hybridization to detect and characterize genes of interest in biomedicine. PCR is generally regarded as the most sensitive diagnostic method. However, Iyer, et al. [4] have shown that the sensitivity of cDNA-chip hybridization is comparable to that of TaqMan-driven quantitative PCR assay, and that the microarray hybridization technique is less likely to be complicated by high false positive rates due to carry-over contaminations. Furthermore, using microarrays, the viral gene transcripts in infected cells can be easily detected by hybridization without any prior amplification steps, and the microarray technique requires much less experimental material when compared to Southern or Northern blotting and can provide high sensitivity in the setting of large throughput.",
+      "cite_spans": [
+        {
+          "start": 65,
+          "end": 68,
+          "text": "[3]",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 763,
+          "end": 766,
+          "text": "[4]",
+          "ref_id": "BIBREF3"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Abstract"
+    },
+    {
+      "text": "In view of the above, the multivirus-chip described in Retrovirology [2] holds several advantages over other more commonly used techniques (e.g. PCR, DNA sequencing) for the diagnosis of viral infections. First, this chip provides a more accurate diagnosis of viral infection by simultaneously evaluating the transcription of all viral genes, and can use such cumulative data to correlate infection with clinical disease manifestations. Second, the high throughput and flexible synthesis nature of DNA microarray construction can allow scientists to tailor-make and rapidly alter arrays to match evolving emergence of new pathogens. The SARS genome chip made by the US NIAID, NIH is a good example [5] of how diagnostic arrays can be developed quickly and be used in a timely manner.",
+      "cite_spans": [
+        {
+          "start": 69,
+          "end": 72,
+          "text": "[2]",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 698,
+          "end": 701,
+          "text": "[5]",
+          "ref_id": "BIBREF4"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Abstract"
+    },
+    {
+      "text": "Finally, the most novel application described by Ghedin, et al. is their use of microarrays to correlate the cellular \"histone code\" [6] with the promoter activity of KSHV. Usually the transcription of a gene located on chromosomal DNA is influenced not only by the cis-acting ele-ments (or DNA-binding motifs), but also by the structure of chromatin. The latter can be vary depending on the post-translational modifications of histone proteins. Methylation, acetylation, and/or phosphorylation of certain amino acid residues at the amino terminal \"tails\" of histone H3 and/or H4 can indeed influence chromatin structure. Thus accumulating evidence has shown that chromatin-associated proteins and their modifications play vital roles in many physiological processes such as growth, differentiation, and development in mammals, plants and fungi [6, 7] . Many studies have used DNA array technology to investigate viral gene expression or to genotype viral isolates; however, none has used this technique to study the influence of cellular chromatin structure on viral gene expression [1]. Ghedin, et al. [2] demonstrated that only DNA fragments derived from ChIP of latent BCBL-1 cell genomic DNA captured using phospho-H3 antibody bound specifically to the KSHV ORF on the multivirus-chip. This result suggests that latent KSHV genome in BCBL-1 cells is packed into a nucleosomal structure and that histone H3 proteins near the viral promoter can be phosphorylated at serines to make the DNA at the promoter region less tightly packed with histones and more easily accessible to transcription factors.",
+      "cite_spans": [
+        {
+          "start": 49,
+          "end": 63,
+          "text": "Ghedin, et al.",
+          "ref_id": null
+        },
+        {
+          "start": 133,
+          "end": 136,
+          "text": "[6]",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 845,
+          "end": 848,
+          "text": "[6,",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 849,
+          "end": 851,
+          "text": "7]",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 1104,
+          "end": 1107,
+          "text": "[2]",
+          "ref_id": "BIBREF1"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Abstract"
+    },
+    {
+      "text": "In conclusion, the multivirus-chip improvements developed by Ghedin, et al. [2] provide versatile clinical and basic uses. In the near future, such chips are likely to be used to detect viral co-infections in many different clinical settings. ",
+      "cite_spans": [
+        {
+          "start": 76,
+          "end": 79,
+          "text": "[2]",
+          "ref_id": "BIBREF1"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Abstract"
+    }
+  ],
+  "bib_entries": {
+    "BIBREF0": {
+      "ref_id": "b0",
+      "title": "The use of DNA array technology in studies of ocular viral pathogenesis",
+      "authors": [
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Natarajan",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [
+            "A"
+          ],
+          "last": "Shepard",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Chodosh",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "DNA Cell Biol",
+      "volume": "21",
+      "issn": "",
+      "pages": "483--490",
+      "other_ids": {}
+    },
+    "BIBREF1": {
+      "ref_id": "b1",
+      "title": "Use of a multi-virus array for the study of human pathogens: gene expression studies and ChIP-chip analysis",
+      "authors": [
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Ghedin",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Pumfery",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [],
+          "last": "De La Fuente",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Yao",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Miller",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [],
+          "last": "Lacoste",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Quackenbush",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Jacobson",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Kashanchi",
+          "suffix": ""
+        }
+      ],
+      "year": 2004,
+      "venue": "Retrovirology",
+      "volume": "1",
+      "issn": "",
+      "pages": "",
+      "other_ids": {}
+    },
+    "BIBREF2": {
+      "ref_id": "b2",
+      "title": "In vivo cross-linking and immunoprecipitation for studying dynamic protein: DNA associations in a chromatin environment",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "H"
+          ],
+          "last": "Kuo",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "D"
+          ],
+          "last": "Allis",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Methods",
+      "volume": "19",
+      "issn": "",
+      "pages": "425--433",
+      "other_ids": {}
+    },
+    "BIBREF3": {
+      "ref_id": "b3",
+      "title": "The transcriptional program in the response of human fibroblasts to serum",
+      "authors": [
+        {
+          "first": "V",
+          "middle": [
+            "R"
+          ],
+          "last": "Iyer",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "B"
+          ],
+          "last": "Eisen",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "T"
+          ],
+          "last": "Ross",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [],
+          "last": "Schuler",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Moore",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "C"
+          ],
+          "last": "Lee",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "M"
+          ],
+          "last": "Trent",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [
+            "M"
+          ],
+          "last": "Staudt",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Hudson",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "S"
+          ],
+          "last": "Boguski",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Lashkari",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Shalon",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Botstein",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "O"
+          ],
+          "last": "Brown",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Science",
+      "volume": "283",
+      "issn": "",
+      "pages": "83--87",
+      "other_ids": {}
+    },
+    "BIBREF4": {
+      "ref_id": "b4",
+      "title": "SARS genome chip available to scientists: the NIAID hopes that widespread access to the SARS genome chip will catalyse research into effective treatments for the virus",
+      "authors": [
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Frankish",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Lancet",
+      "volume": "361",
+      "issn": "",
+      "pages": "",
+      "other_ids": {}
+    },
+    "BIBREF5": {
+      "ref_id": "b5",
+      "title": "Translating the histone code",
+      "authors": [
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Jenuwein",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "D"
+          ],
+          "last": "Allis",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Science",
+      "volume": "293",
+      "issn": "",
+      "pages": "1074--1080",
+      "other_ids": {}
+    },
+    "BIBREF6": {
+      "ref_id": "b6",
+      "title": "Heterochromatin and epigenetic control of gene expression",
+      "authors": [
+        {
+          "first": "Sis",
+          "middle": [],
+          "last": "Grewal",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [],
+          "last": "Moazed",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Science",
+      "volume": "301",
+      "issn": "",
+      "pages": "798--802",
+      "other_ids": {}
+    }
+  },
+  "ref_entries": {
+    "FIGREF0": {
+      "text": "Schematic drawing of the multivirus-chip that possesses multiple functions. The multi-virus array used in the study conducted by Ghedin, et al. contains more than 250 DNA spots derived from PCR amplification of ORFs from eight human pathogenic viruses. These viruses include HIV-1, HTLV-1, HTLV-2, EBV, HHV-6A, HHV-6B, KSHV, and HCV. Depending on how the DNA targets are prepared, the multivirus-chip can be simultaneously used to detect viral genomic sequences, profile viral gene expression patterns, and investigate the relationship between cellular chromatin structure and viral gene transcription. Therefore, this multi-purpose DNA array is functionally versatile and would be very useful in both clinical diagnoses and biomedical research.",
+      "latex": null,
+      "type": "figure"
+    },
+    "TABREF0": {
+      "text": "PCR, polymerase chain reaction HIV-1, human immunodeficiency virus type 1 ORF, open reading frame HTLV-1 and HTLV-2, human T cell leukemia virus types 1 and 2 HCV, hepatitis C virus EBV, Epstein-Barr virus HHV 6A and HHV6B, human herpesvirus types 6A and 6B KSHV, Kaposi's sarcoma-associated herpesvirus ChIP, chromatin immunoprecipitation technique P-H3, phosphorylated histone H3",
+      "latex": null,
+      "type": "table"
+    }
+  },
+  "back_matter": [
+    {
+      "text": "None declared.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Competing interests"
+    },
+    {
+      "text": "Both authors have worked on the development of microarray technology for a long time through mutual collaboration on studies on viral gene expression and disease progression.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Authors' contributions"
+    }
+  ]
+}

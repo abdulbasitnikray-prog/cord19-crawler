@@ -1,0 +1,3792 @@
+{
+  "paper_id": "PMC546175",
+  "metadata": {
+    "title": "Detection and characterization of horizontal transfers in prokaryotes using genomic signature",
+    "authors": [
+      {
+        "first": "Christine",
+        "middle": [],
+        "last": "Dufraigne",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Bernard",
+        "middle": [],
+        "last": "Fertil",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Sylvain",
+        "middle": [],
+        "last": "Lespinats",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Alain",
+        "middle": [],
+        "last": "Giron",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      },
+      {
+        "first": "Patrick",
+        "middle": [],
+        "last": "Deschavanne",
+        "suffix": "",
+        "email": null,
+        "affiliation": {}
+      }
+    ]
+  },
+  "body_text": [
+    {
+      "text": "It is now widely admitted that actual genomes have a common ancestor (LUCA, Last Universal Common Ancestor). Their current diversity results from events that have modified genomes during evolution. While some of these events happen at the nucleotide level (point mutation, indel of few nucleotides), others [strand inversion, duplications, repetitions, transpositions and horizontal transfers (HTs)] may concern significant parts of the genome. It has been postulated that HTs (exchange of genetic material between two different species) were very frequent during the first stages of evolution and are essentially subsisting nowadays in prokaryotes (1\u20134). As a consequence, the detection of HTs appears crucial to the understanding of the evolutionary processes and to the qualitative and quantitative evaluation of exchange rate between species (5\u20139).",
+      "cite_spans": [
+        {
+          "start": 650,
+          "end": 651,
+          "mention": "1",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 652,
+          "end": 653,
+          "mention": "4",
+          "ref_id": "BIBREF33"
+        },
+        {
+          "start": 847,
+          "end": 848,
+          "mention": "5",
+          "ref_id": "BIBREF44"
+        },
+        {
+          "start": 849,
+          "end": 850,
+          "mention": "9",
+          "ref_id": "BIBREF63"
+        }
+      ],
+      "section": "INTRODUCTION",
+      "ref_spans": []
+    },
+    {
+      "text": "The recent complete sequencing of several genomes allows to systematically search for the presence of DNA transfers in species, especially in prokaryotes where the probability of occurrence is higher (10\u201314). It has been reported in particular that (i) HTs in bacteria account for up to 25% of the genome (8,14\u201316); (ii) archaebacteria and non-pathogenic bacteria are more prone to transfers than pathogenic bacteria (15,16); and (iii) operational genes are more likely transferred than genes dealing with information management (15\u201317).",
+      "cite_spans": [
+        {
+          "start": 201,
+          "end": 203,
+          "mention": "10",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 204,
+          "end": 206,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 306,
+          "end": 307,
+          "mention": "8",
+          "ref_id": "BIBREF62"
+        },
+        {
+          "start": 308,
+          "end": 310,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 311,
+          "end": 313,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 418,
+          "end": 420,
+          "mention": "15",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 421,
+          "end": 423,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 530,
+          "end": 532,
+          "mention": "15",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 533,
+          "end": 535,
+          "mention": "17",
+          "ref_id": "BIBREF8"
+        }
+      ],
+      "section": "INTRODUCTION",
+      "ref_spans": []
+    },
+    {
+      "text": "The HT concept has been originally coined to explain the dramatic homologies between genes of unrelated species (18,19). An \u2018unusual\u2019 match is subsequently the criteria for the detection of HTs (20,21). While this approach allows detection of gene transfers with only a partial knowledge of genomes, it requires the sequencing of homologous genes in a number of species and consequently cannot be used for HT screening.",
+      "cite_spans": [
+        {
+          "start": 113,
+          "end": 115,
+          "mention": "18",
+          "ref_id": "BIBREF9"
+        },
+        {
+          "start": 116,
+          "end": 118,
+          "mention": "19",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 195,
+          "end": 197,
+          "mention": "20",
+          "ref_id": "BIBREF12"
+        },
+        {
+          "start": 198,
+          "end": 200,
+          "mention": "21",
+          "ref_id": "BIBREF13"
+        }
+      ],
+      "section": "INTRODUCTION",
+      "ref_spans": []
+    },
+    {
+      "text": "Genes from a given species are very similar to one another with respect to base composition, codon biases and short oligonucleotide composition (15,16,22\u201324). As a general rule, usage of oligonucleotides varies less along genomes than among genomes (24\u201327). In addition, it has been observed that transferred DNA retains (at least for some time) characteristics from its species of origin (8,14). These particularities are used alone or in conjunction to detect DNA transfers between species (8,12,13). Transferred DNA is consequently detected on the basis of some of its singularities with respect to the sequence characteristics of the recipient species. However, these techniques suffer several drawbacks and weaknesses (28\u201330) that led us to consider generalizing the above approach for the screening of atypical regions in sequences. In fact, the genomic signature that accounts for all possible biases in DNA sequences has been shown to be species-specific (26,27,31,32). The signature is approximately invariant along the genome in such a way that the species of origin of DNA segments as small as 1 kb could be identified with a surprisingly high efficiency by means of their signatures (25,27). As a consequence, the sequence signature may be most often (at least in bacteria) considered a valuable estimation of the genomic signature. Assuming that (i) transferred DNA fragments exhibit signature of the species they come from and (ii) recipient and donor signatures are different, the screening of local variations of signature along genomes is expected to reveal regions of interest where HTs might be located. In addition, the status of HT is strongly suggested if the signatures of these regions of interest are found close to the signature of other species.",
+      "cite_spans": [
+        {
+          "start": 145,
+          "end": 147,
+          "mention": "15",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 148,
+          "end": 150,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 151,
+          "end": 153,
+          "mention": "22",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 154,
+          "end": 156,
+          "mention": "24",
+          "ref_id": "BIBREF16"
+        },
+        {
+          "start": 250,
+          "end": 252,
+          "mention": "24",
+          "ref_id": "BIBREF16"
+        },
+        {
+          "start": 253,
+          "end": 255,
+          "mention": "27",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 390,
+          "end": 391,
+          "mention": "8",
+          "ref_id": "BIBREF62"
+        },
+        {
+          "start": 392,
+          "end": 394,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 493,
+          "end": 494,
+          "mention": "8",
+          "ref_id": "BIBREF62"
+        },
+        {
+          "start": 495,
+          "end": 497,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 498,
+          "end": 500,
+          "mention": "13",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 724,
+          "end": 726,
+          "mention": "28",
+          "ref_id": "BIBREF20"
+        },
+        {
+          "start": 727,
+          "end": 729,
+          "mention": "30",
+          "ref_id": "BIBREF23"
+        },
+        {
+          "start": 964,
+          "end": 966,
+          "mention": "26",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 967,
+          "end": 969,
+          "mention": "27",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 970,
+          "end": 972,
+          "mention": "31",
+          "ref_id": "BIBREF24"
+        },
+        {
+          "start": 973,
+          "end": 975,
+          "mention": "32",
+          "ref_id": "BIBREF25"
+        },
+        {
+          "start": 1196,
+          "end": 1198,
+          "mention": "25",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 1199,
+          "end": 1201,
+          "mention": "27",
+          "ref_id": "BIBREF19"
+        }
+      ],
+      "section": "INTRODUCTION",
+      "ref_spans": []
+    },
+    {
+      "text": "The sequence signature is defined as the frequencies of the whole set of short oligonucleotides observed in a sequence (26,31). It can be easily obtained thanks to a very fast algorithm derived from the Chaos Game Representation (CGR) (33), which allows coping with a 1 Mb sequence in a few seconds on a laptop computer. Signatures may be visualized as square images where the color (or gray level) of each pixel represents the frequency of a given oligonucleotide (called word thereafter) (31) (for examples of signatures, see Supplementary Materials 2, 4 and 6).",
+      "cite_spans": [
+        {
+          "start": 120,
+          "end": 122,
+          "mention": "26",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 123,
+          "end": 125,
+          "mention": "31",
+          "ref_id": "BIBREF24"
+        },
+        {
+          "start": 236,
+          "end": 238,
+          "mention": "33",
+          "ref_id": "BIBREF26"
+        },
+        {
+          "start": 491,
+          "end": 493,
+          "mention": "31",
+          "ref_id": "BIBREF24"
+        }
+      ],
+      "section": "Sequence signature ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "DNA sequences are gathered from GenBank. The genomes of 22 prokaryotes are scanned for HTs, B.subtilis, E.coli and H.influenzae genomes being given a special attention to illustrate our approach. In particular, B.subtilis and E.coli provide valuable benchmark thanks to the set of previous works addressing that very issue (12,14,16,34\u201337). Signatures of about 12 000 species are obtained from genomic sequences longer than 1.5 kb. Sequences derived from the same species are concatenated for accuracy purposes. Species from the three domains of life, archaea (\u223c260 species), bacteria (\u223c3950 species) and eukarya (\u223c6750 species) as well as viruses (\u223c1300 species), are represented for a total amount of 1.0 Gb.",
+      "cite_spans": [
+        {
+          "start": 324,
+          "end": 326,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 327,
+          "end": 329,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 330,
+          "end": 332,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 333,
+          "end": 335,
+          "mention": "34",
+          "ref_id": "BIBREF27"
+        },
+        {
+          "start": 336,
+          "end": 338,
+          "mention": "37",
+          "ref_id": "BIBREF30"
+        }
+      ],
+      "section": "DNA sequences ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "The detection of atypical regions is based on the observation of deviation of local signatures (i.e. signature of small fragments of DNA) from the genomic signature of the recipient species. Genomes are consequently sampled by means of a sliding window with an appropriate size. In fact, it would be interesting to have windows the smallest as possible for highest sampling accuracy. However, intra-genomic variability of signature increases for small windows. In addition, variability depends on species and word length. Base composition (1-letter word), 2- and 3-letter words are poorly species-specific: they do not allow a good discrimination between species (25,27). As a general rule, the longer the words (up to 9-letter long), the higher the specificity of the signature (25,27,31). However, counts of long words in small windows are too low to allow a reliable estimation of the parameters. In our hands, the analysis of 4-letter words in a sliding window of 5 kb (with a 0.5 kb step) offers a good trade-off between reliability of count, file size and computational charge, whatever the species. In addition, a double-strand signature (called local signature thereafter) is computed for each window to get rid of variations induced by strand asymmetry (38\u201342).",
+      "cite_spans": [
+        {
+          "start": 664,
+          "end": 666,
+          "mention": "25",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 667,
+          "end": 669,
+          "mention": "27",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 780,
+          "end": 782,
+          "mention": "25",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 783,
+          "end": 785,
+          "mention": "27",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 786,
+          "end": 788,
+          "mention": "31",
+          "ref_id": "BIBREF24"
+        },
+        {
+          "start": 1263,
+          "end": 1265,
+          "mention": "38",
+          "ref_id": "BIBREF31"
+        },
+        {
+          "start": 1266,
+          "end": 1268,
+          "mention": "42",
+          "ref_id": "BIBREF36"
+        }
+      ],
+      "section": "DNA sampling ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "For illustration purposes, local signatures are developed as vertical vectors and stacked together in genome order to give an overall picture of word usage variations along each genome. In such plots, horizontal lines show the variation in frequency of words along the genome, whereas local changes in word usage appear as vertical breaks (Figure 1).",
+      "cite_spans": [],
+      "section": "DNA sampling ::: MATERIALS AND METHODS",
+      "ref_spans": [
+        {
+          "start": 340,
+          "end": 348,
+          "mention": "Figure 1",
+          "ref_id": "FIGREF0"
+        }
+      ]
+    },
+    {
+      "text": "Considering that the greatest part of the genome is species-typical, the signature of the recipient species might have been estimated from the analysis of the whole sequence. Although the vast majority of local signatures look mostly the same (believed to be instances of the recipient species signature), some of them may greatly differ. In order to avoid potential biases linked to these outliers, it has been subsequently decided to select typical local signatures on the basis of their similarities, observed after clustering. The underlying idea is that typical local signatures aggregate in few large groups, whereas outliers are found in small complementary groups at a great distance from the recipient genome signature. Groups were consequently determined with the K-means clustering tool, using every scheme of clusters between 3 and 8 for each species. Finally, the best scheme of clusters was obtained by a decision tree-based partition [CART algorithm (43)]. The purpose of the CART algorithm is to predict values of a categorical dependent variable (clusters of local signatures in this work, each signature being characterized by its distance to the estimated genomic signature) from one or more continuous and/or categorical predictor variables [the different clustering schemes (3\u20138 clusters) in this work]. The CART algorithm thus provides an optimal split between groups collecting signatures close to the estimated recipient genome signature and the others groups. For each species, a clustering scheme is selected (e.g. the 5-group clustering) and a partition offered (continued example: group 2 and 3 on one side; 1, 4 and 5 on the other). The recipient species signature is subsequently calculated as the mean of the signatures of the groups belonging to the partition with the smallest distance to the estimated genomic signature.",
+      "cite_spans": [
+        {
+          "start": 966,
+          "end": 968,
+          "mention": "43",
+          "ref_id": "BIBREF37"
+        }
+      ],
+      "section": "Recipient species signature ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "Comparison of signatures is made possible, thanks to an Euclidian metric, accounting for differences in word usage. It must be pointed out that distances between signatures are calculated for high dimensional data (256 dimensions corresponding to the 256 different 4-letter words) and are consequently subjected to the so-called \u2018concentration of measure phenomenon\u2019 (44). All distances in a high dimension space seem to be comparable since they increase with the square root of the dimension of the space, whereas the variance of their distribution remains unchanged. In fact, the radius of the hyper sphere holding 99% of the signatures of our database is only seven times the nearest neighbor distance (smallest distance between two species). Small differences in distance may consequently be considered highly significant.",
+      "cite_spans": [
+        {
+          "start": 368,
+          "end": 370,
+          "mention": "44",
+          "ref_id": "BIBREF38"
+        }
+      ],
+      "section": "Atypical regions ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "For each species, a set of recipient-specific distances is obtained, every local signature belonging to the large clusters being given a distance to the host signature. In order to select outlying signatures, a cut-off distance is chosen on the basis of the distribution of distances observed for each species. It appears that the 99% percentile offered a good trade-off between sensibility and specificity for outlier detection (for impact of the threshold on detection of atypical regions, see Results). Most signatures from minority clusters are detected in this way. Isolated signatures are detected as well, while very few signatures from the recipient species clusters are selected (1%). Outliers together with the flanking regions on the genome are later on reanalyzed with smaller window and step (1/10th of the original size typically) in order to more accurately determine their limits, when signal-to-noise ratio allows it.",
+      "cite_spans": [],
+      "section": "Atypical regions ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "Finally, the gene content of all detected regions is analyzed with the help of species dedicated databases [Genome Information Broker, ]. A BlastN search (GenBank, default settings) is carried out for each atypical region in order to identify the origin of potential HTs if homology is high enough.",
+      "cite_spans": [],
+      "section": "Atypical regions ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "About 12 000 species (including chromosomal, plasmidic, mitochondrial and chloroplastic DNA) from GenBank are found eligible for a genomic signature. Given the signature of an atypical DNA fragment, species with a close signature might be considered as potential donors. Such a screening is performed for every atypical region of the 22 species under consideration. The first five nearby species are retained when their distance to the outlier was donor-compatible.",
+      "cite_spans": [],
+      "section": "Search for the origin of atypical regions ::: MATERIALS AND METHODS",
+      "ref_spans": []
+    },
+    {
+      "text": "A clustering with three classes allows assessing the signature of B.subtilis. The most populated class (collecting 84% of the segments) is chosen to represent B.subtilis. For this sub-population, the mean distance (arbitrary unit) to the recipient (centroid of the class) and the cut-off distance are 126 and 204, respectively (Table 1). Runs of contiguous outlying windows sharing the same cluster are considered as single transfer events. As a consequence, 58 regions (Figure 2a and Supplementary Material 2) fall beyond the cut-off distance and are thus potential candidates for hosting foreign DNA (for a segmentation of the B.Subtilis genome in terms of genes, see Supplementary Material 3). Figure 2b illustrates the accuracy of segmentation of an atypical region obtained by using a sliding window of 0.5 kb with a 50 bp step.",
+      "cite_spans": [],
+      "section": "B.subtilis genome analysis ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 471,
+          "end": 480,
+          "mention": "Figure 2a",
+          "ref_id": "FIGREF1"
+        },
+        {
+          "start": 697,
+          "end": 706,
+          "mention": "Figure 2b",
+          "ref_id": "FIGREF1"
+        },
+        {
+          "start": 328,
+          "end": 335,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "rRNA genes make up \u223c1.1% of B.subtilis genome (Table 1). All rRNA genes are found in the outlier population. In addition, all windows containing rRNA are assigned to a specific cluster. In fact, it is known that rRNA has its own signature, which is at variance from the host signature (12). rRNA genes account for 7% of the outliers (tRNAs are not considered in this study, because their size is too small to generate a significant deviation from the host signature if they are isolated).",
+      "cite_spans": [
+        {
+          "start": 286,
+          "end": 288,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        }
+      ],
+      "section": "B.subtilis genome analysis ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 47,
+          "end": 54,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "A total of 86% of the B.subtilis genome should be considered as B.subtilis typical (Table 1). When looking for the origin of B.subtilis segments in the 12 000 signature database, B.subtilis appears in the 10 first potential donors for 84% of the whole set of 5 kb sequences that can be derived from its genome. This result confirms that segments having signatures belonging to the predominant clusters are good representatives of the recipient species signature.",
+      "cite_spans": [],
+      "section": "B.subtilis genome analysis ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 84,
+          "end": 91,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "The 49 rRNA-free atypical regions vary in size from 1.5 to 135 kb and make up 13% of the total genome (Table 1). About 50% of atypical regions are less than (or around) 6 kb long. Distances of outlier from first potential donor often fall within the intra-genomic range (Table 1 and Supplementary Material 2): 75% of B.subtilis atypical regions have first donors lying at a distance <234 (mean cut-off distance for the 22 species analyzed in this paper). Potential donors are clearly distinct from B.subtilis (Supplementary Material 2). Although outliers are distributed all over the genome, several types can be distinguished on the basis of their signatures; potential donors seem to come from a few sets of species with similar signatures (Table 1 and Supplementary Material 2). The most important cluster includes bacteriophage SPBc2 and its neighbors, another concerns the Enterococcus genus.",
+      "cite_spans": [],
+      "section": "B.subtilis genome analysis ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 103,
+          "end": 110,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        },
+        {
+          "start": 271,
+          "end": 278,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        },
+        {
+          "start": 743,
+          "end": 750,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "However, in some instances, the outlier-to-donor distance is too great to consider the \u2018closest\u2019 species as potential donor. In contrast, unusual small values deserve a specific attention. In particular, the very small distance between bacteriophage SPBc2 and \u20182150751\u20132285750\u2019 atypical region (d = 2) allows to spot the part of B.subtilis genome where bacteriophage SPBc2 is incorporated (12,47). Other regions in the genome are also found similar (in terms of signature) to bacteriophage SPBc2. Most of them correspond to bacteriophages, imbedded in B.subtilis genome, whose free forms are not sequenced (12,47). Observed similarities with SPBC2 are, however, expected since signatures of phages usually share some characteristics with the species they infect (48). The SPBc2 sequence is the only foreign sequence identified in B.subtilis, using homology as criterion (BlastN, with parameters set to default). In fact, Blast analysis of B.subtilis outliers leads to contrasted results. Besides SPBc2 and 7 out of 9 prophages imbedded in the genome, the only atypical regions identified are those containing the 30 rRNA genes coded in B.subtilis genome. The only few genes that are homologous to parts of atypical regions are found in species belonging to the Bacillus genus. It is interesting to note that no house-keeping genes (except rRNA) are detected in atypical regions. In fact, a great number of genes in atypical regions (except bacteriophage genes and rRNA) have no known function.",
+      "cite_spans": [
+        {
+          "start": 390,
+          "end": 392,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 393,
+          "end": 395,
+          "mention": "47",
+          "ref_id": "BIBREF41"
+        },
+        {
+          "start": 607,
+          "end": 609,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 610,
+          "end": 612,
+          "mention": "47",
+          "ref_id": "BIBREF41"
+        },
+        {
+          "start": 763,
+          "end": 765,
+          "mention": "48",
+          "ref_id": "BIBREF42"
+        }
+      ],
+      "section": "B.subtilis genome analysis ::: RESULTS",
+      "ref_spans": []
+    },
+    {
+      "text": "A clustering with five classes is required to determine the recipient species signature of H.influenzae. The three most populated classes (collecting 94% of the segments) are chosen to calculate the H.influenzae signature. Mean distance to host and cut-off distance is subsequently found equal to 130 and 239, respectively (Table 1). Similarly to B.subtilis, one cluster (1.5% of H.influenzae genome) is devoted to the 18 rRNA gene copies (Table 1). A total of 91% of rRNA is labeled atypical and account for 29% of the outliers.",
+      "cite_spans": [],
+      "section": "H.influenzae genome analysis ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 324,
+          "end": 331,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        },
+        {
+          "start": 440,
+          "end": 447,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "Analysis of Table 1 shows that 95% of the H.influenzae genome should be considered as H.influenzae typical. In fact, H.influenzae is one of the 10 first potential donors for 92% of all 5 kb sequences that can be derived from its genome. As already observed for B.subtilis, the concordance of these two percentages corroborates the partition procedure used for the selection of typical/atypical fragments.",
+      "cite_spans": [],
+      "section": "H.influenzae genome analysis ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 12,
+          "end": 19,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "The 13 rRNA-free atypical regions vary in size from 1.5 to 19.5 kb and make up 3.3% of the genome (Table 1, Annex 4 and Figure 3, see Annex 5 for a segmentation of the H.influenzae genome in terms of genes). About 50% of atypical regions are less than (or around) 2.5 kb long. Numbers for H.influenzae are clearly at variance with those for B.subtilis: a smaller percentage of the genome qualifies as atypical and the average size of atypical regions is also smaller. This result is examined below in the context of intra-species signature variability (see Discussion).",
+      "cite_spans": [],
+      "section": "H.influenzae genome analysis ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 120,
+          "end": 128,
+          "mention": "Figure 3",
+          "ref_id": "FIGREF2"
+        },
+        {
+          "start": 99,
+          "end": 106,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "A clustering with six classes is required to determine the recipient species signature of E.coli. The main features are summarized in Table 1. The potential donors of the 84 RNA-free atypical regions are given in Annex 6 (for a segmentation of the E.coli genome in terms of genes, see Annex 7). It is worth noticing that 56% of E.coli potential donors belong to the Enterobacteriales family. Segmentation in terms of genes is displayed in Annex 7. The analysis of this genome is particularly useful for the comparison with literature (see below).",
+      "cite_spans": [],
+      "section": "E.coli genome analysis ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 134,
+          "end": 141,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "Numerous approaches for detecting horizontal gene transfers have been proposed in the last 2 decades. Phylogenetic trees of protein or DNA sequences, unusual distribution of genes, nucleotide composition (including codon biases) are some of the HT features that are considered within the framework of these models (16,34), Hidden Markov Models (HMMs) (12,14,35) and Factorial Correspondence Analysis (FCA) (37) are some criteria that are currently employed. Each of the resulting models has its own advantages and caveats (28\u201330). As it has been recently pointed out by Ragan (49) and Lawrence and Ochman (50), each approach deals with a particular subset of HTs, being for example more efficient for detecting recent transfers, or more effective for the detection of ancient HTs. Our approach, which is clearly based on oligonucleotide composition, assumes that different species have different signatures but does not rely on any other assumption. It is not surprising, therefore, that the genomic signature approach provides results (in terms of % of DNA transferred) in reasonable agreement with those proposed by Garcia-Vallve (16) and Nakamura et al. (14) for the 22 species that were analyzed in common. Correlations between percentages of HTs found by these three methods are highly significant (R = 0.42, P = 10\u22123 and R = 0.62 and P < 10\u22124 between this work and Nakamura et al. and Garcia-Vallve et al., respectively; R = 0.40 and P = 2 10\u22123 between Nakamura et al. and Garcia-Vallve et al.). However, agreement in percentage of atypical DNA does not imply that the same genome regions are detected by different methods.",
+      "cite_spans": [
+        {
+          "start": 315,
+          "end": 317,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 318,
+          "end": 320,
+          "mention": "34",
+          "ref_id": "BIBREF27"
+        },
+        {
+          "start": 352,
+          "end": 354,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 355,
+          "end": 357,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 358,
+          "end": 360,
+          "mention": "35",
+          "ref_id": "BIBREF28"
+        },
+        {
+          "start": 407,
+          "end": 409,
+          "mention": "37",
+          "ref_id": "BIBREF30"
+        },
+        {
+          "start": 523,
+          "end": 525,
+          "mention": "28",
+          "ref_id": "BIBREF20"
+        },
+        {
+          "start": 526,
+          "end": 528,
+          "mention": "30",
+          "ref_id": "BIBREF23"
+        },
+        {
+          "start": 577,
+          "end": 579,
+          "mention": "49",
+          "ref_id": "BIBREF43"
+        },
+        {
+          "start": 606,
+          "end": 608,
+          "mention": "50",
+          "ref_id": "BIBREF45"
+        },
+        {
+          "start": 1133,
+          "end": 1135,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 1158,
+          "end": 1160,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        }
+      ],
+      "section": "Comparison with other methods ::: RESULTS",
+      "ref_spans": []
+    },
+    {
+      "text": "Two species are extensively studied for HT content: B.subtilis (five methods including ours) and E.coli (six methods including ours). H.influenzae is also analyzed by Garcia-Vallve (16) and Nakamura (14). Comparisons of methods are presented in Tables 2\u20134 and detailed in Supplementary Materials 3, 5 and 7. A voting procedure (majority rule) has been implemented to determine the status of genes with respect to atypicality. For that task, our initial analysis is converted in terms of genes (Supplementary Materials 3, 5 and 7). Degree of agreement between methods is subsequently observed using the statistical Kappa coefficient (51). Kappa measures the degree of agreement on a scale from minus infinity to 1. A Kappa of one indicates full agreement, a Kappa of zero indicates that there is no more agreement than expected by chance and negative values are observed if agreement is weaker than expected by chance (a very rare situation).",
+      "cite_spans": [
+        {
+          "start": 182,
+          "end": 184,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 200,
+          "end": 202,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 633,
+          "end": 635,
+          "mention": "51",
+          "ref_id": "BIBREF46"
+        }
+      ],
+      "section": "Comparison with other methods ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 245,
+          "end": 253,
+          "mention": "Tables 2",
+          "ref_id": "TABREF1"
+        },
+        {
+          "start": 254,
+          "end": 255,
+          "mention": "4",
+          "ref_id": "TABREF3"
+        }
+      ]
+    },
+    {
+      "text": "B.subtilis. Garcia-Vallve et al. (16), Nicolas et al. (12), Nakamura et al. (14), Moszer et al. (36) and we are the voters concerned with the analysis of B.subtilis genome (Table 2, B.subtilis). Proportions of horizontally transferred genes are quite similar (14, 13, 11, 13 and 15%, respectively). The number of detected genes per method is close, ranging from 457 for Nakamura (14) to 599 for this work (median 537). Detailed votes are given in Table 2. Among the 4100 genes of B.subtilis genome, 1011 genes are detected by at least one method (about 25% of B.subtilis genes). The number of \u2018single vote\u2019 genes ranges from 116 for Garcia-Vallve (16) to 47 for Nicolas (12). A total of 470 genes make up the majority consensus set and we detected 453 of them, which is the best score of the five methods. The best agreement with the majority consensus (in terms of Kappas) is reached by Nicolas (12), followed by our method and Moszer (36) (Table 2). Our method gets the best agreement with Nicolas (12) and the worst with the other HMM method used by Nakamura (14) (pairwise Kappa comparison, Table 2 and Supplementary Material 3). In fact, Nakamura approach is at variance with every other approach (14). It gets the lowest Kappa with the majority consensus or with whatever other methods. From Table 2, the probable number of HT genes in B.subtilis would range from 230 to 1011 with a \u2018reasonable\u2019 estimation around 470 corresponding to the majority consensus. It is to be noted that our method is unable to find two genes that are detected by every other methods (Supplementary Material 3). These genes are 338 and 236 nt long, respectively, as compared with 2500 nt, the median size of atypical regions detected by our method (Table 1). Clearly, our method is not appropriate for detecting short isolated atypical genes.",
+      "cite_spans": [
+        {
+          "start": 34,
+          "end": 36,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 55,
+          "end": 57,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 77,
+          "end": 79,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 97,
+          "end": 99,
+          "mention": "36",
+          "ref_id": "BIBREF29"
+        },
+        {
+          "start": 380,
+          "end": 382,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 648,
+          "end": 650,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 671,
+          "end": 673,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 897,
+          "end": 899,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 937,
+          "end": 939,
+          "mention": "36",
+          "ref_id": "BIBREF29"
+        },
+        {
+          "start": 1001,
+          "end": 1003,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 1063,
+          "end": 1065,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 1203,
+          "end": 1205,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        }
+      ],
+      "section": "Comparison with other methods ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 173,
+          "end": 180,
+          "mention": "Table 2",
+          "ref_id": "TABREF1"
+        },
+        {
+          "start": 447,
+          "end": 454,
+          "mention": "Table 2",
+          "ref_id": "TABREF1"
+        },
+        {
+          "start": 942,
+          "end": 949,
+          "mention": "Table 2",
+          "ref_id": "TABREF1"
+        },
+        {
+          "start": 1095,
+          "end": 1102,
+          "mention": "Table 2",
+          "ref_id": "TABREF1"
+        },
+        {
+          "start": 1298,
+          "end": 1305,
+          "mention": "Table 2",
+          "ref_id": "TABREF1"
+        },
+        {
+          "start": 1733,
+          "end": 1740,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "H.influenzae. Garcia-Vallve (16), Nakamura et al. (14) and we are the voters concerned with the analysis of the H.influenzae genome (Supplementary Material 5 and Table 3, H.influenzae). The originality of results obtained by Nakamura (14) is the salient feature of this comparison. The number of detected HT genes is more than twice higher for Nakamura et al., whereas the part belonging to the majority consensus is the smallest (Table 3). Eleven genes are detected both by Garcia-Vallve and Nakamura (14,16) but not by our method; however, the small number of voters precludes any specific comment in this respect. The probable number of HT genes in H.influenzae would range between 11 and 273, with a \u2018reasonable\u2019 estimation around 60 (majority consensus of 57) (Table 3).",
+      "cite_spans": [
+        {
+          "start": 29,
+          "end": 31,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 51,
+          "end": 53,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 235,
+          "end": 237,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 503,
+          "end": 505,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 506,
+          "end": 508,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        }
+      ],
+      "section": "Comparison with other methods ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 162,
+          "end": 169,
+          "mention": "Table 3",
+          "ref_id": "TABREF2"
+        },
+        {
+          "start": 431,
+          "end": 438,
+          "mention": "Table 3",
+          "ref_id": "TABREF2"
+        },
+        {
+          "start": 766,
+          "end": 773,
+          "mention": "Table 3",
+          "ref_id": "TABREF2"
+        }
+      ]
+    },
+    {
+      "text": "E.coli. Garcia-Vallve et al. (16), Hayes and Borodovsky (35), Lawrence and Ochman (34), Nakamura et al. (14), Medigue et al. (37) and we are the voters considered for the comparison. Proportions of horizontally transferred genes are 8, 15, 28, 17, 9 and 12%, respectively. Among the 4288 genes of E.coli, 1732 are detected at least once (40% of E.coli genes), but full agreement is only observed for 64 genes (1.5%) (Table 4, E.coli). Obviously, full agreement is expected to be small if voters are numerous. The majority consensus amounts to 342 genes. This number may provide a decent estimation of HT genes in E.coli. The approach of Lawrence (34) gets the greatest number of genes in common with the majority consensus (335 out of 342) at the price of a low specificity (Kappa = 0.43, Table 4), whereas Hayes' approach (35) gets the smallest number (186 out of 342). Our method detects 261 consensual genes, a score very close to the median score of the six methods (252). Four genes (Supplementary Material 7) are detected by all methods except ours. They are isolated and their lengths are \u223c750 nt. As already pointed out, our method is not suitable for the detection of short isolated HTs.",
+      "cite_spans": [
+        {
+          "start": 30,
+          "end": 32,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 57,
+          "end": 59,
+          "mention": "35",
+          "ref_id": "BIBREF28"
+        },
+        {
+          "start": 83,
+          "end": 85,
+          "mention": "34",
+          "ref_id": "BIBREF27"
+        },
+        {
+          "start": 105,
+          "end": 107,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 126,
+          "end": 128,
+          "mention": "37",
+          "ref_id": "BIBREF30"
+        },
+        {
+          "start": 647,
+          "end": 649,
+          "mention": "34",
+          "ref_id": "BIBREF27"
+        },
+        {
+          "start": 824,
+          "end": 826,
+          "mention": "35",
+          "ref_id": "BIBREF28"
+        }
+      ],
+      "section": "Comparison with other methods ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 417,
+          "end": 424,
+          "mention": "Table 4",
+          "ref_id": "TABREF3"
+        },
+        {
+          "start": 789,
+          "end": 796,
+          "mention": "Table 4",
+          "ref_id": "TABREF3"
+        }
+      ]
+    },
+    {
+      "text": "The three methods in agreement with the consensus are the FCA of Medigue (37), the base composition and CAI approach of Garcia-Vallve (16) and our method (Kappa values: 0.81, 0.74 and 0.67, respectively). Pair wise comparison (Table 4), as well as correspondence analysis (Table 4, inset), shows that the HMM approach of Hayes (35) and the base composition and CAI method of Lawrence and Ochman (34) provide original results. They exhibit low Kappa values when checked against the majority consensus as well as other methods (Table 4). It is surprising that Hayes and Nakamura methods (14,35) get discordant results though they are based on similar approaches. The situation is similar for Garcia-Vallve and Lawrence methods (16,34) (Table 4).",
+      "cite_spans": [
+        {
+          "start": 74,
+          "end": 76,
+          "mention": "37",
+          "ref_id": "BIBREF30"
+        },
+        {
+          "start": 135,
+          "end": 137,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 328,
+          "end": 330,
+          "mention": "35",
+          "ref_id": "BIBREF28"
+        },
+        {
+          "start": 396,
+          "end": 398,
+          "mention": "34",
+          "ref_id": "BIBREF27"
+        },
+        {
+          "start": 586,
+          "end": 588,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 589,
+          "end": 591,
+          "mention": "35",
+          "ref_id": "BIBREF28"
+        },
+        {
+          "start": 726,
+          "end": 728,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 729,
+          "end": 731,
+          "mention": "34",
+          "ref_id": "BIBREF27"
+        }
+      ],
+      "section": "Comparison with other methods ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 227,
+          "end": 234,
+          "mention": "Table 4",
+          "ref_id": "TABREF3"
+        },
+        {
+          "start": 273,
+          "end": 280,
+          "mention": "Table 4",
+          "ref_id": "TABREF3"
+        },
+        {
+          "start": 526,
+          "end": 533,
+          "mention": "Table 4",
+          "ref_id": "TABREF3"
+        },
+        {
+          "start": 734,
+          "end": 741,
+          "mention": "Table 4",
+          "ref_id": "TABREF3"
+        }
+      ]
+    },
+    {
+      "text": "The results obtained by Hayes and Borodovsky (35) are clearly at variance with the others (Table 4). Although the proportion of claimed outliers is within the range of published numbers for E.coli (14,16,24,34,35,37), 37% of them are method-specific, and the agreement with other methods is weak (Table 4). Hayes and Borodovsky have obviously developed an approach based on HMM dealing with specific outliers. Lawrence and Ochman (34) also get a poor rating especially because they detect about twice as many genes as the other authors do (Table 4).",
+      "cite_spans": [
+        {
+          "start": 46,
+          "end": 48,
+          "mention": "35",
+          "ref_id": "BIBREF28"
+        },
+        {
+          "start": 198,
+          "end": 200,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 201,
+          "end": 203,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 204,
+          "end": 206,
+          "mention": "24",
+          "ref_id": "BIBREF16"
+        },
+        {
+          "start": 207,
+          "end": 209,
+          "mention": "34",
+          "ref_id": "BIBREF27"
+        },
+        {
+          "start": 210,
+          "end": 212,
+          "mention": "35",
+          "ref_id": "BIBREF28"
+        },
+        {
+          "start": 213,
+          "end": 215,
+          "mention": "37",
+          "ref_id": "BIBREF30"
+        },
+        {
+          "start": 431,
+          "end": 433,
+          "mention": "34",
+          "ref_id": "BIBREF27"
+        }
+      ],
+      "section": "Comparison with other methods ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 91,
+          "end": 98,
+          "mention": "Table 4",
+          "ref_id": "TABREF3"
+        },
+        {
+          "start": 297,
+          "end": 304,
+          "mention": "Table 4",
+          "ref_id": "TABREF3"
+        },
+        {
+          "start": 540,
+          "end": 547,
+          "mention": "Table 4",
+          "ref_id": "TABREF3"
+        }
+      ]
+    },
+    {
+      "text": "It is worth noting that if the cut-off distance for our method is lowered, i.e. 95% instead of 99% for instance, some of the \u2018single vote\u2019 genes are dug out (for details about the impact of the cut-off distance, see Supplementary Material 7). Meanwhile, the percentage of outliers as reported by our approach rises to 20% and the percentage of \u2018single vote\u2019 genes reaches 24%. As expected, a high cut-off distance provides few single vote genes at the risk of missing some potentially transferred genes. Lowering the cut-off increases the proportion of single vote genes with the advantage of detecting most of the potential transfers (Supplementary Material 7). There is obviously a continuous grading in gene \u2018atypicality\u2019. It is suggested to first consider most \u2018consensual\u2019 genes as potential HTs and then apply amelioration models to explain the grading.",
+      "cite_spans": [],
+      "section": "Comparison with other methods ::: RESULTS",
+      "ref_spans": []
+    },
+    {
+      "text": "It is difficult to assess the relevancy of proposed donors, because genes detected as potential HT have generally undergone amelioration (8). The comparison of recently diverged genomes (species or strains) provides the opportunity to find recent HTs, for which corresponding homologous genes in the donor species may be detected (52). Such a study is performed for five E.coli strains (two K12 strains: E.coli MG1655, E.coli W3110, one uropathogenic strain: E.coli CFT073, two enterohaemorrhagic strains: E.coli O157-H7 RIMD 0509952, E.coli O157-H7_EDL933) and two Shigella flexneri strains (S.flexneri 2a 2457T, S.flexneri 2a 301). These seven strains/species have recently diverged, genome sizes are different and the proportion of horizontally transferred genes varies from one strain/species to another (14,52). For instance, only \u223c40% of the non-redundant set of proteins is common to E.coli strains CFT073, 0157-H7 EDL 9333 and MG1655 (53). These strains/species can be clustered in four groups with respect to phylogeny (Table 5).",
+      "cite_spans": [
+        {
+          "start": 138,
+          "end": 139,
+          "mention": "8",
+          "ref_id": "BIBREF62"
+        },
+        {
+          "start": 331,
+          "end": 333,
+          "mention": "52",
+          "ref_id": "BIBREF47"
+        },
+        {
+          "start": 809,
+          "end": 811,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 812,
+          "end": 814,
+          "mention": "52",
+          "ref_id": "BIBREF47"
+        },
+        {
+          "start": 943,
+          "end": 945,
+          "mention": "53",
+          "ref_id": "BIBREF48"
+        }
+      ],
+      "section": "Detection of recent HTs ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 1029,
+          "end": 1036,
+          "mention": "Table 5",
+          "ref_id": "TABREF4"
+        }
+      ]
+    },
+    {
+      "text": "Two criteria are used to searching for \u2018recent horizontally transferred genes\u2019: atypical regions (window size 1 kb, step 0.5 kb) (i) must have a signature that differs greatly from that of the host [distance to host must be at least >325, 2.5 times the E.coli intrinsic mean distance (Table 1)] and (ii) must be present in a limited number of strains/species to ascertain their recentness. In fact, outliers meeting the first criterion generally aggregate into several heterogeneous clusters (K-means clustering) that usually include samples from each strain/species. In some instances, however, some strains/species were absent from the cluster. It was subsequently considered that the corresponding regions might have been recently acquired by the relevant strains/species.",
+      "cite_spans": [],
+      "section": "Detection of recent HTs ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 285,
+          "end": 292,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "Table 5 shows a selection of potential recently transferred genes. Each cluster of atypical regions contains genes present in a specific set of strains. Some atypical genes are strain-specific, some are only absent in the non-pathogenic K12 strains and intermediate situations are also encountered. FASTA and Blast searches confirm that these genes are absent from some of the tested strains as already observed in the analysis complete genomes (53\u201355). In a large number of cases, we are able to find a well-conserved homologous gene in another species (Table 5). It is interesting to note that some of the suggested donors using our 12 000 signature database are in agreement with the species found by alignment methods. When no homologous gene is found, the proposed donors give credit to the known mechanisms of gene transfer (bacteriophages or plasmids) (Table 5).",
+      "cite_spans": [
+        {
+          "start": 446,
+          "end": 448,
+          "mention": "53",
+          "ref_id": "BIBREF48"
+        },
+        {
+          "start": 449,
+          "end": 451,
+          "mention": "55",
+          "ref_id": "BIBREF50"
+        }
+      ],
+      "section": "Detection of recent HTs ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 0,
+          "end": 7,
+          "mention": "Table 5",
+          "ref_id": "TABREF4"
+        },
+        {
+          "start": 555,
+          "end": 562,
+          "mention": "Table 5",
+          "ref_id": "TABREF4"
+        },
+        {
+          "start": 860,
+          "end": 867,
+          "mention": "Table 5",
+          "ref_id": "TABREF4"
+        }
+      ]
+    },
+    {
+      "text": "It is worth noticing that most of the selected genes that are absent in K12 strains are involved in the pathogenicity of the other strains (52). E.coli 0157-H7 is the strain exhibiting the greatest number of genes absent in K12 strains [about 1400 (54)]. It has the greatest number of genes for which no homolog can be found (Table 5). Moreover, we are unable to propose a donor for a great part of these genes (Table 5). Many selected genes for E.coli 0157-H7 lie in the Ter region of the genome (between positions 2 000 000 and 2 500 000) in agreement with the published results (56).",
+      "cite_spans": [
+        {
+          "start": 140,
+          "end": 142,
+          "mention": "52",
+          "ref_id": "BIBREF47"
+        },
+        {
+          "start": 249,
+          "end": 251,
+          "mention": "54",
+          "ref_id": "BIBREF49"
+        },
+        {
+          "start": 582,
+          "end": 584,
+          "mention": "56",
+          "ref_id": "BIBREF51"
+        }
+      ],
+      "section": "Detection of recent HTs ::: RESULTS",
+      "ref_spans": [
+        {
+          "start": 326,
+          "end": 333,
+          "mention": "Table 5",
+          "ref_id": "TABREF4"
+        },
+        {
+          "start": 412,
+          "end": 419,
+          "mention": "Table 5",
+          "ref_id": "TABREF4"
+        }
+      ]
+    },
+    {
+      "text": "We have observed that most genomic regions are typical of the genome they belong to, using the signature as endpoint. Considering that the genomic signature is species-specific, atypicality of a region in terms of oligonucleotide usage has been promoted as a criterion for the detection of HTs. However, atypicality-based methods suffer several caveats that reduce their effectiveness in such a way that only a part of HTs can be detected. In fact, transfers between species with close signatures cannot be detected: significant differences between characteristics of transferred DNA and recipient species DNA are required. For similar reasons, HTs that were drastically ameliorated following their introduction cannot be detected either (8,14). The most stringent constraint, however, results from the size of the screening window. On the one hand, ideally, the best signal-to-noise ratio would be obtained when windows and HTs have a comparable size. On the other hand, the window size must be large enough to provide significant word counts, a requirement that strengthens with the size of the words under consideration and the intrinsic variability of the genomic signature along the genome. All together, the trade-off that has been implemented in this paper allows detecting atypical regions as small as 1 kb. In fact, rRNA regions sharing this characteristic were consistently detected. It must be pointed out that smaller fragments can be eventually detected if their signatures are radically atypical.",
+      "cite_spans": [
+        {
+          "start": 739,
+          "end": 740,
+          "mention": "8",
+          "ref_id": "BIBREF62"
+        },
+        {
+          "start": 741,
+          "end": 743,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        }
+      ],
+      "section": "Putative HTs ::: DISCUSSION",
+      "ref_spans": []
+    },
+    {
+      "text": "G+C% atypicality has often been considered as criterion for detecting HTs (8,24), but this approach suffered several drawbacks (28\u201330). It is to be noted that our signature-based method detects regions for which the G+C% lies within one standard deviation from the mean G+C% of the species (for instance, regions 2675251\u20132676250 in B.subtilis or 534751\u2013535250 in H.Influenzae, see also Supplementary Materials 2 and 4).",
+      "cite_spans": [
+        {
+          "start": 75,
+          "end": 76,
+          "mention": "8",
+          "ref_id": "BIBREF62"
+        },
+        {
+          "start": 77,
+          "end": 79,
+          "mention": "24",
+          "ref_id": "BIBREF16"
+        },
+        {
+          "start": 128,
+          "end": 130,
+          "mention": "28",
+          "ref_id": "BIBREF20"
+        },
+        {
+          "start": 131,
+          "end": 133,
+          "mention": "30",
+          "ref_id": "BIBREF23"
+        }
+      ],
+      "section": "Putative HTs ::: DISCUSSION",
+      "ref_spans": []
+    },
+    {
+      "text": "As already observed by Nicolas et al. (12) for B.subtilis, rRNA has definitely an atypical signature. It is systematically classified as outlier, whatever the species (Table 1). Although transfer of rRNA from one species to another is unlikely (11,57), it cannot be firmly ruled out. However, it is clear that the atypical signature of rRNA does not imply that they are horizontally transferred.",
+      "cite_spans": [
+        {
+          "start": 39,
+          "end": 41,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 245,
+          "end": 247,
+          "mention": "11",
+          "ref_id": "BIBREF2"
+        },
+        {
+          "start": 248,
+          "end": 250,
+          "mention": "57",
+          "ref_id": "BIBREF52"
+        }
+      ],
+      "section": "Putative HTs ::: DISCUSSION",
+      "ref_spans": [
+        {
+          "start": 168,
+          "end": 175,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "The signature approach has an interesting property (that it shares with HMM) (7,12,28): detection is not bound to any specific function in the genome. In contrast with most other methods, the signature approach not only detects genes, but whole transferred regions as well, in agreement with the described mechanisms of DNA exchange between species. It is to be noticed that the method allows detecting several atypical non-coding regions (Supplementary Materials 3, 5 and 7). One major difference between HMM and signature method lies beyond the time required for the learning process, in the few resources that HMM can mobilize to deal with a short \u2018one of its kind\u2019 HT. On the other hand, HTs shorter than 1 kb can hardly be detected by a signature-based approach. An innovative HT detector is likely to result from an adequate fusion of both methods.",
+      "cite_spans": [
+        {
+          "start": 78,
+          "end": 79,
+          "mention": "7",
+          "ref_id": "BIBREF61"
+        },
+        {
+          "start": 80,
+          "end": 82,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 83,
+          "end": 85,
+          "mention": "28",
+          "ref_id": "BIBREF20"
+        }
+      ],
+      "section": "Putative HTs ::: DISCUSSION",
+      "ref_spans": []
+    },
+    {
+      "text": "Several factors contribute to the efficiency of the search for donors. Of course, distance between putative HT and donor signatures is essential. Accuracy of signatures, linked to the length of available sequences, density of signatures in the \u2018vicinity\u2019 of HT, amount of amelioration sustained by HT during its presence in the host are also of importance [P. Deschavanne, S. Lespinats and B. Fertil, unpublished results; (25,27,31)]. Distance between the signature of a putative HT and the closest species varies to a large extent, but usually the shortest ones fall within the intra-genomic range (Table 1, Supplementary Materials 1, 2, 4 and 6). In some cases, the distance between the closest donor signature and the atypical segment signature is so great that no potential donor can be proposed (Supplementary Materials 1, 2, 4 and 6).",
+      "cite_spans": [
+        {
+          "start": 423,
+          "end": 425,
+          "mention": "25",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 426,
+          "end": 428,
+          "mention": "27",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 429,
+          "end": 431,
+          "mention": "31",
+          "ref_id": "BIBREF24"
+        }
+      ],
+      "section": "Potential donors ::: DISCUSSION",
+      "ref_spans": [
+        {
+          "start": 600,
+          "end": 607,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "When strong similarities between a given DNA sequence and a foreign species are observed, the hypothesis for an underlying transfer is highly strengthen. However, the \u2018true\u2019 donor has to be previously sequenced and included in our bank of signatures to allow such a situation to occur. Moreover, we must take into account the intrinsic variability of short DNA segment signature (which is a function of their size, but also species-specific) when compared with the signature of a complete genome or any other large species sample (25,27,31). In the present state, our signature database is in no way representative of the diversity and richness of life. However, it must be noticed that there is already an obvious structure (in terms of distances between signatures) expressing taxonomy relationships between species in our signature database (31,58\u201361). Related species are often found close to one another. Clusters of potential donors may consequently provide pertinent information about the origin of HTs.",
+      "cite_spans": [
+        {
+          "start": 531,
+          "end": 533,
+          "mention": "25",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 534,
+          "end": 536,
+          "mention": "27",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 537,
+          "end": 539,
+          "mention": "31",
+          "ref_id": "BIBREF24"
+        },
+        {
+          "start": 845,
+          "end": 847,
+          "mention": "31",
+          "ref_id": "BIBREF24"
+        },
+        {
+          "start": 848,
+          "end": 850,
+          "mention": "58",
+          "ref_id": "BIBREF53"
+        },
+        {
+          "start": 851,
+          "end": 853,
+          "mention": "61",
+          "ref_id": "BIBREF57"
+        }
+      ],
+      "section": "Potential donors ::: DISCUSSION",
+      "ref_spans": []
+    },
+    {
+      "text": "The diversity of signatures of putative HTs that can be observed for most of the species analyzed in this paper reveals the multiplicity of transfer events and donors (Supplementary Materials 2, 4 and 6). However, several outliers, not necessarily neighbors in the genome, are given the same set of potential donors (Table 1, Supplementary Materials 1, 2, 4 and 6). In general, the potential donors belong to few sets of taxonomically close species (Table 1) and share the biotope of the host (Supplementary Materials 1, 2, 4 and 6). For instance, B.subtilis, H.Influenzae and E.coli live in distinct biotopes; their potential donors do so as well. It is particularly encouraging to find that most of the potential donors that our approach has pointed out have had the opportunity to exchange DNA material with the recipient species.",
+      "cite_spans": [],
+      "section": "Potential donors ::: DISCUSSION",
+      "ref_spans": [
+        {
+          "start": 317,
+          "end": 324,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        },
+        {
+          "start": 450,
+          "end": 457,
+          "mention": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ]
+    },
+    {
+      "text": "Numerous viruses and plasmids qualify as potential donors (Tables 1 and 5, Supplementary Materials 1, 2, 4 and 6). It is not really surprising since they are known as HT vectors. They are often totally or partially inserted together with transferred genes in the host genome (14).",
+      "cite_spans": [
+        {
+          "start": 276,
+          "end": 278,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        }
+      ],
+      "section": "Potential donors ::: DISCUSSION",
+      "ref_spans": [
+        {
+          "start": 59,
+          "end": 67,
+          "mention": "Tables 1",
+          "ref_id": "TABREF0"
+        },
+        {
+          "start": 72,
+          "end": 73,
+          "mention": "5",
+          "ref_id": "TABREF4"
+        }
+      ]
+    },
+    {
+      "text": "Some atypical DNA segments are particularly peculiar. They are isolated, have a specific signature (distances from neighbors are great), so that they cannot be given a credible set of donors (Supplementary Materials 1, 2, 4 and 6). Lack of data in the search domain, shift of signature features after a substantial amelioration process, structural constraints serving special functions or roles (14,62) (as it is for rRNA coding regions) are some of the tracks that remain to explore in these circumstances.",
+      "cite_spans": [
+        {
+          "start": 396,
+          "end": 398,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 399,
+          "end": 401,
+          "mention": "62",
+          "ref_id": "BIBREF58"
+        }
+      ],
+      "section": "Potential donors ::: DISCUSSION",
+      "ref_spans": []
+    },
+    {
+      "text": "It would be interesting to localize the region the transfer may come from when the complete genome of the donor is available. However, homology (at the DNA level) is not a pertinent criterion for the comparison of sequences as soon as amelioration has taken place (8,14). In fact, homology is sometimes weak, e.g. between genes of Escherichia and Salmonella although these species have \u2018recently\u2019 diverged (34). It is clear that a more powerful search for the origin of putative HTs would have to embody models of amelioration [such as the one designed by Lawrence and Ochman (8)].",
+      "cite_spans": [
+        {
+          "start": 265,
+          "end": 266,
+          "mention": "8",
+          "ref_id": "BIBREF62"
+        },
+        {
+          "start": 267,
+          "end": 269,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 407,
+          "end": 409,
+          "mention": "34",
+          "ref_id": "BIBREF27"
+        },
+        {
+          "start": 577,
+          "end": 578,
+          "mention": "8",
+          "ref_id": "BIBREF62"
+        }
+      ],
+      "section": "Potential donors ::: DISCUSSION",
+      "ref_spans": []
+    },
+    {
+      "text": "When searching for very recent horizontally transferred genes, in different strains of a species for instance, it was possible to find a great homology between detected genes and some genes from other species (Table 5). In numerous cases, the selection of donors is consistent with FASTA results (Table 5). This confirms the pertinence, beyond the similarity of signature between putative HTs and donors, of the proposed method to retrieve the species of origin of a transferred region. It seems that the search for origin of HTs on the basis of genomic signature is a powerful approach to understand some of the mechanisms of evolution (13,63).",
+      "cite_spans": [
+        {
+          "start": 638,
+          "end": 640,
+          "mention": "13",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 641,
+          "end": 643,
+          "mention": "63",
+          "ref_id": "BIBREF59"
+        }
+      ],
+      "section": "Potential donors ::: DISCUSSION",
+      "ref_spans": [
+        {
+          "start": 210,
+          "end": 217,
+          "mention": "Table 5",
+          "ref_id": "TABREF4"
+        },
+        {
+          "start": 297,
+          "end": 304,
+          "mention": "Table 5",
+          "ref_id": "TABREF4"
+        }
+      ]
+    },
+    {
+      "text": "Oligonucleotide usage is known to be species-specific and to suffer only minor variations along the genome (25,27). Considered together, these properties allow searching for atypical local signatures that may point out DNA transfers. Results obtained with the 22 genomes analyzed in this paper are found in good agreement with literature (Tables 2\u20134, Supplementary Materials 3, 5 and 7) (12,14\u201316,24,34,35).",
+      "cite_spans": [
+        {
+          "start": 108,
+          "end": 110,
+          "mention": "25",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 111,
+          "end": 113,
+          "mention": "27",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 388,
+          "end": 390,
+          "mention": "12",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 391,
+          "end": 393,
+          "mention": "14",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 394,
+          "end": 396,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 397,
+          "end": 399,
+          "mention": "24",
+          "ref_id": "BIBREF16"
+        },
+        {
+          "start": 400,
+          "end": 402,
+          "mention": "34",
+          "ref_id": "BIBREF27"
+        },
+        {
+          "start": 403,
+          "end": 405,
+          "mention": "35",
+          "ref_id": "BIBREF28"
+        }
+      ],
+      "section": "CONCLUSION",
+      "ref_spans": [
+        {
+          "start": 339,
+          "end": 347,
+          "mention": "Tables 2",
+          "ref_id": "TABREF1"
+        },
+        {
+          "start": 348,
+          "end": 349,
+          "mention": "4",
+          "ref_id": "TABREF3"
+        }
+      ]
+    },
+    {
+      "text": "The species specificity of signature allows searching for donor species. Quite often, sets of donor species with common taxonomic features are obtained. With the help of environmental considerations, it is subsequently possible to identify (or collect clues about) potential donors. The search for donor makes use of non-homologous sequences. Partially sequenced species become consequently eligible, inasmuch 1.5 kb of the genome is available (25,27). Thanks to the exponentially growing rate of nucleotide databanks, the search for donor species by means of the sequence signature will turn more and more pertinent and fruitful in the future. In this context, it is worth noticing that computational power is clearly not an issue since the CGR algorithm described in this paper is fast and of 0 order (calculation time is proportional to the number of nucleotides).",
+      "cite_spans": [
+        {
+          "start": 445,
+          "end": 447,
+          "mention": "25",
+          "ref_id": "BIBREF17"
+        },
+        {
+          "start": 448,
+          "end": 450,
+          "mention": "27",
+          "ref_id": "BIBREF19"
+        }
+      ],
+      "section": "CONCLUSION",
+      "ref_spans": []
+    },
+    {
+      "text": "Several methods are proposed to look for HTs. The signature method, based on different hypotheses, is complementary to those already described. It seems that each method detects preferentially certain types of HTs (49,50). In agreement with many authors (1,16,49,50,64), it appears that the conjunction of several methods is required to obtain an overview of HT extent in a genome.",
+      "cite_spans": [
+        {
+          "start": 215,
+          "end": 217,
+          "mention": "49",
+          "ref_id": "BIBREF43"
+        },
+        {
+          "start": 218,
+          "end": 220,
+          "mention": "50",
+          "ref_id": "BIBREF45"
+        },
+        {
+          "start": 255,
+          "end": 256,
+          "mention": "1",
+          "ref_id": "BIBREF0"
+        },
+        {
+          "start": 257,
+          "end": 259,
+          "mention": "16",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 260,
+          "end": 262,
+          "mention": "49",
+          "ref_id": "BIBREF43"
+        },
+        {
+          "start": 263,
+          "end": 265,
+          "mention": "50",
+          "ref_id": "BIBREF45"
+        },
+        {
+          "start": 266,
+          "end": 268,
+          "mention": "64",
+          "ref_id": "BIBREF60"
+        }
+      ],
+      "section": "CONCLUSION",
+      "ref_spans": []
+    },
+    {
+      "text": "The signature method described in this paper generalized many approaches that ground the detection of outliers on the basis of the bias in oligonucleodides. The strong species specificity of the signature not only allows detecting various kinds of outliers but also provides clues about their possible origin. Obviously, the detection of HTs remains an open question; a consensus has still to emerge.",
+      "cite_spans": [],
+      "section": "CONCLUSION",
+      "ref_spans": []
+    },
+    {
+      "text": "Additional materials and experimentation with the genomic signature are available from the GENSTYLE site ().",
+      "cite_spans": [],
+      "section": "CONCLUSION",
+      "ref_spans": []
+    },
+    {
+      "text": "Supplementary Material is available at NAR Online.",
+      "cite_spans": [],
+      "section": "SUPPLEMENTARY MATERIAL",
+      "ref_spans": []
+    }
+  ],
+  "ref_entries": {
+    "TABREF0": {
+      "text": "Table 1: Main data for the 22 species\n",
+      "type": "table"
+    },
+    "TABREF1": {
+      "text": "Table 2: Agreement between methods for the analysis of B.subtilis genome in terms of Kappa\n",
+      "type": "table"
+    },
+    "TABREF2": {
+      "text": "Table 3: Agreement between methods for the analysis of H.Influenzae genome in terms of Kappa\n",
+      "type": "table"
+    },
+    "TABREF3": {
+      "text": "Table 4: Agreement between methods for the analysis of E.coli genome in terms of Kappa\n",
+      "type": "table"
+    },
+    "TABREF4": {
+      "text": "Table 5: Recent potential HTs (genes) in E.coli strains\n",
+      "type": "table"
+    },
+    "FIGREF0": {
+      "text": "Figure 1: Signatures (4-letter words and 5 kb windows) along genome for Clostridium acetobutylicum, Deinococcus radiodurans and Mycobacterium tuberculosis. In this kind of displays, lines represent the frequency of words along genome, columns represent signature of windows.",
+      "type": "figure"
+    },
+    "FIGREF1": {
+      "text": "Figure 2: Atypical regions for the B.subtilis genome (a) Upper panel: signatures along the genome (same as Figure 1). Lower panel: distances of local signatures to host signature (one window out of ten is shown). Distances are expressed in arbitrary units (AU). (b) Inset: close up of the 1116\u20131141 kb region of a putative HT, with gene composition, using 0.5 kb window and 50 bp step. Gray diamonds, host; closed diamonds, original rRNA-free regions; and multiple symbols, rRNA-containing regions.",
+      "type": "figure"
+    },
+    "FIGREF2": {
+      "text": "Figure 3: Atypical regions for the H.influenzae genome. Upper panel: signatures along the genome. Lower panel: distances of local signatures to the host signature (one window out of 10 is shown). Distances are expressed in AU. Gray diamonds, host; closed diamonds, original rRNA-free regions; and multiple symbols, rRNA regions.",
+      "type": "figure"
+    }
+  },
+  "back_matter": [],
+  "bib_entries": {
+    "BIBREF0": {
+      "title": "Horizontal gene transfer among microbial genomes: new insights from complete genome analysis",
+      "authors": [
+        {
+          "first": "J.A.",
+          "middle": [],
+          "last": "Eisen",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Curr. Opin. Genet. Dev.",
+      "volume": "10",
+      "issn": "",
+      "pages": "606-611",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF1": {
+      "title": "Horizontal gene transfer and the origin of species: lessons from bacteria",
+      "authors": [
+        {
+          "first": "F.",
+          "middle": [],
+          "last": "de la Cruz",
+          "suffix": ""
+        },
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Davies",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Trends Microbiol.",
+      "volume": "8",
+      "issn": "",
+      "pages": "128-132",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF2": {
+      "title": "Compositional biases of bacterial genomes and evolutionary implications",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Karlin",
+          "suffix": ""
+        },
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Mr\u00e0zek",
+          "suffix": ""
+        },
+        {
+          "first": "A.M.",
+          "middle": [],
+          "last": "Campbell",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "J. Bacteriol.",
+      "volume": "179",
+      "issn": "",
+      "pages": "3899-3913",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF3": {
+      "title": "Mining Bacillus subtilis chromosome heterogeneities using hidden Markov models",
+      "authors": [
+        {
+          "first": "P.",
+          "middle": [],
+          "last": "Nicolas",
+          "suffix": ""
+        },
+        {
+          "first": "L.",
+          "middle": [],
+          "last": "Bize",
+          "suffix": ""
+        },
+        {
+          "first": "F.",
+          "middle": [],
+          "last": "Muri",
+          "suffix": ""
+        },
+        {
+          "first": "M.",
+          "middle": [],
+          "last": "Hoebeke",
+          "suffix": ""
+        },
+        {
+          "first": "F.",
+          "middle": [],
+          "last": "Rodolphe",
+          "suffix": ""
+        },
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Ehrlich",
+          "suffix": ""
+        },
+        {
+          "first": "B.",
+          "middle": [],
+          "last": "Prum",
+          "suffix": ""
+        },
+        {
+          "first": "P.",
+          "middle": [],
+          "last": "Bessieres",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Nucleic Acids Res.",
+      "volume": "30",
+      "issn": "",
+      "pages": "1418-1426",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF4": {
+      "title": "Lateral gene transfer and the nature of bacterial innovation",
+      "authors": [
+        {
+          "first": "H.",
+          "middle": [],
+          "last": "Ochman",
+          "suffix": ""
+        },
+        {
+          "first": "J.G.",
+          "middle": [],
+          "last": "Lawrence",
+          "suffix": ""
+        },
+        {
+          "first": "E.A.",
+          "middle": [],
+          "last": "Groisman",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Nature",
+      "volume": "405",
+      "issn": "",
+      "pages": "299-304",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF5": {
+      "title": "Biased biological functions of horizontally transferred genes in prokaryotic genomes",
+      "authors": [
+        {
+          "first": "Y.",
+          "middle": [],
+          "last": "Nakamura",
+          "suffix": ""
+        },
+        {
+          "first": "T.",
+          "middle": [],
+          "last": "Itoh",
+          "suffix": ""
+        },
+        {
+          "first": "H.",
+          "middle": [],
+          "last": "Matsuda",
+          "suffix": ""
+        },
+        {
+          "first": "T.",
+          "middle": [],
+          "last": "Gojobori",
+          "suffix": ""
+        }
+      ],
+      "year": 2004,
+      "venue": "Nature Genet.",
+      "volume": "36",
+      "issn": "",
+      "pages": "760-766",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF6": {
+      "title": "Horizontal gene transfer in bacterial and archaeal complete genomes",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Garcia-Vallv\u00e9",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Romeu",
+          "suffix": ""
+        },
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Palau",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Genome Res.",
+      "volume": "10",
+      "issn": "",
+      "pages": "1719-1725",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF7": {
+      "title": "HGT-DB: a database of putative horizontally transferred genes in prokaryotic complete genomes",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Garcia-Vallve",
+          "suffix": ""
+        },
+        {
+          "first": "E.",
+          "middle": [],
+          "last": "Guzman",
+          "suffix": ""
+        },
+        {
+          "first": "M.A.",
+          "middle": [],
+          "last": "Montero",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Romeu",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Nucleic Acids Res.",
+      "volume": "31",
+      "issn": "",
+      "pages": "187-189",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF8": {
+      "title": "Horizontal gene transfer among genomes: the complexity hypothesis",
+      "authors": [
+        {
+          "first": "R.",
+          "middle": [],
+          "last": "Jain",
+          "suffix": ""
+        },
+        {
+          "first": "M.",
+          "middle": [],
+          "last": "Rivera",
+          "suffix": ""
+        },
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Lake",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Proc. Natl Acad. Sci. USA",
+      "volume": "96",
+      "issn": "",
+      "pages": "3801-3806",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF9": {
+      "title": "Detecting recombination from gene trees",
+      "authors": [
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Maynard-Smith",
+          "suffix": ""
+        },
+        {
+          "first": "N.H.",
+          "middle": [],
+          "last": "Smith",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Mol. Biol. Evol.",
+      "volume": "15",
+      "issn": "",
+      "pages": "590-599",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF10": {
+      "title": "Escherichia coli molecular phylogeny using the incongruence length difference test",
+      "authors": [
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Lecointre",
+          "suffix": ""
+        },
+        {
+          "first": "L.",
+          "middle": [],
+          "last": "Rachdi",
+          "suffix": ""
+        },
+        {
+          "first": "P.",
+          "middle": [],
+          "last": "Darlu",
+          "suffix": ""
+        },
+        {
+          "first": "E.",
+          "middle": [],
+          "last": "Denamur",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Mol. Biol. Evol.",
+      "volume": "15",
+      "issn": "",
+      "pages": "1685-1695",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF11": {
+      "title": "Horizontal gene transfer contributes to the wide distribution and evolution of type II restriction-modification systems",
+      "authors": [
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Jeltsch",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Pingoud",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "J. Mol. Evol.",
+      "volume": "42",
+      "issn": "",
+      "pages": "91-96",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF12": {
+      "title": "Evolution of aminoacyl-tRNA synthetases\u2014analysis of unique domain architectures and phylogenetic trees reveals a complex history of horizontal gene transfer events",
+      "authors": [
+        {
+          "first": "Y.I.",
+          "middle": [],
+          "last": "Wolf",
+          "suffix": ""
+        },
+        {
+          "first": "L.",
+          "middle": [],
+          "last": "Aravind",
+          "suffix": ""
+        },
+        {
+          "first": "N.V.",
+          "middle": [],
+          "last": "Grishin",
+          "suffix": ""
+        },
+        {
+          "first": "E.V.",
+          "middle": [],
+          "last": "Koonin",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Genome Res.",
+      "volume": "9",
+      "issn": "",
+      "pages": "689-710",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF13": {
+      "title": "Phylogenetic classification and the universal tree",
+      "authors": [
+        {
+          "first": "W.F.",
+          "middle": [],
+          "last": "Doolittle",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Science",
+      "volume": "284",
+      "issn": "",
+      "pages": "2124-2129",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF14": {
+      "title": "Heterogeneity of genomes: measures and values",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Karlin",
+          "suffix": ""
+        },
+        {
+          "first": "I.",
+          "middle": [],
+          "last": "Ladunga",
+          "suffix": ""
+        },
+        {
+          "first": "B.E.",
+          "middle": [],
+          "last": "Blaisdell",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Proc. Natl Acad. Sci. USA",
+      "volume": "91",
+      "issn": "",
+      "pages": "12837-12841",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF15": {
+      "title": "Detecting alien genes in bacterial genomes",
+      "authors": [
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Mrazek",
+          "suffix": ""
+        },
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Karlin",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Ann. NY Acad. Sci.",
+      "volume": "870",
+      "issn": "",
+      "pages": "314-329",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF16": {
+      "title": "Detecting anomalous gene clusters and pathogenicity islands in diverse bacterial genomes",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Karlin",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Trends Microbiol.",
+      "volume": "9",
+      "issn": "",
+      "pages": "335-343",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF17": {
+      "title": "Genomic signature is preserved in short DNA fragments",
+      "authors": [
+        {
+          "first": "P.",
+          "middle": [],
+          "last": "Deschavanne",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Giron",
+          "suffix": ""
+        },
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Vilain",
+          "suffix": ""
+        },
+        {
+          "first": "C.",
+          "middle": [],
+          "last": "Dufraigne",
+          "suffix": ""
+        },
+        {
+          "first": "B.",
+          "middle": [],
+          "last": "Fertil",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "",
+      "volume": "",
+      "issn": "",
+      "pages": "161-167",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF18": {
+      "title": "Dinucleotide relative abundance extremes: a genomic signature",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Karlin",
+          "suffix": ""
+        },
+        {
+          "first": "C.",
+          "middle": [],
+          "last": "Burge",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Trends Genet.",
+      "volume": "11",
+      "issn": "",
+      "pages": "283-290",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF19": {
+      "title": "Capturing whole-genome characteristics in short sequences using a na\u00efve Bayesian classifier",
+      "authors": [
+        {
+          "first": "R.",
+          "middle": [],
+          "last": "Sandberg",
+          "suffix": ""
+        },
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Winberg",
+          "suffix": ""
+        },
+        {
+          "first": "C.-I.",
+          "middle": [],
+          "last": "Br\u00e4nden",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Kaske",
+          "suffix": ""
+        },
+        {
+          "first": "I.",
+          "middle": [],
+          "last": "Ernberg",
+          "suffix": ""
+        },
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "C\u00f6ster",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Genome Res.",
+      "volume": "11",
+      "issn": "",
+      "pages": "1404-1409",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF20": {
+      "title": "Codon bias and base composition are poor indicators of horizontally transferred genes",
+      "authors": [
+        {
+          "first": "L.",
+          "middle": [],
+          "last": "Koski",
+          "suffix": ""
+        },
+        {
+          "first": "R.",
+          "middle": [],
+          "last": "Morton",
+          "suffix": ""
+        },
+        {
+          "first": "L.",
+          "middle": [],
+          "last": "Golding",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Mol. Biol. Evol.",
+      "volume": "18",
+      "issn": "",
+      "pages": "404-412",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF21": {
+      "title": "Limitations of compositional approach to identifying horizontally transferred gene",
+      "authors": [
+        {
+          "first": "B.",
+          "middle": [],
+          "last": "Wang",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "J. Mol. Evol.",
+      "volume": "53",
+      "issn": "",
+      "pages": "244-250",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF22": {
+      "title": "Gene transfer is a major factor in bacterial evolution",
+      "authors": [
+        {
+          "first": "R.",
+          "middle": [],
+          "last": "Lan",
+          "suffix": ""
+        },
+        {
+          "first": "P.R.",
+          "middle": [],
+          "last": "Reeves",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Mol. Biol. Evol.",
+      "volume": "13",
+      "issn": "",
+      "pages": "47-55",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF23": {
+      "title": "Intragenomic base content variation is a potential source of biases when searching for horizontally transferred genes",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Guindon",
+          "suffix": ""
+        },
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Perriere",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Mol. Biol. Evol.",
+      "volume": "18",
+      "issn": "",
+      "pages": "1838-1840",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF24": {
+      "title": "Genomic signature: characterization and classification of species assessed by chaos game representation of sequences",
+      "authors": [
+        {
+          "first": "P.J.",
+          "middle": [],
+          "last": "Deschavanne",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Giron",
+          "suffix": ""
+        },
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Vilain",
+          "suffix": ""
+        },
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Fagot",
+          "suffix": ""
+        },
+        {
+          "first": "B.",
+          "middle": [],
+          "last": "Fertil",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Mol. Biol. Evol.",
+      "volume": "16",
+      "issn": "",
+      "pages": "1391-1399",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF25": {
+      "title": "An archaeal genomic signature",
+      "authors": [
+        {
+          "first": "D.",
+          "middle": [],
+          "last": "Graham",
+          "suffix": ""
+        },
+        {
+          "first": "R.",
+          "middle": [],
+          "last": "Overbeek",
+          "suffix": ""
+        },
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Olsen",
+          "suffix": ""
+        },
+        {
+          "first": "C.",
+          "middle": [],
+          "last": "Woese",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Proc. Natl Acad. Sci. USA",
+      "volume": "97",
+      "issn": "",
+      "pages": "3304-3308",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF26": {
+      "title": "Chaos game representation of gene structure",
+      "authors": [
+        {
+          "first": "H.J.",
+          "middle": [],
+          "last": "Jeffrey",
+          "suffix": ""
+        }
+      ],
+      "year": 1990,
+      "venue": "Nucleic Acids Res.",
+      "volume": "18",
+      "issn": "",
+      "pages": "2163-2170",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF27": {
+      "title": "Molecular archaeology of the Escherichia coli genome",
+      "authors": [
+        {
+          "first": "J.G.",
+          "middle": [],
+          "last": "Lawrence",
+          "suffix": ""
+        },
+        {
+          "first": "H.",
+          "middle": [],
+          "last": "Ochman",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Proc. Natl Acad. Sci. USA",
+      "volume": "95",
+      "issn": "",
+      "pages": "9413-9417",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF28": {
+      "title": "How to interpret an anonymous bacterial genome: machine learning approach to gene identification",
+      "authors": [
+        {
+          "first": "W.S.",
+          "middle": [],
+          "last": "Hayes",
+          "suffix": ""
+        },
+        {
+          "first": "M.",
+          "middle": [],
+          "last": "Borodovsky",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Genome Res.",
+      "volume": "8",
+      "issn": "",
+      "pages": "1154-1171",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF29": {
+      "title": "Codon usage and lateral gene transfer in Bacillus subtilis",
+      "authors": [
+        {
+          "first": "I.",
+          "middle": [],
+          "last": "Moszer",
+          "suffix": ""
+        },
+        {
+          "first": "E.P.",
+          "middle": [],
+          "last": "Rocha",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Danchin",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Curr. Opin. Microbiol.",
+      "volume": "2",
+      "issn": "",
+      "pages": "524-528",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF30": {
+      "title": "Evidence for horizontal gene transfer in Escherichia coli speciation",
+      "authors": [
+        {
+          "first": "C.",
+          "middle": [],
+          "last": "Medigue",
+          "suffix": ""
+        },
+        {
+          "first": "T.",
+          "middle": [],
+          "last": "Rouxel",
+          "suffix": ""
+        },
+        {
+          "first": "P.",
+          "middle": [],
+          "last": "Vigier",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Henaut",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Danchin",
+          "suffix": ""
+        }
+      ],
+      "year": 1991,
+      "venue": "J. Mol. Biol.",
+      "volume": "222",
+      "issn": "",
+      "pages": "851-856",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF31": {
+      "title": "Oligonucleotide bias in Bacillus subtilis: general trends and taxonomic comparisons",
+      "authors": [
+        {
+          "first": "E.P.C.",
+          "middle": [],
+          "last": "Rocha",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Viari",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Danchin",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Nucleic Acid Res.",
+      "volume": "26",
+      "issn": "",
+      "pages": "2971-2980",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF32": {
+      "title": "Bacterial DNA strand compositional asymmetry",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Karlin",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Trends Microbiol.",
+      "volume": "7",
+      "issn": "",
+      "pages": "305-308",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF33": {
+      "title": "Evolution by acquisition: the case for horizontal gene transfers",
+      "authors": [
+        {
+          "first": "M.W.",
+          "middle": [],
+          "last": "Smith",
+          "suffix": ""
+        },
+        {
+          "first": "D.F.",
+          "middle": [],
+          "last": "Feng",
+          "suffix": ""
+        },
+        {
+          "first": "R.F.",
+          "middle": [],
+          "last": "Doolittle",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Trends Biochem. Sci.",
+      "volume": "17",
+      "issn": "",
+      "pages": "489-493",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF34": {
+      "title": "Asymmetric substitution patterns in the two DNA strands of bacteria",
+      "authors": [
+        {
+          "first": "J.R.",
+          "middle": [],
+          "last": "Lobry",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Mol. Biol. Evol.",
+      "volume": "13",
+      "issn": "",
+      "pages": "660-665",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF35": {
+      "title": "Asymmetric directional mutation pressures in bacteria",
+      "authors": [
+        {
+          "first": "J.R.",
+          "middle": [],
+          "last": "Lobry",
+          "suffix": ""
+        },
+        {
+          "first": "N.",
+          "middle": [],
+          "last": "Sueoka",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Genome Biol.",
+      "volume": "3",
+      "issn": "",
+      "pages": "0058.1-0058.14",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF36": {
+      "title": "Strand compositional asymmetry in bacterial and large viral genomes",
+      "authors": [
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Mrazek",
+          "suffix": ""
+        },
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Karlin",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Proc. Natl Acad. Sci. USA",
+      "volume": "95",
+      "issn": "",
+      "pages": "3720-3725",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF37": {
+      "title": "Tree structured classifiers",
+      "authors": [
+        {
+          "first": "L.",
+          "middle": [],
+          "last": "Breiman",
+          "suffix": ""
+        },
+        {
+          "first": "J.H.",
+          "middle": [],
+          "last": "Friedman",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Richard",
+          "suffix": ""
+        },
+        {
+          "first": "C.J.",
+          "middle": [],
+          "last": "Stone",
+          "suffix": ""
+        }
+      ],
+      "year": 1984,
+      "venue": "Classification and Regression Trees",
+      "volume": "",
+      "issn": "",
+      "pages": "20-23",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF38": {
+      "title": "",
+      "authors": [
+        {
+          "first": "M.",
+          "middle": [],
+          "last": "Ledoux",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "The Concentration of Measure Phenomenon",
+      "volume": "",
+      "issn": "",
+      "pages": null,
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF39": {
+      "title": "Global dinucleotide signatures and analysis of genomic heterogeneity",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Karlin",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Curr. Opin. Microbiol.",
+      "volume": "1",
+      "issn": "",
+      "pages": "598-610",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF40": {
+      "title": "Comparative DNA analysis across diverse genomes",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Karlin",
+          "suffix": ""
+        },
+        {
+          "first": "A.M.",
+          "middle": [],
+          "last": "Campbell",
+          "suffix": ""
+        },
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Mrazek",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Annu. Rev. Genet.",
+      "volume": "32",
+      "issn": "",
+      "pages": "185-225",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF41": {
+      "title": "The complete genome sequence of the gram-positive bacterium Bacillus subtilis",
+      "authors": [
+        {
+          "first": "F.",
+          "middle": [],
+          "last": "Kunst",
+          "suffix": ""
+        },
+        {
+          "first": "N.",
+          "middle": [],
+          "last": "Ogasawara",
+          "suffix": ""
+        },
+        {
+          "first": "I.",
+          "middle": [],
+          "last": "Moszer",
+          "suffix": ""
+        },
+        {
+          "first": "A.M.",
+          "middle": [],
+          "last": "Albertini",
+          "suffix": ""
+        },
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Alloni",
+          "suffix": ""
+        },
+        {
+          "first": "V.",
+          "middle": [],
+          "last": "Azevedo",
+          "suffix": ""
+        },
+        {
+          "first": "M.G.",
+          "middle": [],
+          "last": "Bertero",
+          "suffix": ""
+        },
+        {
+          "first": "P.",
+          "middle": [],
+          "last": "Bessieres",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Bolotin",
+          "suffix": ""
+        },
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Borchert",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "Nature",
+      "volume": "390",
+      "issn": "",
+      "pages": "249-256",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF42": {
+      "title": "Similarities and dissimilarities of phage genomes",
+      "authors": [
+        {
+          "first": "B.E.",
+          "middle": [],
+          "last": "Blaisdell",
+          "suffix": ""
+        },
+        {
+          "first": "A.M.",
+          "middle": [],
+          "last": "Campbell",
+          "suffix": ""
+        },
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Karlin",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Proc. Natl Acad. Sci. USA",
+      "volume": "93",
+      "issn": "",
+      "pages": "5854-5859",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF43": {
+      "title": "On surrogate methods for detecting lateral gene transfer",
+      "authors": [
+        {
+          "first": "M.A.",
+          "middle": [],
+          "last": "Ragan",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "FEMS Microbiol. Lett.",
+      "volume": "201",
+      "issn": "",
+      "pages": "187-191",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF44": {
+      "title": "Horizontal gene transfer and bacterial diversity",
+      "authors": [
+        {
+          "first": "C.",
+          "middle": [],
+          "last": "Dutta",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Pan",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "J. Biosci.",
+      "volume": "27",
+      "issn": "",
+      "pages": "27-33",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF45": {
+      "title": "Reconciling the many faces of lateral gene transfer",
+      "authors": [
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Lawrence",
+          "suffix": ""
+        },
+        {
+          "first": "H.",
+          "middle": [],
+          "last": "Ochman",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Trends Microbiol.",
+      "volume": "10",
+      "issn": "",
+      "pages": "1-4",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF46": {
+      "title": "",
+      "authors": [
+        {
+          "first": "J.L.",
+          "middle": [],
+          "last": "Fleiss",
+          "suffix": ""
+        }
+      ],
+      "year": 1981,
+      "venue": "Statistical Methods for Rates and Proportions",
+      "volume": "",
+      "issn": "",
+      "pages": "38-46",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF47": {
+      "title": "The source of laterally transferred genes in bacterial genomes",
+      "authors": [
+        {
+          "first": "V.",
+          "middle": [],
+          "last": "Daubin",
+          "suffix": ""
+        },
+        {
+          "first": "E.",
+          "middle": [],
+          "last": "Lerat",
+          "suffix": ""
+        },
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Perriere",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Genome Biol.",
+      "volume": "4",
+      "issn": "",
+      "pages": null,
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF48": {
+      "title": "Extensive mosaic structure revealed by the complete genome sequence of uropathogenic Escherichia coli",
+      "authors": [
+        {
+          "first": "R.A.",
+          "middle": [],
+          "last": "Welch",
+          "suffix": ""
+        },
+        {
+          "first": "V.",
+          "middle": [],
+          "last": "Burland",
+          "suffix": ""
+        },
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Plunkett",
+          "suffix": "III"
+        },
+        {
+          "first": "P.",
+          "middle": [],
+          "last": "Redford",
+          "suffix": ""
+        },
+        {
+          "first": "P.",
+          "middle": [],
+          "last": "Roesch",
+          "suffix": ""
+        },
+        {
+          "first": "D.",
+          "middle": [],
+          "last": "Rasko",
+          "suffix": ""
+        },
+        {
+          "first": "E.L.",
+          "middle": [],
+          "last": "Buckles",
+          "suffix": ""
+        },
+        {
+          "first": "S.R.",
+          "middle": [],
+          "last": "Liou",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Boutin",
+          "suffix": ""
+        },
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Hackett",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Proc. Natl Acad. Sci. USA",
+      "volume": "99",
+      "issn": "",
+      "pages": "17020-17024",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF49": {
+      "title": "Genome sequence of enterohaemorrhagic Escherichia coli O157:H7",
+      "authors": [
+        {
+          "first": "N.T.",
+          "middle": [],
+          "last": "Perna",
+          "suffix": ""
+        },
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Plunkett",
+          "suffix": "III"
+        },
+        {
+          "first": "V.",
+          "middle": [],
+          "last": "Burland",
+          "suffix": ""
+        },
+        {
+          "first": "B.",
+          "middle": [],
+          "last": "Mau",
+          "suffix": ""
+        },
+        {
+          "first": "J.D.",
+          "middle": [],
+          "last": "Glasner",
+          "suffix": ""
+        },
+        {
+          "first": "D.J.",
+          "middle": [],
+          "last": "Rose",
+          "suffix": ""
+        },
+        {
+          "first": "G.F.",
+          "middle": [],
+          "last": "Mayhew",
+          "suffix": ""
+        },
+        {
+          "first": "P.S.",
+          "middle": [],
+          "last": "Evans",
+          "suffix": ""
+        },
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Gregor",
+          "suffix": ""
+        },
+        {
+          "first": "H.A.",
+          "middle": [],
+          "last": "Kirkpatrick",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Nature",
+      "volume": "409",
+      "issn": "",
+      "pages": "529-533",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF50": {
+      "title": "Complete genome sequence and comparative genomics of Shigella flexneri serotype 2a strain 2457T",
+      "authors": [
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Wei",
+          "suffix": ""
+        },
+        {
+          "first": "M.B.",
+          "middle": [],
+          "last": "Goldberg",
+          "suffix": ""
+        },
+        {
+          "first": "V.",
+          "middle": [],
+          "last": "Burland",
+          "suffix": ""
+        },
+        {
+          "first": "M.M.",
+          "middle": [],
+          "last": "Venkatesan",
+          "suffix": ""
+        },
+        {
+          "first": "W.",
+          "middle": [],
+          "last": "Deng",
+          "suffix": ""
+        },
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Fournier",
+          "suffix": ""
+        },
+        {
+          "first": "G.F.",
+          "middle": [],
+          "last": "Mayhew",
+          "suffix": ""
+        },
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Plunkett",
+          "suffix": "III"
+        },
+        {
+          "first": "D.J.",
+          "middle": [],
+          "last": "Rose",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Darling",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Infect. Immun.",
+      "volume": "71",
+      "issn": "",
+      "pages": "2775-2786",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF51": {
+      "title": "G+C3 structuring along the genome: a common feature in prokaryotes",
+      "authors": [
+        {
+          "first": "V.",
+          "middle": [],
+          "last": "Daubin",
+          "suffix": ""
+        },
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Perri\u00e8re",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Mol. Biol. Evol.",
+      "volume": "20",
+      "issn": "",
+      "pages": "471-483",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF52": {
+      "title": "Statistical significance of sequence patterns in proteins",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Karlin",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Curr. Opin. Struct. Biol.",
+      "volume": "5",
+      "issn": "",
+      "pages": "360-371",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF53": {
+      "title": "Genomic signature: A global sequence analysis concept applied to phylogeny",
+      "authors": [
+        {
+          "first": "C.",
+          "middle": [],
+          "last": "Chapus",
+          "suffix": ""
+        },
+        {
+          "first": "B.",
+          "middle": [],
+          "last": "Fertil",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Giron",
+          "suffix": ""
+        },
+        {
+          "first": "P.",
+          "middle": [],
+          "last": "Deschavanne",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "",
+      "volume": "",
+      "issn": "",
+      "pages": "183-184",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF54": {
+      "title": "A genomic schism in birds revealed by phylogenetic analysis of DNA strings",
+      "authors": [
+        {
+          "first": "S.",
+          "middle": [],
+          "last": "Edwards",
+          "suffix": ""
+        },
+        {
+          "first": "B.",
+          "middle": [],
+          "last": "Fertil",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Giron",
+          "suffix": ""
+        },
+        {
+          "first": "P.J.",
+          "middle": [],
+          "last": "Deschavanne",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Syst. Biol.",
+      "volume": "51",
+      "issn": "",
+      "pages": "599-613",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF55": {
+      "title": "Lateral genomics",
+      "authors": [
+        {
+          "first": "W.F.",
+          "middle": [],
+          "last": "Doolittle",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Trends Cell Biol.",
+      "volume": "9",
+      "issn": "",
+      "pages": "M5-M8",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF56": {
+      "title": "Relationship of SARS-CoV to other pathogenic RNA viruses explored by tetranucleotide usage profiling",
+      "authors": [
+        {
+          "first": "Y.L.",
+          "middle": [],
+          "last": "Yap",
+          "suffix": ""
+        },
+        {
+          "first": "X.W.",
+          "middle": [],
+          "last": "Zhang",
+          "suffix": ""
+        },
+        {
+          "first": "A.",
+          "middle": [],
+          "last": "Danchin",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "BMC Bioinformatics",
+      "volume": "4",
+      "issn": "",
+      "pages": null,
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF57": {
+      "title": "Evolutionary implications of microbial genome tetranucleotide frequency biases",
+      "authors": [
+        {
+          "first": "D.T.",
+          "middle": [],
+          "last": "Pride",
+          "suffix": ""
+        },
+        {
+          "first": "R.J.",
+          "middle": [],
+          "last": "Meinersmann",
+          "suffix": ""
+        },
+        {
+          "first": "T.M.",
+          "middle": [],
+          "last": "Wassenaar",
+          "suffix": ""
+        },
+        {
+          "first": "M.J.",
+          "middle": [],
+          "last": "Blaser",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Genome Res.",
+      "volume": "13",
+      "issn": "",
+      "pages": "145-158",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF58": {
+      "title": "Use and misuse of correspondence analysis in codon usage studies",
+      "authors": [
+        {
+          "first": "G.",
+          "middle": [],
+          "last": "Perriere",
+          "suffix": ""
+        },
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Thioulouse",
+          "suffix": ""
+        }
+      ],
+      "year": 2002,
+      "venue": "Nucleic Acid Res.",
+      "volume": "30",
+      "issn": "",
+      "pages": "4548-4555",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF59": {
+      "title": "Ancient horizontal gene transfer",
+      "authors": [
+        {
+          "first": "J.R.",
+          "middle": [],
+          "last": "Brown",
+          "suffix": ""
+        }
+      ],
+      "year": 2003,
+      "venue": "Nature Rev. Genet.",
+      "volume": "4",
+      "issn": "",
+      "pages": "121-132",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF60": {
+      "title": "Assessing evolutionary relationships among microbes from whole genome analysis",
+      "authors": [
+        {
+          "first": "J.A.",
+          "middle": [],
+          "last": "Eisen",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Curr. Opin. Microbiol.",
+      "volume": "3",
+      "issn": "",
+      "pages": "475-480",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF61": {
+      "title": "A Hidden Markov Model approach to variation among sites in rate of evolution",
+      "authors": [
+        {
+          "first": "J.",
+          "middle": [],
+          "last": "Felsenstein",
+          "suffix": ""
+        },
+        {
+          "first": "G.A.",
+          "middle": [],
+          "last": "Churchill",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Mol. Biol. Evol.",
+      "volume": "13",
+      "issn": "",
+      "pages": "93-104",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF62": {
+      "title": "Amelioration of bacterial genomes: rates of change and exchange",
+      "authors": [
+        {
+          "first": "J.G.",
+          "middle": [],
+          "last": "Lawrence",
+          "suffix": ""
+        },
+        {
+          "first": "H.",
+          "middle": [],
+          "last": "Ochman",
+          "suffix": ""
+        }
+      ],
+      "year": 1997,
+      "venue": "J. Mol. Evol.",
+      "volume": "44",
+      "issn": "",
+      "pages": "383-397",
+      "other_ids": {
+        "DOI": []
+      }
+    },
+    "BIBREF63": {
+      "title": "Horizontal gene transfer: evidence and possible consequences",
+      "authors": [
+        {
+          "first": "M.",
+          "middle": [],
+          "last": "Syvanen",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Annu. Rev. Genet.",
+      "volume": "28",
+      "issn": "",
+      "pages": "237-261",
+      "other_ids": {
+        "DOI": []
+      }
+    }
+  }
+}

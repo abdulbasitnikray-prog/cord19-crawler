@@ -1,0 +1,2474 @@
+{
+  "paper_id": "5f48792a5fa08bed9f56016f4981ae2ca6031b32",
+  "metadata": {
+    "title": "",
+    "authors": [
+      {
+        "first": "Joseph",
+        "middle": [
+          "B"
+        ],
+        "last": "Domachowske",
+        "suffix": "",
+        "affiliation": {},
+        "email": ""
+      },
+      {
+        "first": "Cynthia",
+        "middle": [
+          "A"
+        ],
+        "last": "Bonville",
+        "suffix": "",
+        "affiliation": {},
+        "email": ""
+      },
+      {
+        "first": "Helene",
+        "middle": [
+          "F"
+        ],
+        "last": "Rosenberg",
+        "suffix": "",
+        "affiliation": {
+          "laboratory": "Laboratory of Host Defenses",
+          "institution": "National Institutes of Health",
+          "location": {
+            "settlement": "Bethesda",
+            "region": "Maryland",
+            "country": "USA"
+          }
+        },
+        "email": ""
+      }
+    ]
+  },
+  "abstract": [
+    {
+      "text": "commentary review reports primary research CCR = chemokine receptor; ICAM = intercellular adhesion molecule; MIP = macrophage inflammatory protein; NF-\u03baB = nuclear factor-\u03baB; PCR = polymerase chain reaction; pfu = plaque-forming units; PVM = pneumonia virus of mice; RANTES = regulated upon activation, normal T-cell expressed and secreted; RSV = respiratory syncytial virus; TNF = tumor necrosis factor.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    },
+    {
+      "text": "Respiratory syncytial virus (RSV) and pneumonia virus of mice (PVM) are viruses of the family Paramyxoviridae, subfamily pneumovirus, which cause clinically important respiratory infections in humans and rodents, respectively. The respiratory epithelial target cells respond to viral infection with specific alterations in gene expression, including production of chemoattractant cytokines, adhesion molecules, elements that are related to the apoptosis response, and others that remain incompletely understood. Here we review our current understanding of these mucosal responses and discuss several genomic approaches, including differential display reverse transcription-polymerase chain reaction (PCR) and gene array strategies, that will permit us to unravel the nature of these responses in a more complete and systematic manner.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Abstract"
+    }
+  ],
+  "body_text": [
+    {
+      "text": "RSV and PVM are viruses of the family Paramyxoviridae, subfamily pneumovirus; they are enveloped, singlestranded, nonsegmented RNA viruses that can cause intense viral bronchiolitis in humans and mice, respectively. In its most severe form, the lower respiratory tract infection caused by pneumoviruses is associated with the development of peribronchiolar infiltrates that are accompanied by submucosal edema and bronchorrhea, and ultimately leads to bronchiolar obstruction and compromised oxygen transfer. As the infection is confined to the respiratory epithelium, the responses of these cells are clearly of primary importance in determining the nature and extent of the resulting inflammatory process.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Introduction"
+    },
+    {
+      "text": "Most of our understanding of responses to pneumovirus infection has emerged from studies of RSV infection of human epithelial target cells in vitro; a list of genes and/or gene products produced by epithelial cells in response to RSV infection in vitro is provided in Table 1 . At the cellular level, epithelial cells initially respond to RSV infection by reducing their ciliary beat frequency. Production and release of chemoattractant cytokines (chemokines) can be observed as early as 12 h after infection, leading to the recruitment of specific leukocyte subsets to the lung tissue. RSV-infected epithelial cells become resistant to tumor necrosis factor (TNF)-\u03b1-induced apoptosis, but later fuse to form giant-cell syncytia and die by cellular necrosis. We review the molecular bases (to the extent that they",
+      "cite_spans": [],
+      "ref_spans": [
+        {
+          "start": 268,
+          "end": 275,
+          "text": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ],
+      "section": "Introduction"
+    },
+    {
+      "text": "are understood) of these specific responses, and discuss several novel strategies that may permit us to study the responses to RSV and PVM infection in a more coherent and systematic manner.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Gene expression in epithelial cells in response to pneumovirus infection"
+    },
+    {
+      "text": "Tristram et al [1] observed that explanted respiratory epithelial cells slow their ciliary beat frequency almost immediately after exposure to RSV, with complete ciliostasis seen as early as 6 h after the initial infection. The molecular basis of ciliostasis remains completely unknown.",
+      "cite_spans": [
+        {
+          "start": 15,
+          "end": 18,
+          "text": "[1]",
+          "ref_id": "BIBREF0"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Ciliostasis"
+    },
+    {
+      "text": "The chemokines and cytokines with production and release that has been associated with RSV infection of human epithelial cells are listed in Table 1 . Much of this work was also recently reviewed elsewhere [2, 3] . We focus here on the three chemokines whose molecular mechanisms and physiologic implications are best understood.",
+      "cite_spans": [
+        {
+          "start": 206,
+          "end": 209,
+          "text": "[2,",
+          "ref_id": "BIBREF1"
+        },
+        {
+          "start": 210,
+          "end": 212,
+          "text": "3]",
+          "ref_id": "BIBREF2"
+        }
+      ],
+      "ref_spans": [
+        {
+          "start": 141,
+          "end": 148,
+          "text": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ],
+      "section": "Production and release of chemokines"
+    },
+    {
+      "text": "The earliest reports on this subject described production of the neutrophil chemoattractant IL-8 from tissue culture supernatants from RSV-infected cells [4] [5] [6] and in nasal secretions from patients with viral rhinitis [7] . IL-8 has since been detected in lower airway secretions from patients with severe RSV bronchiolitis [8] , and the neutrophil influx observed in response to this infection is probably due, at least in part, to the activity of this chemokine.",
+      "cite_spans": [
+        {
+          "start": 154,
+          "end": 157,
+          "text": "[4]",
+          "ref_id": "BIBREF3"
+        },
+        {
+          "start": 158,
+          "end": 161,
+          "text": "[5]",
+          "ref_id": "BIBREF4"
+        },
+        {
+          "start": 162,
+          "end": 165,
+          "text": "[6]",
+          "ref_id": "BIBREF5"
+        },
+        {
+          "start": 224,
+          "end": 227,
+          "text": "[7]",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 330,
+          "end": 333,
+          "text": "[8]",
+          "ref_id": "BIBREF7"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Interleukin-8"
+    },
+    {
+      "text": "At the cellular level IL-8 production can be observed in response to inactivated RSV virions, whereas IL-8 production in response to active infection was inhibited by ribavarin, amiloride, and antioxidants [9, 10] . Several groups have demonstrated activation of the transcription factor nuclear factor-\u03baB (NF-\u03baB) in response to RSV infection, and NF-\u03baB is recognized for its central role in eliciting the production of IL-8 [9, 11, 12] . The transcription factor NF-IL-6 is also produced in response to RSV infection [13] , and participates in a co-operative manner with NF-\u03baB in the regulation of IL-8 gene expression [11] , although later studies suggest that activator protein-1 may function preferentially in this role [14] . Interestingly, the NF-\u03baB regulator I\u03baB\u03b1, which functions by inhibiting NF-\u03baB activation in response to TNF-\u03b1, was produced with different kinetics and does not promote a reversal of NF-\u03baB activation in response to RSV infection as it does in response to TNF-\u03b1 [15] . Most recently, Casola et al [16] demonstrated that the IL-8 promoter contains independent response elements, with nucleotides -162 to -132 representing a unique RSV response element that is distinct from elements necessary for IL-8 production in response to TNF-\u03b1. This concept of a stimulus-specific response will probably make an important contribution toward our understanding of how pneumoviruses promote transcription of unique and specific sets of independent gene products.",
+      "cite_spans": [
+        {
+          "start": 206,
+          "end": 209,
+          "text": "[9,",
+          "ref_id": "BIBREF8"
+        },
+        {
+          "start": 210,
+          "end": 213,
+          "text": "10]",
+          "ref_id": "BIBREF9"
+        },
+        {
+          "start": 425,
+          "end": 428,
+          "text": "[9,",
+          "ref_id": "BIBREF8"
+        },
+        {
+          "start": 429,
+          "end": 432,
+          "text": "11,",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 433,
+          "end": 436,
+          "text": "12]",
+          "ref_id": "BIBREF11"
+        },
+        {
+          "start": 518,
+          "end": 522,
+          "text": "[13]",
+          "ref_id": "BIBREF12"
+        },
+        {
+          "start": 620,
+          "end": 624,
+          "text": "[11]",
+          "ref_id": "BIBREF10"
+        },
+        {
+          "start": 724,
+          "end": 728,
+          "text": "[14]",
+          "ref_id": "BIBREF13"
+        },
+        {
+          "start": 991,
+          "end": 995,
+          "text": "[15]",
+          "ref_id": "BIBREF14"
+        },
+        {
+          "start": 1026,
+          "end": 1030,
+          "text": "[16]",
+          "ref_id": "BIBREF15"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Interleukin-8"
+    },
+    {
+      "text": "The pleiotropic chemokine regulated upon activation, normal T-cell expressed and secreted (RANTES) has also been detected in supernatants from RSV-infected epithelial cells in culture [17, 18] , as well as in upper and lower airway secretions from patients infected with this virus [7, 8] . RANTES acts as a chemoattractant for eosinophils and monocytes in vitro, although its role in vivo is somewhat less clear. Similar to IL-8, RANTES can be produced in vitro in response to inactivated virions [8] , and involves NF-\u03baB activation, binding, and nuclear translocation [19] . However, Koga et al [20] demonstrated that stabilization of RANTES mRNA, a response to RSV infection mediated in part by nucleotides 11-389 of the RANTES gene, is probably the primary mechanism underlying increased production and secretion of RANTES protein. Further studies will determine whether a similar mechanism is also in place for IL-8 and other RSV-mediated responses. ",
+      "cite_spans": [
+        {
+          "start": 184,
+          "end": 188,
+          "text": "[17,",
+          "ref_id": null
+        },
+        {
+          "start": 189,
+          "end": 192,
+          "text": "18]",
+          "ref_id": null
+        },
+        {
+          "start": 282,
+          "end": 285,
+          "text": "[7,",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 286,
+          "end": 288,
+          "text": "8]",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 498,
+          "end": 501,
+          "text": "[8]",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 570,
+          "end": 574,
+          "text": "[19]",
+          "ref_id": null
+        },
+        {
+          "start": 597,
+          "end": 601,
+          "text": "[20]",
+          "ref_id": "BIBREF17"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Regulated upon activation, normal T-cell expressed and secreted"
+    },
+    {
+      "text": "Several groups have recently shown that macrophage inflammatory protein (MIP)-1\u03b1 is released from RSVinfected cells in culture [7, 21] ; MIP-1\u03b1 was also detected in upper and lower airway secretions from RSV-infected patients [7, 8] . Interestingly, of the three aforementioned chemokines, MIP-1\u03b1 is the one that is most closely correlated with the presence of eosinophil degranulation products; this, together with data from our PVM model of pneumovirus infection [22] , has suggested to us that MIP-1\u03b1 plays a pivotal role in eosinophil recruitment in response to primary pneumovirus infection. Interestingly, production of MIP-1\u03b1 in cell culture requires active viral replication [8] , which suggests that this response may proceed by a mechanism that is completely distinct from that which elicits production of RANTES and IL-8. However, no reports to date have addressed the molecular mechanism that underlies the RSV-mediated MIP-1\u03b1 response.",
+      "cite_spans": [
+        {
+          "start": 127,
+          "end": 130,
+          "text": "[7,",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 131,
+          "end": 134,
+          "text": "21]",
+          "ref_id": "BIBREF18"
+        },
+        {
+          "start": 226,
+          "end": 229,
+          "text": "[7,",
+          "ref_id": "BIBREF6"
+        },
+        {
+          "start": 230,
+          "end": 232,
+          "text": "8]",
+          "ref_id": "BIBREF7"
+        },
+        {
+          "start": 465,
+          "end": 469,
+          "text": "[22]",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 683,
+          "end": 686,
+          "text": "[8]",
+          "ref_id": "BIBREF7"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Macrophage inflammatory protein-1\u03b1 \u03b1"
+    },
+    {
+      "text": "A list of cell-surface molecules that have been reported as expressed in response to RSV infection is shown in Table 1 . We focus here on the expression of intercellular adhesion molecule (ICAM)-1 (CD54) and the leukocyte integrin CD18.",
+      "cite_spans": [],
+      "ref_spans": [
+        {
+          "start": 111,
+          "end": 118,
+          "text": "Table 1",
+          "ref_id": "TABREF0"
+        }
+      ],
+      "section": "Cell-surface adhesion molecules"
+    },
+    {
+      "text": "Increased expression of this cell-surface adhesion protein was observed in both respiratory epithelial cell lines [23, 24] and in human nasal epithelial cells [25] in response to infection with RSV in vitro. Chini et al [26] demonstrated that the expression of ICAM-1 mRNA, similar to IL-8 and RANTES, was dependent on an intact NF-\u03baB site in the gene promoter, and demonstrated a role for the consensus binding site for the factor CCAAT/ enhancer-binding protein. Stark et al [27] demonstrated that ICAM-1 and CD18 expressed in response to RSV serve to enhance neutrophil and eosinophil binding to epithelial cells.",
+      "cite_spans": [
+        {
+          "start": 114,
+          "end": 118,
+          "text": "[23,",
+          "ref_id": "BIBREF20"
+        },
+        {
+          "start": 119,
+          "end": 122,
+          "text": "24]",
+          "ref_id": "BIBREF21"
+        },
+        {
+          "start": 159,
+          "end": 163,
+          "text": "[25]",
+          "ref_id": "BIBREF22"
+        },
+        {
+          "start": 220,
+          "end": 224,
+          "text": "[26]",
+          "ref_id": "BIBREF23"
+        },
+        {
+          "start": 477,
+          "end": 481,
+          "text": "[27]",
+          "ref_id": "BIBREF24"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Intercellular adhesion molecule-1"
+    },
+    {
+      "text": "CD18 is a polypeptide of the integrin family that functions in mediating cell-cell interactions. Several groups have observed expression of CD18 on epithelial cells in response to RSV infection [27, 28] , with CD18 shown to enhance the degranulation of eosinophils in this specific setting [28] . Of particular interest are the recent findings relating expression of CD18 (along with CD14) to earlier literature on bacterial superinfections in the setting of viral infections. Earlier studies [29, 30] reported enhanced binding of bacteria to respiratory epithelial cells that were infected with RSV, findings that had clinical implications relating to acute bacterial otitis media in infants.",
+      "cite_spans": [
+        {
+          "start": 194,
+          "end": 198,
+          "text": "[27,",
+          "ref_id": "BIBREF24"
+        },
+        {
+          "start": 199,
+          "end": 202,
+          "text": "28]",
+          "ref_id": "BIBREF25"
+        },
+        {
+          "start": 290,
+          "end": 294,
+          "text": "[28]",
+          "ref_id": "BIBREF25"
+        },
+        {
+          "start": 493,
+          "end": 497,
+          "text": "[29,",
+          "ref_id": "BIBREF26"
+        },
+        {
+          "start": 498,
+          "end": 501,
+          "text": "30]",
+          "ref_id": "BIBREF27"
+        }
+      ],
+      "ref_spans": [],
+      "section": "CD18"
+    },
+    {
+      "text": "Two more recent studies addressed the question of binding sites. Saadi et al [31] determined that two strains of the pathogen Bordetella pertussis bound more efficiently to RSV-infected cells, and that the binding was reduced upon pretreatment of the cells with anti-CD14 or anti-CD18 antibodies. Similarly, Raza et al [32] reported that both CD14 and CD18 on RSV-infected epithelial cells contributed to the binding of nonpilate Neisseria meningitidis. In vivo testing is required before the clinical significance of these intriguing findings can be appreciated.",
+      "cite_spans": [
+        {
+          "start": 77,
+          "end": 81,
+          "text": "[31]",
+          "ref_id": "BIBREF28"
+        },
+        {
+          "start": 319,
+          "end": 323,
+          "text": "[32]",
+          "ref_id": "BIBREF29"
+        }
+      ],
+      "ref_spans": [],
+      "section": "CD18"
+    },
+    {
+      "text": "RSV-infected epithelial cells in culture do not show features that are suggestive of apoptosis (ie no evidence of membrane blebbing, fragmentation of chromosomal DNA, or characteristic changes in nuclear morphology). Takeuchi et al [33] showed that, although RSV-infected epithelial cells express a number of apoptosis-associated genes, including interferon regulatory factor-1, IL-1\u03b2-converting enzyme and caspase 3, they do not undergo formal apoptosis.",
+      "cite_spans": [
+        {
+          "start": 232,
+          "end": 236,
+          "text": "[33]",
+          "ref_id": "BIBREF30"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Protection from programmed cell death"
+    },
+    {
+      "text": "As part of our attempts to understand mucosal responses in a more systematic manner (see below), we discovered that RSV-infected epithelial cells express the recently described antiapoptosis gene IEX-1L [34] . In our studies, we found that expression of IEX-1L is a response to active virus; no gene expression was observed in response to irradiated, replication-incompetent virus. Moreover, expression of IEX-1L is not observed in response to adenoviral infection, suggesting that expression of this gene is not a universal response to cellular perturbation, or indeed to all viral infections. Functionally, we also demonstrated that RSV infection protects epithelial cells from TNF-\u03b1-induced apoptosis, an effect that is temporally associated with the expression of IEX-1L.",
+      "cite_spans": [
+        {
+          "start": 203,
+          "end": 207,
+          "text": "[34]",
+          "ref_id": "BIBREF31"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Protection from programmed cell death"
+    },
+    {
+      "text": "Apoptosis is generally considered to be a highly efficient self-defense mechanism employed by host target cells, because it permits the infected host to dispose of viral proteins and nucleic acids on a single-cell basis without inducing an inflammatory response. It is thus not surprising that many viruses have evolved strategies to circumvent this response. Of interest, Krilov et al [35] demonstrated that monocytes and cord blood mononuclear cells are similarly protected from apoptosis when infected with RSV.",
+      "cite_spans": [
+        {
+          "start": 386,
+          "end": 390,
+          "text": "[35]",
+          "ref_id": "BIBREF32"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Protection from programmed cell death"
+    },
+    {
+      "text": "Although virus-induced protection from apoptosis appears advantageous to the virus alone, another interpretation may be considered. Because respiratory epithelial cells are now recognized as a major source of leukocyte chemoattractants, and because leukocyte recruitment to the lung has been associated with enhanced viral clearance and prolonged survival in pneumovirus infection [22] , the ability to maintain chemoattractant production from viable cells may ultimately benefit the host organism as well.",
+      "cite_spans": [
+        {
+          "start": 381,
+          "end": 385,
+          "text": "[22]",
+          "ref_id": "BIBREF19"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Protection from programmed cell death"
+    },
+    {
+      "text": "Available online http://respiratory-research.com/content/2/4/225",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Protection from programmed cell death"
+    },
+    {
+      "text": "In tissue culture, RSV-infection is characterized by the formation of giant-cell syncytia. The mechanisms for the formation of these fused masses of cells depend in part on the expression of the RSV-specific fusion (F) protein on the surface of infected host cells, and in part on virusmediated changes in cytoskeletal architecture. It is important to note that RSV-induced changes in cytoskeletal architecture are not restricted to cell lines grown in vitro, as giant-cell syncytia have also been found in pathologic lung specimens obtained from both humans and animals that were infected with RSV.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Syncytia formation"
+    },
+    {
+      "text": "Again, as part of our systematic study of gene expression in response to pneumovirus infection, we found that human respiratory epithelial cells respond to RSV infection with increased expression of the cytoskeletal protein cytokeratin-17 [36] . Cytokeratin-17 is a 46-kDa cytoskeletal protein that belongs to the class I acidic cytokeratin family. In the lung, expression of cytokeratin-17 is normally restricted to basal epithelial cells of the larynx, trachea, and bronchi. In RSV-infected cells, we found expression of Ck-17 predominantly at sites of syncytia formation, and thus provided the first description of a unique component of these pathognomonic structures at the molecular level. Similar to what has been reported for the production of IL-8, expression of Ck-17 is dependent on the activity of the transcription factor NF-\u03baB, and future studies will determine the role of the NF-\u03baB consensus site (-200 to -208 of the cytokeratin-17 promoter) in mediating this response.",
+      "cite_spans": [
+        {
+          "start": 239,
+          "end": 243,
+          "text": "[36]",
+          "ref_id": "BIBREF34"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Syncytia formation"
+    },
+    {
+      "text": "To date, efforts to study pneumovirus-induced alterations in gene expression have relied heavily on in vitro models of virus-infected cells and cell lines. The intrinsic value of characterizing the genes identified in this artificial system is by definition limited, and the clinical and physiologic sig-nificance of any findings must ultimately be tested in vivo.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "A novel model of inflammatory viral bronchiolitis: pneumonia virus of mice"
+    },
+    {
+      "text": "To some extent, the study of gene products in clinical specimens is possible, but this approach is limited, cumbersome, and dictated by sample availability. It is clear that an appropriate animal model of inflammatory bronchiolitis is required to characterize the alterations in gene expression discovered using the available in vitro models. Although RSV has been used for the study of specific allergic reactions to viral antigens, it is not a natural pathogen of mice, and intranasal inoculation of virus at high titer results in, at best, a minimal primary infection with a correspondingly minimal inflammatory response. In order to study gene expression in response to primary pneumovirus infection in vivo, we developed a novel mouse model of inflammatory bronchiolitis using the natural rodent pneumovirus pathogen and closest phylogenetic relative of RSV [37] -PVM. We presented our initial findings on PVM infection in mice in three recent publications [22, 38, 39] . A summary of these findings is presented in Table 2 and Fig. 1 .",
+      "cite_spans": [
+        {
+          "start": 962,
+          "end": 966,
+          "text": "[22,",
+          "ref_id": "BIBREF19"
+        },
+        {
+          "start": 967,
+          "end": 970,
+          "text": "38,",
+          "ref_id": "BIBREF36"
+        },
+        {
+          "start": 971,
+          "end": 974,
+          "text": "39]",
+          "ref_id": "BIBREF37"
+        }
+      ],
+      "ref_spans": [
+        {
+          "start": 1021,
+          "end": 1028,
+          "text": "Table 2",
+          "ref_id": "TABREF1"
+        },
+        {
+          "start": 1033,
+          "end": 1039,
+          "text": "Fig. 1",
+          "ref_id": "FIGREF0"
+        }
+      ],
+      "section": "A novel model of inflammatory viral bronchiolitis: pneumonia virus of mice"
+    },
+    {
+      "text": "To begin, we described the cellular and biochemical pathology observed in response to PVM infection in mice [38] . We found that infection could be established with as few as 30 plaque-forming units (pfu) of PVM in the inoculum, with infection resulting in significant morbidity and mortality, and viral recoveries in the order of 10 8 pfu/g lung tissue. We also noted inflammatory bronchiolitis as among the immediate responses to this infection, with bronchoalveolar lavage fluid containing virtually 100% neutrophils and eosinophils obtained as early as 3 days after inoculation. Furthermore, we found that infection was accompanied by the production of the proinflammatory chemokine MIP-1\u03b1, which was previously shown by Cook et al [40] to be an important component of the inflammatory response to the orthomyxovirus influenza virus.",
+      "cite_spans": [
+        {
+          "start": 108,
+          "end": 112,
+          "text": "[38]",
+          "ref_id": "BIBREF36"
+        },
+        {
+          "start": 736,
+          "end": 740,
+          "text": "[40]",
+          "ref_id": "BIBREF38"
+        }
+      ],
+      "ref_spans": [],
+      "section": "A novel model of inflammatory viral bronchiolitis: pneumonia virus of mice"
+    },
+    {
+      "text": "We also described the role played by MIP-1\u03b1 in the pathogenesis of PVM-induced bronchiolitis [22] . Specifi- cally, we explored the responses of gene-deleted mice to infection with PVM, and found no inflammatory response in mice deficient in MIP-1\u03b1 expression (MIP-1\u03b1 -/-) and only minimal virus-induced inflammation in mice that lacked the major MIP-1\u03b1 receptor on granulocytes chemokine receptor (CCR)1 (CCR1 -/-). Although the inflammatory response is often considered to be unnecessary and indeed detrimental, we demonstrated that the absence of granulocytic inflammation was associated with enhanced recovery of infectious virions, as well as with accelerated mortality. These results suggest that the MIP-1\u03b1/CCR1-mediated acute inflammatory response protects mice by delaying the lethal sequelae of viral infection.",
+      "cite_spans": [
+        {
+          "start": 93,
+          "end": 97,
+          "text": "[22]",
+          "ref_id": "BIBREF19"
+        }
+      ],
+      "ref_spans": [],
+      "section": "A novel model of inflammatory viral bronchiolitis: pneumonia virus of mice"
+    },
+    {
+      "text": "Our most recent report on this subject [39] presents a direct comparison between the responses of mice to challenge with PVM and RSV. Although RSV is not a natural pathogen of mice, it has been used extensively in mouse models of human infection because a limited, or 'semipermissive' infection can be established via intranasal inocula-tion of virus at very high titers. In this regard, we found (as have others) that RSV infection did not result in any measurable degree of morbidity, and that viral recovery was significantly lower than that found in the inoculum; these results suggested that there was no significant viral replication in mouse lung tissue. We further demonstrated that the inflammatory response to RSV challenge was minimal, as few leukocytes were recruited to the lungs (Fig. 1) .",
+      "cite_spans": [
+        {
+          "start": 39,
+          "end": 43,
+          "text": "[39]",
+          "ref_id": "BIBREF37"
+        }
+      ],
+      "ref_spans": [
+        {
+          "start": 793,
+          "end": 801,
+          "text": "(Fig. 1)",
+          "ref_id": "FIGREF0"
+        }
+      ],
+      "section": "Respiratory Research Vol 2 No 4 Domachowske et al"
+    },
+    {
+      "text": "Taken together, our results suggest that infection of mice with PVM provides a superior model for the study of acute inflammatory bronchiolitis in response to pneumovirus infection in vivo. The advantages of this model include the following: clinical parameters -morbidity and mortalitythat can be measured clearly and specifically; clear evidence of viral replication in lung tissue, with incremental recoveries that, at peak, are in excess of 10 8 pfu/g in response to as few as 30 pfu in the inoculum; and a dramatic granulocytic response that is modulated at least in part by the proinflammatory chemokine MIP-1\u03b1 and its receptor CCR1. ",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Respiratory Research Vol 2 No 4 Domachowske et al"
+    },
+    {
+      "text": "Traditionally, analysis of gene expression through measurement of steady-state levels of individual mRNAs could be conducted only one gene at a time using northern blotting, dot blots, or quantitative reverse transcription-PCR. Differential display, serial analysis of gene expression, and total gene analysis offer great promise, because they are multiplex technologies that provide simultaneous analysis of multiple mRNAs isolated under conditions of interest via PCR amplification techniques. DNA hybridization arrays are theoretically the most efficient of the gene expression analysis techniques. Although many skeptics have described these genome-based approaches as expensive, nonhypothesis-driven 'fishing expeditions', we view them as broad-based screening techniques that will enable us to identify patterns of gene expression that can then be subjected to careful characterization and analysis.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Genomic approaches to alterations in gene expression"
+    },
+    {
+      "text": "Differential display is a semiquantitative, reverse transcription-PCR-based technique that is used to compare mRNAs from two or more conditions of interest. Both increased and decreased expression of specific amplicons will be evident -an obvious advantage to this approach. Total RNA can be isolated from virus infected versus uninfected cells or mouse lungs both before and during infection, and differential display is performed using degenerate T11(XY) anchoring primers and random upstream oligomers, as described elsewhere [34, 36] . The resulting PCR products are separated by electrophoresis, and the gel is dried and exposed to film. An example of our results comparing cDNA amplicons from RNA extracted from RSV-infected epithelial cells daily for 4 days is shown in Fig. 2 . Differentially expressed bands are cut from the gel, eluted and reamplified using the same primers that generated the original signal, and northern blots generated from RNA extracted from pneumovirus-infected cells or tissue over time and probed with the differentially expressed amplicons serve to confirm differential expression of the identified sequence.",
+      "cite_spans": [
+        {
+          "start": 529,
+          "end": 533,
+          "text": "[34,",
+          "ref_id": "BIBREF31"
+        },
+        {
+          "start": 534,
+          "end": 537,
+          "text": "36]",
+          "ref_id": "BIBREF34"
+        }
+      ],
+      "ref_spans": [
+        {
+          "start": 777,
+          "end": 783,
+          "text": "Fig. 2",
+          "ref_id": null
+        }
+      ],
+      "section": "Differential display"
+    },
+    {
+      "text": "The DNA sequences of the newly identified differentially expressed amplicons are compared with sequences present in the GenBank database. Viral sequences are expected to be upregulated over time and can be identified immediately, because the entire genomes of both PVM and RSV are present in GenBank. In cases in which the amplicon represents a newly discovered gene, potential openreading frames are compared with sequences that are present in the Swiss protein database; motifs that share homologies with known proteins represent important clues to the identity of the differentially expressed gene.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Differential display"
+    },
+    {
+      "text": "With the help of differential display, we have identified and characterized several genes that are upregulated in RSV-infected respiratory epithelial cells. Two specific examples of genes that were found to be induced during RSV infection, and later characterized as playing independent roles in the pathophysiology of RSV infection, are the antiapoptosis gene IEX-1L [34] and the gene that encodes the cytoskeletal protein cytokeratin-17 [36] .",
+      "cite_spans": [
+        {
+          "start": 368,
+          "end": 372,
+          "text": "[34]",
+          "ref_id": "BIBREF31"
+        },
+        {
+          "start": 439,
+          "end": 443,
+          "text": "[36]",
+          "ref_id": "BIBREF34"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Differential display"
+    },
+    {
+      "text": "Unlike DNA viruses, which are known to encode virus-specific antiapoptosis genes, RSV -an RNA virus with a small (approximately 15.2 kb) viral genome -was shown to alter host cell expression of the apoptosis inhibitor IEX-1L. After demonstrating that IEX-1L mRNA was present at sevenfold higher concentrations in RSV-infected respiratory epithelial cells when compared with uninfected cells, we concluded that this cellular response protected against TNF-\u03b1-induced programmed cell death during viral infection. Further efforts to determine which of the 11 RSV proteins participate in the trans-activation of the IEX-1L gene (either directly or indirectly) are ongoing.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Differential display"
+    },
+    {
+      "text": "A second example of a gene that is specifically upregulated in RSV-infected respiratory epithelium, as identified by differential display, is that which encodes cytokeratin-17 [36] . Upon characterizing the molecular events that are important for cytokeratin-17 induction, we demonstrated a link to an NF-\u03baB signaling pathway. Above, we discussed the importance of this transcription factor in the regulation of proinflammatory cytokine gene expression, and because of this involvement we were not surprised to discover its role in virus-induced cytokeratin-17 gene regulation. Perhaps the most interesting observation made during these experiments was the in situ localization of cytokeratin-17 protein to areas of cytopathic syncytia formation, suggesting a role for this cytoskeletal protein in their formation. Of note, we observed a dramatic decrease in RSV replication and in syncytia formation when we blocked cytokeratin-17 expression, suggesting that blocking syncytia formation, at least in part, impairs the direct cell-cell spread and productive replication of virus.",
+      "cite_spans": [
+        {
+          "start": 176,
+          "end": 180,
+          "text": "[36]",
+          "ref_id": "BIBREF34"
+        }
+      ],
+      "ref_spans": [],
+      "section": "Differential display"
+    },
+    {
+      "text": "Although there are several companies that market these systems and components, the cytokine gene macroarray systems recently developed by R&D Systems (Sigma Genosys \u00ae ; Minneapolis, MN, USA) and Clontech (Atlas \u00ae ; Palo Alto, CA, USA) represent some of the newer opportunities available that have a focus on gene products that are known to be involved in inflammation. These arrays consist of different cDNAs printed as PCR products onto charged nylon membranes. An example of our experience with the Sigma Genosys array is shown in Fig. 3 . For this example, total RNA was extracted from RSV-infected HEp-2 cells and uninfected controls at day 3 after infection. Three micrograms of total RNA was used in a cDNA synthesis reaction, using a proprietary mixture of 378 primer pairs and trace amounts of 32 P-radiolabeled dCTP.",
+      "cite_spans": [],
+      "ref_spans": [
+        {
+          "start": 533,
+          "end": 539,
+          "text": "Fig. 3",
+          "ref_id": null
+        }
+      ],
+      "section": "Gene arrays"
+    },
+    {
+      "text": "The resulting radiolabeled products were hybridized to the macroarrays overnight at 65\u00b0C, and then washed and exposed to film. The arrow highlights one of the most obviously upregulated sequences from this experiment, which was identified as the gene encoding human MIP-1\u03b1. The physiologic importance of MIP-1\u03b1 upregulation during human RSV infection and during rodent PVM bronchiolitis has already been described.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Gene arrays"
+    },
+    {
+      "text": "Microarrays can be differentiated from macroarrays in several ways. Among these differences, the microarray matrix is a glass or plastic slide, probes are labeled with fluorescent dye rather than via radioisotopes, and, most significantly, microarrays generally include a larger number and a higher density of imbedded sequences than do macroarrays. Although this may seem to be highly appealing at first, the massive amounts of data generated by microarray technology poses new challenges with respect to data normalization, management, and development of mathematical models to assist in data interpretation.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Gene arrays"
+    },
+    {
+      "text": "The pneumoviruses RSV and PVM enter respiratory epithelial cells via a receptor-mediated event. During hostcell attachment and internalization, the target cell begins to alter its gene expression, which, among other events, involves the transcriptional upregulation of cytokine and chemokine genes. As RSV replication progresses, additional changes in cellular gene expression can be observed, including induction of the potent antiapoptosis gene IEX-1L and increased expression of the otherwise quiescent gene that encodes cytokeratin-17. What we know regarding the physiologic importance of these genes and their gene products has been described, but there is more to be learned. As the available technologies evolve, we can continue to capitalize on the use of Display of amplicons generated from RNA extracted from RSV-infected cells at daily intervals following infection (days 0-4) using a single anchoring primer, T11GC (downstream primer 8) and (A-H) eight random 10mers. Two differentially expressed sequences are highlighted by arrows (the black arrow shows an upregulated amplicon, and the white arrow highlights a downregulated amplicon). Several other differentially expressed signals are also seen.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Conclusion"
+    },
+    {
+      "text": "genomic approaches as large-scale screening tools to identify genes that play important roles in the pathophysiology of pneumovirus infection. These elegant and simple tools will provide us with the means for thorough and systematic exploration of gene expression, both in the estab- Cytokine macroarray probed with radiolabelled cDNA generated from total RNA extracted from epithelial cells 48 h after RSV infection (upper panel) or 48 h after exposure to conditioned medium (lower panel). Signal intensity of each gene under each condition is compared. The arrow highlights the signal for human MIP-1\u03b1 present at 12-fold higher concentration in infected epithelial cells compared with the uninfected controls.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Conclusion"
+    }
+  ],
+  "bib_entries": {
+    "BIBREF0": {
+      "ref_id": "b0",
+      "title": "Respiratory syncytial virus and human bronchial epithelium",
+      "authors": [
+        {
+          "first": "D",
+          "middle": [
+            "A"
+          ],
+          "last": "Tristram",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [],
+          "last": "Hicks",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Hard",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "Arch Otolaryngol",
+      "volume": "124",
+      "issn": "",
+      "pages": "777--783",
+      "other_ids": {}
+    },
+    "BIBREF1": {
+      "ref_id": "b1",
+      "title": "Host responses to respiratory virus infection and immunization",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "E"
+          ],
+          "last": "Crowe",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Curr Top Microbiol Immunol",
+      "volume": "236",
+      "issn": "",
+      "pages": "191--214",
+      "other_ids": {}
+    },
+    "BIBREF2": {
+      "ref_id": "b2",
+      "title": "Epithelial regulation of innate immunity to respiratory syncytial virus",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [
+            "P"
+          ],
+          "last": "Garofalo",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Haeberle",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Am J Respir Cell Mol Biol",
+      "volume": "23",
+      "issn": "",
+      "pages": "581--585",
+      "other_ids": {}
+    },
+    "BIBREF3": {
+      "ref_id": "b3",
+      "title": "Interleukin-8 expression in normal nasal epithelium and its modulation by infection with respiratory syncytial virus and cytokines tumor necrosis factor, interleukin-1, and interleukin-6",
+      "authors": [
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Becker",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "S"
+          ],
+          "last": "Koren",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "C"
+          ],
+          "last": "Henke",
+          "suffix": ""
+        }
+      ],
+      "year": 1993,
+      "venue": "Am J Respir Cell Mol Biol",
+      "volume": "8",
+      "issn": "",
+      "pages": "20--27",
+      "other_ids": {}
+    },
+    "BIBREF4": {
+      "ref_id": "b4",
+      "title": "Respiratory syncytial virus increases IL-8 gene expression and protein release in A549 cells",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Fiedler",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Wernke-Dollries",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "M"
+          ],
+          "last": "Stark",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Am J Physiol",
+      "volume": "269",
+      "issn": "",
+      "pages": "865--872",
+      "other_ids": {}
+    },
+    "BIBREF5": {
+      "ref_id": "b5",
+      "title": "Interleukin-8, interleukin-6, and soluble tumour necrosis factor receptor type I release from a human pulmonary epithelial cell line (A549) exposed to respiratory syncytial virus",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Arnold",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Humbert",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Werchau",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Gallati",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [],
+          "last": "Konig",
+          "suffix": ""
+        }
+      ],
+      "year": 1994,
+      "venue": "Immunology",
+      "volume": "82",
+      "issn": "",
+      "pages": "126--133",
+      "other_ids": {}
+    },
+    "BIBREF6": {
+      "ref_id": "b6",
+      "title": "Macrophage inflammatory protein-1\u03b1 \u03b1 and RANTES are present in nasal secretions during ongoing upper respiratory tract infection",
+      "authors": [
+        {
+          "first": "C",
+          "middle": [
+            "A"
+          ],
+          "last": "Bonville",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "F"
+          ],
+          "last": "Rosenberg",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "B"
+          ],
+          "last": "Domachowske",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Pediatr Allergy Immunol",
+      "volume": "10",
+      "issn": "",
+      "pages": "39--44",
+      "other_ids": {}
+    },
+    "BIBREF7": {
+      "ref_id": "b7",
+      "title": "Respiratory syncytial virus-induced chemokine expression in the lower airways: eosinophil recruitment and degranulation",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "M"
+          ],
+          "last": "Harrison",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "A"
+          ],
+          "last": "Bonville",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "F"
+          ],
+          "last": "Rosenberg",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "B"
+          ],
+          "last": "Domachowske",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Am J Respir Crit Care Med",
+      "volume": "159",
+      "issn": "",
+      "pages": "1918--1924",
+      "other_ids": {}
+    },
+    "BIBREF8": {
+      "ref_id": "b8",
+      "title": "Inhibiton of viral replication reverses respiratory syncytial virus-induced NF-\u03ba \u03baB activation and interleukin-8 gene expression in A549 cells",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Fiedler",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Wernke-Dollries",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "M"
+          ],
+          "last": "Stark",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "J Virol",
+      "volume": "70",
+      "issn": "",
+      "pages": "9079--9082",
+      "other_ids": {}
+    },
+    "BIBREF9": {
+      "ref_id": "b9",
+      "title": "Oxidant tone regulates IL-8 production in epithelium infected with respiratory syncytial virus",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "G"
+          ],
+          "last": "Mastronarde",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "M"
+          ],
+          "last": "Monick",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [
+            "W"
+          ],
+          "last": "Hunninghake",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Am J Respir Cell Mol Biol",
+      "volume": "13",
+      "issn": "",
+      "pages": "237--244",
+      "other_ids": {}
+    },
+    "BIBREF10": {
+      "ref_id": "b10",
+      "title": "Induction of interlukin (IL)-8 gene expression by respiratory syncytial virus involved activation of nuclear factor (NF)-\u03ba \u03baB and NF-IL-6",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "G"
+          ],
+          "last": "Mastronarde",
+          "suffix": ""
+        },
+        {
+          "first": "B",
+          "middle": [],
+          "last": "He",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "M"
+          ],
+          "last": "Monick",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Mukaida",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Matsushima",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [
+            "W"
+          ],
+          "last": "Hunninghake",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "J Infect Dis",
+      "volume": "174",
+      "issn": "",
+      "pages": "262--267",
+      "other_ids": {}
+    },
+    "BIBREF11": {
+      "ref_id": "b11",
+      "title": "Transcriptional activation of the interleukin-8 gene by respiratory syncytial virus infection in alveolar epithelial cells: nuclear translocation of the RelA transcription factor as a mechanism producing airway mucosal inflammation",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Garofalo",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Sabry",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Jamaluddin",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "K"
+          ],
+          "last": "Yu",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Casola",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "L"
+          ],
+          "last": "Ogra",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "R"
+          ],
+          "last": "Brasier",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "J Virol",
+      "volume": "70",
+      "issn": "",
+      "pages": "8773--8781",
+      "other_ids": {}
+    },
+    "BIBREF12": {
+      "ref_id": "b12",
+      "title": "Inducible translational regulation of the NF-IL6 transcription factor by respiratory syncytial virus infection in pulmonary epithelial cells",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Jamaluddin",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Garofalo",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "L"
+          ],
+          "last": "Ogra",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "R"
+          ],
+          "last": "Brasier",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "J Virol",
+      "volume": "70",
+      "issn": "",
+      "pages": "1554--1563",
+      "other_ids": {}
+    },
+    "BIBREF13": {
+      "ref_id": "b13",
+      "title": "Activator protein-1 is the preferred transcription factor for cooperative interaction with nuclear factor-\u03ba \u03baB in respiratory syncytial virus-induced interleukin-8 gene expression in airway epithelium",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "G"
+          ],
+          "last": "Mastronarde",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "M"
+          ],
+          "last": "Monick",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Mukaida",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Matsushima",
+          "suffix": ""
+        },
+        {
+          "first": "G",
+          "middle": [
+            "W"
+          ],
+          "last": "Hunninghake",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "J Infect Dis",
+      "volume": "177",
+      "issn": "",
+      "pages": "1275--1281",
+      "other_ids": {}
+    },
+    "BIBREF14": {
+      "ref_id": "b14",
+      "title": "Incomplete regulation of NF-\u03ba \u03baB by I\u03ba \u03baB\u03b1 \u03b1 during respiratory syncytial virus infection in A549 cells",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Fiedler",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Wernke-Dollries",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "J Virol",
+      "volume": "73",
+      "issn": "",
+      "pages": "4502--4507",
+      "other_ids": {}
+    },
+    "BIBREF15": {
+      "ref_id": "b15",
+      "title": "Requirement of a novel upstream response element in respiratory syncytial virus-induced IL-8 gene expression",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Casola",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "P"
+          ],
+          "last": "Garofalo",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Jamaluddin",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Vlahopoulos",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "R"
+          ],
+          "last": "Brasier",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "J Immunol",
+      "volume": "164",
+      "issn": "",
+      "pages": "5944--5951",
+      "other_ids": {}
+    },
+    "BIBREF17": {
+      "ref_id": "b17",
+      "title": "Virus-inducible expression of a host chemokine gene relies on replication-linked mRNA stabilization",
+      "authors": [
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Koga",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Sardina",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "M"
+          ],
+          "last": "Tidwell",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Pelletier",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "C"
+          ],
+          "last": "Look",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "J"
+          ],
+          "last": "Hotzman",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Proc Natl Acad Sci",
+      "volume": "96",
+      "issn": "",
+      "pages": "5680--5685",
+      "other_ids": {}
+    },
+    "BIBREF18": {
+      "ref_id": "b18",
+      "title": "Cell-specific expression of RANTES, MCP-1, and MIP-1\u03b1 \u03b1 by lower airway epithelial cells and eosinophils infected with respiratory syncytial virus",
+      "authors": [
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Olszewska-Pazdrak",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Casola",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Saito",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Alam",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "E"
+          ],
+          "last": "Crowe",
+          "suffix": ""
+        },
+        {
+          "first": "F",
+          "middle": [],
+          "last": "Mei",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "L"
+          ],
+          "last": "Ogra",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "P"
+          ],
+          "last": "Garofalo",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "J Virol",
+      "volume": "72",
+      "issn": "",
+      "pages": "4756--4764",
+      "other_ids": {}
+    },
+    "BIBREF19": {
+      "ref_id": "b19",
+      "title": "The chemokine MIP-1\u03b1 \u03b1 and its receptor CCR1 control pulmonary inflammation and anti-viral host defense in paramyxovirus infection",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "B"
+          ],
+          "last": "Domachowske",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "A"
+          ],
+          "last": "Bonville",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "L"
+          ],
+          "last": "Gao",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "M"
+          ],
+          "last": "Murphy",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "J"
+          ],
+          "last": "Easton",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "F"
+          ],
+          "last": "Rosenberg",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "J Immunol",
+      "volume": "165",
+      "issn": "",
+      "pages": "2677--2682",
+      "other_ids": {}
+    },
+    "BIBREF20": {
+      "ref_id": "b20",
+      "title": "Adhesion molecule expression on epithelial cells infected with respiratory syncytial virus",
+      "authors": [
+        {
+          "first": "S",
+          "middle": [
+            "Z"
+          ],
+          "last": "Wang",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "G"
+          ],
+          "last": "Hallsworth",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [
+            "D"
+          ],
+          "last": "Dowling",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "H"
+          ],
+          "last": "Alpers",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "J"
+          ],
+          "last": "Bowden",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [
+            "D"
+          ],
+          "last": "Forsyth",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Eur Respir J",
+      "volume": "15",
+      "issn": "",
+      "pages": "358--366",
+      "other_ids": {}
+    },
+    "BIBREF21": {
+      "ref_id": "b21",
+      "title": "ICAM-1 expression and low-molecularweight G-protein activation of human bronchial epithelial cells (A549) infected with RSV",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Arnold",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [],
+          "last": "Konig",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "J Leukoc Biol",
+      "volume": "60",
+      "issn": "",
+      "pages": "766--771",
+      "other_ids": {}
+    },
+    "BIBREF22": {
+      "ref_id": "b22",
+      "title": "Induction of intercellular adhesion molecule-1 in human nasal epithelial cells during respiratory syncytial virus infection",
+      "authors": [
+        {
+          "first": "Z",
+          "middle": [],
+          "last": "Matsuzaki",
+          "suffix": ""
+        },
+        {
+          "first": "Y",
+          "middle": [],
+          "last": "Okamoto",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Sarashina",
+          "suffix": ""
+        },
+        {
+          "first": "E",
+          "middle": [],
+          "last": "Ito",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Togawa",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [],
+          "last": "Saito",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "Immunology",
+      "volume": "88",
+      "issn": "",
+      "pages": "565--568",
+      "other_ids": {}
+    },
+    "BIBREF23": {
+      "ref_id": "b23",
+      "title": "Essential roles of NF-\u03ba \u03baB and C/EBP in the regulation of intercellular adhesion molecule-1 after respiratory syncytial virus infection of human respiratory epithelial cell cultures",
+      "authors": [
+        {
+          "first": "B",
+          "middle": [
+            "A"
+          ],
+          "last": "Chini",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Fiedler",
+          "suffix": ""
+        },
+        {
+          "first": "L",
+          "middle": [],
+          "last": "Milligan",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [],
+          "last": "Hopkins",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "M"
+          ],
+          "last": "Stark",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "J Virol",
+      "volume": "72",
+      "issn": "",
+      "pages": "1623--1626",
+      "other_ids": {}
+    },
+    "BIBREF24": {
+      "ref_id": "b24",
+      "title": "Respiratory syncytial virus infection enhances neutrophil and eosinophil adhesion to cultured respiratory epithelial cells. Roles of CD18 and intercellular adhesion molecule-1",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "M"
+          ],
+          "last": "Stark",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [],
+          "last": "Godding",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "B"
+          ],
+          "last": "Sedgwick",
+          "suffix": ""
+        },
+        {
+          "first": "W",
+          "middle": [
+            "W"
+          ],
+          "last": "Busse",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "J Immunol",
+      "volume": "156",
+      "issn": "",
+      "pages": "4774--4782",
+      "other_ids": {}
+    },
+    "BIBREF25": {
+      "ref_id": "b25",
+      "title": "Respiratory syncytial virus-infected pulmonary epithelial cells induced eosinophil degranulation by a CD18-mediated mechanism",
+      "authors": [
+        {
+          "first": "B",
+          "middle": [],
+          "last": "Olszewska-Pazdrak",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Pazdrak",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "L"
+          ],
+          "last": "Ogra",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "P"
+          ],
+          "last": "Garofalo",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "J Immunol",
+      "volume": "160",
+      "issn": "",
+      "pages": "4889--4895",
+      "other_ids": {}
+    },
+    "BIBREF26": {
+      "ref_id": "b26",
+      "title": "Effect of respiratory syncytial virus infection on binding of Neisseria meningitidis and Haemophilus influenzae type b to a human epithelial cell line (HEp-2)",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "W"
+          ],
+          "last": "Raza",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "M"
+          ],
+          "last": "Ogilvie",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "C"
+          ],
+          "last": "Blackwell",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Stewart",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "A"
+          ],
+          "last": "Elton",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "M"
+          ],
+          "last": "Weir",
+          "suffix": ""
+        }
+      ],
+      "year": 1993,
+      "venue": "Epidemiol Infect",
+      "volume": "110",
+      "issn": "",
+      "pages": "339--347",
+      "other_ids": {}
+    },
+    "BIBREF27": {
+      "ref_id": "b27",
+      "title": "Effect of respiratory syncytial virus on adherence, colonization and immunity of nontypable Haemophilus influenzae: implications for otitis media",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [],
+          "last": "Patel",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Faden",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Sharma",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "L"
+          ],
+          "last": "Ogra",
+          "suffix": ""
+        }
+      ],
+      "year": 1992,
+      "venue": "Int J Pediatr Otorhinolaryngol",
+      "volume": "23",
+      "issn": "",
+      "pages": "15--23",
+      "other_ids": {}
+    },
+    "BIBREF28": {
+      "ref_id": "b28",
+      "title": "Developmental and environmental factors that enhance binding of Bordetella pertussis to human epithelial cells in relation to sudden infant death syndrome (SIDS)",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "T"
+          ],
+          "last": "Saadi",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "C"
+          ],
+          "last": "Blackwell",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "D"
+          ],
+          "last": "Essery",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "W"
+          ],
+          "last": "Raza",
+          "suffix": ""
+        },
+        {
+          "first": "El",
+          "middle": [],
+          "last": "Ahmer",
+          "suffix": ""
+        },
+        {
+          "first": "O",
+          "middle": [
+            "R"
+          ],
+          "last": "Mackenzie",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "A"
+          ],
+          "last": "James",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [
+            "S"
+          ],
+          "last": "Weir",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "M"
+          ],
+          "last": "Ogilvie",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "M"
+          ],
+          "last": "Elton",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "A"
+          ],
+          "last": "Busuttil",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [],
+          "last": "Keeling",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "W"
+          ],
+          "last": "",
+          "suffix": ""
+        }
+      ],
+      "year": 1996,
+      "venue": "FEMS Immunol Med Microbiol",
+      "volume": "16",
+      "issn": "",
+      "pages": "51--59",
+      "other_ids": {}
+    },
+    "BIBREF29": {
+      "ref_id": "b29",
+      "title": "Infection with respiratory syncytial virus enhances expression of native receptors for non-pilate Neisseria meningitidis on HEp-2 cells",
+      "authors": [
+        {
+          "first": "M",
+          "middle": [
+            "W"
+          ],
+          "last": "Raza",
+          "suffix": ""
+        },
+        {
+          "first": "O",
+          "middle": [
+            "R"
+          ],
+          "last": "El Ahmer",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "M"
+          ],
+          "last": "Ogilvie",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "C"
+          ],
+          "last": "Blackwell",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "T"
+          ],
+          "last": "Saadi",
+          "suffix": ""
+        },
+        {
+          "first": "R",
+          "middle": [
+            "A"
+          ],
+          "last": "Elton",
+          "suffix": ""
+        },
+        {
+          "first": "D",
+          "middle": [
+            "M"
+          ],
+          "last": "Weir",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "FEMS Immunol Med Microbiol",
+      "volume": "23",
+      "issn": "",
+      "pages": "115--124",
+      "other_ids": {}
+    },
+    "BIBREF30": {
+      "ref_id": "b30",
+      "title": "Respiratory syncytial virus infection of human alveolar epithelial cells enhances interferon regulatory factor 1 and interleukin-1\u03b2 \u03b2-converting enzyme gene expression but does not cause apoptosis",
+      "authors": [
+        {
+          "first": "R",
+          "middle": [],
+          "last": "Takeuchi",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [],
+          "last": "Tsutsumi",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [],
+          "last": "Osaki",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [],
+          "last": "Haseyama",
+          "suffix": ""
+        },
+        {
+          "first": "N",
+          "middle": [],
+          "last": "Mizue",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [],
+          "last": "Chiba",
+          "suffix": ""
+        }
+      ],
+      "year": 1998,
+      "venue": "J Virol",
+      "volume": "72",
+      "issn": "",
+      "pages": "4498--4502",
+      "other_ids": {}
+    },
+    "BIBREF31": {
+      "ref_id": "b31",
+      "title": "Respiratory syncytial virus infection induces expression of the anti-apoptosis gene IEX-1L in human respiratory epithelial cells",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "B"
+          ],
+          "last": "Domachowske",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "A"
+          ],
+          "last": "Bonville",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "J"
+          ],
+          "last": "Mortelliti",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "B"
+          ],
+          "last": "Colella",
+          "suffix": ""
+        },
+        {
+          "first": "U",
+          "middle": [],
+          "last": "Kim",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "F"
+          ],
+          "last": "Rosenberg",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "J Infect Dis",
+      "volume": "181",
+      "issn": "",
+      "pages": "824--830",
+      "other_ids": {}
+    },
+    "BIBREF32": {
+      "ref_id": "b32",
+      "title": "Responses of monocytes in peripheral blood mononuclear leukocytes (PBMLs) exposed to respiratory syncytial virus (RSV) in vitro",
+      "authors": [
+        {
+          "first": "L",
+          "middle": [
+            "R"
+          ],
+          "last": "Krilov",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [
+            "W"
+          ],
+          "last": "Mcclosky",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "H"
+          ],
+          "last": "Harkness",
+          "suffix": ""
+        },
+        {
+          "first": "V",
+          "middle": [
+            "S"
+          ],
+          "last": "Pahwa",
+          "suffix": ""
+        }
+      ],
+      "year": null,
+      "venue": "",
+      "volume": "",
+      "issn": "",
+      "pages": "",
+      "other_ids": {}
+    },
+    "BIBREF34": {
+      "ref_id": "b34",
+      "title": "Cytokeratin 17 is expressed in cells infected with respiratory syncytial virus via NF-\u03ba \u03baB activations and is associated with the formation of cytopathic syncytia",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "B"
+          ],
+          "last": "Domachowske",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "A"
+          ],
+          "last": "Bonville",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "F"
+          ],
+          "last": "Rosenberg",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "J Infect Dis",
+      "volume": "182",
+      "issn": "",
+      "pages": "1022--1028",
+      "other_ids": {}
+    },
+    "BIBREF35": {
+      "ref_id": "b35",
+      "title": "Reverse genetics of the Paramyxoviridae",
+      "authors": [
+        {
+          "first": "A",
+          "middle": [
+            "C"
+          ],
+          "last": "Marriott",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "J"
+          ],
+          "last": "Easton",
+          "suffix": ""
+        }
+      ],
+      "year": 1999,
+      "venue": "Adv Virus Res",
+      "volume": "53",
+      "issn": "",
+      "pages": "321--340",
+      "other_ids": {}
+    },
+    "BIBREF36": {
+      "ref_id": "b36",
+      "title": "Pulmonary eosinophilia and production of MIP-1\u03b1 \u03b1 are prominent responses to infection with pneumonia virus of mice",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "B"
+          ],
+          "last": "Domachowske",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "A"
+          ],
+          "last": "Bonville",
+          "suffix": ""
+        },
+        {
+          "first": "K",
+          "middle": [
+            "D"
+          ],
+          "last": "Dyer",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "J"
+          ],
+          "last": "Easton",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "F"
+          ],
+          "last": "Rosenberg",
+          "suffix": ""
+        }
+      ],
+      "year": 2000,
+      "venue": "Cell Immunol",
+      "volume": "200",
+      "issn": "",
+      "pages": "98--104",
+      "other_ids": {}
+    },
+    "BIBREF37": {
+      "ref_id": "b37",
+      "title": "MIP-1\u03b1 \u03b1 is produced but it does not control pulmonary inflammation in response to respiratory syncytial virus infection in mice",
+      "authors": [
+        {
+          "first": "J",
+          "middle": [
+            "B"
+          ],
+          "last": "Domachowske",
+          "suffix": ""
+        },
+        {
+          "first": "C",
+          "middle": [
+            "A"
+          ],
+          "last": "Bonville",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "L"
+          ],
+          "last": "Gao",
+          "suffix": ""
+        },
+        {
+          "first": "P",
+          "middle": [
+            "M"
+          ],
+          "last": "Murphy",
+          "suffix": ""
+        },
+        {
+          "first": "A",
+          "middle": [
+            "J"
+          ],
+          "last": "Easton",
+          "suffix": ""
+        },
+        {
+          "first": "H",
+          "middle": [
+            "F"
+          ],
+          "last": "Rosenberg",
+          "suffix": ""
+        }
+      ],
+      "year": 2001,
+      "venue": "Cell Immunol",
+      "volume": "",
+      "issn": "",
+      "pages": "",
+      "other_ids": {}
+    },
+    "BIBREF38": {
+      "ref_id": "b38",
+      "title": "Smithies O: Requirement of MIP-1alpha for an inflammatory response to viral infection",
+      "authors": [
+        {
+          "first": "D",
+          "middle": [
+            "N"
+          ],
+          "last": "Cook",
+          "suffix": ""
+        },
+        {
+          "first": "M",
+          "middle": [
+            "A"
+          ],
+          "last": "Beck",
+          "suffix": ""
+        },
+        {
+          "first": "T",
+          "middle": [
+            "M"
+          ],
+          "last": "Coffman",
+          "suffix": ""
+        },
+        {
+          "first": "S",
+          "middle": [
+            "L"
+          ],
+          "last": "Kirby",
+          "suffix": ""
+        },
+        {
+          "first": "J",
+          "middle": [
+            "F"
+          ],
+          "last": "Sheridan",
+          "suffix": ""
+        },
+        {
+          "first": "I",
+          "middle": [
+            "B"
+          ],
+          "last": "Pragnell",
+          "suffix": ""
+        }
+      ],
+      "year": 1995,
+      "venue": "Science",
+      "volume": "269",
+      "issn": "",
+      "pages": "1583--1585",
+      "other_ids": {}
+    }
+  },
+  "ref_entries": {
+    "FIGREF0": {
+      "text": "Pulmonary histopathology during pneumovirus infection. Lungs from mice infected with PVM (60 pfu) for (A, D) 3 days, (B, E) 5 days, and (C, F) 7 days. Images at lower magnification (A, B, and C \u00d7400) show the extent of inflammatory changes, whereas the higher power images (D, E, and F \u00d71000) demonstrate that the cells are predominantly granulocytes. The arrows in panel D highlight the presence of eosinophils. Lung histology from animals infected with RSV (1 million pfu) for (G) 3, (H) 5, and (I) 7 days (\u00d7400). Note the paucity of acute inflammatory changes.",
+      "latex": null,
+      "type": "figure"
+    },
+    "FIGREF1": {
+      "text": "Figure 2",
+      "latex": null,
+      "type": "figure"
+    },
+    "FIGREF2": {
+      "text": "lished in vitro cell culture models and in our new murine model of acute pneumovirus infection. PB, Alam R, Ogra PL, Garofalo R: Respiratory syncytial virus induces selective production of the chemokine RANTES by upper airway epithelial cells. J Infect Dis 1997, 175:497-504. 18. Becker S, Reed W, Henderson FW, Noah TL: RSV infection of human airway epithelial cells causes production of the betachemokine RANTES. Am J Physiol 1997, 272:L512-L520. 19. Thomas LH, Friedland JS, Sharland M, Becker S: Respiratory syncytial virus-induced RANTES production from human bronchial epithelial cells is dependent on nuclear factor-\u03ba \u03baB nuclear binding and is inhibited by adenovirus-mediated expression of inhibitor of \u03ba \u03baB\u03b1 \u03b1. J Immunol 1998, 161:1007-1016.",
+      "latex": null,
+      "type": "figure"
+    },
+    "TABREF0": {
+      "text": "Alterations in gene expression in response to RSV infection",
+      "latex": null,
+      "type": "table"
+    },
+    "TABREF1": {
+      "text": "Features of RSV infection of humans, RSV in mice, and PVM infection in mice: a comparison",
+      "latex": null,
+      "type": "table",
+      "html": "<html><body><table><tr><td>Features </td><td>Humans infected with RSV </td><td>Mice infected with PVM </td><td>Mice infected with RSV\n</td></tr><tr><td>Inoculum required </td><td>Very low (presumed) </td><td>&lt;30 pfu </td><td>&gt;0.5-2 million pfu\n</td></tr><tr><td>Pulmonary inflammation </td><td>Granulocytic bronchiolitis </td><td>Granulocytic bronchiolitis </td><td>Mild mononuclear cell infiltrate\n</td></tr><tr><td>Eosinophil recruitment </td><td>Yes </td><td>Yes (8-12%); see arrows in panel D, Fig. 1 </td><td>No\n</td></tr><tr><td>Progression to ARDS </td><td>Yes </td><td>Yes </td><td>No\n</td></tr><tr><td>Percent with respiratory failure </td><td>10% </td><td>60% (low dose); 100% (high dose) </td><td>0%\n</td></tr><tr><td>Weight loss </td><td>Not reported, but likely </td><td>30% </td><td>12-15%\n</td></tr><tr><td>Peak lung viral titers </td><td>106 pfu/ml nasal secretion </td><td>106-108 pfu/g lung </td><td>Less than inoculum\n</td></tr></table></body></html>"
+    }
+  },
+  "back_matter": [
+    {
+      "text": "We thank Dr Andrew Easton for his assistance with the PVM model. We thank Drs Leonard Weiner, Harry Malech, and John Gallin for their support for the ongoing research in our laboratories. This work was funded in part by an American Heart Association Scientist Development Grant to JBD, the Sinsheimer Foundation and the Children's Miracle Network of Central New York.",
+      "cite_spans": [],
+      "ref_spans": [],
+      "section": "Acknowledgements"
+    }
+  ]
+}
