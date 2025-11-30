@@ -26,7 +26,7 @@ cord19-search/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/abdulbasitnikray-prog/cord19-crawler.git>
    cd cord19-search
    ```
 
@@ -78,7 +78,7 @@ lexicon, forward_index, inverted_index, backward_index = generate_indexes_from_s
 Modify `BASE_PATH` in both `crawler.py` and `index.py` to point to your CORD-19 dataset location:
 
 ```python
-BASE_PATH = "path/to/your/cord-19/dataset"
+BASE_PATH = "C:/Users/acer/Downloads/cord-19_2020-04-10/2020-04-10"
 ```
 
 ## Performance
