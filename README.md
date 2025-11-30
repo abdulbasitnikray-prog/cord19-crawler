@@ -22,6 +22,8 @@ Here is an explanation of the files currently in the repository:
 | :--- | :--- |
 | **`Crawler.py`** | The main engine script. It handles the TAR streaming, text preprocessing (SciSpacy), and the generation of all three indices. |
 | **`read_csv.py`** | A utility script used to inspect and visualize the `metadata.csv` file to understand the dataset structure before processing. |
+| **`extraction.py`** | A utility script to perform "surgical extraction" of sample JSON papers from the massive TAR archive without unzipping the whole thing. |
+| **`sample_data/`** | A folder containing a small batch of extracted JSON papers for testing the code without the full dataset. |
 | **`Forward_Inverted_Lexicon.001`** | Split archive (Part 1). Contains the generated `lexicon.json`, `forward_index.json`, and `inverted_index.json`. Split to bypass GitHub's file size limits. |
 | **`Forward_Inverted_Lexicon.002`** | Split archive (Part 2). The second part of the zipped indices. |
 | **`.gitignore`** | Configuration to prevent uploading massive raw datasets (like `document_parses.tar.gz`) or local environment folders to GitHub. |
