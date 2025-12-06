@@ -1,4 +1,4 @@
-# crawler.py
+# crawler.py - Optimized for parallel batch processing
 import json as js 
 import os
 import csv
@@ -6,8 +6,9 @@ import tarfile
 import time
 import spacy 
 import re
+from collections import defaultdict
 
-#creating the base paths for the directory and the folder in which we've stored the extracted .t.gaz folders
+# Base paths
 BASE_PATH = "C:/Users/acer/Downloads/cord-19_2020-04-10/2020-04-10"
 EXTRACTION_FOLDER = os.path.join(BASE_PATH, "document_parses")
 
@@ -16,8 +17,26 @@ PUNCT_PATTERN = re.compile(r'[{}]'.format(re.escape('"#$%&*+/<=>@[\\]^_`{|}~')))
 SPACE_PATTERN = re.compile(r'\s+')
 DIGIT_PATTERN = re.compile(r'\d+')
 
+# Global NLP model for worker processes
+_nlp_model = None
+
+def init_worker_nlp():
+    """Initialize spaCy model for worker processes (called once per worker)"""
+    global _nlp_model
+    if _nlp_model is None:
+        disable_pipes = ["parser", "ner", "textcat", "custom"]
+        try: 
+            _nlp_model = spacy.load("en_core_sci_sm", disable=disable_pipes)
+        except Exception as e:
+            try:
+                _nlp_model = spacy.load("en_core_web_sm", disable=disable_pipes)
+            except:
+                print(f"Worker: Failed to load spaCy model: {e}")
+                _nlp_model = None
+
 def get_scipacy_model():
-    disable_pipes =["parser","ner","textcat","custom"]
+    """Get spaCy model for text processing (main thread)"""
+    disable_pipes = ["parser", "ner", "textcat", "custom"]
     try: 
         return spacy.load("en_core_sci_sm", disable=disable_pipes)
     except Exception as e:
@@ -36,7 +55,7 @@ def clean_text(lines):
     full_text = DIGIT_PATTERN.sub('', full_text)
     return full_text.strip()
 
-def extract_text(json_parse):
+def extract_text(json_parse, max_lines=35):
     """Extract text from paper JSON"""
     if json_parse is None:
         return []
@@ -45,18 +64,23 @@ def extract_text(json_parse):
     for section in body:
         text = section.get("text", "")
         lines.extend(text.splitlines())
-        if len(lines) >= 35:  
+        if len(lines) >= max_lines:  
             break
-    return lines[:35]
+    return lines[:max_lines]
 
-def process_papers(json_parse, nlp, cord_uid=None):  
-    """Process single paper - text parsing only"""
+def process_paper_single(json_parse, cord_uid=None):  
+    """Process single paper - text parsing only (for single-threaded use)"""
     if json_parse is None:
         return None
     raw_lines = extract_text(json_parse)
     if not raw_lines: return None
     full_text = clean_text(raw_lines)
     if not full_text: return None
+    
+    nlp = get_scipacy_model()
+    if not nlp:
+        return None
+        
     nlp.max_length = 1500000 
     doc = nlp(full_text) 
     indexed_tokens = []
@@ -69,6 +93,61 @@ def process_papers(json_parse, nlp, cord_uid=None):
         }
         indexed_tokens.append(token_data)
     return {"tokens": indexed_tokens}
+
+def process_paper_batch(batch):
+    """
+    Process a batch of papers using spaCy's pipe for efficiency
+    Returns: List of processed papers with tokens
+    """
+    global _nlp_model
+    
+    if _nlp_model is None:
+        init_worker_nlp()
+        if _nlp_model is None:
+            return []
+    
+    papers_data = []
+    texts = []
+    
+    # Extract and clean texts
+    for paper in batch:
+        raw_lines = extract_text(paper.get('json_parse'))
+        if raw_lines:
+            full_text = clean_text(raw_lines)
+            if full_text:
+                texts.append(full_text)
+                papers_data.append({
+                    "cord_uid": paper.get("cord_uid"),
+                    "title": paper.get("title", "")
+                })
+    
+    if not texts:
+        return []
+    
+    # Batch process with spaCy pipe
+    results = []
+    batch_size = min(50, len(texts))  # Optimal batch size for spaCy
+    
+    for doc in _nlp_model.pipe(texts, batch_size=batch_size, n_process=1):
+        if not papers_data:
+            continue
+            
+        paper_info = papers_data.pop(0)
+        tokens = []
+        
+        for token in doc:
+            if (not token.is_stop and not token.is_punct and 
+                not token.is_space and not token.like_num and 
+                len(token.text) >= 2):
+                tokens.append(token.lemma_)
+        
+        if tokens:
+            results.append({
+                "cord_uid": paper_info["cord_uid"],
+                "tokens": tokens
+            })
+    
+    return results
 
 def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
     """
@@ -132,8 +211,8 @@ def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
                                 "json_parse": content
                             }
                             found_count += 1
-                            if found_count % 100 == 0:
-                                print(f"  Streamed {found_count} papers...")
+                            if found_count % 5000 == 0:
+                                print(f"  Streamed {found_count:,} papers...")
                         except:
                             pass # Skip malformed JSONs
                             
@@ -141,7 +220,7 @@ def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
         print(f"Error: Could not find the tar file at {tar_path}")
         return
 
-    print(f"Successfully streamed {found_count} papers from archive.")
+    print(f"Successfully streamed {found_count:,} papers from archive.")
 
 def get_paper_stream(max_papers=None):
     """
@@ -171,7 +250,7 @@ def get_paper_stream(max_papers=None):
             print(f"Warning: Could not find {tar_filename}")
             continue
             
-        print(f"Processing {tar_filename}...")
+        print(f"\nProcessing {tar_filename}...")
         
         # Get papers from this tar file
         for paper in stream_tar_dataset(metadata_path, tar_path, max_papers=None):
@@ -182,89 +261,60 @@ def get_paper_stream(max_papers=None):
             
             # Check again after yielding
             if max_papers and total_found >= max_papers:
-                print(f"Reached max papers limit: {max_papers}")
+                print(f"Reached max papers limit: {max_papers:,}")
                 return
     
-    print(f"Total papers available: {total_found}")
+    print(f"\nTotal papers available: {total_found:,}")
 
-def process_with_chunks(paper_generator, chunk_size=100, max_papers=None):
+def get_paper_batches(batch_size=100, max_papers=None):
     """
-    Process papers in chunks directly from the yield generator.
-    Returns processed papers with tokens - NO indexing!
+    Yields batches of papers for parallel processing
+    Returns: Generator of paper batches
     """
-    all_processed_papers = []
-    current_chunk = []
-    total_processed = 0
-
-    print("Processing papers in chunks...")
-    start_time = time.time()
+    print(f"Creating paper batches (batch_size={batch_size})...")
     
-    # Load model once
-    nlp = get_scipacy_model()
-    if not nlp:
-        print("ERROR: Could not load the spaCy model")
-        return []
+    paper_stream = get_paper_stream(max_papers)
+    if not paper_stream:
+        return
     
-    # Process papers from generator in chunks
-    for i, paper in enumerate(paper_generator):
-        if max_papers and i >= max_papers:
-            break
-
-        current_chunk.append(paper)
-        total_processed += 1
-
-        # Process chunk when full
-        if len(current_chunk) >= chunk_size:
-            chunk_num = len(all_processed_papers) // chunk_size + 1
-            print(f"Processing chunk {chunk_num} ({len(current_chunk)} papers)")
-
-            processed_in_chunk = 0
-            for paper in current_chunk:
-                processed_data = process_papers(paper['json_parse'], nlp, paper['cord_uid'])
-                if processed_data:
-                    paper["processed"] = processed_data
-                    all_processed_papers.append(paper)
-                    processed_in_chunk += 1
+    current_batch = []
+    batch_count = 0
+    
+    for paper in paper_stream:
+        current_batch.append(paper)
+        
+        if len(current_batch) >= batch_size:
+            yield current_batch
+            current_batch = []
+            batch_count += 1
             
-            # Progress reporting
-            elapsed_time = time.time() - start_time
-            papers_per_second = total_processed / elapsed_time
-            remaining_papers = max_papers - total_processed if max_papers else 0
-            eta = remaining_papers / papers_per_second if papers_per_second > 0 else 0
-            
-            print(f"Progress: {total_processed}/{max_papers if max_papers else '∞'} | "
-                  f"Speed: {papers_per_second:.1f} papers/sec | "
-                  f"ETA: {eta/60:.1f} min")
-            current_chunk = []
+            if batch_count % 10 == 0:
+                print(f"  Created {batch_count} batches...")
     
-    # Process final chunk
-    if current_chunk:
-        print(f"Processing final chunk ({len(current_chunk)} papers)...")
-        for paper in current_chunk:
-            processed_data = process_papers(paper['json_parse'], nlp, paper['cord_uid'])
-            if processed_data:
-                paper["processed"] = processed_data
-                all_processed_papers.append(paper)
+    # Yield final batch
+    if current_batch:
+        yield current_batch
+        batch_count += 1
     
-    total_time = time.time() - start_time
-    print(f"Processing completed in {total_time/60:.2f} minutes")
-    print(f"Successfully processed {len(all_processed_papers)} papers")
-    
-    return all_processed_papers
+    print(f"Total batches created: {batch_count}")
 
 def check_files():
+    """Utility function to check if required files exist"""
     metadata_path = os.path.join(BASE_PATH, "metadata.csv")
-    tar_path = os.path.join(BASE_PATH, "document_parses.tar.gz")
     
     print(f"Looking for metadata at: {metadata_path}")
     print(f"Exists: {os.path.exists(metadata_path)}")
-    print(f"Looking for tar at: {tar_path}")
-    print(f"Exists: {os.path.exists(tar_path)}")
     
     # List all files in BASE_PATH to see what's there
     if os.path.exists(BASE_PATH):
         print("\nFiles in directory:")
+        tar_files = []
         for file in os.listdir(BASE_PATH):
-            if file.endswith(('.tar', '.gz', '.csv')):
-                print(f"  - {file}")
-
+            if file.endswith('.tar.gz'):
+                tar_files.append(file)
+            elif file.endswith('.csv'):
+                print(f"  - {file} (metadata)")
+        
+        print(f"\nTar files found: {len(tar_files)}")
+        for tf in tar_files:
+            print(f"  - {tf}")
