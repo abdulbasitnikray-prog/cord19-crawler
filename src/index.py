@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore", message="generator ignored GeneratorExit")
 warnings.filterwarnings("ignore", message=".*en_core_sci_sm.*")
 warnings.filterwarnings("ignore", category=UserWarning)
 
-from crawler import get_paper_batches, process_paper_batch, init_worker_nlp
+from . crawler import get_paper_batches, process_paper_batch, init_worker_nlp
 
 # Base path
 BASE_PATH = "C:/Users/acer/Downloads/cord-19_2020-04-10/2020-04-10"
