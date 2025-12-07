@@ -1,26 +1,25 @@
-﻿# Data directories - DO NOT COMMIT
+# Raw data directories - IGNORE
 barrels/
 compressed_barrels/
 indexes/
+
+# Git LFS handles these archive formats
+# DO NOT ignore these - Git LFS tracks them:
+# *.zip  <-- Tracked by LFS, so DON'T add this line!
+# *.7z   <-- Tracked by LFS, so DON'T add this line!
+# *.pkl  <-- Tracked by LFS, so DON'T add this line!
 
 # Python cache
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
 
-# Data files
-*.json
-*.pkl
-*.pickle
-*.h5
-*.hdf5
-
-# Archives
-*.zip
-*.7z
-*.gz
-*.tar
+# Virtual environments
+scispacy_64bit/
+scispacy_env/
+scispacy_final/
+env/
+venv/
 
 # OS files
 .DS_Store
@@ -29,5 +28,3 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
-*.swp
-*.swo
