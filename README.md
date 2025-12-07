@@ -4,10 +4,6 @@ A high-performance, memory-efficient Python pipeline designed to crawl, process,
 
 This project was built for the CS-250 Data Structures & Algorithms course at NUST (SE-15). It efficiently parses and indexes 50,000 priority papers out of the total 81,226 papers available in the TREC-COVID Round 1 dataset, creating a robust search foundation on standard hardware.
 
-# **CORD-19 Search Index System**
-
-A Python-based search indexing system for the COVID-19 Open Research Dataset (CORD-19). This system processes scientific research papers to build efficient search indexes that enable fast document retrieval and text analysis.
-
 ## Features
 
 - **Memory-efficient streaming** - Processes compressed tar files without full extraction
