@@ -1,4 +1,4 @@
-# crawler.py - Optimized for parallel batch processing
+# crawler.py - Memory-optimized for parallel batch processing with scispaCy
 import json as js 
 import os
 import csv
@@ -6,6 +6,7 @@ import tarfile
 import time
 import spacy 
 import re
+import string
 from collections import defaultdict
 
 # Base paths
@@ -16,72 +17,161 @@ EXTRACTION_FOLDER = os.path.join(BASE_PATH, "document_parses")
 PUNCT_PATTERN = re.compile(r'[{}]'.format(re.escape('"#$%&*+/<=>@[\\]^_`{|}~')))
 SPACE_PATTERN = re.compile(r'\s+')
 DIGIT_PATTERN = re.compile(r'\d+')
+URL_PATTERN = re.compile(r'https?://\S+|www\.\S+')
+EMAIL_PATTERN = re.compile(r'\S+@\S+')
+# Pattern to detect gibberish (like if there's multiple nonalphabetic characters in a row)
+GIBBERISH_PATTERN = re.compile(r'[^a-zA-Z\s]{3,}')
+# Pattern for chemical/biological sequences (like DNA/protein sequences)
+SEQUENCE_PATTERN = re.compile(r'\b[ACGTU]{6,}\b|\b[ACGTU]{3,}(?:[ACGTU]{3,})+\b', re.IGNORECASE)
 
 # Global NLP model for worker processes
 _nlp_model = None
 
 def init_worker_nlp():
-    """Initialize spaCy model for worker processes (called once per worker)"""
+    """Initialize lightweight ScispaCy model with memory optimization (the other one was too heavy and took too long)"""
     global _nlp_model
     if _nlp_model is None:
-        disable_pipes = ["parser", "ner", "textcat", "custom"]
-        try: 
+        # we only need tokenizer, tagger, lemmatizer (minimise components)
+        disable_pipes = ["parser", "ner", "textcat", "attribute_ruler", "senter"]
+        
+        try:
             _nlp_model = spacy.load("en_core_sci_sm", disable=disable_pipes)
+            _nlp_model.max_length = 1000000  # 1 million characters
+            
         except Exception as e:
+            print(f"worker failed to load scispaCy model: {e}")
+            print("going to fallback to web_sm model")
             try:
+                # code to fallback to web_sm if sci_sm fails (web-sm is smaller but less accurate)
                 _nlp_model = spacy.load("en_core_web_sm", disable=disable_pipes)
+                _nlp_model.max_length = 1000000
+                # print("worker: Loaded en_core_web_sm (fallback)")
             except:
-                print(f"Worker: Failed to load spaCy model: {e}")
+                print("could not load any spaCy model")
                 _nlp_model = None
 
 def get_scipacy_model():
-    """Get spaCy model for text processing (main thread)"""
-    disable_pipes = ["parser", "ner", "textcat", "custom"]
-    try: 
-        return spacy.load("en_core_sci_sm", disable=disable_pipes)
+    """Get spaCy model for text processing (main thread) - optimised for memory"""
+    # Use same configuration as init_worker_nlp
+    disable_pipes = ["parser", "ner", "textcat", "attribute_ruler", "senter"]
+    
+    try:
+        # Load without invalid config
+        nlp = spacy.load("en_core_sci_sm", disable=disable_pipes)
+        nlp.max_length = 1000000
+        return nlp
     except Exception as e:
         try:
-            return spacy.load("en_core_web_sm", disable=disable_pipes)
+            nlp = spacy.load("en_core_web_sm", disable=disable_pipes)
+            nlp.max_length = 1000000
+            return nlp
         except:
             print(f"An exception occurred: {e}")
             return None
 
 def clean_text(lines):
-    """Clean text - only basic text processing"""
-    if not lines: return ""
+    """clean text with memory-safe preprocessing"""
+    if not lines: 
+        return ""
+    
+    # join lines and convert to lowercase
     full_text = " ".join(lines).lower()
-    full_text = SPACE_PATTERN.sub(' ', full_text)
-    full_text = PUNCT_PATTERN.sub('', full_text)
+    
+    # truncating very long texts to prevent memory issues
+    max_chars = 50000  # limit to 50K characters
+    if len(full_text) > max_chars:
+        full_text = full_text[:max_chars]
+    
+    # no urls
+    full_text = URL_PATTERN.sub('', full_text)
+    # no emails
+    full_text = EMAIL_PATTERN.sub('', full_text)
+    # no chemical/biological sequences (DNA, protein sequences)
+    full_text = SEQUENCE_PATTERN.sub('', full_text)
+    # no gibberish (multiple non-alphabetic characters)
+    full_text = GIBBERISH_PATTERN.sub('', full_text)
+    # no digits
     full_text = DIGIT_PATTERN.sub('', full_text)
+    # no problematic punctuation (keeping some for sentence structure)
+    full_text = PUNCT_PATTERN.sub('', full_text)
+    # no extra whitespace
+    full_text = SPACE_PATTERN.sub(' ', full_text)
+    # removing standalone single letters (except 'a' and 'i')
+    words = full_text.split()
+    filtered_words = []
+    for word in words:
+        if len(word) == 1 and word not in ['a', 'i']:
+            continue
+        if len(word) > 50:  # skip extremely long words (not really useful)
+            continue
+        filtered_words.append(word)
+    
+    full_text = ' '.join(filtered_words)
+    
     return full_text.strip()
 
-def extract_text(json_parse, max_lines=35):
-    """Extract text from paper JSON"""
+def extract_text(json_parse, max_lines=50):
+    """Extract text from paper JSON with character limits"""
     if json_parse is None:
         return []
-    body = json_parse.get("body_text", [])
+    
     lines = []
-    for section in body:
-        text = section.get("text", "")
-        lines.extend(text.splitlines())
-        if len(lines) >= max_lines:  
-            break
-    return lines[:max_lines]
+    total_chars = 0
+    
+    # extract title if available
+    if 'metadata' in json_parse and 'title' in json_parse['metadata']:
+        title = json_parse['metadata']['title']
+        if title and isinstance(title, str):
+            lines.extend(title.splitlines())
+            total_chars += len(title)
+    
+    # extract abstract
+    if 'abstract' in json_parse:
+        for entry in json_parse['abstract']:
+            text = entry.get("text", "")
+            if text and isinstance(text, str):
+                lines.extend(text.splitlines())
+                total_chars += len(text)
+    
+    # extract body text with character limit
+    if 'body_text' in json_parse:
+        for section in json_parse['body_text']:
+            text = section.get("text", "")
+            if text and isinstance(text, str):
+                # skip if already too much text
+                if total_chars > 50000:  # 50K character limit
+                    break
+                lines.extend(text.splitlines())
+                total_chars += len(text)
+                if len(lines) >= max_lines:  
+                    break
+    
+    # take only unique lines to reduce repetition
+    unique_lines = []
+    seen_lines = set()
+    for line in lines:
+        line_stripped = line.strip()
+        if line_stripped and line_stripped not in seen_lines:
+            seen_lines.add(line_stripped)
+            unique_lines.append(line_stripped)
+    
+    return unique_lines[:max_lines]
 
 def process_paper_single(json_parse, cord_uid=None):  
     """Process single paper - text parsing only (for single-threaded use)"""
     if json_parse is None:
         return None
     raw_lines = extract_text(json_parse)
-    if not raw_lines: return None
+    if not raw_lines: 
+        return None
     full_text = clean_text(raw_lines)
-    if not full_text: return None
+    if not full_text: 
+        return None
     
     nlp = get_scipacy_model()
     if not nlp:
         return None
         
-    nlp.max_length = 1500000 
     doc = nlp(full_text) 
     indexed_tokens = []
     for token in doc:
@@ -89,7 +179,9 @@ def process_paper_single(json_parse, cord_uid=None):
             token.like_num or len(token.text) < 2):
             continue
         token_data = {
-            'lemma': token.lemma_
+            'lemma': token.lemma_,
+            'pos': token.pos_,
+            'tag': token.tag_
         }
         indexed_tokens.append(token_data)
     return {"tokens": indexed_tokens}
@@ -109,12 +201,12 @@ def process_paper_batch(batch):
     papers_data = []
     texts = []
     
-    # Extract and clean texts
+    # extract and clean texts
     for paper in batch:
         raw_lines = extract_text(paper.get('json_parse'))
         if raw_lines:
             full_text = clean_text(raw_lines)
-            if full_text:
+            if full_text and len(full_text) > 10:  # Skip very short texts
                 texts.append(full_text)
                 papers_data.append({
                     "cord_uid": paper.get("cord_uid"),
@@ -124,28 +216,40 @@ def process_paper_batch(batch):
     if not texts:
         return []
     
-    # Batch process with spaCy pipe
+    # batch process with spaCy pipe - with smaller batch size for memory
     results = []
-    batch_size = min(50, len(texts))  # Optimal batch size for spaCy
+    batch_size = min(20, len(texts))  # SMALLER batch size for memory safety
     
-    for doc in _nlp_model.pipe(texts, batch_size=batch_size, n_process=1):
-        if not papers_data:
-            continue
+    try:
+        for doc in _nlp_model.pipe(texts, batch_size=batch_size, n_process=1):
+            if not papers_data:
+                continue
+                
+            paper_info = papers_data.pop(0)
+            tokens = []
             
-        paper_info = papers_data.pop(0)
-        tokens = []
-        
-        for token in doc:
-            if (not token.is_stop and not token.is_punct and 
-                not token.is_space and not token.like_num and 
-                len(token.text) >= 2):
-                tokens.append(token.lemma_)
-        
-        if tokens:
-            results.append({
-                "cord_uid": paper_info["cord_uid"],
-                "tokens": tokens
-            })
+            for token in doc:
+                if (not token.is_stop and not token.is_punct and 
+                    not token.is_space and not token.like_num and 
+                    len(token.text) >= 2 and token.pos_ != 'X'):  # skip "other" category
+                    
+                    # Store token with POS information
+                    token_info = {
+                        'lemma': token.lemma_,
+                        'pos': token.pos_,
+                        'tag': token.tag_
+                    }
+                    tokens.append(token_info)
+            
+            if tokens:
+                results.append({
+                    "cord_uid": paper_info["cord_uid"],
+                    "tokens": tokens  # pos info for queries
+                })
+    
+    except Exception as e:
+        print(f"  Worker error (skipping batch): {str(e)[:100]}")
+        return []
     
     return results
 
@@ -219,6 +323,9 @@ def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
     except FileNotFoundError:
         print(f"Error: Could not find the tar file at {tar_path}")
         return
+    except GeneratorExit:
+        # Handle generator being closed early
+        return
 
     print(f"Successfully streamed {found_count:,} papers from archive.")
 
@@ -255,14 +362,10 @@ def get_paper_stream(max_papers=None):
         # Get papers from this tar file
         for paper in stream_tar_dataset(metadata_path, tar_path, max_papers=None):
             if max_papers and total_found >= max_papers:
+                print(f"Reached max papers limit: {max_papers:,}")
                 return
             total_found += 1
             yield paper
-            
-            # Check again after yielding
-            if max_papers and total_found >= max_papers:
-                print(f"Reached max papers limit: {max_papers:,}")
-                return
     
     print(f"\nTotal papers available: {total_found:,}")
 
@@ -288,8 +391,6 @@ def get_paper_batches(batch_size=100, max_papers=None):
             current_batch = []
             batch_count += 1
             
-            if batch_count % 10 == 0:
-                print(f"  Created {batch_count} batches...")
     
     # Yield final batch
     if current_batch:
