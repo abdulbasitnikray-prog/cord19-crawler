@@ -13,10 +13,10 @@ warnings.filterwarnings("ignore", message="generator ignored GeneratorExit")
 warnings.filterwarnings("ignore", message=".*en_core_sci_sm.*")
 warnings.filterwarnings("ignore", category=UserWarning)
 
-from . crawler import get_paper_batches, process_paper_batch, init_worker_nlp
+from crawler import get_paper_batches, process_paper_batch, init_worker_nlp
 
 # Base path
-BASE_PATH = "C:/Users/acer/Downloads/cord-19_2020-04-10/2020-04-10"
+BASE_PATH = "D:/Cord19/cord/2022"
 
 def build_indexes_from_batch_results(batch_results, target_papers=50000):
     """
@@ -382,11 +382,11 @@ def main():
     print("=" * 70)
     
     
-    TARGET_PAPERS = 10000
+    TARGET_PAPERS = 50000
     BATCH_SIZE = 100
     USE_PARALLEL = True
     MEMORY_SAFE = True  #enable memory optimizations
-    NUM_WORKERS = 4     #fixed at 4 workers for scispaCy
+    NUM_WORKERS = 4    #fixed at 4 workers for scispaCy
     
     print(f"Target: Process {TARGET_PAPERS:,} papers")
     print(f"Batch size: {BATCH_SIZE}")
