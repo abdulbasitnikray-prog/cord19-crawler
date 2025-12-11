@@ -7,6 +7,11 @@ indexes/
 # data/*.zip  <-- Tracked by Git LFS
 # data/*.7z   <-- Tracked by Git LFS
 
+# Json Files
+forward_index.json
+inverted_index.json
+lexicon.json
+
 # Python
 __pycache__/
 *.pyc
