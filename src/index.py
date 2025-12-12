@@ -18,273 +18,94 @@ from crawler import get_paper_batches, process_paper_batch, init_worker_nlp
 # Base path
 BASE_PATH = "D:/Cord19/cord/2022"
 
-def build_indexes_from_batch_results(batch_results, target_papers=50000):
-    """
-    Build all indexes from processed batch results with integrated POS information
-    """
-    print(f"\n--- Building Indexes from Processed Results (Target: {target_papers:,} papers) ---")
-    
-    # full lexicon with POS information
-    lexicon = {}           # word -> {"id": word_id, "pos_counts": {pos: count}, "lemma": lemma}
-    forward_index = {}     # doc_id -> [word_id1, word_id2, ...]
-    inverted_index = {}    # word_id -> {doc_id: frequency}
-    backward_index = {}    # doc_id -> [{word, lemma, pos, tag}, ...]
+def generate_indexes_parallel(target_papers=50000, batch_size=500, num_workers=4, memory_safe=True):
+    print("=" * 70)
+    print(f"INCREMENTAL PARALLEL INDEXING (Target: {target_papers:,})")
+    print("=" * 70)
+
+    # --- Initialize Indexes Immediately (Not at the end) ---
+    lexicon = {}
+    forward_index = {}
+    inverted_index = {}
+    backward_index = {}
     word_id_counter = 1
     
-    total_papers = 0
     start_time = time.time()
     last_report_time = start_time
+    total_processed = 0
     
-    # process all batch results
-    for batch_idx, batch in enumerate(batch_results):
-        for paper_data in batch:
-            if not paper_data or "tokens" not in paper_data:
-                continue
-                
-            doc_id = paper_data["cord_uid"]
-            tokens = paper_data["tokens"]
-            
-            # update backward index with POS information
-            backward_index[doc_id] = tokens
-            
-            # update lexicon and forward index
-            doc_word_ids = []
-            word_freq = defaultdict(int)
-            
-            for token_info in tokens:
-                lemma = token_info['lemma']
-                pos = token_info['pos']
-                tag = token_info['tag']
-                
-                # use lemma as the word key
-                word_key = lemma
-                
-                # add to lexicon if new
-                if word_key not in lexicon:
-                    lexicon[word_key] = {
-                        "id": word_id_counter,
-                        "pos_counts": defaultdict(int),
-                        "lemma": lemma
-                    }
-                    word_id_counter += 1
-                
-                # update POS counts for this word
-                lexicon[word_key]["pos_counts"][pos] += 1
-                
-                word_id = lexicon[word_key]["id"]
-                doc_word_ids.append(word_id)
-                word_freq[word_id] += 1
-            
-            # update forward index
-            forward_index[doc_id] = doc_word_ids
-            
-            # update inverted index
-            for word_id, freq in word_freq.items():
-                if word_id not in inverted_index:
-                    inverted_index[word_id] = {}
-                inverted_index[word_id][doc_id] = freq
-            
-            total_papers += 1
-            
-            # progress reporting every 1000 papers or 30 seconds
-            current_time = time.time()
-            if total_papers % 1000 == 0 or (current_time - last_report_time) > 30:
-                elapsed = current_time - start_time
-                rate = total_papers / elapsed
-                
-                # to find out how much time remains 
-                papers_remaining = target_papers - total_papers
-                if rate > 0:
-                    time_remaining = papers_remaining / rate
-                    hours = int(time_remaining // 3600)
-                    minutes = int((time_remaining % 3600) // 60)
-                    seconds = int(time_remaining % 60)
-                    time_str = f"{hours:02d}:{minutes:02d}:{seconds:02d}"
-                else:
-                    time_str = "in the middle of calculating"
-                
-                print(f"  Indexed {total_papers:,}/{target_papers:,} papers | "
-                      f"Rate: {rate:.1f} papers/sec | "
-                      f"Time Remaining: {time_str} | "
-                      f"Unique words: {len(lexicon):,}")
-                
-                last_report_time = current_time
-    
-    total_time = time.time() - start_time
-    
-    # analyze pos distribution
-    pos_summary = defaultdict(int)
-    for word_info in lexicon.values():
-        for pos, count in word_info["pos_counts"].items():
-            pos_summary[pos] += count
-    
-    print(f"\nIndex building completed in {total_time/60:.2f} minutes")
-    print(f"Final count: {total_papers:,} papers indexed")
-    print(f"POS tag distribution:")
-    for pos, count in sorted(pos_summary.items(), key=lambda x: x[1], reverse=True): #asceding order sort to show the count of pos tagged terms 
-        percentage = (count / sum(pos_summary.values())) * 100
-        print(f"  {pos}: {count:,} ({percentage:.1f}%)")
-    
-    return lexicon, forward_index, inverted_index, backward_index
-def generate_indexes_parallel(target_papers=50000, batch_size=100, num_workers=None, memory_safe=True):
-    """
-    Generate indexes using parallel processing
-    Processes batches as they arrive from generator 
-    """
-    print("=" * 70)
-    print("TRUE STREAMING PARALLEL INDEXING WITH SCIENTIFIC POS TAGGING")
-    print(f"Target: {target_papers:,} papers")
-    print("=" * 70)
-    
-    # use fewer workers for scispaCy
-    if num_workers is None:
-        if memory_safe:
-            # safe settings for scispaCy 
-            num_workers = min(4, max(1, cpu_count() // 3))  # max 4 workers / can do 11 but that would take too much memory and might crash
-        else:
-            num_workers = max(1, cpu_count() - 1)
-    
-    print(f"Configuration:")
-    print(f"  Target papers: {target_papers:,}")
-    print(f"  Batch size: {batch_size}")
-    print(f"  Worker processes: {num_workers} (optimized for scispaCy)")
-    print(f"  Model: en_core_sci_sm (scientific terminology)")
-    print(f"  Processing mode: True streaming (no pre-collection)")
-    print(f"  Memory safe: {'Yes' if memory_safe else 'No'}")
-    print("=" * 70)
-    
-    # Get batch generator (we're not collecting or storing batches anywhere, just getting the batch stream)
-    print(f"\nStep 1: starting paper stream...")
-    batch_generator = get_paper_batches(batch_size=batch_size, max_papers=target_papers)
-    
-    print(f"\nStep 2: streaming processing with {num_workers} workers...")
-    print("using en_core_sci_sm for scientific terminology")
-    start_time = time.time()
-    last_report_time = start_time
-    
-    batch_results = []
-    completed_batches = 0
-    total_papers_processed = 0
-    
-    # process chunks as they arrive from generator
-    chunk_size = 20  # Process 20 batches at a time // yield generates paper stream -> stream collected as a batch -> batches collected into chunks -> chunks processed in parallel
+    print(f"Starting stream with {num_workers} workers...")
+    batch_gen = get_paper_batches(batch_size=batch_size, max_papers=target_papers)
     
     with Pool(processes=num_workers, initializer=init_worker_nlp) as pool:
-        current_chunk = []
+        # Use imap_unordered for speed
+        cursor = pool.imap_unordered(process_paper_batch, batch_gen)
         
-        for batch in batch_generator:  # streaming from generator, not collecting 
-            current_chunk.append(batch)
+        for batch_result in cursor:
+            if not batch_result: continue
             
-            # when we have enough batches, process this chunk
-            if len(current_chunk) >= chunk_size:
-                # process the current chunk
-                try:
-                    chunk_results = list(pool.imap(process_paper_batch, current_chunk, chunksize=1))
+            # --- PROCESS DATA IMMEDIATELY ---
+            # Instead of storing results, we update indexes and delete the data
+            for paper in batch_result:
+                if not paper or "tokens" not in paper: continue
+                
+                doc_id = paper["cord_uid"]
+                tokens = paper["tokens"]
+                
+                # 1. Backward Index
+                backward_index[doc_id] = tokens
+                
+                doc_word_ids = []
+                word_freq = defaultdict(int)
+                
+                for token_info in tokens:
+                    lemma = token_info['lemma']
+                    pos = token_info.get('pos', 'UNK')
                     
-                    # add results
-                    for result in chunk_results:
-                        batch_results.append(result)
-                        completed_batches += 1
-                        total_papers_processed += len(result)
-                        
-                        # progress updates
-                        current_time = time.time()
-                        if completed_batches % 5 == 0 or (current_time - last_report_time) > 30:
-                            elapsed = current_time - start_time
-                            rate = total_papers_processed / elapsed
-                            
-                            # time remaining calculation
-                            if rate > 0:
-                                papers_remaining = target_papers - total_papers_processed
-                                time_remaining = papers_remaining / rate
-                                hours = int(time_remaining // 3600)
-                                minutes = int((time_remaining % 3600) // 60)
-                                seconds = int(time_remaining % 60)
-                                time_str = f"{hours:02d}:{minutes:02d}:{seconds:02d}"
-                                
-                                # estimate completion time
-                                completion_time = time.strftime("%H:%M:%S", 
-                                    time.localtime(current_time + time_remaining))
-                            else:
-                                time_str = "calculating"
-                                completion_time = "unknown"
-                            
-                            print(f"  Processed {completed_batches} batches | "
-                                  f"{total_papers_processed:,}/{target_papers:,} papers | "
-                                  f"Rate: {rate:.1f} papers/sec | "
-                                  f"Remaining: {time_str} | "
-                                  f"ETA: {completion_time}")
-                            
-                            last_report_time = current_time
+                    # 2. Update Lexicon
+                    if lemma not in lexicon:
+                        lexicon[lemma] = {
+                            "id": word_id_counter,
+                            "pos_counts": defaultdict(int),
+                            "lemma": lemma
+                        }
+                        word_id_counter += 1
+                    
+                    lexicon[lemma]["pos_counts"][pos] += 1
+                    w_id = lexicon[lemma]["id"]
+                    
+                    doc_word_ids.append(w_id)
+                    word_freq[w_id] += 1
                 
-                except Exception as e:
-                    print(f"  Warning: Error processing chunk: {str(e)[:100]}")
+                # 3. Update Forward Index
+                forward_index[doc_id] = doc_word_ids
                 
-                finally:
-                    # Clear current chunk and memory
-                    current_chunk = []
-                    gc.collect()
-        
-        # process any remaining batches in the final chunk
-        if current_chunk:
-            try:
-                chunk_results = list(pool.imap(process_paper_batch, current_chunk, chunksize=1))
-                batch_results.extend(chunk_results)
-                completed_batches += len(current_chunk)
-                total_papers_processed += sum(len(r) for r in chunk_results)
-            except Exception as e:
-                print(f"  Warning: Error processing final chunk: {str(e)[:100]}")
-    
-    parallel_time = time.time() - start_time
-    print(f"\nStreaming processing completed in {parallel_time/60:.2f} minutes")
-    print(f"Total batches processed: {completed_batches}")
-    print(f"Total papers processed: {total_papers_processed:,}")
-    
-    # Build indexes from results
-    print(f"\nStep 3: Building indexes with POS information...")
-    lexicon, forward_index, inverted_index, backward_index = build_indexes_from_batch_results(
-        batch_results, target_papers=target_papers
-    )
-    
+                # 4. Update Inverted Index
+                for w_id, freq in word_freq.items():
+                    if w_id not in inverted_index:
+                        inverted_index[w_id] = {}
+                    inverted_index[w_id][doc_id] = freq
+                
+                total_processed += 1
+
+            # --- CRITICAL MEMORY FIX ---
+            # Delete the processed batch from RAM immediately
+            del batch_result
+            
+            # Progress Report
+            current_time = time.time()
+            if total_processed % 1000 == 0:
+                elapsed = current_time - start_time
+                rate = total_processed / elapsed
+                remaining = (target_papers - total_processed) / rate if rate > 0 else 0
+                time_str = time.strftime("%H:%M:%S", time.gmtime(remaining))
+                
+                print(f"Indexed {total_processed:,} | Rate: {rate:.1f} docs/s | ETA: {time_str} | RAM Safe: Yes")
+
     total_time = time.time() - start_time
-    total_papers_indexed = len(forward_index)
-    
-    print("\n" + "=" * 70)
-    print("STREAMING INDEXING COMPLETE")
-    print("=" * 70)
-    print(f"Target papers: {target_papers:,}")
-    print(f"Batches processed: {completed_batches}")
-    print(f"Papers processed: {total_papers_processed:,}")
-    print(f"Papers indexed: {total_papers_indexed:,}")
-    
-    if total_papers_indexed > 0:
-        print(f"\nSuccess rates:")
-        print(f"  Processing: {total_papers_processed/target_papers*100:.1f}%")
-        print(f"  Final: {total_papers_indexed/target_papers*100:.1f}%")
-    
-    print(f"\nPerformance:")
-    print(f"  Total time: {total_time/60:.2f} minutes")
-    print(f"  Average rate: {total_papers_indexed/total_time:.1f} papers/sec")
-    print(f"  Peak memory efficiency: True streaming (no batch pre-collection)")
-    print(f"  Unique words: {len(lexicon):,}")
-    print(f"  Index sizes:")
-    print(f"    - Forward index: {len(forward_index):,} documents")
-    print(f"    - Inverted index: {len(inverted_index):,} terms")
-    print(f"    - Backward index: {len(backward_index):,} documents")
-    print(f"    - Lexicon: {len(lexicon):,} entries with POS info")
-    
-    # check if we met the target
-    if total_papers_indexed >= target_papers * 0.95:  
-        print(f"\nIndexing successful: Achieved {total_papers_indexed/target_papers*100:.1f}% of target")
-    elif total_papers_indexed >= target_papers * 0.8: 
-        print(f"\nOnly achieved {total_papers_indexed/target_papers*100:.1f}% of target")
-    else:
-        print(f"\nOnly achieved {total_papers_indexed/target_papers*100:.1f}% of target")
-    
-    print("=" * 70)
+    print(f"\nCompleted in {total_time/60:.2f} minutes")
     
     return lexicon, forward_index, inverted_index, backward_index
-
 
 
 def save_index_files(lexicon, forward_index, inverted_index, backward_index, output_dir="indexes", total_time=None):
@@ -383,10 +204,10 @@ def main():
     
     
     TARGET_PAPERS = 50000
-    BATCH_SIZE = 100
+    BATCH_SIZE = 50
     USE_PARALLEL = True
     MEMORY_SAFE = True  #enable memory optimizations
-    NUM_WORKERS = 4    #fixed at 4 workers for scispaCy
+    NUM_WORKERS = 2    #fixed at 2 workers for scispaCy
     
     print(f"Target: Process {TARGET_PAPERS:,} papers")
     print(f"Batch size: {BATCH_SIZE}")
