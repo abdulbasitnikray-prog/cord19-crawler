@@ -75,22 +75,6 @@ def train_model():
     print(f"TRAINING COMPLETE in {total_time/60:.2f} minutes")
     print(f"Model saved: {os.path.abspath(MODEL_OUTPUT_FILE)}")
     
-    # 4. Verification Test
-    test_terms = ["coronavirus", "heart", "lungs", "fever"]
-    print("\n--- Model Verification ---")
-    for term in test_terms:
-        try:
-            # Check if term is in vocabulary
-            if term in model.wv:
-                similar = model.wv.most_similar(term, topn=3)
-                print(f"Synonyms for '{term}': {similar}")
-            else:
-                print(f"'{term}' not found in vocabulary.")
-        except Exception as e:
-            print(f"Error testing '{term}': {e}")
-            
-    print("="*60)
-
 if __name__ == "__main__":
     # Initialize shared memory for NLP if needed
     init_worker_nlp()
