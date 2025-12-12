@@ -60,11 +60,26 @@ def extract_text(json_parse):
     if json_parse is None: return []
     body = json_parse.get("body_text", [])
     lines = []
-    for section in body:
-        text = section.get("text", "")
-        lines.extend(text.splitlines())
-        if len(lines) >= 35: break # Optimization limit
-    return lines[:35]
+    # 1. Get Title
+    if 'metadata' in json_parse and 'title' in json_parse['metadata']:
+        title = json_parse['metadata']['title']
+        if title: lines.append(title)
+    
+    # 2. Get Abstract (Crucial for semantic training)
+    if 'abstract' in json_parse:
+        for entry in json_parse['abstract']:
+            text = entry.get("text", "")
+            if text: lines.append(text)
+            
+    # 3. Get Body Text
+    if 'body_text' in json_parse:
+        for section in json_parse['body_text']:
+            text = section.get("text", "")
+            if text:
+                lines.append(text)
+                if len(lines) >= 50: break 
+                
+    return lines
 
 def stream_tar_dataset(metadata_path, tar_path, max_papers=None):
     """Streams papers from the .tar file matching metadata"""
@@ -167,7 +182,7 @@ def process_paper_batch(batch):
 
     try:
         # n_process=1 because we are already inside a multiprocessing worker
-        doc_stream = nlp.pipe(texts, batch_size=100, n_process=1)
+        doc_stream = nlp.pipe(texts, batch_size=20, n_process=1)
         
         for doc, uid in zip(doc_stream, ids):
             indexed_tokens = []
