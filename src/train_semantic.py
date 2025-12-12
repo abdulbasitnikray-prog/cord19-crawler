@@ -6,7 +6,7 @@ from crawler import get_paper_batches, process_paper_batch, init_worker_nlp
 
 # --- CONFIGURATION ---
 MODEL_OUTPUT_FILE = "cord19_semantic.model"
-TARGET_PAPERS = 50000  # Train on same scale as your index
+TARGET_PAPERS = 50000 
 WORKERS = 4
 # ---------------------
 
@@ -23,10 +23,10 @@ class Cord19Sentences:
 
     def __iter__(self):
         # 1. Get batches of raw papers using your existing crawler logic
-        # We use a larger batch for training speed
-        batch_generator = get_paper_batches(batch_size=500, max_papers=TARGET_PAPERS)
-        
-        for batch in batch_generator:
+        batch_generator = get_paper_batches(batch_size=1000, max_papers=TARGET_PAPERS)
+
+        for i, batch in enumerate(batch_generator):
+            print(f"Training iterator : Loading Batch {i}")
             # 2. Process batch to get Lemmas (using optimized spaCy pipe)
             processed_papers = process_paper_batch(batch)
             
@@ -54,7 +54,7 @@ def train_model():
     # vector_size=100:  Dimensions. 100 is standard for this dataset size.
     # window=5:         Context window (5 words left/right).
     # min_count=10:     Ignore rare typos to keep model small.
-    # epochs=5:         Number of times to go through the data.
+    # epochs=1:         Number of times to go through the data.
     print(f"Training Word2Vec model on {TARGET_PAPERS} papers...")
     
     model = Word2Vec(
@@ -63,7 +63,7 @@ def train_model():
         window=5, 
         min_count=10, 
         workers=WORKERS,
-        epochs=5
+        epochs=1
     )
 
     # 3. Save the model
