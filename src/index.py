@@ -20,10 +20,10 @@ BASE_PATH = "D:/Cord19/cord/2022"
 
 def generate_indexes_parallel(target_papers=50000, batch_size=500, num_workers=4, memory_safe=True):
     print("=" * 70)
-    print(f"INCREMENTAL PARALLEL INDEXING (Target: {target_papers:,})")
+    print(f"INCREMENTAL PARALLEL INDEXING (Target: {target_papers:,} UNIQUE papers)")
     print("=" * 70)
 
-    # --- Initialize Indexes Immediately (Not at the end) ---
+    # --- Initialize Indexes ---
     lexicon = {}
     forward_index = {}
     inverted_index = {}
@@ -31,82 +31,98 @@ def generate_indexes_parallel(target_papers=50000, batch_size=500, num_workers=4
     word_id_counter = 1
     
     start_time = time.time()
-    last_report_time = start_time
-    total_processed = 0
+    
+    # We will track progress based on unique papers indexed
+    unique_count = 0
     
     print(f"Starting stream with {num_workers} workers...")
-    batch_gen = get_paper_batches(batch_size=batch_size, max_papers=target_papers)
     
-    with Pool(processes=num_workers, initializer=init_worker_nlp) as pool:
-        # Use imap_unordered for speed
-        cursor = pool.imap_unordered(process_paper_batch, batch_gen)
-        
-        for batch_result in cursor:
-            if not batch_result: continue
+    # max_papers=None ensures the reader keeps going until we get enough UNIQUE papers
+    batch_gen = get_paper_batches(batch_size=batch_size, max_papers=None)
+    
+    try:
+        with Pool(processes=num_workers, initializer=init_worker_nlp) as pool:
+            # Use imap_unordered for speed
+            cursor = pool.imap_unordered(process_paper_batch, batch_gen)
             
-            # --- PROCESS DATA IMMEDIATELY ---
-            # Instead of storing results, we update indexes and delete the data
-            for paper in batch_result:
-                if not paper or "tokens" not in paper: continue
+            for batch_result in cursor:
+                if not batch_result: continue
                 
-                doc_id = paper["cord_uid"]
-                tokens = paper["tokens"]
-                
-                # 1. Backward Index
-                backward_index[doc_id] = tokens
-                
-                doc_word_ids = []
-                word_freq = defaultdict(int)
-                
-                for token_info in tokens:
-                    lemma = token_info['lemma']
-                    pos = token_info.get('pos', 'UNK')
-                    
-                    # 2. Update Lexicon
-                    if lemma not in lexicon:
-                        lexicon[lemma] = {
-                            "id": word_id_counter,
-                            "pos_counts": defaultdict(int),
-                            "lemma": lemma
-                        }
-                        word_id_counter += 1
-                    
-                    lexicon[lemma]["pos_counts"][pos] += 1
-                    w_id = lexicon[lemma]["id"]
-                    
-                    doc_word_ids.append(w_id)
-                    word_freq[w_id] += 1
-                
-                # 3. Update Forward Index
-                forward_index[doc_id] = doc_word_ids
-                
-                # 4. Update Inverted Index
-                for w_id, freq in word_freq.items():
-                    if w_id not in inverted_index:
-                        inverted_index[w_id] = {}
-                    inverted_index[w_id][doc_id] = freq
-                
-                total_processed += 1
+                # --- PROCESS DATA IMMEDIATELY ---
+                for paper in batch_result:
+                    # Check if target is reached
+                    if unique_count >= target_papers:
+                        break
 
-            # --- CRITICAL MEMORY FIX ---
-            # Delete the processed batch from RAM immediately
-            del batch_result
-            
-            # Progress Report
-            current_time = time.time()
-            if total_processed % 1000 == 0:
-                elapsed = current_time - start_time
-                rate = total_processed / elapsed
-                remaining = (target_papers - total_processed) / rate if rate > 0 else 0
-                time_str = time.strftime("%H:%M:%S", time.gmtime(remaining))
-                
-                print(f"Indexed {total_processed:,} | Rate: {rate:.1f} docs/s | ETA: {time_str} | RAM Safe: Yes")
+                    if not paper or "tokens" not in paper: continue
+                    
+                    doc_id = paper["cord_uid"]
+                    
+                    # [CRITICAL FIX] Skip duplicates!
+                    if doc_id in forward_index:
+                        continue
+                        
+                    tokens = paper["tokens"]
+                    
+                    # 1. Backward Index
+                    backward_index[doc_id] = tokens
+                    
+                    doc_word_ids = []
+                    word_freq = defaultdict(int)
+                    
+                    for token_info in tokens:
+                        lemma = token_info['lemma']
+                        pos = token_info.get('pos', 'UNK')
+                        
+                        # 2. Update Lexicon
+                        if lemma not in lexicon:
+                            lexicon[lemma] = {
+                                "id": word_id_counter,
+                                "pos_counts": defaultdict(int),
+                                "lemma": lemma
+                            }
+                            word_id_counter += 1
+                        
+                        lexicon[lemma]["pos_counts"][pos] += 1
+                        w_id = lexicon[lemma]["id"]
+                        
+                        doc_word_ids.append(w_id)
+                        word_freq[w_id] += 1
+                    
+                    # 3. Update Forward Index
+                    forward_index[doc_id] = doc_word_ids
+                    
+                    # 4. Update Inverted Index
+                    for w_id, freq in word_freq.items():
+                        if w_id not in inverted_index:
+                            inverted_index[w_id] = {}
+                        inverted_index[w_id][doc_id] = freq
+                    
+                    unique_count += 1
+                    if unique_count % 500 == 0:
+                        elapsed = time.time() - start_time
+                        rate = unique_count / elapsed
+                        remaining = (target_papers - unique_count) / rate if rate > 0 else 0
+                        time_str = time.strftime("%H:%M:%S", time.gmtime(remaining))
+                        
+                        print(f"Indexed {unique_count:,} | Rate: {rate:.1f} docs/s | ETA: {time_str}")
+
+                # --- CLEANUP RAM ---
+                del batch_result
+                # Break the loop if target reached
+                if unique_count >= target_papers:
+                    print(f"\nTarget of {target_papers:,} unique papers reached successfully.")
+                    pool.terminate() 
+                    break
+                    
+    except Exception as e:
+        # Catch generator exit errors gracefully
+        print(f"Stream ended or interrupted: {e}")
 
     total_time = time.time() - start_time
     print(f"\nCompleted in {total_time/60:.2f} minutes")
     
-    return lexicon, forward_index, inverted_index, backward_index
-
+    return lexicon, forward_index, inverted_index, backward_index    
 
 def save_index_files(lexicon, forward_index, inverted_index, backward_index, output_dir="indexes", total_time=None):
     """
@@ -204,10 +220,10 @@ def main():
     
     
     TARGET_PAPERS = 50000
-    BATCH_SIZE = 50
+    BATCH_SIZE = 100
     USE_PARALLEL = True
     MEMORY_SAFE = True  #enable memory optimizations
-    NUM_WORKERS = 2    #fixed at 2 workers for scispaCy
+    NUM_WORKERS = 3    #fixed at 2 workers for scispaCy
     
     print(f"Target: Process {TARGET_PAPERS:,} papers")
     print(f"Batch size: {BATCH_SIZE}")
