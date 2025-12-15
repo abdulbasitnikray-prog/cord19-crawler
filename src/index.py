@@ -124,7 +124,7 @@ def generate_indexes_parallel(target_papers=50000, batch_size=500, num_workers=4
     
     return lexicon, forward_index, inverted_index, backward_index    
 
-def save_index_files(lexicon, forward_index, inverted_index, backward_index, output_dir="indexes", total_time=None):
+def save_index_files(lexicon, forward_index, inverted_index, backward_index, output_dir="data/indexes", total_time=None):
     """
     Save all index files to disk with statistics
     """
@@ -257,7 +257,7 @@ def main():
     #save indexes
     if lexicon:  #check if indexing was successful
         save_index_files(lexicon, forward_index, inverted_index, backward_index, 
-                        output_dir="indexes", total_time=total_time)
+                        output_dir="data/indexes", total_time=total_time)
     
     print(f"\nTotal execution time: {total_time/60:.2f} minutes")
     

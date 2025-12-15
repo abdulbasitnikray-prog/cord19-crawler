@@ -3,7 +3,7 @@ import os
 import struct 
 import pickle
 from collections import defaultdict 
-from . import barrel
+import barrel
 import math
 
 def varbyte_encode_num(n):
@@ -107,7 +107,7 @@ def compress_posting_list(doc_ids, doc_freqs=None):
     
     return result
 
-def create_compressed_barrels(index_directory="indexes", 
+def create_compressed_barrels(index_directory="data/indexes", 
                               barrel_dir="barrels", 
                               output_dir="compressed_barrels",
                               num_barrels=10):
