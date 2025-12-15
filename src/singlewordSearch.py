@@ -11,17 +11,20 @@ from collections import defaultdict
 from typing import List, Tuple, Dict, Optional
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "data")
+# Go up one level from 'src' to get to 'cord19-crawler' root
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 
-BARREL_MAP_PATH = os.path.join(DATA_DIR, "barrels", "barrels", "barrel_mappings.json")
-BARRELS_DIR = os.path.join(DATA_DIR, "barrels", "barrels")
-COMPRESSED_BARRELS_DIR = os.path.join(DATA_DIR, "compressed_barrels", "compressed_barrels")
+# CORRECTED PATHS - Remove double nesting
+BARREL_MAP_PATH = os.path.join(DATA_DIR, "barrels", "barrel_mappings.json")
+BARRELS_DIR = os.path.join(DATA_DIR, "barrels")
+COMPRESSED_BARRELS_DIR = os.path.join(DATA_DIR, "compressed_barrels")
 DOC_MAP_PATH = os.path.join(COMPRESSED_BARRELS_DIR, "doc_id_mapping.pkl")
-INDEXES_DIR = os.path.join(DATA_DIR, "indexes", "indexes")
+INDEXES_DIR = os.path.join(DATA_DIR, "indexes")
 BACKWARD_INDEX_PATH = os.path.join(INDEXES_DIR, "backward_index.json")
 LEXICON_PATH = os.path.join(INDEXES_DIR, "lexicon.json")
 TRIE_PATH = os.path.join(DATA_DIR, "barrel_trie.pkl")  # trie file
-
+dynamic_indexer_ref = None
 class TrieNode:
     #Trie node for fast barrel lookup
     __slots__ = ('children', 'barrel_ids', 'is_end_of_word')  # optimising the memory
@@ -182,194 +185,78 @@ barrel_lookup = OptimizedBarrelLookup()
 # ============================================================================
 #all our document paths will be found here (can change if locally they are stored differently)
 # ============================================================================
-BASE_PATH = "C:/Users/acer/Downloads/cord-19_2020-04-10/2020-04-10"
-EXTRACTION_FOLDER = os.path.join(BASE_PATH, "document_parses")
-METADATA_PATH = r"C:\Users\acer\Downloads\cord-19_2020-04-10\2020-04-10\metadata.csv"
-
-DOC_SUBFOLDERS = [
-    "noncomm_use_subset",
-    "comm_use_subset", 
-    "biorxiv_medrxiv",
-    "custom_license"
-]
-
+BASE_PATH = "D:/Cord19/cord/2022"
 # ============================================================================
 # metadata.csv loading and document management
 # ============================================================================
+# ... (Keep imports at the top)
+
+# 1. UPDATE PATH TO YOUR NEW CSV
+# Point this to the file you just created in Step 1
+PROCESSED_DATA_PATH = os.path.join(DATA_DIR, "processed_corpus.csv")
+
+# ... (Keep OptimizedBarrelLookup class as is) ...
+
+# ============================================================================
+# NEW DOCUMENT MANAGER (Reads from Processed CSV)
+# ============================================================================
 class DocumentManager:
     def __init__(self):
-        self.metadata = None
-        self.metadata_loaded = False
+        self.data = None
+        self.loaded = False
         self.title_cache = {}
-        self.path_cache = {}
-        self.text_cache = {}
-        self._max_text_cache = 100  # LRU cache size
-        
+        # NEW: In-memory store for dynamic documents
+        self.dynamic_docs = {}
+    
+    def add_dynamic_doc(self, doc_id, title, content):
+        """Store a new document in memory immediately"""
+        self.dynamic_docs[doc_id] = {
+            'title': title,
+            'content': content
+        }
+        # Update title cache so it shows up in results
+        self.title_cache[doc_id] = title
+
     def load_metadata(self):
-        if self.metadata_loaded:
-            return True
-        
-        try:
-            if os.path.exists(METADATA_PATH):
-                print(f"Loading metadata from {METADATA_PATH}...")
-                start_time = time.time()
+        if self.loaded: return True
+        if os.path.exists(PROCESSED_DATA_PATH):
+            print(f"Loading corpus from {PROCESSED_DATA_PATH}...")
+            try:
+                self.data = pd.read_csv(PROCESSED_DATA_PATH)
+                if 'id' in self.data.columns and 'cord_uid' not in self.data.columns:
+                    self.data.rename(columns={'id': 'cord_uid'}, inplace=True)
                 
-                #using pandas but only loading necessary columns
-                self.metadata = pd.read_csv(
-                    METADATA_PATH, 
-                    usecols=['cord_uid', 'title', 'sha', 'pmcid'],
-                    dtype={'cord_uid': 'string', 'title': 'string'}
-                )
-                
-                #lookup dicts for fast access
-                self.title_cache = {}
-                self.cord_to_shas = {}
-                self.cord_to_pmcids = {}
-                
-                for _, row in self.metadata.iterrows():
-                    cord_uid = str(row['cord_uid']).strip()
-                    if cord_uid:
-                        title = str(row['title']).strip() if pd.notna(row['title']) else "Untitled"
-                        self.title_cache[cord_uid] = title
-                        
-                        #sha hashes for finding document files
-                        sha_field = str(row.get('sha', '')).strip()
-                        if sha_field and sha_field != 'nan':
-                            shas = [s.strip() for s in sha_field.split(';') if s.strip()]
-                            self.cord_to_shas[cord_uid] = shas
-                        
-                        #pmcid parsing for finding document files
-                        pmcid = str(row.get('pmcid', '')).strip()
-                        if pmcid and pmcid != 'nan':
-                            self.cord_to_pmcids[cord_uid] = pmcid
-                
-                self.metadata_loaded = True
-                elapsed = time.time() - start_time
-                print(f"Loaded {len(self.title_cache)} document titles in {elapsed:.2f}s")
-                print(f"SHA mappings: {len(self.cord_to_shas)}, PMCID mappings: {len(self.cord_to_pmcids)}")
+                self.data['cord_uid'] = self.data['cord_uid'].astype(str).str.strip()
+                self.data.set_index('cord_uid', inplace=True)
+                self.title_cache = self.data['title'].to_dict()
+                self.loaded = True
                 return True
-                
-        except Exception as e:
-            print(f"Error loading metadata: {e}")
-        
+            except Exception as e:
+                print(f"Error loading processed corpus: {e}")
+                return False
         return False
     
     def get_document_title(self, doc_id: str) -> str:
-        """Fast title lookup from cache"""
-        if not self.metadata_loaded:
-            self.load_metadata()
-        
-        return self.title_cache.get(doc_id, f"Document {doc_id}")
+        # Check dynamic docs first
+        if doc_id in self.dynamic_docs:
+            return self.dynamic_docs[doc_id]['title']
+        if not self.loaded: self.load_metadata()
+        return self.title_cache.get(doc_id, "Untitled Document")
     
-    def find_document_file(self, doc_id: str) -> Optional[str]:
-        """Find the JSON file for a document ID using SHA or PMCID"""
-        if not self.metadata_loaded:
-            self.load_metadata()
-        
-        # Check cache first
-        if doc_id in self.path_cache:
-            return self.path_cache[doc_id]
-        
-        # Try SHA hashes
-        if doc_id in self.cord_to_shas:
-            shas = self.cord_to_shas[doc_id]
-            for sha in shas:
-                if not sha:
-                    continue
-                filename = f"{sha}.json"
-                for subfolder in DOC_SUBFOLDERS:
-                    for json_type in ["pdf_json", "pmc_json"]:
-                        folder = os.path.join(EXTRACTION_FOLDER, subfolder, json_type)
-                        if os.path.exists(folder):
-                            file_path = os.path.join(folder, filename)
-                            if os.path.exists(file_path):
-                                self.path_cache[doc_id] = file_path
-                                return file_path
-        
-        # Try PMCID
-        if doc_id in self.cord_to_pmcids:
-            pmcid = self.cord_to_pmcids[doc_id]
-            filename = f"{pmcid}.json"
-            for subfolder in DOC_SUBFOLDERS:
-                for json_type in ["pdf_json", "pmc_json"]:
-                    folder = os.path.join(EXTRACTION_FOLDER, subfolder, json_type)
-                    if os.path.exists(folder):
-                        file_path = os.path.join(folder, filename)
-                        if os.path.exists(file_path):
-                            self.path_cache[doc_id] = file_path
-                            return file_path
-        
-        return None
-    
-    def get_document_text(self, doc_id: str) -> Optional[str]:
-        # Check cache
-        if doc_id in self.text_cache:
-            return self.text_cache[doc_id]
-        
-        # Find the document file
-        doc_path = self.find_document_file(doc_id)
-        if not doc_path:
-            return None
-        
+    def get_document_text(self, doc_id: str) -> str:
+        # Check dynamic docs first
+        if doc_id in self.dynamic_docs:
+            return self.dynamic_docs[doc_id]['content']
+        if not self.loaded: self.load_metadata()
         try:
-            with open(doc_path, 'r', encoding='utf-8') as f:
-                doc_data = js.load(f)
-            
-            # Extract text from JSON structure
-            lines = []
-            total_chars = 0
-            
-            # Extract title if available
-            if 'metadata' in doc_data and 'title' in doc_data['metadata']:
-                title = doc_data['metadata']['title']
-                if title and isinstance(title, str):
-                    lines.extend(title.splitlines())
-                    total_chars += len(title)
-            
-            # Extract abstract
-            if 'abstract' in doc_data:
-                for entry in doc_data['abstract']:
-                    text = entry.get("text", "")
-                    if text and isinstance(text, str):
-                        lines.extend(text.splitlines())
-                        total_chars += len(text)
-            
-            # Extract body text with character limit
-            if 'body_text' in doc_data:
-                for section in doc_data['body_text']:
-                    text = section.get("text", "")
-                    if text and isinstance(text, str):
-                        if total_chars > 50000:  # 50K character limit (can be adjusted but keeps it fast)
-                            break
-                        lines.extend(text.splitlines())
-                        total_chars += len(text)
-            
-            # no repitition of lines (using only unique lines and set for fast lookup)
-            unique_lines = []
-            seen_lines = set()
-            for line in lines:
-                line_stripped = line.strip()
-                if line_stripped and line_stripped not in seen_lines:
-                    seen_lines.add(line_stripped)
-                    unique_lines.append(line_stripped)
-            
-            full_text = "\n".join(unique_lines)
-            
-            # Cache the result
-            if len(self.text_cache) >= self._max_text_cache:
-                oldest = next(iter(self.text_cache))
-                del self.text_cache[oldest]
-            self.text_cache[doc_id] = full_text
-            
-            return full_text
-        
-        except Exception as e:
-            print(f"Error loading document {doc_id}: {e}")
-            return None
-
+            if doc_id in self.data.index:
+                text = self.data.loc[doc_id, 'content']
+                if pd.isna(text): return "No text content available."
+                return str(text)
+            return "Document not found."
+        except: return "Error retrieving text."
 #doc manager instance
 doc_manager = DocumentManager()
-
 # ============================================================================
 # path verification because we need to be sure all paths are correct
 # ============================================================================
@@ -379,7 +266,7 @@ def verify_paths():
         BARREL_MAP_PATH,
         COMPRESSED_BARRELS_DIR,
         DOC_MAP_PATH,
-        METADATA_PATH
+        PROCESSED_DATA_PATH  # <--- CHANGED THIS (Was METADATA_PATH)
     ]
     
     print("\n" + "=" * 60)
@@ -390,14 +277,14 @@ def verify_paths():
     for path in required_paths:
         exists = os.path.exists(path)
         status = "Exists!" if exists else "Does NOT exist!"
-        name = os.path.basename(path) or os.path.basename(os.path.dirname(path))
+        # Just print the filename to keep it clean
+        name = os.path.basename(path) 
         print(f"{status} {name}: {exists}")
         if not exists:
             all_exist = False
     
     print("=" * 60)
     return all_exist
-
 # ============================================================================
 # decompressing functions (optimised but mostly similar to previous)
 # ============================================================================
@@ -517,21 +404,45 @@ def search_word_parallel(word: str) -> Tuple[List[int], Optional[List[int]]]:
     
     return all_doc_ids, all_frequencies if all_frequencies else None
 
-def search_word(word: str, use_compressed: bool = True) -> Tuple[List[int], Optional[List[int]]]:
-    """Main search function - optimized with trie and parallelism"""
+def search_word(word: str, use_compressed: bool = True) -> Tuple[List[str], Optional[List[int]]]:
+    """Main search function - Hybrid (Barrels + Dynamic Index)"""
     start_time = time.time()
     
-    # Fast search using trie and parallel processing
-    doc_ids, frequencies = search_word_parallel(word)
+    # 1. Search Static Barrels
+    # Note: This returns INTEGERS (mapped IDs)
+    barrel_doc_ids, barrel_freqs = search_word_parallel(word)
+    
+    # 2. Search Dynamic Index (The "Gap Bridge")
+    global dynamic_indexer_ref
+    dyn_doc_ids = []
+    dyn_freqs = []
+    
+    if dynamic_indexer_ref:
+        # This returns STRINGS (actual IDs)
+        dyn_doc_ids, dyn_freqs = dynamic_indexer_ref.search_dynamic_word(word)
     
     elapsed_time = time.time() - start_time
     
-    if doc_ids:
-        print(f"-- Found {len(doc_ids)} documents in {elapsed_time:.3f}s")
-    else:
-        print(f"No documents found")
+    # 3. Merge Results
+    # We must ensure all IDs are consistent. 
+    # Since barrel IDs are ints, we leave them as is for now, resolve_document_ids handles them.
+    # Dynamic IDs are strings, we add them to the list.
     
-    return doc_ids, frequencies
+    final_ids = []
+    final_freqs = []
+    
+    if barrel_doc_ids:
+        final_ids.extend(barrel_doc_ids)
+        if barrel_freqs: final_freqs.extend(barrel_freqs)
+    
+    if dyn_doc_ids:
+        final_ids.extend(dyn_doc_ids)
+        if dyn_freqs: final_freqs.extend(dyn_freqs)
+
+    if final_ids:
+        print(f"-- Found {len(final_ids)} documents in {elapsed_time:.3f}s")
+    
+    return final_ids, final_freqs
 
 # ============================================================================
 # doc resolution functions (optimized with caching)

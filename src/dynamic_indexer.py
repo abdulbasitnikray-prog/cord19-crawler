@@ -7,13 +7,13 @@ import os
 import json as js
 import time
 from collections import defaultdict
-from .crawler import process_paper_single, clean_text, extract_text
-from .index import save_index_files
+from crawler import process_paper_single, clean_text, extract_text
+from index import save_index_files
 
 class DynamicIndexer:
     """Handles dynamic addition of new documents to existing search index"""
     
-    def __init__(self, index_dir="indexes"):
+    def __init__(self, index_dir="data/indexes"):
         """
         Initialize dynamic indexer
         
@@ -248,6 +248,29 @@ class DynamicIndexer:
             "inverted_index_terms": len(self.inverted_index),
             "backward_index_docs": len(self.backward_index)
         }
+    
+    def search_dynamic_word(self, word):
+        """
+        Search for a word ONLY in the newly added dynamic documents.
+        Returns: (doc_ids_list, freqs_list)
+        """
+        if not self.loaded:
+            return [], []
+        
+        # Check if word exists in our dynamic lexicon
+        if word not in self.lexicon:
+            return [], []
+            
+        word_id = self.lexicon[word]["id"]
+        
+        # Check inverted index for this word ID
+        if word_id in self.inverted_index:
+            doc_freq_map = self.inverted_index[word_id] # {doc_id: freq}
+            
+            # Return keys (Doc IDs) and values (Frequencies)
+            return list(doc_freq_map.keys()), list(doc_freq_map.values())
+            
+        return [], []
 
 
 # ============ UTILITY FUNCTIONS ============
@@ -371,7 +394,7 @@ if __name__ == "__main__":
         }
     }
     
-    indexer = DynamicIndexer("indexes")
+    indexer = DynamicIndexer("data/indexes")
     if indexer.add_single_document(new_doc):
         print(" Document added successfully!")
         print(f"New stats: {indexer.get_index_stats()}")

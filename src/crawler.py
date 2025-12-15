@@ -231,6 +231,23 @@ def process_papers(json_parse, nlp):
         
     return {"tokens": indexed_tokens}
 
+def process_paper_single(json_parse, cord_uid=None):
+    """
+    Wrapper for processing a single paper on demand.
+    Loads the model if needed and processes the JSON.
+    """
+    nlp = get_scipacy_model()
+    if not nlp:
+        return None
+        
+    result = process_papers(json_parse, nlp)
+    
+    # If a cord_uid was passed, ensure it's attached (optional depending on usage)
+    if result and cord_uid:
+        result['cord_uid'] = cord_uid
+        
+    return result
+
 def save_files(lexicon, forward_index, inverted_index):
     # Ensure indexes directory exists
     os.makedirs("indexes", exist_ok=True)
