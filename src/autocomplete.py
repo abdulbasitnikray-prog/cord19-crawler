@@ -15,7 +15,7 @@ class AutocompleteEngine:
         self.loaded = False
 
     def load_from_lexicon(self, lexicon_path):
-        print("Loading Autocomplete Trie...")
+        print(f"Loading Autocomplete Trie from {lexicon_path}...")  # Add debugging
         start = time.time()
         try:
             with open(lexicon_path, 'r', encoding='utf-8') as f:
