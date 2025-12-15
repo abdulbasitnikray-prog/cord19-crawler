@@ -11,36 +11,60 @@ This project was built for the CS-250 Data Structures & Algorithms course at NUS
 * **Intelligent barreling** - Partitions indexes into 10 balanced barrels for parallel search
 * **Advanced compression** - Uses VarByte encoding with mean-centered frequency compression
 * **Scientific text processing** - Uses spaCy for advanced NLP and lemmatization
-* **Semantic Analysis** - Includes trained models for context-aware query understanding
+* **Semantic Analysis** - Includes trained Word2Vec models for context-aware query understanding
 * **Autocomplete Engine** - Provides real-time search suggestions based on the indexed lexicon
 * **Multi-file support** - Handles all CORD-19 dataset subsets automatically
 * **JSON output** - Generates standardized index files for easy integration
+* **Web Interface** - Flask-based search application with HTML templates
+* **Single-word & Multi-word Search** - Supports both simple and complex query searches
+* **Dynamic Indexing** - Add new documents to existing indexes without rebuilding
+* **Barrel-based Parallel Search** - Leverages barrel partitions for concurrent query processing
+* **Trie-based Optimization** - Fast barrel lookup with prefix-matching capabilities
 
 ## Project Structure
 
 ```
-cord19-search/
-├── data/                       # Data archives
-│   ├── barrels.zip             # Zipped barrel partitions
-│   ├── compressed_barrels.zip  # Zipped compressed binary barrels
-│   └── indexes.zip             # Zipped core index files
-├── src/                        # Source code directory
+cord19-crawler/
+├── data/                           # Data storage and indexes
+│   ├── processed_corpus.csv        # Processed paper metadata with text
+│   ├── barrels/                    # 10 balanced index partitions
+│   │   ├── barrel_1.json
+│   │   ├── barrel_2.json
+│   │   └── ... (barrel_3 through barrel_10)
+│   │   └── barrel_mappings.json    # Routing tables for query processing
+│   ├── compressed_barrels/         # Compressed barrel versions (VarByte)
+│   │   └── doc_id_mapping.pkl      # Document ID mappings
+│   └── indexes/                    # Core index files
+│       ├── lexicon.json            # Word ID mappings
+│       ├── forward_index.json      # Word lists per document
+│       ├── inverted_index.json     # Document lists per word
+│       ├── backward_index.json     # Human-readable word lists
+│       └── index_statistics.json   # Index metadata and statistics
+├── src/                            # Source code directory
 │   ├── __init__.py
-│   ├── autocomplete.py         # Search suggestion and completion engine
-│   ├── barrel.py               # Barrel creation with load balancing
-│   ├── barreled_index.py       # Compression engine with VarByte encoding
-│   ├── crawler.py              # Data streaming and text processing
-│   ├── index.py                # Index generation and main pipeline
-│   ├── read_csv.py             # Utility for parsing metadata CSVs
-│   └── train_semantic.py       # Training script for semantic word embeddings
-├── .gitattributes
-├── .gitignore
-├── cord19_semantic.model       # Main semantic model file
+│   ├── app.py                      # Flask web application
+│   ├── autocomplete.py             # Search suggestion and completion engine
+│   ├── barrel.py                   # Barrel creation with load balancing
+│   ├── barreled_index.py           # Compression engine with VarByte encoding
+│   ├── crawler.py                  # Data streaming and text processing
+│   ├── dynamic_indexer.py          # Dynamic document addition engine
+│   ├── index.py                    # Index generation and main pipeline
+│   ├── multiwordSearch.py          # Multi-word query search with AND/OR logic
+│   ├── preprocess_papers.py        # CSV preprocessing and corpus generation
+│   ├── read_csv.py                 # Utility for parsing metadata CSVs
+│   ├── semantic_search.py          # Semantic query expansion with Word2Vec
+│   ├── singlewordSearch.py         # Single-word search with ranking
+│   ├── train_semantic.py           # Training script for semantic models
+│   ├── __pycache__/                # Python cache files
+│   └── templates/                  # Web interface templates
+│       ├── index.html              # Search interface
+│       └── article.html            # Article detail view
+├── cord19_semantic.model           # Trained Word2Vec semantic model
 ├── cord19_semantic.model.syn1neg.npy
 ├── cord19_semantic.model.wv.vectors.npy
-├── README.md                   # This file
-└── requirements.txt            # Python dependencies
-````
+├── README.md                       # This file
+└── requirements.txt                # Python dependencies
+```
 
 ## Output Files
 
@@ -53,8 +77,11 @@ cord19-search/
 | **barrel_X.json** | Partitioned index segments (10 files) | ~30MB each | Contains subset of words with documents and frequencies |
 | **barrel_mappings.json** | Routing tables for query processing | ~5MB | `{"word_to_barrel": {"covid": 3}, "doc_to_barrels": {"doc1": [1, 3]}}` |
 | **compressed_barrel_X.pkl** | Compressed barrels with VarByte encoding | ~6MB each | Binary pickle files with 80-90% size reduction |
-| **cord19\_semantic.model** | Trained Word2Vec/Semantic model | Varies | Binary model data |
-| **barrels.zip** | Archived distribution of barrel files | Varies | ZIP Archive |
+| **doc_id_mapping.pkl** | Document ID to path mapping | ~1MB | Pickle file for document resolution |
+| **barrel_trie.pkl** | Trie data structure for fast barrel lookup | ~2MB | Serialized trie for prefix matching |
+| **processed_corpus.csv** | Processed paper metadata with full text | ~500MB | CSV format: doc_id, title, authors, text |
+| **cord19_semantic.model** | Trained Word2Vec/Semantic model | ~50MB | Binary model data |
+| **index_statistics.json** | Metadata about index composition | ~100KB | Statistics and index metadata |
 
 ## Installation
 
@@ -78,12 +105,23 @@ cord19-search/
 
 ## Usage
 
+### Web Application (Recommended)
+
+Start the Flask web server for interactive searching:
+
+```bash
+python src/app.py
+```
+
+Then open your browser to `http://localhost:5000` and use the search interface.
+
 ### Basic Indexing (Complete Pipeline)
 
 ```bash
 python src/index.py           # Step 1: Build indexes from dataset
 python src/barrel.py          # Step 2: Create 10 balanced barrels
 python src/barreled_index.py  # Step 3: Apply compression to barrels
+python src/preprocess_papers.py # Step 4: Generate corpus metadata
 ```
 
 ### Semantic Training
@@ -94,7 +132,59 @@ To train the semantic model on the new dataset:
 python src/train_semantic.py
 ```
 
-### Individual Steps
+### Search Types
+
+**Single-word Search:**
+
+```python
+from src.singlewordSearch import search_word
+
+results = search_word("coronavirus", max_results=10)
+# Returns: List of documents containing the word with scores
+```
+
+**Multi-word Search:**
+
+```python
+from src.multiwordSearch import multi_word_search
+
+results = multi_word_search(["vaccine", "treatment"], operator="AND")
+# Returns: Documents containing all specified words
+```
+
+**Semantic Search:**
+
+```python
+from src.semantic_search import semantic_engine
+
+semantic_engine.load_model()
+similar_words = semantic_engine.get_similar_words("virus", top_n=5)
+# Returns: Semantically similar words for query expansion
+```
+
+**Autocomplete:**
+
+```python
+from src.autocomplete import AutocompleteEngine
+
+suggestions = AutocompleteEngine.get_suggestions("coro", max_suggestions=5)
+# Returns: Search suggestions matching prefix
+```
+
+### Dynamic Indexing
+
+Add new documents to existing indexes without rebuilding:
+
+```python
+from src.dynamic_indexer import DynamicIndexer
+
+indexer = DynamicIndexer(index_dir="data/indexes")
+indexer.load_indexes()
+indexer.add_document(doc_id="new_doc", content="Paper content here...")
+indexer.save_indexes()
+```
+
+### Individual Steps (Advanced)
 
 **Step 1: Generate all indexes**
 
@@ -120,8 +210,8 @@ barrels, doc_to_barrels, word_to_barrel = barrel.create_and_save_barrels(
 **Step 3: Compress barrels**
 
 ```python
-import src.barrelled_index as barrelled_index
-barrelled_index.create_compressed_barrels(
+import src.barreled_index as barreled_index
+barreled_index.create_compressed_barrels(
     index_directory="indexes",
     barrel_dir="barrels",
     output_dir="compressed_barrels",
@@ -152,17 +242,24 @@ BASE_PATH = "C:/Users/acer/Downloads/cord-19_2020-04-10/2020-04-10"
 - **Text Analysis** - Analyze term frequencies and document similarities across barrels
 - **Research Tools** - Integrate indexes into larger research platforms
 - **Data Mining** - Extract insights from scientific paper collections
-- **Educational Tool** - Study barreling and compression algorithms
+- **Educational Tool** - Study barreling, compression, and semantic search algorithms
 - **Parallel Search** - Enable simultaneous searching across multiple barrels
+- **Document Management** - Dynamically add and index new research papers
+- **Semantic Query Expansion** - Improve search relevance with context-aware suggestions
+- **Web Application** - Deploy as a full-featured research paper search platform
 
 ## Future Enhancements
 
   * Positional indexing for phrase search support
   * TF-IDF scoring for relevance ranking
   * Query expansion with medical synonyms
-  * Web-based search interface with barrel-level parallelization
+  * Web-based search interface improvements
   * Real-time index updates with incremental barreling
   * Distributed storage of barrels across multiple servers
+  * Advanced filtering by paper metadata (date, author, journal)
+  * Integration with citation graph analysis
+  * Batch processing and bulk document import
+  * Performance optimization for sub-second query latency
 
 ## Acknowledgments
 
