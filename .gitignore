@@ -2,8 +2,8 @@
 barrels/
 compressed_barrels/
 indexes/
-data/
-
+barrel_trie.pkl
+processed_corpus.csv
 # Data folder contains Git LFS tracked archives
 # data/*.zip  <-- Tracked by Git LFS
 # data/*.7z   <-- Tracked by Git LFS
