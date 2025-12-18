@@ -59,8 +59,11 @@ singlewordSearch.dynamic_indexer_ref = indexer
 
 @app.route('/')
 def home():
-    total_docs = len(doc_manager.data) if doc_manager.data is not None else 0
-    return render_template('index.html', total_docs=f"{total_docs:,}")
+    # VISUAL FIX: Show the total corpus size (700k+) instead of just indexed docs
+    # If total_docs_in_corpus is 0 (fallback), show title_cache length
+    display_count = doc_manager.total_docs_in_corpus if doc_manager.total_docs_in_corpus > 0 else len(doc_manager.title_cache)
+    
+    return render_template('index.html', total_docs=f"{display_count:,}")
 
 @app.route('/api/search', methods=['GET'])
 def search():

@@ -14,305 +14,145 @@ from singlewordSearch import (
     doc_manager, DOC_MAP_PATH, barrel_lookup
 )
 
-# ============================================================================
-# PATH CONFIGURATION - CRITICAL FIX
-# ============================================================================
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BARRELS_DIR = os.path.join(BASE_DIR, "data", "barrels")
 COMPRESSED_BARRELS_DIR = os.path.join(BASE_DIR, "data", "compressed_barrels")
 BARREL_MAP_PATH = os.path.join(BARRELS_DIR, "barrel_mappings.json")
 
-# Verify paths exist
-if not os.path.exists(BARRELS_DIR):
-    print(f"⚠️ WARNING: Barrels directory not found at {BARRELS_DIR}")
-if not os.path.exists(COMPRESSED_BARRELS_DIR):
-    print(f"⚠️ WARNING: Compressed barrels directory not found at {COMPRESSED_BARRELS_DIR}")
+# Global Cache for total docs
+_total_docs_cache = None
 
-# ============================================================================
-# optimised preprocessing functions found here
-# ============================================================================
-
-# compile regex patterns once for performance (similar to stopword filtering, doesnt need compilation each time)
 STOPWORDS = {
-    'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 
-    'for', 'of', 'with', 'by', 'is', 'are', 'was', 'were', 'be', 
-    'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 
-    'will', 'would', 'shall', 'should', 'can', 'could', 'may', 
-    'might', 'must', 'about', 'above', 'after', 'before', 'between',
-    'from', 'into', 'through', 'during', 'since', 'under', 'over',
-    'again', 'further', 'then', 'once', 'here', 'there', 'when',
-    'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few',
-    'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not',
-    'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't',
-    'just', 'now'
+    'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'is', 'are', 'was', 'were', 
+    'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'shall', 'should', 'can', 'could', 
+    'may', 'might', 'must', 'about', 'above', 'after', 'before', 'between', 'from', 'into', 'through', 'during', 'since', 
+    'under', 'over', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how', 'all', 'any', 
+    'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so', 
+    'than', 'too', 'very', 's', 't', 'just', 'now'
 }
 
-#cache for word expansions
 _word_expansion_cache = {}
 
 def expand_word_with_lemmas(word: str) -> List[str]:
-    """Fast word expansion with caching"""
-    if word in _word_expansion_cache:
-        return _word_expansion_cache[word]
-    
+    if word in _word_expansion_cache: return _word_expansion_cache[word]
     lemmas = get_lemma_for_word(word, return_all_variations=True)
     expanded = [word.lower()]
-    
-    # add all lemma forms (e.g., plural, tense)
     for lemma in lemmas:
-        lemma_lower = lemma.lower()
-        if lemma_lower not in expanded:
-            expanded.append(lemma_lower)
-    
-    # also add stripped version
-    stripped = word.lower().strip('.,!?;:"\'()[]{}')
-    if stripped and stripped not in expanded:
-        expanded.append(stripped)
-    
+        if lemma.lower() not in expanded: expanded.append(lemma.lower())
     result = list(set(expanded))
     _word_expansion_cache[word] = result
     return result
 
 def preprocess_query(query: str) -> List[List[str]]:
-    if not query:
-        return []
-
+    if not query: return []
     query = query.lower().strip()
     words = re.findall(r'\b[a-z0-9]{2,}\b', query)
-    
-    if not words:
-        return []
-    
-    #filter stopwords
-    filtered_words = [word for word in words if word not in STOPWORDS]
-    
-    #expand words
-    expanded_words = []
-    for word in filtered_words:
-        word_forms = expand_word_with_lemmas(word)
-        if word_forms:
-            expanded_words.append(word_forms)
-    
-    return expanded_words
+    if not words: return []
+    filtered = [w for w in words if w not in STOPWORDS]
+    return [expand_word_with_lemmas(w) for w in filtered if expand_word_with_lemmas(w)]
 
 def search_word_with_variants(word_forms: List[str]) -> Dict[str, Tuple[List[str], Optional[List[int]]]]:
-    #optimized parallel search for word variants
     results = {}
-    
-    # filter out words that don't exist in any barrel using trie
-    existing_words = []
-    for word_form in word_forms:
+    existing = []
+    for wf in word_forms:
         try:
-            barrel_ids = barrel_lookup.get_barrels_for_word(word_form)
-            if barrel_ids:
-                existing_words.append(word_form)
-        except Exception as e:
-            print(f"  [ERROR] Trie lookup failed for '{word_form}': {str(e)[:50]}")
-            continue
+            if barrel_lookup.get_barrels_for_word(wf): existing.append(wf)
+        except: continue
     
-    # If no variants found in static barrels, still try all variants (captures dynamic docs)
-    if not existing_words:
-        print(f"  [DEBUG] No barrels found for {word_forms}, trying all variants anyway")
-        existing_words = word_forms
+    if not existing: existing = word_forms
     
-    if not existing_words:
-        print(f"  [DEBUG] No words to search")
-        return {}
-    
-    # Use ThreadPoolExecutor for parallel execution
-    with concurrent.futures.ThreadPoolExecutor(max_workers=min(4, len(existing_words))) as executor:
-        future_to_word = {
-            executor.submit(search_word, word_form, True): word_form 
-            for word_form in existing_words
-        }
-        
-        # Collect results as they complete (save memory by not storing futures)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=min(4, len(existing) + 1)) as executor:
+        future_to_word = {executor.submit(search_word, wf, True): wf for wf in existing}
         for future in concurrent.futures.as_completed(future_to_word):
-            word_form = future_to_word[future]
+            wf = future_to_word[future]
             try:
-                doc_ids, frequencies = future.result()
-                if doc_ids and len(doc_ids) > 0:
-                    str_doc_ids = resolve_document_ids(doc_ids)
-                    if str_doc_ids and len(str_doc_ids) > 0:
-                        results[word_form] = (str_doc_ids, frequencies)
-                        print(f"  [DEBUG] Found {len(str_doc_ids)} docs for '{word_form}'")
-            except Exception as e:
-                print(f"  [DEBUG] Error searching '{word_form}': {str(e)[:50]}")
-                continue
-    
-    print(f"  [DEBUG] Returned {len(results)} word results")
+                ids, freqs = future.result()
+                if ids:
+                    s_ids = resolve_document_ids(ids)
+                    if s_ids: results[wf] = (s_ids, freqs)
+            except: continue
     return results
 
-def search_words_batch(word_groups: List[List[str]]) -> List[Dict[str, Tuple[List[str], Optional[List[int]]]]]:
-    #Batch search for multiple word groups in parallel
-
-    all_word_results = [None] * len(word_groups)
+def search_words_batch(word_groups: List[List[str]]) -> List[Dict]:
+    all_res = [None] * len(word_groups)
     with concurrent.futures.ThreadPoolExecutor(max_workers=min(4, len(word_groups))) as executor:
-
-        future_to_idx = {
-            executor.submit(search_word_with_variants, word_forms): idx
-            for idx, word_forms in enumerate(word_groups)
-        }
-        
+        future_to_idx = {executor.submit(search_word_with_variants, wg): i for i, wg in enumerate(word_groups)}
         for future in concurrent.futures.as_completed(future_to_idx):
-            idx = future_to_idx[future]
-            try:
-                word_results = future.result()
-                if word_results:
-                    all_word_results[idx] = word_results
-                else:
-                    all_word_results[idx] = {}
-            except Exception as e:
-                print(f"  [ERROR] Batch search failed: {str(e)[:50]}")
-                all_word_results[idx] = {}
-    
-    return all_word_results
+            all_res[future_to_idx[future]] = future.result() or {}
+    return all_res
 
-def combine_word_results_fast(all_word_results: List[Dict[str, Tuple[List[str], Optional[List[int]]]]]) -> Dict[str, float]:
-    # Filter out None and empty dicts
-    valid_results = [wr for wr in all_word_results if wr and isinstance(wr, dict) and len(wr) > 0]
+def combine_word_results_fast(all_word_results: List[Dict]) -> Dict[str, float]:
+    valid = [wr for wr in all_word_results if wr]
+    if not valid: return {}
     
-    if not valid_results:
-        print(f"  [DEBUG] All word results empty")
-        return {}
+    # --- OPTIMIZATION: Cache Total Docs to prevent IO lag ---
+    global _total_docs_cache
+    if _total_docs_cache is None:
+        try:
+            with open(DOC_MAP_PATH, 'rb') as f:
+                _total_docs_cache = len(pickle.load(f).get("int_to_str", {}))
+        except: _total_docs_cache = 50000
+    total_docs = _total_docs_cache
+    # --------------------------------------------------------
     
-    # Load total document count from mapping
-    try:
-        with open(DOC_MAP_PATH, 'rb') as f:
-            mapping_data = pickle.load(f)
-        total_docs = len(mapping_data.get("int_to_str", {}))
-        print(f"  [DEBUG] Loaded {total_docs} total docs from mapping")
-    except Exception as e:
-        print(f"  [DEBUG] Could not load DOC_MAP: {str(e)[:50]}")
-        total_docs = 50000  # Reasonable default
-    
-    # Phase 1: Collect document statistics
     doc_word_freqs = defaultdict(lambda: defaultdict(int))
     word_doc_counts = defaultdict(int)
     
-    for word_idx, word_result in enumerate(valid_results):
-        if not word_result:
-            continue
-            
-        # Track best frequency for each document
+    for idx, wr in enumerate(valid):
         doc_freqs_for_word = defaultdict(int)
-        
-        for _, (doc_ids, frequencies) in word_result.items():
-            if frequencies and len(frequencies) == len(doc_ids):
-                # Use frequencies if available
-                for doc_id, freq in zip(doc_ids, frequencies):
-                    if freq > doc_freqs_for_word[doc_id]:
-                        doc_freqs_for_word[doc_id] = freq
+        for _, (ids, freqs) in wr.items():
+            if freqs and len(freqs) == len(ids):
+                for doc_id, f in zip(ids, freqs):
+                    if f > doc_freqs_for_word[doc_id]: doc_freqs_for_word[doc_id] = f
             else:
-                for doc_id in doc_ids:
-                    if doc_freqs_for_word[doc_id] == 0:
-                        doc_freqs_for_word[doc_id] = 1
+                for doc_id in ids:
+                    if doc_freqs_for_word[doc_id] == 0: doc_freqs_for_word[doc_id] = 1
         
-        # global statistics being built
-        for doc_id, freq in doc_freqs_for_word.items():
-            doc_word_freqs[doc_id][word_idx] = freq
+        for doc_id, f in doc_freqs_for_word.items():
+            doc_word_freqs[doc_id][idx] = f
+        word_doc_counts[idx] = len(doc_freqs_for_word)
         
-        word_doc_counts[word_idx] = len(doc_freqs_for_word)
-    
-    # Phase 2: TF-IDF Scoring (basically tells you how relevant a document is for the query)
     doc_scores = defaultdict(float)
-    total_words = len(valid_results)
-    
-    # Pre-calculate IDF for each word index (pre calc necessary to speed up otherwise recalculated for each doc)
+    total_words = len(valid)
     word_idf = {}
-    for word_idx in range(total_words):
-        doc_count = word_doc_counts[word_idx]
-        if doc_count > 0:
-            # optimisation using smoothed IDF
-            word_idf[word_idx] = math.log((total_docs + 1) / (doc_count + 1)) + 1.0
-        else:
-            word_idf[word_idx] = 1.0
     
-    # Calculate scores only for documents that appear in results (Saves time)
-    for doc_id, word_freqs in doc_word_freqs.items():
-        score = 0.0
-        word_count = len(word_freqs)
+    for i in range(total_words):
+        dc = word_doc_counts[i]
+        word_idf[i] = math.log((total_docs + 1) / (dc + 1)) + 1.0 if dc > 0 else 1.0
         
-        if word_count > 0:
-            for word_idx, freq in word_freqs.items():
-                # Fast TF: log(1 + freq)
-                tf = 1.0 + math.log(freq) if freq > 1 else 1.0
-                score += tf * word_idf[word_idx]
-            
-            # Bonus for having more query words (encourages comprehensive matches)
-            if word_count > 1:
-                score *= (1.0 + 0.1 * (word_count - 1))
-            
+    for doc_id, wfs in doc_word_freqs.items():
+        score = 0.0
+        wc = len(wfs)
+        if wc > 0:
+            for idx, f in wfs.items():
+                tf = 1.0 + math.log(f) if f > 1 else 1.0
+                score += tf * word_idf[idx]
+            if wc > 1: score *= (1.0 + 0.1 * (wc - 1))
             doc_scores[doc_id] = score
-    
+            
     return dict(doc_scores)
 
 def multi_word_search(query: str, max_results: int = 20) -> Tuple[List[Tuple[str, float]], int]:
-    """
-    Multi-word search with TF-IDF ranking.
-    
-    Returns:
-        Tuple of (results_list, total_found_count)
-        - results_list: List of (doc_id, score) tuples, sorted by score descending
-        - total_found_count: Total number of matching documents
-    """
-    start_time = time.time()
-    
-    # Fast preprocessing
-    expanded_words = preprocess_query(query)
-    
-    if not expanded_words:
-        print(f"❌ No valid search terms")
-        return [], 0
+    start = time.time()
+    expanded = preprocess_query(query)
+    if not expanded: return [], 0
     
     print(f"\n-- MULTI-WORD SEARCH --: '{query}'")
-    print(f"Search terms: {[words[0] for words in expanded_words]}")
-    print(f"Total word forms to search: {sum(len(w) for w in expanded_words)}")
+    all_res = search_words_batch(expanded)
+    valid = [wr for wr in all_res if wr]
+    if not valid: return [], 0
     
-    #Batch search for all word groups in parallel
-    all_word_results = search_words_batch(expanded_words)
+    combined = combine_word_results_fast(valid)
+    if not combined: return [], 0
     
-    #Filter out empty results
-    valid_word_results = [wr for wr in all_word_results if wr and isinstance(wr, dict) and len(wr) > 0]
-    
-    if not valid_word_results:
-        print(f"❌ No documents found - check if barrels are built")
-        # Diagnostic info
-        try:
-            if not barrel_lookup.trie:
-                print(f"  💡 Trie is empty - need to build barrels first")
-        except:
-            pass
-        return [], 0
-    
-    # Combine results
-    combined_results = combine_word_results_fast(valid_word_results)
-    
-    if not combined_results:
-        print(f"❌ No matching documents after combination")
-        return [], 0
-    
-    # Fast top-K selection with heapq (this is an optimisation which avoids full sort if not needed)
-    if max_results < len(combined_results):
-        top_items = heapq.nlargest(max_results, combined_results.items(), key=lambda x: x[1])
-        final_results = top_items
+    if max_results < len(combined):
+        final = heapq.nlargest(max_results, combined.items(), key=lambda x: x[1])
     else:
-        final_results = sorted(combined_results.items(), key=lambda x: x[1], reverse=True)
-    
-    elapsed_time = time.time() - start_time
-    
-    total_found = len(combined_results) # Capture the total count
-    print(f"✅ Found {total_found} documents in {elapsed_time:.3f}s")
-    
-    # Performance feedback (to attach in interactive mode later)
-    word_count = len(expanded_words)
-    if word_count == 1 and elapsed_time > 0.5:
-        print(f"Single word query: {elapsed_time:.3f}s (target: <0.5s)")
-    elif word_count == 5 and elapsed_time > 1.5:
-        print(f"5-word query: {elapsed_time:.3f}s (target: <1.5s)")
-
-    return final_results, total_found
-
+        final = sorted(combined.items(), key=lambda x: x[1], reverse=True)
+        
+    elapsed = time.time() - start
+    print(f"✅ Found {len(combined)} documents in {elapsed:.3f}s")
+    return final, len(combined)
 # ============================================================================
 #display functions (Almost same as singlewordSearch.py)
 # ============================================================================

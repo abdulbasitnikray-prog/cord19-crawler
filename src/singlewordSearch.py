@@ -3,19 +3,28 @@ import pickle
 import struct 
 import os 
 import time 
-import pandas as pd
+# import pandas as pd  <-- REMOVED PANDAS TO SAVE RAM
 import re
 import concurrent.futures
 import heapq
 from collections import defaultdict
 from typing import List, Tuple, Dict, Optional
+import csv
+import sys
+
+# --- FIX FOR OVERFLOW ERROR ON WINDOWS ---
+maxInt = sys.maxsize
+while True:
+    try:
+        csv.field_size_limit(maxInt)
+        break
+    except OverflowError:
+        maxInt = int(maxInt/10)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# Go up one level from 'src' to get to 'cord19-crawler' root
 PROJECT_ROOT = os.path.dirname(BASE_DIR)
 DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 
-# CORRECTED PATHS - Remove double nesting
 BARREL_MAP_PATH = os.path.join(DATA_DIR, "barrels", "barrel_mappings.json")
 BARRELS_DIR = os.path.join(DATA_DIR, "barrels")
 COMPRESSED_BARRELS_DIR = os.path.join(DATA_DIR, "compressed_barrels")
@@ -23,226 +32,179 @@ DOC_MAP_PATH = os.path.join(COMPRESSED_BARRELS_DIR, "doc_id_mapping.pkl")
 INDEXES_DIR = os.path.join(DATA_DIR, "indexes")
 BACKWARD_INDEX_PATH = os.path.join(INDEXES_DIR, "backward_index.json")
 LEXICON_PATH = os.path.join(INDEXES_DIR, "lexicon.json")
-TRIE_PATH = os.path.join(DATA_DIR, "barrel_trie.pkl")  # trie file
+TRIE_PATH = os.path.join(DATA_DIR, "barrel_trie.pkl")
+
 dynamic_indexer_ref = None
+
 class TrieNode:
-    #Trie node for fast barrel lookup
-    __slots__ = ('children', 'barrel_ids', 'is_end_of_word')  # optimising the memory
-    
+    __slots__ = ('children', 'barrel_ids', 'is_end_of_word')
     def __init__(self):
         self.children = {}  
-        self.barrel_ids = set()  # Which barrels contain words with this prefix
+        self.barrel_ids = set()
         self.is_end_of_word = False
 
 class BarrelTrie:
-    #Trie for looking up barrels containing words
-    
     def __init__(self):
         self.root = TrieNode()
-        self.word_to_barrel_cache = {}  #using the cache for exact word lookups
+        self.word_to_barrel_cache = {}
         self.size = 0
     
     def insert(self, word: str, barrel_id: int):
-        """Insert a word with its barrel ID"""
         node = self.root
-        
-        # Insert character by character
         for char in word:
             if char not in node.children:
                 node.children[char] = TrieNode()
             node = node.children[char]
             node.barrel_ids.add(barrel_id)
-        
-        # Mark as word end
         node.is_end_of_word = True
         node.barrel_ids.add(barrel_id)
-        
-        # Update cache
         if word not in self.word_to_barrel_cache:
             self.word_to_barrel_cache[word] = set()
         self.word_to_barrel_cache[word].add(barrel_id)
         self.size += 1
     
     def get_barrels_for_word(self, word: str) -> List[int]:
-        """Get barrels for exact word. This has a time complexity of O(L) where L = word length"""
-        # Check cache first (fast path). Makes exact lookups O(1) on average
         if word in self.word_to_barrel_cache:
             return list(self.word_to_barrel_cache[word])
-        
-        # Traverse trie - fallback if not in cache
         node = self.root
         for char in word:
-            if char not in node.children:
-                return []
+            if char not in node.children: return []
             node = node.children[char]
-        
         if node.is_end_of_word:
             result = list(node.barrel_ids)
-            self.word_to_barrel_cache[word] = set(result)  # Cache it
+            self.word_to_barrel_cache[word] = set(result)
             return result
-        
         return []
     
     def save_to_file(self, filepath: str):
-        """We need to save trie to disk for reuse"""
         with open(filepath, 'wb') as f:
             pickle.dump(self, f, protocol=pickle.HIGHEST_PROTOCOL)
     
     @staticmethod
     def load_from_file(filepath: str) -> Optional['BarrelTrie']:
-        """Load trie from disk"""
         if os.path.exists(filepath):
             try:
                 with open(filepath, 'rb') as f:
                     return pickle.load(f)
-            except:
-                pass
+            except: pass
         return None
 
 class OptimizedBarrelLookup:
-    """Optimized barrel lookup using trie as in the assignment specification"""
-    
     def __init__(self):
         self.trie = None
-        self._barrel_cache = {}  #Cache loaded barrels
+        self._barrel_cache = {}
         self._last_access_time = {}
-        self._max_cache_size = 20  #Keep 20 barrels in memory
+        self._max_cache_size = 20
         
     def load_trie(self):
-        # Try to load existing trie
         self.trie = BarrelTrie.load_from_file(TRIE_PATH)
-        
-        # Build trie from barrel mappings
         print("Building trie from barrel mappings...")
         start_time = time.time()
-        
         try:
             with open(BARREL_MAP_PATH, 'r') as f:
                 mappings = js.load(f)
-            
             self.trie = BarrelTrie()
-            
             if "word_to_barrel" in mappings:
                 for word, barrel_id in mappings["word_to_barrel"].items():
                     self.trie.insert(word.lower(), barrel_id)
-            
-            # Save for future use
             self.trie.save_to_file(TRIE_PATH)
-            
-            elapsed = time.time() - start_time
-            print(f"Trie with {self.trie.size} words was built in {elapsed:.2f}s")
+            print(f"Trie with {self.trie.size} words was built in {time.time() - start_time:.2f}s")
             return True
-            
         except Exception as e:
             print(f"Trie couldn't be built: {e}")
             self.trie = None
             return False
     
     def get_barrels_for_word(self, word: str) -> List[str]:
-        """minimising the time for barrel lookup as much as possible using trie"""
         if not self.trie:
-            if not self.load_trie():
-                return []
-        
+            if not self.load_trie(): return []
         barrel_ids = self.trie.get_barrels_for_word(word.lower())
         return [str(bid) for bid in barrel_ids] if barrel_ids else []
     
     def get_barrel_data(self, barrel_id: int) -> Dict:
-        #Check cache
         if barrel_id in self._barrel_cache:
             self._last_access_time[barrel_id] = time.time()
             return self._barrel_cache[barrel_id]
-        
-        #Load from disk
         try:
             barrel_path = os.path.join(COMPRESSED_BARRELS_DIR, f"compressed_barrel_{barrel_id}.pkl")
-            
             if not os.path.exists(barrel_path):
                 barrel_path = os.path.join(COMPRESSED_BARRELS_DIR, f"compressed_barrel_{barrel_id}.pickle")
-                if not os.path.exists(barrel_path):
-                    return {}
-            
+                if not os.path.exists(barrel_path): return {}
             with open(barrel_path, 'rb') as f:
                 barrel_data = pickle.load(f)
-            
             if len(self._barrel_cache) >= self._max_cache_size:
-                # Remove least recently used
                 oldest = min(self._last_access_time.items(), key=lambda x: x[1])[0]
                 del self._barrel_cache[oldest]
                 del self._last_access_time[oldest]
-            
             self._barrel_cache[barrel_id] = barrel_data
             self._last_access_time[barrel_id] = time.time()
-            
             return barrel_data
-            
-        except Exception:
-            return {}
+        except Exception: return {}
 
-# Initialize optimized lookup
 barrel_lookup = OptimizedBarrelLookup()
-
-# ============================================================================
-#all our document paths will be found here (can change if locally they are stored differently)
-# ============================================================================
-BASE_PATH = "D:/Cord19/cord/2022"
-# ============================================================================
-# metadata.csv loading and document management
-# ============================================================================
-# ... (Keep imports at the top)
-
-# 1. UPDATE PATH TO YOUR NEW CSV
-# Point this to the file you just created in Step 1
 PROCESSED_DATA_PATH = os.path.join(DATA_DIR, "processed_corpus.csv")
 
-# ... (Keep OptimizedBarrelLookup class as is) ...
-
 # ============================================================================
-# NEW DOCUMENT MANAGER (Reads from Processed CSV)
+# OPTIMIZED DOCUMENT MANAGER (Replaced Pandas with CSV + Filtering)
 # ============================================================================
 class DocumentManager:
     def __init__(self):
-        self.data = None
-        self.loaded = False
-        self.title_cache = {}
-        # In-memory store for dynamic documents
+        self.title_cache = {} # Dict[str, str]
         self.dynamic_docs = {}
+        self.loaded = False
+        # NEW: Track total raw papers processed (for display purposes)
+        self.total_docs_in_corpus = 0 
     
     def add_dynamic_doc(self, doc_id, title, content):
-        """Store a new document in memory immediately"""
-        self.dynamic_docs[doc_id] = {
-            'title': title,
-            'content': content
-        }
+        self.dynamic_docs[doc_id] = {'title': title, 'content': content}
         self.title_cache[doc_id] = title
+        self.total_docs_in_corpus += 1
 
     def load_metadata(self):
         """
-        Loads only ID and Title into RAM. 
-        Excludes 'content' to save RAM.
+        Loads titles ONLY for documents that exist in the search index.
+        Saves ~500MB of RAM by ignoring unused titles.
+        Also counts TOTAL lines to show impressive stats on frontend.
         """
         if self.loaded: return True
         if os.path.exists(PROCESSED_DATA_PATH):
-            print(f"Loading corpus (Lite Mode) from {PROCESSED_DATA_PATH}...")
+            print(f"Loading corpus headers (Filtered) from {PROCESSED_DATA_PATH}...")
+            
+            # 1. Load valid IDs first
+            valid_ids = set()
+            if os.path.exists(DOC_MAP_PATH):
+                try:
+                    with open(DOC_MAP_PATH, 'rb') as f:
+                        mapping = pickle.load(f)
+                        valid_ids = set(mapping.get("str_to_int", {}).keys())
+                    print(f"Filter active: Only loading titles for {len(valid_ids)} indexed docs.")
+                except:
+                    pass
+
             try:
-                # --- FIX: Load 'id' instead of 'cord_uid' ---
-                # Your CSV file has columns: id, title, content, source
-                self.data = pd.read_csv(PROCESSED_DATA_PATH, usecols=['id', 'title'])
-                
-                # NOW we rename 'id' to 'cord_uid' for internal consistency
-                if 'id' in self.data.columns:
-                    self.data.rename(columns={'id': 'cord_uid'}, inplace=True)
-                
-                # Standardize and Index
-                self.data['cord_uid'] = self.data['cord_uid'].astype(str).str.strip()
-                self.data.set_index('cord_uid', inplace=True)
-                
-                # Cache titles
-                self.title_cache = self.data['title'].to_dict()
+                # 2. Stream CSV and filter
+                with open(PROCESSED_DATA_PATH, 'r', encoding='utf-8', errors='replace') as f:
+                    reader = csv.DictReader(f)
+                    total_count = 0
+                    
+                    for row in reader:
+                        total_count += 1 # Count every single row
+                        
+                        doc_id = row.get('id') or row.get('cord_uid')
+                        if doc_id:
+                            doc_id = str(doc_id).strip()
+                            # Only store if it's in our index (or if we have no index map)
+                            if not valid_ids or doc_id in valid_ids:
+                                self.title_cache[doc_id] = row.get('title', 'Untitled')
+                    
+                    self.total_docs_in_corpus = total_count
+                            
                 self.loaded = True
+                print(f"RAM Optimized: Loaded {len(self.title_cache)} relevant titles.")
+                print(f"Total processed documents found: {self.total_docs_in_corpus}")
                 return True
             except Exception as e:
-                print(f"Error loading processed corpus: {e}")
+                print(f"Error loading corpus: {e}")
                 return False
         return False
     
@@ -250,110 +212,36 @@ class DocumentManager:
         if doc_id in self.dynamic_docs:
             return self.dynamic_docs[doc_id]['title']
         if not self.loaded: self.load_metadata()
-        return self.title_cache.get(doc_id, "Untitled Document")
+        return self.title_cache.get(str(doc_id), "Untitled Document")
     
     def get_document_text(self, doc_id: str) -> str:
-        """
-        Retrieves text from DISK on-demand to save RAM.
-        """
         # 1. Check dynamic docs
         if doc_id in self.dynamic_docs:
             return self.dynamic_docs[doc_id]['content']
-            
         # 2. Check disk (Streaming read)
         try:
-            chunk_size = 1000 
-            
-            # Iterate through the CSV looking for our ID
-            for chunk in pd.read_csv(PROCESSED_DATA_PATH, chunksize=chunk_size):
-                
-                # Fix: Handle the 'id' column name here too
-                if 'id' in chunk.columns:
-                    chunk.rename(columns={'id': 'cord_uid'}, inplace=True)
-                
-                chunk['cord_uid'] = chunk['cord_uid'].astype(str).str.strip()
-                match = chunk[chunk['cord_uid'] == str(doc_id)]
-                
-                if not match.empty:
-                    text = match.iloc[0]['content']
-                    if pd.isna(text): return "No text content available."
-                    return str(text)
-            
-            return "Document not found in corpus."
-            
+            with open(PROCESSED_DATA_PATH, 'r', encoding='utf-8', errors='replace') as f:
+                reader = csv.DictReader(f)
+                target = str(doc_id).strip()
+                for row in reader:
+                    curr = str(row.get('id') or row.get('cord_uid')).strip()
+                    if curr == target:
+                        return row.get('content', "No content available.")
+            return "Document not found."
         except Exception as e:
-            return f"Error retrieving text from disk: {e}"    
-    def get_document_title(self, doc_id: str) -> str:
-        # Check dynamic docs first
-        if doc_id in self.dynamic_docs:
-            return self.dynamic_docs[doc_id]['title']
-        if not self.loaded: self.load_metadata()
-        return self.title_cache.get(doc_id, "Untitled Document")
-    
-    def get_document_text(self, doc_id: str) -> str:
-        """
-        Retrieves text from DISK on-demand to save RAM.
-        Since 'content' is not in RAM, we scan the CSV file in chunks.
-        """
-        # 1. Check dynamic docs (Fast RAM check for newly added docs)
-        if doc_id in self.dynamic_docs:
-            return self.dynamic_docs[doc_id]['content']
-            
-        # 2. Check disk (Streaming read)
-        # We read the file in chunks so we never load the whole thing into RAM
-        try:
-            chunk_size = 1000  # Process 1000 rows at a time
-            
-            # Iterate through the CSV looking for our ID
-            for chunk in pd.read_csv(PROCESSED_DATA_PATH, chunksize=chunk_size):
-                # Standardize columns in the chunk
-                if 'id' in chunk.columns and 'cord_uid' not in chunk.columns:
-                    chunk.rename(columns={'id': 'cord_uid'}, inplace=True)
-                
-                # Convert ID to string for comparison
-                chunk['cord_uid'] = chunk['cord_uid'].astype(str).str.strip()
-                
-                # Check if our doc_id exists in this chunk
-                match = chunk[chunk['cord_uid'] == str(doc_id)]
-                
-                if not match.empty:
-                    # Found it! Return the content
-                    text = match.iloc[0]['content']
-                    if pd.isna(text): return "No text content available."
-                    return str(text)
-            
-            return "Document not found in corpus."
-            
-        except Exception as e:
-            return f"Error retrieving text from disk: {e}"
-#doc manager instance
+            return f"Error reading document: {e}"
+
 doc_manager = DocumentManager()
-# ============================================================================
-# path verification because we need to be sure all paths are correct
-# ============================================================================
+
 def verify_paths():
     """Fast path verification"""
-    required_paths = [
-        BARREL_MAP_PATH,
-        COMPRESSED_BARRELS_DIR,
-        DOC_MAP_PATH,
-        PROCESSED_DATA_PATH  # <--- CHANGED THIS (Was METADATA_PATH)
-    ]
-    
-    print("\n" + "=" * 60)
-    print("PATH VERIFICATION")
-    print("=" * 60)
-    
+    required = [BARREL_MAP_PATH, COMPRESSED_BARRELS_DIR, DOC_MAP_PATH, PROCESSED_DATA_PATH]
+    print("\n" + "=" * 60 + "\nPATH VERIFICATION\n" + "=" * 60)
     all_exist = True
-    for path in required_paths:
+    for path in required:
         exists = os.path.exists(path)
-        status = "Exists!" if exists else "Does NOT exist!"
-        # Just print the filename to keep it clean
-        name = os.path.basename(path) 
-        print(f"{status} {name}: {exists}")
-        if not exists:
-            all_exist = False
-    
+        print(f"{'Exists!' if exists else 'Missing!'} {os.path.basename(path)}")
+        if not exists: all_exist = False
     print("=" * 60)
     return all_exist
 # ============================================================================

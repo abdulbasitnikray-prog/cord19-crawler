@@ -1,13 +1,15 @@
 import json
 import time
+import gc
 
 class TrieNode:
+    __slots__ = ('children', 'is_end', 'word', 'frequency', 'top_cache')
     def __init__(self):
         self.children = {}
         self.is_end = False
         self.word = None
         self.frequency = 0
-        self.top_cache = [] # Optimization: Cache top results at every node
+        self.top_cache = [] 
 
 class AutocompleteEngine:
     def __init__(self):
@@ -21,40 +23,30 @@ class AutocompleteEngine:
             with open(lexicon_path, 'r', encoding='utf-8') as f:
                 lexicon = json.load(f)
             
-            # --- OPTIMIZATION: Sort by frequency and take only top 50k ---
-            print(f"Sorting {len(lexicon)} words by frequency...")
+            # OPTIMIZATION: Take top 25,000 words. 
+            # This is the sweet spot for RAM vs Utility.
+            TOP_N = 25000
             
-            # Convert dict to list of (word, freq)
-            word_list = []
-            for word, data in lexicon.items():
-                freq = data.get("total_count", 0) if isinstance(data, dict) else 0
-                word_list.append((word, freq))
-            
-            # Sort descending
-            word_list.sort(key=lambda x: x[1], reverse=True)
-            
-            # Keep only top 50,000
-            TOP_N = 50000
-            pruned_list = word_list[:TOP_N]
-            
-            print(f"Pruned to top {TOP_N} words. Building Trie...")
+            sorted_words = sorted(
+                [(k, v.get("total_count", 0)) for k, v in lexicon.items() if isinstance(v, dict)], 
+                key=lambda x: x[1], 
+                reverse=True
+            )[:TOP_N]
 
-            for word, freq in pruned_list:
-                # Skip tiny words to save more RAM
-                if len(word) > 2:
+            for word, freq in sorted_words:
+                if len(word) > 2: 
                     self.insert(word, freq)
                 
             self.loaded = True
-            print(f"Autocomplete Ready: {len(pruned_list)} words in {time.time()-start:.2f}s")
+            print(f"Autocomplete Ready: {len(sorted_words)} words in {time.time()-start:.2f}s")
             
-            # Force garbage collection
+            # Force cleanup
             del lexicon
-            del word_list
-            import gc
+            del sorted_words
             gc.collect()
             
         except Exception as e:
-            print(f"Failed to load lexicon for autocomplete: {e}")
+            print(f"Failed to load lexicon: {e}")
 
     def insert(self, word, freq):
         node = self.root
@@ -63,7 +55,6 @@ class AutocompleteEngine:
                 node.children[char] = TrieNode()
             node = node.children[char]
             
-            # Cache top 5 high-frequency words at this node
             node.top_cache.append((freq, word))
             node.top_cache.sort(key=lambda x: x[0], reverse=True)
             if len(node.top_cache) > 5:
