@@ -34,9 +34,9 @@ def check_required_files():
         for file in missing_files:
             print(f"  - {file}")
         print("\nPlease run these scripts first:")
-        print("  1. python src/index.py (to create indexes)")
-        print("  2. python src/barreled_index.py (to create barrels)")
-        print("  3. python src/preprocess_papers.py (to create processed corpus)")
+        print("  1. python src/index.py")
+        print("  2. python src/barreled_index.py")
+        print("  3. python src/preprocess_papers.py")
         print("\nContinue anyway? (y/n): ", end="")
         response = input().strip().lower()
         if response != 'y':
@@ -46,7 +46,7 @@ def check_required_files():
 
 # --- Global Initialization ---
 print("--- INITIALIZING SEARCH ENGINE ---")
-check_required_files()  # ADD THIS LINE
+check_required_files()
 barrel_lookup.load_trie()
 doc_manager.load_metadata()
 
@@ -59,7 +59,6 @@ singlewordSearch.dynamic_indexer_ref = indexer
 
 @app.route('/')
 def home():
-    # Pass total document count to the frontend for the header stats
     total_docs = len(doc_manager.data) if doc_manager.data is not None else 0
     return render_template('index.html', total_docs=f"{total_docs:,}")
 
@@ -76,32 +75,28 @@ def search():
     # 1. Semantic Expansion
     query_words = query.split()
     synonyms_list = []
-    
-    # We create a new variable for the actual search
     final_search_query = query 
 
     if use_semantic:
         expansion_map = semantic_engine.expand_query(query_words)
         for word, syns in expansion_map.items():
             synonyms_list.extend(syns)
-        
         synonyms_list = list(set(synonyms_list))
-        
-        # --- THE FIX: ADD SYNONYMS TO THE SEARCH QUERY ---
         if synonyms_list:
-            # Append synonyms to the original query string
             final_search_query += " " + " ".join(synonyms_list)
 
-    # 2. Perform Search with the ENHANCED query
-    # We pass 'final_search_query' instead of 'query'
+    # 2. Perform Search
     results, total_found = multi_word_search(final_search_query, max_results=30)
     
-    # 3. Format Results (Keep the rest of your code the same)
+    # 3. Format Results
     formatted_results = []
     for doc_id, score in results:
         title = doc_manager.get_document_title(doc_id)
-        text = doc_manager.get_document_text(doc_id)
-        snippet = text[:200] + "..." if text else "No text preview available."
+        
+        # --- CRITICAL FIX FOR PERFORMANCE ---
+        # We DO NOT fetch text here anymore. It's too slow in Lite Mode.
+        # We provide a generic snippet instead.
+        snippet = "Click to view full document content..."
         
         formatted_results.append({
             "id": doc_id,
@@ -125,7 +120,6 @@ def get_autocomplete():
     prefix = request.args.get('q', '').strip()
     if not prefix or len(prefix) < 2:
         return jsonify([])
-    
     suggestions = autocomplete.search(prefix)
     return jsonify(suggestions)
 
@@ -138,10 +132,8 @@ def add_document():
     if 'cord_uid' not in data:
         data['cord_uid'] = f"doc_{int(time.time())}"
         
-    # 1. Update the Search Index
     success = indexer.add_single_document(data)
     
-    # 2. Update the Document Manager (So we can read the text/title later)
     if success:
         doc_manager.add_dynamic_doc(
             data['cord_uid'], 
@@ -154,14 +146,14 @@ def add_document():
 
 @app.route('/view/<doc_id>')
 def view_document(doc_id):
-    # Fetch title and full text using your existing DocumentManager
+    # Fetching text here is fine because it only happens ONCE per click
     title = doc_manager.get_document_title(doc_id)
     text = doc_manager.get_document_text(doc_id)
     
     if not text:
-        text = "Error: Could not load the text for this document. The file might be missing from the dataset."
+        text = "Error: Could not load the text for this document."
     
     return render_template('article.html', title=title, content=text, doc_id=doc_id)
 
 if __name__ == '__main__':
-    app.run(debug=True,use_reloader = False, port=5000)
+    app.run(debug=True, use_reloader=False, port=5000)

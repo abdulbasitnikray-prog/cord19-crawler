@@ -205,7 +205,7 @@ class DocumentManager:
         self.data = None
         self.loaded = False
         self.title_cache = {}
-        # NEW: In-memory store for dynamic documents
+        # In-memory store for dynamic documents
         self.dynamic_docs = {}
     
     def add_dynamic_doc(self, doc_id, title, content):
@@ -214,20 +214,30 @@ class DocumentManager:
             'title': title,
             'content': content
         }
-        # Update title cache so it shows up in results
         self.title_cache[doc_id] = title
 
     def load_metadata(self):
+        """
+        Loads only ID and Title into RAM. 
+        Excludes 'content' to save RAM.
+        """
         if self.loaded: return True
         if os.path.exists(PROCESSED_DATA_PATH):
-            print(f"Loading corpus from {PROCESSED_DATA_PATH}...")
+            print(f"Loading corpus (Lite Mode) from {PROCESSED_DATA_PATH}...")
             try:
-                self.data = pd.read_csv(PROCESSED_DATA_PATH)
-                if 'id' in self.data.columns and 'cord_uid' not in self.data.columns:
+                # --- FIX: Load 'id' instead of 'cord_uid' ---
+                # Your CSV file has columns: id, title, content, source
+                self.data = pd.read_csv(PROCESSED_DATA_PATH, usecols=['id', 'title'])
+                
+                # NOW we rename 'id' to 'cord_uid' for internal consistency
+                if 'id' in self.data.columns:
                     self.data.rename(columns={'id': 'cord_uid'}, inplace=True)
                 
+                # Standardize and Index
                 self.data['cord_uid'] = self.data['cord_uid'].astype(str).str.strip()
                 self.data.set_index('cord_uid', inplace=True)
+                
+                # Cache titles
                 self.title_cache = self.data['title'].to_dict()
                 self.loaded = True
                 return True
@@ -237,6 +247,43 @@ class DocumentManager:
         return False
     
     def get_document_title(self, doc_id: str) -> str:
+        if doc_id in self.dynamic_docs:
+            return self.dynamic_docs[doc_id]['title']
+        if not self.loaded: self.load_metadata()
+        return self.title_cache.get(doc_id, "Untitled Document")
+    
+    def get_document_text(self, doc_id: str) -> str:
+        """
+        Retrieves text from DISK on-demand to save RAM.
+        """
+        # 1. Check dynamic docs
+        if doc_id in self.dynamic_docs:
+            return self.dynamic_docs[doc_id]['content']
+            
+        # 2. Check disk (Streaming read)
+        try:
+            chunk_size = 1000 
+            
+            # Iterate through the CSV looking for our ID
+            for chunk in pd.read_csv(PROCESSED_DATA_PATH, chunksize=chunk_size):
+                
+                # Fix: Handle the 'id' column name here too
+                if 'id' in chunk.columns:
+                    chunk.rename(columns={'id': 'cord_uid'}, inplace=True)
+                
+                chunk['cord_uid'] = chunk['cord_uid'].astype(str).str.strip()
+                match = chunk[chunk['cord_uid'] == str(doc_id)]
+                
+                if not match.empty:
+                    text = match.iloc[0]['content']
+                    if pd.isna(text): return "No text content available."
+                    return str(text)
+            
+            return "Document not found in corpus."
+            
+        except Exception as e:
+            return f"Error retrieving text from disk: {e}"    
+    def get_document_title(self, doc_id: str) -> str:
         # Check dynamic docs first
         if doc_id in self.dynamic_docs:
             return self.dynamic_docs[doc_id]['title']
@@ -244,17 +291,41 @@ class DocumentManager:
         return self.title_cache.get(doc_id, "Untitled Document")
     
     def get_document_text(self, doc_id: str) -> str:
-        # Check dynamic docs first
+        """
+        Retrieves text from DISK on-demand to save RAM.
+        Since 'content' is not in RAM, we scan the CSV file in chunks.
+        """
+        # 1. Check dynamic docs (Fast RAM check for newly added docs)
         if doc_id in self.dynamic_docs:
             return self.dynamic_docs[doc_id]['content']
-        if not self.loaded: self.load_metadata()
+            
+        # 2. Check disk (Streaming read)
+        # We read the file in chunks so we never load the whole thing into RAM
         try:
-            if doc_id in self.data.index:
-                text = self.data.loc[doc_id, 'content']
-                if pd.isna(text): return "No text content available."
-                return str(text)
-            return "Document not found."
-        except: return "Error retrieving text."
+            chunk_size = 1000  # Process 1000 rows at a time
+            
+            # Iterate through the CSV looking for our ID
+            for chunk in pd.read_csv(PROCESSED_DATA_PATH, chunksize=chunk_size):
+                # Standardize columns in the chunk
+                if 'id' in chunk.columns and 'cord_uid' not in chunk.columns:
+                    chunk.rename(columns={'id': 'cord_uid'}, inplace=True)
+                
+                # Convert ID to string for comparison
+                chunk['cord_uid'] = chunk['cord_uid'].astype(str).str.strip()
+                
+                # Check if our doc_id exists in this chunk
+                match = chunk[chunk['cord_uid'] == str(doc_id)]
+                
+                if not match.empty:
+                    # Found it! Return the content
+                    text = match.iloc[0]['content']
+                    if pd.isna(text): return "No text content available."
+                    return str(text)
+            
+            return "Document not found in corpus."
+            
+        except Exception as e:
+            return f"Error retrieving text from disk: {e}"
 #doc manager instance
 doc_manager = DocumentManager()
 # ============================================================================
