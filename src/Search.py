@@ -53,23 +53,24 @@ def initialize_ranking_system():
 def get_paper_text_for_ranking(paper_ids: List[str], limit: int = 10) -> Dict[str, Dict]:
     """
     Extract text for papers to use in ranking.
-    Only extracts for top papers to save time.
+    Only extracts for top papers to save time and memory.
     """
     paper_texts = {}
     
+    # Process only top papers to minimize memory
     for paper_id in paper_ids[:limit]:
         text = doc_manager.get_document_text(paper_id)
         if text:
-            # Simple text segmentation for ranking
-            lines = text.split('\n')
-            title = lines[0] if lines else ""
-            abstract = " ".join(lines[1:5]) if len(lines) > 1 else ""
-            body = " ".join(lines[5:100]) if len(lines) > 5 else ""  # First 100 lines
+            # Simple text segmentation for ranking with limited size
+            lines = text.split('\n', 100)  # Limit split to first 100
+            title = lines[0][:500].lower() if lines else ""  # Limit title length
+            abstract = " ".join(lines[1:5])[:1000].lower() if len(lines) > 1 else ""  # Limit abstract
+            body = " ".join(lines[5:50])[:5000].lower() if len(lines) > 5 else ""  # Reduced from 100 to 50 lines
             
             paper_texts[paper_id] = {
-                'title': title.lower(),
-                'abstract': abstract.lower(),
-                'body': body.lower()
+                'title': title,
+                'abstract': abstract,
+                'body': body
             }
     
     return paper_texts

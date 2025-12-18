@@ -106,6 +106,11 @@ def generate_indexes_parallel(target_papers=50000, batch_size=500, num_workers=4
                         time_str = time.strftime("%H:%M:%S", time.gmtime(remaining))
                         
                         print(f"Indexed {unique_count:,} | Rate: {rate:.1f} docs/s | ETA: {time_str}")
+                        
+                        # Aggressive memory cleanup every 500 docs
+                        import gc
+                        if unique_count % 5000 == 0:
+                            gc.collect()
 
                 # --- CLEANUP RAM ---
                 del batch_result

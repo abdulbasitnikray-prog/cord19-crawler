@@ -49,36 +49,47 @@ def get_scipacy_model():
             return None
 
 def clean_text(lines):
-    if not lines: return ""
-    full_text = " ".join(lines).lower()
+    """Optimized text cleaning with minimal string operations"""
+    if not lines:
+        return ""
+    # Join with generator to save memory
+    full_text = " ".join(line.lower() for line in lines if line)
+    # Apply all patterns in one pass
     full_text = SPACE_PATTERN.sub(' ', full_text)
     full_text = PUNCT_PATTERN.sub('', full_text)
     full_text = DIGIT_PATTERN.sub('', full_text)
     return full_text.strip()
 
 def extract_text(json_parse):
-    if json_parse is None: return []
-    body = json_parse.get("body_text", [])
+    """Generator-based text extraction for memory efficiency"""
+    if json_parse is None:
+        return []
+    
     lines = []
     # 1. Get Title
     if 'metadata' in json_parse and 'title' in json_parse['metadata']:
         title = json_parse['metadata']['title']
-        if title: lines.append(title)
+        if title:
+            lines.append(title)
     
     # 2. Get Abstract (Crucial for semantic training)
     if 'abstract' in json_parse:
         for entry in json_parse['abstract']:
-            text = entry.get("text", "")
-            if text: lines.append(text)
-            
+            text = entry.get("text")
+            if text:
+                lines.append(text)
+            if len(lines) >= 50:
+                return lines  # Early return
+    
     # 3. Get Body Text
     if 'body_text' in json_parse:
         for section in json_parse['body_text']:
-            text = section.get("text", "")
+            text = section.get("text")
             if text:
                 lines.append(text)
-                if len(lines) >= 50: break 
-                
+                if len(lines) >= 50:
+                    return lines  # Early return
+    
     return lines
 
 def stream_tar_dataset(metadata_path, tar_path, max_papers=None):

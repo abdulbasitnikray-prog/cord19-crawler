@@ -56,14 +56,11 @@ def save_barrels(barrels, doc_to_barrels, word_to_barrel, output_dir="barrels"):
 def create_barrels_by_freq(inverted_index, lexicon, num_barrels=10):
     """Create barrels based on term frequency with even distribution"""
     
-    # Create reverse mapping: word_id -> word
-    id_to_word = {}
-    for word, info in lexicon.items():
-        if isinstance(info, dict) and "id" in info:
-            id_to_word[str(info["id"])] = word
-        else:
-            # Handle case where lexicon is just word->id mapping
-            id_to_word[str(info)] = word
+    # Create reverse mapping: word_id -> word (use dict comprehension for speed)
+    id_to_word = {
+        str(info["id"] if isinstance(info, dict) and "id" in info else info): word
+        for word, info in lexicon.items()
+    }
     
     print(f"Creating {num_barrels} barrels from {len(inverted_index):,} terms...")
     
@@ -127,19 +124,22 @@ def create_barrels_by_freq(inverted_index, lexicon, num_barrels=10):
         for word in barrel["words"]:
             word_to_barrel[word] = barrel["barrel_id"]
     
-    # Create document-to-barrels mapping
-    doc_to_barrel = defaultdict(set)
+    # Create document-to-barrels mapping (optimized with dict)
+    doc_to_barrel = {}
     
     for word, stats in word_frequencies.items():
         barrel_id = word_to_barrel.get(word)
         if barrel_id:
             for doc_id in stats["documents"]:
+                if doc_id not in doc_to_barrel:
+                    doc_to_barrel[doc_id] = set()
                 doc_to_barrel[doc_id].add(barrel_id)
                 
                 # Add document to barrel's document set
                 for barrel in barrels:
                     if barrel["barrel_id"] == barrel_id:
                         barrel["documents"].add(doc_id)
+                        break  # Exit inner loop once found
     
     # Convert sets to lists for JSON serialization
     for barrel in barrels:

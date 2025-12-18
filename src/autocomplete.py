@@ -1,13 +1,16 @@
 import json
 import time
+import heapq
 
 class TrieNode:
+    __slots__ = ('children', 'is_end', 'word', 'frequency', 'top_cache')  # Memory optimization
+    
     def __init__(self):
         self.children = {}
         self.is_end = False
         self.word = None
         self.frequency = 0
-        self.top_cache = [] # Optimization: Cache top results at every node
+        self.top_cache = []  # Optimization: Cache top results at every node
 
 class AutocompleteEngine:
     def __init__(self):
@@ -32,25 +35,32 @@ class AutocompleteEngine:
 
     def insert(self, word, freq):
         node = self.root
-        for char in word.lower():
+        word_lower = word.lower()  # Cache lowercase conversion
+        for char in word_lower:
             if char not in node.children:
                 node.children[char] = TrieNode()
             node = node.children[char]
             
-            # Cache top 5 high-frequency words at this node
-            node.top_cache.append((freq, word))
-            node.top_cache.sort(key=lambda x: x[0], reverse=True)
-            if len(node.top_cache) > 5:
-                node.top_cache = node.top_cache[:5]
+            # Use heap for efficient top-k maintenance
+            import heapq
+            if len(node.top_cache) < 5:
+                heapq.heappush(node.top_cache, (freq, word))
+            elif freq > node.top_cache[0][0]:
+                heapq.heapreplace(node.top_cache, (freq, word))
             
         node.is_end = True
         node.word = word
         node.frequency = freq
 
     def search(self, prefix):
-        if not prefix or not self.loaded: return []
+        if not prefix or not self.loaded:
+            return []
         node = self.root
-        for char in prefix.lower():
-            if char not in node.children: return []
+        prefix_lower = prefix.lower()  # Cache lowercase
+        for char in prefix_lower:
+            if char not in node.children:
+                return []
             node = node.children[char]
-        return [item[1] for item in node.top_cache]
+        # Return sorted results from heap (largest first)
+        import heapq
+        return [item[1] for item in heapq.nlargest(5, node.top_cache)]

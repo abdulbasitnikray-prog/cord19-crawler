@@ -137,20 +137,27 @@ def search_words_batch(word_groups: List[List[str]]) -> List[Dict[str, Tuple[Lis
     
     return all_word_results
 
+# Cache total_docs to avoid repeated file I/O
+_total_docs_cache = None
+
 def combine_word_results_fast(all_word_results: List[Dict[str, Tuple[List[str], Optional[List[int]]]]]) -> Dict[str, float]:
     if not all_word_results:
         return {}
-    # Load total document count from mapping
-    try:
-        with open(DOC_MAP_PATH, 'rb') as f:
-            mapping_data = pickle.load(f)
-        total_docs = len(mapping_data.get("int_to_str", {}))
-    except:
-        total_docs = 50000  # Reasonable default
     
-    # Phase 1: Collect document statistics
-    doc_word_freqs = defaultdict(lambda: defaultdict(int))
-    word_doc_counts = defaultdict(int)
+    # Use cached total_docs
+    global _total_docs_cache
+    if _total_docs_cache is None:
+        try:
+            with open(DOC_MAP_PATH, 'rb') as f:
+                mapping_data = pickle.load(f)
+            _total_docs_cache = len(mapping_data.get("int_to_str", {}))
+        except:
+            _total_docs_cache = 50000  # Reasonable default
+    total_docs = _total_docs_cache
+    
+    # Phase 1: Collect document statistics (use normal dict for speed)
+    doc_word_freqs = {}
+    word_doc_counts = {}
     
     for word_idx, word_result in enumerate(all_word_results):
         if not word_result:
@@ -172,12 +179,14 @@ def combine_word_results_fast(all_word_results: List[Dict[str, Tuple[List[str], 
         
         # global statistics being built
         for doc_id, freq in doc_freqs_for_word.items():
+            if doc_id not in doc_word_freqs:
+                doc_word_freqs[doc_id] = {}
             doc_word_freqs[doc_id][word_idx] = freq
         
         word_doc_counts[word_idx] = len(doc_freqs_for_word)
     
     # Phase 2: TF-IDF Scoring (basically tells you how relevant a document is for the query)
-    doc_scores = defaultdict(float)
+    doc_scores = {}
     total_words = len(all_word_results)
     
     # Pre-calculate IDF for each word index (pre calc necessary to speed up otherwise recalculated for each doc)
@@ -260,7 +269,7 @@ def multi_word_search(query: str, max_results: int = 20) -> List[Tuple[str, floa
     
     return final_results
 
-# ============================================================================
+# ======================================== ====================================
 #display functions (Almost same as singlewordSearch.py)
 # ============================================================================
 

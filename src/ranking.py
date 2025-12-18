@@ -29,9 +29,10 @@ class AuthorProminenceAnalyzer:
     
     def _analyze_authors(self):
         """Analyze all authors in the dataset."""
-        author_papers = defaultdict(list)
-        author_journals = defaultdict(Counter)
-        author_years = defaultdict(list)
+        # Use regular dicts for better memory efficiency
+        author_papers = {}
+        author_journals = {}
+        author_years = {}
         
         for _, row in self.metadata_df.iterrows():
             paper_id = str(row['cord_uid']).strip()
@@ -46,13 +47,13 @@ class AuthorProminenceAnalyzer:
             
             for author in authors:
                 author_lower = author.lower().strip()
-                author_papers[author_lower].append(paper_id)
+                author_papers.setdefault(author_lower, []).append(paper_id)
                 if journal:
-                    author_journals[author_lower][journal] += 1
+                    author_journals.setdefault(author_lower, Counter())[journal] += 1
                 if publish_time:
                     year_match = re.search(r'(\d{4})', publish_time)
                     if year_match:
-                        author_years[author_lower].append(int(year_match.group(1)))
+                        author_years.setdefault(author_lower, []).append(int(year_match.group(1)))
         
         author_metrics = {}
         for author, paper_ids in author_papers.items():
@@ -255,11 +256,22 @@ class PaperRanker:
         
         self.author_analyzer = AuthorProminenceAnalyzer(metadata_df, citation_builder)
         
+        # Lazy initialization - only build when needed
+        self.paper_metadata = None
+        self.title_lookup = None
+        self.journal_lookup = None
+        self._metadata_initialized = False
+    
+    def _ensure_metadata_loaded(self):
+        """Lazy load metadata on first use"""
+        if self._metadata_initialized:
+            return
+        
         self.paper_metadata = {}
         self.title_lookup = {}
         self.journal_lookup = {}
         
-        for _, row in metadata_df.iterrows():
+        for _, row in self.metadata_df.iterrows():
             cord_uid = str(row['cord_uid']).strip()
             if cord_uid:
                 self.paper_metadata[cord_uid] = row
@@ -269,10 +281,14 @@ class PaperRanker:
                 journal = str(row.get('journal', '')).lower()
                 if journal:
                     self.journal_lookup[cord_uid] = journal
+        
+        self._metadata_initialized = True
     
     def calculate_paper_score(self, paper_id: str, query_terms: List[str], 
                             paper_text: Dict[str, str] = None) -> float:
         """Calculate comprehensive score for a single paper."""
+        self._ensure_metadata_loaded()  # Ensure metadata is loaded
+        
         if paper_id not in self.paper_metadata:
             return 0.0
         
@@ -422,6 +438,7 @@ class PaperRanker:
     
     def _calculate_journal_score(self, paper_id: str) -> float:
         """Calculate score based on journal prestige."""
+        self._ensure_metadata_loaded()  # Ensure metadata is loaded
         journal = self.journal_lookup.get(paper_id, '').lower()
         
         if not journal:

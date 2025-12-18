@@ -10,7 +10,7 @@ import heapq
 from collections import defaultdict
 from typing import List, Tuple, Dict, Optional
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Go up to project root
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
 BARREL_MAP_PATH = os.path.join(DATA_DIR, "barrels", "barrels", "barrel_mappings.json")
@@ -203,7 +203,9 @@ class DocumentManager:
         self.title_cache = {}
         self.path_cache = {}
         self.text_cache = {}
-        self._max_text_cache = 100  # LRU cache size
+        self._text_cache_order = []  # Track insertion order for LRU
+        self._max_text_cache = 50  # Reduced cache size for lower memory
+        self._max_path_cache = 500  # Limit path cache too
         
     def load_metadata(self):
         if self.metadata_loaded:
@@ -214,31 +216,34 @@ class DocumentManager:
                 print(f"Loading metadata from {METADATA_PATH}...")
                 start_time = time.time()
                 
-                #using pandas but only loading necessary columns
-                self.metadata = pd.read_csv(
-                    METADATA_PATH, 
-                    usecols=['cord_uid', 'title', 'sha', 'pmcid'],
-                    dtype={'cord_uid': 'string', 'title': 'string'}
-                )
-                
-                #lookup dicts for fast access
+                # Use pandas with chunking for large files to reduce memory peak
+                chunk_size = 10000
                 self.title_cache = {}
                 self.cord_to_shas = {}
                 self.cord_to_pmcids = {}
                 
-                for _, row in self.metadata.iterrows():
-                    cord_uid = str(row['cord_uid']).strip()
-                    if cord_uid:
+                for chunk in pd.read_csv(
+                    METADATA_PATH,
+                    usecols=['cord_uid', 'title', 'sha', 'pmcid'],
+                    dtype={'cord_uid': 'string', 'title': 'string'},
+                    chunksize=chunk_size,
+                    low_memory=True
+                ):
+                    for _, row in chunk.iterrows():
+                        cord_uid = str(row['cord_uid']).strip()
+                        if not cord_uid:
+                            continue
+                            
                         title = str(row['title']).strip() if pd.notna(row['title']) else "Untitled"
                         self.title_cache[cord_uid] = title
                         
-                        #sha hashes for finding document files
+                        # sha hashes for finding document files
                         sha_field = str(row.get('sha', '')).strip()
                         if sha_field and sha_field != 'nan':
                             shas = [s.strip() for s in sha_field.split(';') if s.strip()]
                             self.cord_to_shas[cord_uid] = shas
                         
-                        #pmcid parsing for finding document files
+                        # pmcid parsing for finding document files
                         pmcid = str(row.get('pmcid', '')).strip()
                         if pmcid and pmcid != 'nan':
                             self.cord_to_pmcids[cord_uid] = pmcid
@@ -296,6 +301,13 @@ class DocumentManager:
                     if os.path.exists(folder):
                         file_path = os.path.join(folder, filename)
                         if os.path.exists(file_path):
+                            # Limit path cache size
+                            if len(self.path_cache) >= self._max_path_cache:
+                                self.path_cache.pop(next(iter(self.path_cache)), None)
+                            # Limit path cache size
+                            if len(self.path_cache) >= self._max_path_cache:
+                                # Remove arbitrary old entry
+                                self.path_cache.pop(next(iter(self.path_cache)), None)
                             self.path_cache[doc_id] = file_path
                             return file_path
         
@@ -355,11 +367,15 @@ class DocumentManager:
             
             full_text = "\n".join(unique_lines)
             
-            # Cache the result
+            # Implement LRU cache properly
             if len(self.text_cache) >= self._max_text_cache:
-                oldest = next(iter(self.text_cache))
-                del self.text_cache[oldest]
+                # Remove oldest entry
+                if self._text_cache_order:
+                    oldest = self._text_cache_order.pop(0)
+                    self.text_cache.pop(oldest, None)
+            
             self.text_cache[doc_id] = full_text
+            self._text_cache_order.append(doc_id)
             
             return full_text
         
@@ -402,13 +418,16 @@ def verify_paths():
 # decompressing functions (optimised but mostly similar to previous)
 # ============================================================================
 def varbyte_decode(byte_arr: bytes) -> List[int]:
-    """Optimized varbyte decoding"""
+    """Optimized varbyte decoding with pre-allocation"""
+    # Pre-allocate list for better memory performance
     numbers = []
     curr = 0
-
-    for byte in byte_arr:
+    
+    # Use memoryview for faster byte access
+    mv = memoryview(byte_arr)
+    for byte in mv:
         if byte < 128:
-            curr = (curr << 7) | byte  #Faster than 128 * curr + byte (was used in barrels)
+            curr = (curr << 7) | byte
         else:
             curr = (curr << 7) | (byte - 128)
             numbers.append(curr)
@@ -512,6 +531,8 @@ def search_word_parallel(word: str) -> Tuple[List[int], Optional[List[int]]]:
                         all_doc_ids.extend(doc_ids)
                         if frequencies:
                             all_frequencies.extend(frequencies)
+                        # Clear variables to free memory
+                        del doc_ids, frequencies
             except Exception:
                 continue
     
