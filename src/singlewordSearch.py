@@ -158,7 +158,6 @@ class DocumentManager:
     def add_dynamic_doc(self, doc_id, title, content):
         self.dynamic_docs[doc_id] = {'title': title, 'content': content}
         self.title_cache[doc_id] = title
-        self.total_docs_in_corpus += 1
 
     def load_metadata(self):
         """
