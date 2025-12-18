@@ -260,36 +260,37 @@
             <div class="glass-panel rounded-2xl p-8 shadow-2xl bg-white dark:bg-slate-800 border dark:border-slate-700">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-2xl font-bold text-slate-800 dark:text-white">Add New Paper</h2>
-                    <button onclick="closeModal()"
-                        class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
+                    <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                     </button>
                 </div>
 
-                <form onsubmit="submitDocument(event)" class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Paper
-                            Title</label>
-                        <input type="text" id="doc-title"
-                            class="w-full p-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 ring-indigo-500 outline-none transition text-slate-900 dark:text-white"
-                            placeholder="e.g. Clinical trials of..." required>
-                    </div>
+                <div class="flex gap-4 mb-6 border-b border-slate-200 dark:border-slate-700">
+                    <button onclick="switchTab('manual')" id="tab-manual" class="pb-2 border-b-2 border-indigo-600 font-bold text-indigo-600 dark:text-indigo-400 transition">Manual Entry</button>
+                    <button onclick="switchTab('file')" id="tab-file" class="pb-2 border-b-2 border-transparent text-slate-500 hover:text-indigo-500 transition">File Upload</button>
+                </div>
 
+                <form id="form-manual" onsubmit="submitManual(event)" class="space-y-4">
                     <div>
-                        <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Content /
-                            Abstract</label>
-                        <textarea id="doc-content"
-                            class="w-full p-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 ring-indigo-500 outline-none h-24 transition text-slate-900 dark:text-white"
-                            placeholder="Brief summary..." required></textarea>
+                        <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Paper Title</label>
+                        <input type="text" id="doc-title" class="w-full p-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 ring-indigo-500 outline-none transition text-slate-900 dark:text-white" required>
                     </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Content</label>
+                        <textarea id="doc-content" class="w-full p-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 ring-indigo-500 outline-none h-24 transition text-slate-900 dark:text-white" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-md transition">Index Manual</button>
+                </form>
 
-                    <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-md hover:shadow-lg transition transform hover:scale-[1.01]">
-                        Index Document
-                    </button>
+                <form id="form-file" onsubmit="submitFile(event)" class="space-y-4 hidden">
+                    <div class="border-2 border-dashed border-slate-300 dark:border-slate-600 rounded-xl p-8 text-center hover:bg-slate-50 dark:hover:bg-slate-700/50 transition cursor-pointer relative">
+                        <input type="file" id="file-upload" accept=".json,.txt" class="absolute inset-0 opacity-0 cursor-pointer" onchange="updateFileName()">
+                        <div class="text-slate-500 dark:text-slate-400">
+                            <div class="text-4xl mb-2">📄</div>
+                            <span id="file-label">Click to upload .json or .txt</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-md transition">Upload & Index</button>
                 </form>
             </div>
         </div>
@@ -462,61 +463,84 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();
         });
-        async function submitDocument(event) {
-            event.preventDefault(); // Stop page reload
+        // --- NEW: Tab Switching Logic ---
+        function switchTab(tab) {
+            document.getElementById('form-manual').classList.toggle('hidden', tab !== 'manual');
+            document.getElementById('form-file').classList.toggle('hidden', tab !== 'file');
+            
+            // Update Tab Styles
+            const manualTab = document.getElementById('tab-manual');
+            const fileTab = document.getElementById('tab-file');
+            
+            if (tab === 'manual') {
+                manualTab.className = "pb-2 border-b-2 border-indigo-600 font-bold text-indigo-600 dark:text-indigo-400 transition";
+                fileTab.className = "pb-2 border-b-2 border-transparent text-slate-500 hover:text-indigo-500 transition";
+            } else {
+                fileTab.className = "pb-2 border-b-2 border-indigo-600 font-bold text-indigo-600 dark:text-indigo-400 transition";
+                manualTab.className = "pb-2 border-b-2 border-transparent text-slate-500 hover:text-indigo-500 transition";
+            }
+        }
 
-            const title = document.getElementById('doc-title').value;
-            const content = document.getElementById('doc-content').value;
-            const submitBtn = event.target.querySelector('button[type="submit"]');
+        function updateFileName() {
+            const file = document.getElementById('file-upload').files[0];
+            if (file) document.getElementById('file-label').innerText = file.name;
+        }
 
-            // 1. visual feedback (loading state)
-            const originalText = submitBtn.innerText;
-            submitBtn.innerText = "Indexing...";
-            submitBtn.disabled = true;
+        // --- NEW: Submission Logic (Manual) ---
+        async function submitManual(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Indexing..."; btn.disabled = true;
 
             try {
-                // 2. Send data to your Python Backend
-                const response = await fetch('/api/index', {
+                const response = await fetch('/api/upload', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        title: title,
-                        content: content,
-                        // We let the backend generate the ID
+                        title: document.getElementById('doc-title').value,
+                        content: document.getElementById('doc-content').value
                     })
                 });
+                handleResponse(response);
+            } catch (error) { alert('Connection Error'); } 
+            finally { btn.innerText = originalText; btn.disabled = false; }
+        }
 
-                const data = await response.json();
+        // --- NEW: Submission Logic (File) ---
+        async function submitFile(event) {
+            event.preventDefault();
+            const file = document.getElementById('file-upload').files[0];
+            if(!file) return alert("Please select a file");
 
-                if (response.ok) {
-                    // 3. Success!
-                    alert(`Success! Document indexed with ID: ${data.id}`);
+            const btn = event.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Uploading..."; btn.disabled = true;
 
-                    // Clear form
-                    document.getElementById('doc-title').value = '';
-                    document.getElementById('doc-content').value = '';
+            const formData = new FormData();
+            formData.append('file', file);
 
-                    closeModal();
+            try {
+                const response = await fetch('/api/upload', { method: 'POST', body: formData });
+                handleResponse(response);
+            } catch (error) { alert('Connection Error'); }
+            finally { btn.innerText = originalText; btn.disabled = false; }
+        }
 
-                    // Optional: Update the stats number immediately
-                    const statsEl = document.getElementById('header-stats');
-                    if (statsEl) {
-                        let current = parseInt(statsEl.innerText.replace(/,/g, ''));
-                        statsEl.innerText = (current + 1).toLocaleString();
-                    }
-                } else {
-                    alert('Error: ' + data.error);
-                }
-
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Failed to connect to the search engine.');
-            } finally {
-                // Reset button
-                submitBtn.innerText = originalText;
-                submitBtn.disabled = false;
+        // --- Helper: Response Handler ---
+        async function handleResponse(response) {
+            const data = await response.json();
+            if (response.ok) {
+                alert(`Success! Indexed ID: ${data.id}`);
+                closeModal();
+                // Clear forms
+                document.getElementById('doc-title').value = '';
+                document.getElementById('doc-content').value = '';
+                document.getElementById('file-upload').value = '';
+                document.getElementById('file-label').innerText = 'Click to upload .json or .txt';
+                window.location.reload(); // Refresh stats
+            } else {
+                alert('Error: ' + data.error);
             }
         }
     </script>

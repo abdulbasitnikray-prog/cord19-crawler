@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import time
 import os
+import json
 
 # Import your existing modules
 from multiwordSearch import multi_word_search, barrel_lookup, doc_manager
@@ -59,12 +60,13 @@ singlewordSearch.dynamic_indexer_ref = indexer
 
 @app.route('/')
 def home():
-    # VISUAL FIX: Show the total corpus size (700k+) instead of just indexed docs
-    # If total_docs_in_corpus is 0 (fallback), show title_cache length
-    display_count = doc_manager.total_docs_in_corpus if doc_manager.total_docs_in_corpus > 0 else len(doc_manager.title_cache)
-    
-    return render_template('index.html', total_docs=f"{display_count:,}")
-
+    # Show Total (Static + Dynamic)
+    # Uses the total count from the CSV scan + any new dynamic docs
+    static_count = getattr(doc_manager, 'total_docs_in_corpus', len(doc_manager.title_cache))
+    # Count documents in the dynamic indexer if it exists
+    dynamic_count = len(indexer.forward_index) if indexer else 0
+    total = static_count + dynamic_count
+    return render_template('index.html', total_docs=f"{total:,}")
 @app.route('/api/search', methods=['GET'])
 def search():
     query = request.args.get('q', '').strip()
@@ -126,27 +128,69 @@ def get_autocomplete():
     suggestions = autocomplete.search(prefix)
     return jsonify(suggestions)
 
-@app.route('/api/index', methods=['POST'])
-def add_document():
-    data = request.json
-    if not data or 'content' not in data:
-        return jsonify({"error": "Invalid data"}), 400
+# --- NEW: UNIFIED UPLOAD API (Manual + Files) ---
+@app.route('/api/upload', methods=['POST'])
+def upload_document():
+    content = ""
+    title = "Untitled"
     
-    if 'cord_uid' not in data:
-        data['cord_uid'] = f"doc_{int(time.time())}"
+    # 1. Handle File Uploads (JSON or TXT)
+    if 'file' in request.files:
+        file = request.files['file']
+        if file.filename == '':
+            return jsonify({"error": "No file selected"}), 400
         
-    success = indexer.add_single_document(data)
-    
-    if success:
-        doc_manager.add_dynamic_doc(
-            data['cord_uid'], 
-            data.get('title', 'Untitled'), 
-            data['content']
-        )
-        return jsonify({"message": "Document indexed successfully", "id": data['cord_uid']})
-    else:
-        return jsonify({"error": "Failed to index document"}), 500
+        title = file.filename
+        
+        try:
+            if file.filename.lower().endswith('.json'):
+                data = json.load(file)
+                # Support CORD-19 format (metadata + body_text)
+                if 'metadata' in data and 'title' in data['metadata']:
+                    title = data['metadata']['title']
+                    content = " ".join([p['text'] for p in data.get('body_text', [])])
+                # Support Simple format (title + content)
+                elif 'content' in data:
+                    title = data.get('title', title)
+                    content = data['content']
+                else:
+                    return jsonify({"error": "Unknown JSON structure. Use CORD-19 or simple {'title':, 'content':} format"}), 400
+            
+            elif file.filename.lower().endswith('.txt'):
+                content = file.read().decode('utf-8')
+            
+            else:
+                return jsonify({"error": "Unsupported file type. Use .json or .txt"}), 400
 
+        except Exception as e:
+            return jsonify({"error": f"Failed to parse file: {str(e)}"}), 500
+
+    # 2. Handle Manual Entry (JSON Body)
+    elif request.json:
+        data = request.json
+        title = data.get('title', 'Untitled')
+        content = data.get('content', '')
+    else:
+        return jsonify({"error": "No data provided"}), 400
+
+    if not content or not content.strip():
+        return jsonify({"error": "Document content is empty"}), 400
+
+    # 3. Index It (Instant Delta Indexing)
+    doc_id = f"dyn_{int(time.time())}"
+    doc_data = {
+        "cord_uid": doc_id,
+        "title": title,
+        "content": content
+    }
+    
+    # Add to Dynamic Indexer (Search)
+    if indexer.add_single_document(doc_data):
+        # Add to Document Manager (View/Retrieval)
+        doc_manager.add_dynamic_doc(doc_id, title, content)
+        return jsonify({"message": "Indexed successfully", "id": doc_id, "title": title})
+    else:
+        return jsonify({"error": "Indexing failed (Duplicate or Empty)"}), 500
 @app.route('/view/<doc_id>')
 def view_document(doc_id):
     # Fetching text here is fine because it only happens ONCE per click
