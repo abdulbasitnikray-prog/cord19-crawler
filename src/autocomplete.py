@@ -15,18 +15,44 @@ class AutocompleteEngine:
         self.loaded = False
 
     def load_from_lexicon(self, lexicon_path):
-        print(f"Loading Autocomplete Trie from {lexicon_path}...")  # Add debugging
+        print(f"Loading Autocomplete Trie from {lexicon_path}...")
         start = time.time()
         try:
             with open(lexicon_path, 'r', encoding='utf-8') as f:
                 lexicon = json.load(f)
             
+            # --- OPTIMIZATION: Sort by frequency and take only top 50k ---
+            print(f"Sorting {len(lexicon)} words by frequency...")
+            
+            # Convert dict to list of (word, freq)
+            word_list = []
             for word, data in lexicon.items():
                 freq = data.get("total_count", 0) if isinstance(data, dict) else 0
-                self.insert(word, freq)
+                word_list.append((word, freq))
+            
+            # Sort descending
+            word_list.sort(key=lambda x: x[1], reverse=True)
+            
+            # Keep only top 50,000
+            TOP_N = 50000
+            pruned_list = word_list[:TOP_N]
+            
+            print(f"Pruned to top {TOP_N} words. Building Trie...")
+
+            for word, freq in pruned_list:
+                # Skip tiny words to save more RAM
+                if len(word) > 2:
+                    self.insert(word, freq)
                 
             self.loaded = True
-            print(f"Autocomplete Ready: {len(lexicon)} words in {time.time()-start:.2f}s")
+            print(f"Autocomplete Ready: {len(pruned_list)} words in {time.time()-start:.2f}s")
+            
+            # Force garbage collection
+            del lexicon
+            del word_list
+            import gc
+            gc.collect()
+            
         except Exception as e:
             print(f"Failed to load lexicon for autocomplete: {e}")
 
