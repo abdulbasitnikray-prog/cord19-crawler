@@ -16,13 +16,16 @@ CORS(app)
 
 def check_required_files():
     """Check if all required files exist before starting"""
+    # Adjust paths for Docker: go up one level from src/
+    base_path = os.path.join(os.path.dirname(__file__), '..')
+    
     required_files = [
-        os.path.join("data", "barrels", "barrel_mappings.json"),
-        os.path.join("data", "processed_corpus.csv"),
-        os.path.join("data", "indexes", "lexicon.json"),
-        os.path.join("data", "indexes", "forward_index.json"),
-        os.path.join("data", "indexes", "inverted_index.json"),
-        os.path.join("data", "indexes", "backward_index.json")
+        os.path.join(base_path, "data", "barrels", "barrel_mappings.json"),
+        os.path.join(base_path, "data", "processed_corpus.csv"),
+        os.path.join(base_path, "data", "indexes", "lexicon.json"),
+        os.path.join(base_path, "data", "indexes", "forward_index.json"),
+        os.path.join(base_path, "data", "indexes", "inverted_index.json"),
+        os.path.join(base_path, "data", "indexes", "backward_index.json")
     ]
     
     missing_files = []
@@ -38,6 +41,13 @@ def check_required_files():
         print("  1. python src/index.py")
         print("  2. python src/barreled_index.py")
         print("  3. python src/preprocess_papers.py")
+        
+        # In production/Docker, don't prompt for input - just exit
+        import sys
+        if not sys.stdin.isatty():
+            print("\n⚠️ Running in non-interactive mode. Exiting...")
+            exit(1)
+        
         print("\nContinue anyway? (y/n): ", end="")
         response = input().strip().lower()
         if response != 'y':
@@ -51,11 +61,15 @@ check_required_files()
 barrel_lookup.load_trie()
 doc_manager.load_metadata()
 
+# Adjust path for Docker/production
+base_path = os.path.join(os.path.dirname(__file__), '..')
+lexicon_path = os.path.join(base_path, "data", "indexes", "lexicon.json")
+
 autocomplete = AutocompleteEngine()
-autocomplete.load_from_lexicon(os.path.join("data", "indexes", "lexicon.json"))
+autocomplete.load_from_lexicon(lexicon_path)
 
 semantic_engine.load_model()
-indexer = DynamicIndexer("data/indexes")
+indexer = DynamicIndexer(os.path.join(base_path, "data", "indexes"))
 singlewordSearch.dynamic_indexer_ref = indexer
 
 @app.route('/')
